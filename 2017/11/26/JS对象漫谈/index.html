@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,17 +79,16 @@
 
 
 
-<meta name="description" content="安装 npm install -g hexo-cli  建站 hexo init  &amp;lt;你博客存储文件夹名字&amp;gt; cd &amp;lt;你博客存储文件夹名字&amp;gt; npm i  example npm init blog cd blog npm i  修改配置文件_config.yml">
-<meta name="keywords" content="hexo">
+<meta name="description" content="如何转为number Number(‘1’) === 1 parseInt(‘1’, 10) === 1 parseFloat(‘1.23’) === 1.23 ‘1’ - 0   ‘1’    全局对象window 浏览器在加载时首先会创建window对象 window的属性分为两类： ECMAScript规定的和浏">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo食用教程">
-<meta property="og:url" content="http://yoursite.com/2017/11/18/Hexo食用教程/index.html">
+<meta property="og:title" content="JS对象漫谈">
+<meta property="og:url" content="http://yoursite.com/2017/11/26/JS对象漫谈/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="安装 npm install -g hexo-cli  建站 hexo init  &amp;lt;你博客存储文件夹名字&amp;gt; cd &amp;lt;你博客存储文件夹名字&amp;gt; npm i  example npm init blog cd blog npm i  修改配置文件_config.yml deploy:  ​    type: git ​    repo:   部署 npm install hex">
-<meta property="og:updated_time" content="2017-11-18T11:36:22.000Z">
+<meta property="og:description" content="如何转为number Number(‘1’) === 1 parseInt(‘1’, 10) === 1 parseFloat(‘1.23’) === 1.23 ‘1’ - 0   ‘1’    全局对象window 浏览器在加载时首先会创建window对象 window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, hist">
+<meta property="og:updated_time" content="2017-11-26T04:21:18.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo食用教程">
-<meta name="twitter:description" content="安装 npm install -g hexo-cli  建站 hexo init  &amp;lt;你博客存储文件夹名字&amp;gt; cd &amp;lt;你博客存储文件夹名字&amp;gt; npm i  example npm init blog cd blog npm i  修改配置文件_config.yml deploy:  ​    type: git ​    repo:   部署 npm install hex">
+<meta name="twitter:title" content="JS对象漫谈">
+<meta name="twitter:description" content="如何转为number Number(‘1’) === 1 parseInt(‘1’, 10) === 1 parseFloat(‘1.23’) === 1.23 ‘1’ - 0   ‘1’    全局对象window 浏览器在加载时首先会创建window对象 window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, hist">
 
 
 
@@ -119,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/18/Hexo食用教程/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/26/JS对象漫谈/"/>
 
 
 
 
 
-  <title>Hexo食用教程 | 1024子翔的程序人生</title>
+  <title>JS对象漫谈 | 1024子翔的程序人生</title>
   
 
 
@@ -232,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/18/Hexo食用教程/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/JS对象漫谈/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林子翔">
@@ -249,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo食用教程</h1>
+          <h1 class="post-title" itemprop="name headline">JS对象漫谈</h1>
         
 
         <div class="post-meta">
@@ -261,8 +260,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-18T19:00:30+08:00">
-                2017-11-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T12:18:14+08:00">
+                2017-11-26
               </time>
             
 
@@ -299,34 +298,61 @@
       
 
       
-        <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote>
-<p>npm install -g hexo-cli</p>
+        <h1 id="如何转为number"><a href="#如何转为number" class="headerlink" title="如何转为number"></a>如何转为number</h1><ul>
+<li>Number(‘1’) === 1</li>
+<li>parseInt(‘1’, 10) === 1</li>
+<li>parseFloat(‘1.23’) === 1.23</li>
+<li>‘1’ - 0 </li>
+<li><ul>
+<li>‘1’</li>
+</ul>
+</li>
+</ul>
+<h1 id="全局对象window"><a href="#全局对象window" class="headerlink" title="全局对象window"></a>全局对象window</h1><ul>
+<li>浏览器在加载时首先会创建window对象</li>
+<li>window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, history, document等）</li>
+<li>document属于dom规范范畴 ,history属于bom规范范畴</li>
+</ul>
+<h1 id="详解Number"><a href="#详解Number" class="headerlink" title="详解Number"></a>详解Number</h1><ul>
+<li>Number(‘1’) 类型转换</li>
+<li>var n = new Number(1) 1 =&gt; {valueOf(): 1,..},通过valueOf获取到原始值1</li>
+<li>使用直接量赋值 var n = 1;在早期是没有toString方法的，而现在直接使用toString会临时转换为Number对象包装后的“1”然后使用toString，最后把这个包装对象丢掉（磨砂次）,这就是为什么给n.xxx = 1后，然后取n.xxx是undefined的原因</li>
+</ul>
+<h1 id="parseInt-与-toString进制问题"><a href="#parseInt-与-toString进制问题" class="headerlink" title="parseInt 与 toString进制问题"></a>parseInt 与 toString进制问题</h1><ul>
+<li>parseInt第二个形参传入一个进制，代表将第一个实参是什么进制的，然后转化为10进制输出</li>
+<li>toString可以传入一个参数代表将要转化的进制，把调用者转化为对应进制的字符串</li>
+</ul>
+<h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><ul>
+<li>为什么叫slice？外国人切面包叫slice，js slice可以“切”数组，字符串。</li>
+</ul>
+<h1 id="5个falsy值"><a href="#5个falsy值" class="headerlink" title="5个falsy值"></a>5个falsy值</h1><ul>
+<li>0</li>
+<li>NaN</li>
+<li>‘’</li>
+<li>null</li>
+<li>undefined</li>
+<li>false</li>
+</ul>
+<blockquote>
+<p>所有对象都是真值</p>
 </blockquote>
-<h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><blockquote>
-<p>hexo init  &lt;你博客存储文件夹名字&gt;</p>
-<p>cd &lt;你博客存储文件夹名字&gt;</p>
-<p>npm i</p>
+<h1 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h1><blockquote>
+<p>var o1 = {};</p>
+<p>o1.<strong>proto</strong> ===  Object.prototype</p>
+<p>var n1 = new Number(1)</p>
 </blockquote>
-<h4 id="example"><a href="#example" class="headerlink" title="example"></a>example</h4><blockquote>
-<p>npm init blog</p>
-<p>cd blog</p>
-<p>npm i</p>
-</blockquote>
-<h1 id="修改配置文件-config-yml"><a href="#修改配置文件-config-yml" class="headerlink" title="修改配置文件_config.yml"></a>修改配置文件_config.yml</h1><blockquote>
-<p>deploy: </p>
-<p>​    type: git</p>
-<p>​    repo: <your git="" repository=""></your></p>
-</blockquote>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><blockquote>
-<p>npm install hexo-deployer-git –save</p>
-<p>hexo deploy</p>
-</blockquote>
-<h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><blockquote>
-<p>hexo new <blog name=""> //新建文章</blog></p>
-<p>hexo g       //生成静态件</p>
-<p>hexo deploy          //发布</p>
-</blockquote>
-<h1 id="feel-interesting"><a href="#feel-interesting" class="headerlink" title="feel interesting?"></a>feel interesting?</h1><p>do it!</p>
+<p>n1.<strong>proto</strong> === Number.prototype</p>
+<p>n1.<strong>proto</strong>.<strong>proto</strong> === Object.prototype</p>
+<h1 id="proto-和-prototype"><a href="#proto-和-prototype" class="headerlink" title="proto 和 prototype"></a><strong>proto</strong> 和 prototype</h1><p>String.prototype是String的公用属性的引用</p>
+<p>s.<strong>proto</strong> 也是String的公用属性的引用</p>
+<p>var 对象 = new 函数();</p>
+<p>对象.<strong>proto</strong> === 函数.prototype 它们的值是 <a href="原型对象，一个对象或null">[Prototype]</a></p>
+<p>var obj = 函数.prototype</p>
+<p>obj.<strong>proto</strong>  === Object.prototype</p>
+<p>var obj2 = 函数</p>
+<p>obj2.<strong>proto</strong> === Function.prototype</p>
+<p>Function.<strong>proto</strong> === Function.prototype</p>
+<p>Function,prototype.<strong>proto</strong> === Object.prototype</p>
 
       
     </div>
@@ -342,12 +368,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
-        </div>
-      
 
       
       
@@ -357,15 +377,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/19/武汉光谷国际人工智能产业峰会/" rel="next" title="武汉光谷国际人工智能产业峰会">
+                <i class="fa fa-chevron-left"></i> 武汉光谷国际人工智能产业峰会
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/18/开博大吉/" rel="prev" title="开博大吉">
-                开博大吉 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -490,7 +510,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建站"><span class="nav-number">2.</span> <span class="nav-text">建站</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#example"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">example</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改配置文件-config-yml"><span class="nav-number">3.</span> <span class="nav-text">修改配置文件_config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署"><span class="nav-number">4.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写作"><span class="nav-number">5.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#feel-interesting"><span class="nav-number">6.</span> <span class="nav-text">feel interesting?</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何转为number"><span class="nav-number">1.</span> <span class="nav-text">如何转为number</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局对象window"><span class="nav-number">2.</span> <span class="nav-text">全局对象window</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详解Number"><span class="nav-number">3.</span> <span class="nav-text">详解Number</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#parseInt-与-toString进制问题"><span class="nav-number">4.</span> <span class="nav-text">parseInt 与 toString进制问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#slice"><span class="nav-number">5.</span> <span class="nav-text">slice</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5个falsy值"><span class="nav-number">6.</span> <span class="nav-text">5个falsy值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原型"><span class="nav-number">7.</span> <span class="nav-text">原型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#proto-和-prototype"><span class="nav-number">8.</span> <span class="nav-text">proto 和 prototype</span></a></li></ol></div>
             
 
           </div>
