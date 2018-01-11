@@ -228,6 +228,318 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/Node编程基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="林子翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="1024子翔的程序人生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/11/Node编程基础/" itemprop="url">Node编程基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T13:59:29+08:00">
+                2018-01-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Node编程基础"><a href="#Node编程基础" class="headerlink" title="Node编程基础"></a>Node编程基础</h1><h2 id="如何组织代码"><a href="#如何组织代码" class="headerlink" title="如何组织代码"></a>如何组织代码</h2><blockquote>
+<p>模块是Node让代码易于重用的一种组织和包装方式</p>
+</blockquote>
+<ul>
+<li>传统方式按逻辑把单个文件分为多个文件，但这些文件互相引用的同时会产生全局变量污染的问题</li>
+<li>Node模块打包代码是为了重用，但它们不会改变全局作用域</li>
+<li>Node模块允许你从被引入文件中选择要你暴露给程序的函数和变量，如果模块返回的函数和变量不止一个，可以把它们作为exports对象的属性，否则就使用module.exports</li>
+</ul>
+<h3 id="如何创建模块"><a href="#如何创建模块" class="headerlink" title="如何创建模块"></a>如何创建模块</h3><ul>
+<li>模块既可能是一个文件，也可能是包含一个或多个文件的目录。如果模块是一个目录，Node通常会在这个目录下找一个叫index.js的文件作为模块的入口</li>
+<li>使用模块要用到require函数，require是Node中少数几个同步I/O操作之一</li>
+</ul>
+<h4 id="用node-modules重用模块"><a href="#用node-modules重用模块" class="headerlink" title="用node_modules重用模块"></a>用node_modules重用模块</h4><ul>
+<li><p>要求模块在文件系统中使用相对路径存放，对于组织程序特定的代码很有帮助，但是与他人共享代码却用处不大。Node的node_modules机制可以不必知道模块在文件系统中的具体位置。</p>
+</li>
+<li><p>node_modules的搜寻机制如下：</p>
+<p>1.开始在文件同一目录下寻找；</p>
+<p>2.没有找到，就在当前目录node_modules下找</p>
+<p>3.没有找到，进入父目录，再找当前目录node_modules中有没有，重复3；</p>
+<p>4.没有找到，找环境变量NODE_PATH指定目录中是否存在；</p>
+<p>5没有找到，异常。</p>
+</li>
+</ul>
+<h2 id="异步编程技术"><a href="#异步编程技术" class="headerlink" title="异步编程技术"></a>异步编程技术</h2><ul>
+<li><p>事件发生会触发响应逻辑。</p>
+</li>
+<li><p>在Node事件里流行两种响应逻辑的管理方式：</p>
+<ol>
+<li><p>回调</p>
+<blockquote>
+<p>回调通常用来定义一次性响应逻辑。比如数据库查询，可以指定一个回调函数来确定如何处理查询结果。这个回调函数可能会显示数据数据库查询结果，根据这些结果做些计算，或者以查询结果为参数执行另一个回调函数</p>
+</blockquote>
+</li>
+<li><p>事件监听</p>
+<blockquote>
+<p>事件监听器，本质上也是一个回调，不同的是，它跟一个事件相关联。在Node中，当有HTTP请求过来时，此时服务器会产生一个事件，事件监听器就可以监听这个事件，并添加一些响应的逻辑。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>一个Node HTTP服务器实例就是一个事件发射器</p>
+</li>
+<li><p>能够继承和添加事件发射及处理能力的类（EventEmitter）</p>
+</li>
+</ul>
+<p>（未完待续）</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/基本视觉格式化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="林子翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="1024子翔的程序人生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/11/基本视觉格式化/" itemprop="url">基本视觉格式化</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T13:48:33+08:00">
+                2018-01-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基本视觉格式化"><a href="#基本视觉格式化" class="headerlink" title="基本视觉格式化"></a>基本视觉格式化</h1><h2 id="基本框"><a href="#基本框" class="headerlink" title="基本框"></a>基本框</h2><ul>
+<li>css假定每个元素都会生成一个或多个矩形框，这称为元素框。各元素框中心有一个内容区。这个内容区周围有可选的内边距，边框和外边距。</li>
+</ul>
+<h2 id="包含块（布局上下文）"><a href="#包含块（布局上下文）" class="headerlink" title="包含块（布局上下文）"></a>包含块（布局上下文）</h2><ul>
+<li>每个元素都相对于其包含块摆放。正常流中的一个元素，其包含块由最近的块级祖先框、表单元格或行内块祖先框的内容边界构成。</li>
+</ul>
+<blockquote>
+<p>正常流是指西方语言文本从左向右、从上向下显示。大多数元素都在正常流中，除了浮动或定位元素。</p>
+</blockquote>
+<h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><ul>
+<li>一般一个基本框从左到右有这几个部分：<ol>
+<li>左外边界</li>
+<li>左外边距</li>
+<li>左边框</li>
+<li>左内边距</li>
+<li>左内边界</li>
+<li>内容区宽度</li>
+<li>右内边界</li>
+<li>右内边距</li>
+<li>右边框</li>
+<li>右外边距</li>
+<li>右外边界</li>
+</ol>
+</li>
+<li>一般地，一个元素的宽度（width）被定义为从左内边界到右内边界的距离，高度同理。高度和宽度属性都可以应用到元素。</li>
+<li>不同的宽度、高度、内边距和外边距相结合，就可以确定文档的布局。</li>
+</ul>
+<p>（未完待续）</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1240,7 +1552,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -1253,7 +1565,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">Tags</span>
                 
               </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="get started," />
+  <meta name="keywords" content="Node," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="开博大吉 一名初入行的小前端的个人博客,原博客地址博客园酱板鸡。  ​">
-<meta name="keywords" content="get started">
+<meta name="description" content="Node编程基础如何组织代码 模块是Node让代码易于重用的一种组织和包装方式   传统方式按逻辑把单个文件分为多个文件，但这些文件互相引用的同时会产生全局变量污染的问题 Node模块打包代码是为了重用，但它们不会改变全局作用域 Node模块允许你从被引入文件中选择要你暴露给程序的函数和变量，如果模块返回的函数和变量不">
+<meta name="keywords" content="Node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开博大吉">
-<meta property="og:url" content="http://yoursite.com/2017/11/18/开博大吉/index.html">
+<meta property="og:title" content="Node编程基础">
+<meta property="og:url" content="http://yoursite.com/2018/01/11/Node编程基础/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="开博大吉 一名初入行的小前端的个人博客,原博客地址博客园酱板鸡。  ​">
-<meta property="og:updated_time" content="2017-11-18T11:50:59.000Z">
+<meta property="og:description" content="Node编程基础如何组织代码 模块是Node让代码易于重用的一种组织和包装方式   传统方式按逻辑把单个文件分为多个文件，但这些文件互相引用的同时会产生全局变量污染的问题 Node模块打包代码是为了重用，但它们不会改变全局作用域 Node模块允许你从被引入文件中选择要你暴露给程序的函数和变量，如果模块返回的函数和变量不止一个，可以把它们作为exports对象的属性，否则就使用module.expo">
+<meta property="og:updated_time" content="2018-01-11T06:00:40.275Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开博大吉">
-<meta name="twitter:description" content="开博大吉 一名初入行的小前端的个人博客,原博客地址博客园酱板鸡。  ​">
+<meta name="twitter:title" content="Node编程基础">
+<meta name="twitter:description" content="Node编程基础如何组织代码 模块是Node让代码易于重用的一种组织和包装方式   传统方式按逻辑把单个文件分为多个文件，但这些文件互相引用的同时会产生全局变量污染的问题 Node模块打包代码是为了重用，但它们不会改变全局作用域 Node模块允许你从被引入文件中选择要你暴露给程序的函数和变量，如果模块返回的函数和变量不止一个，可以把它们作为exports对象的属性，否则就使用module.expo">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/18/开博大吉/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/11/Node编程基础/"/>
 
 
 
 
 
-  <title>开博大吉 | 1024子翔的程序人生</title>
+  <title>Node编程基础 | 1024子翔的程序人生</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/18/开博大吉/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/Node编程基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林子翔">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开博大吉</h1>
+          <h1 class="post-title" itemprop="name headline">Node编程基础</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-18T19:40:30+08:00">
-                2017-11-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T13:59:29+08:00">
+                2018-01-11
               </time>
             
 
@@ -299,10 +299,52 @@
       
 
       
-        <h1 id="开博大吉"><a href="#开博大吉" class="headerlink" title="开博大吉"></a>开博大吉</h1><blockquote>
-<p>一名初入行的小前端的个人博客,原博客地址博客园酱板鸡。</p>
+        <h1 id="Node编程基础"><a href="#Node编程基础" class="headerlink" title="Node编程基础"></a>Node编程基础</h1><h2 id="如何组织代码"><a href="#如何组织代码" class="headerlink" title="如何组织代码"></a>如何组织代码</h2><blockquote>
+<p>模块是Node让代码易于重用的一种组织和包装方式</p>
 </blockquote>
-<p>​                                                            </p>
+<ul>
+<li>传统方式按逻辑把单个文件分为多个文件，但这些文件互相引用的同时会产生全局变量污染的问题</li>
+<li>Node模块打包代码是为了重用，但它们不会改变全局作用域</li>
+<li>Node模块允许你从被引入文件中选择要你暴露给程序的函数和变量，如果模块返回的函数和变量不止一个，可以把它们作为exports对象的属性，否则就使用module.exports</li>
+</ul>
+<h3 id="如何创建模块"><a href="#如何创建模块" class="headerlink" title="如何创建模块"></a>如何创建模块</h3><ul>
+<li>模块既可能是一个文件，也可能是包含一个或多个文件的目录。如果模块是一个目录，Node通常会在这个目录下找一个叫index.js的文件作为模块的入口</li>
+<li>使用模块要用到require函数，require是Node中少数几个同步I/O操作之一</li>
+</ul>
+<h4 id="用node-modules重用模块"><a href="#用node-modules重用模块" class="headerlink" title="用node_modules重用模块"></a>用node_modules重用模块</h4><ul>
+<li><p>要求模块在文件系统中使用相对路径存放，对于组织程序特定的代码很有帮助，但是与他人共享代码却用处不大。Node的node_modules机制可以不必知道模块在文件系统中的具体位置。</p>
+</li>
+<li><p>node_modules的搜寻机制如下：</p>
+<p>1.开始在文件同一目录下寻找；</p>
+<p>2.没有找到，就在当前目录node_modules下找</p>
+<p>3.没有找到，进入父目录，再找当前目录node_modules中有没有，重复3；</p>
+<p>4.没有找到，找环境变量NODE_PATH指定目录中是否存在；</p>
+<p>5没有找到，异常。</p>
+</li>
+</ul>
+<h2 id="异步编程技术"><a href="#异步编程技术" class="headerlink" title="异步编程技术"></a>异步编程技术</h2><ul>
+<li><p>事件发生会触发响应逻辑。</p>
+</li>
+<li><p>在Node事件里流行两种响应逻辑的管理方式：</p>
+<ol>
+<li><p>回调</p>
+<blockquote>
+<p>回调通常用来定义一次性响应逻辑。比如数据库查询，可以指定一个回调函数来确定如何处理查询结果。这个回调函数可能会显示数据数据库查询结果，根据这些结果做些计算，或者以查询结果为参数执行另一个回调函数</p>
+</blockquote>
+</li>
+<li><p>事件监听</p>
+<blockquote>
+<p>事件监听器，本质上也是一个回调，不同的是，它跟一个事件相关联。在Node中，当有HTTP请求过来时，此时服务器会产生一个事件，事件监听器就可以监听这个事件，并添加一些响应的逻辑。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>一个Node HTTP服务器实例就是一个事件发射器</p>
+</li>
+<li><p>能够继承和添加事件发射及处理能力的类（EventEmitter）</p>
+</li>
+</ul>
+<p>（未完待续）</p>
 
       
     </div>
@@ -320,7 +362,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/get-started/" rel="tag"># get started</a>
+            <a href="/tags/Node/" rel="tag"># Node</a>
           
         </div>
       
@@ -333,8 +375,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/18/Hexo食用教程/" rel="next" title="Hexo食用教程">
-                <i class="fa fa-chevron-left"></i> Hexo食用教程
+              <a href="/2018/01/11/基本视觉格式化/" rel="next" title="基本视觉格式化">
+                <i class="fa fa-chevron-left"></i> 基本视觉格式化
               </a>
             
           </div>
@@ -342,10 +384,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/19/武汉光谷国际人工智能产业峰会/" rel="prev" title="武汉光谷国际人工智能产业峰会">
-                武汉光谷国际人工智能产业峰会 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -470,7 +508,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开博大吉"><span class="nav-number">1.</span> <span class="nav-text">开博大吉</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Node编程基础"><span class="nav-number">1.</span> <span class="nav-text">Node编程基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何组织代码"><span class="nav-number">1.1.</span> <span class="nav-text">如何组织代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何创建模块"><span class="nav-number">1.1.1.</span> <span class="nav-text">如何创建模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用node-modules重用模块"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">用node_modules重用模块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步编程技术"><span class="nav-number">1.2.</span> <span class="nav-text">异步编程技术</span></a></li></ol></li></ol></div>
             
 
           </div>
