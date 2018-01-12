@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T13:59:29+08:00">
                 2018-01-11
@@ -422,7 +422,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T13:48:33+08:00">
                 2018-01-11
@@ -491,6 +491,20 @@
 <li>一般地，一个元素的宽度（width）被定义为从左内边界到右内边界的距离，高度同理。高度和宽度属性都可以应用到元素。</li>
 <li>不同的宽度、高度、内边距和外边距相结合，就可以确定文档的布局。</li>
 </ul>
+<h3 id="水平格式化"><a href="#水平格式化" class="headerlink" title="水平格式化"></a>水平格式化</h3><ul>
+<li>区分width和可见元素框的宽度，width属性是不包含padding和margin的（例外的是使用了CSS3的box-sizing），而可见元素框宽度是包含了padding和margin的</li>
+<li>有个规则，正常流中块级元素框的水平部分总和就等于父元素width。这一句话即所有子元素的width加上它们的左、右内边距，边框和外边距就是父元素的width。</li>
+</ul>
+<h4 id="水平属性"><a href="#水平属性" class="headerlink" title="水平属性"></a>水平属性</h4><ul>
+<li>水平格式化有7大属性，从左至右，分别是：margin-left, border-left,padding-left,width,padding-right,border-right,margin-right。这7个属性的值加在一起必须是元素包含块的宽度，这往往是块元素的的父元素的width。</li>
+<li>这7大属性只有其中3个可以设置为auto（width，margin-left,margin-right）</li>
+</ul>
+<h4 id="使用auto（不考虑3个值以外的属性）"><a href="#使用auto（不考虑3个值以外的属性）" class="headerlink" title="使用auto（不考虑3个值以外的属性）"></a>使用auto（不考虑3个值以外的属性）</h4><ol>
+<li>3个auto（margin-left,width,margin-right均为auto），其中width会占满父元素width，而margin-left,margin-right为0</li>
+<li>2个auto（比如margin-left,width为auto），这时设置auto的属性会为0，width会将父元素width的剩余空间占满</li>
+<li>1个auto，如果设置3个值其中一个为auto，那么设置auto的属性会确定所需的长度，保证3个值加起来等于父元素的width</li>
+<li>0个auto同时三者设置的和超过父元素width，则margin-right会为auto。</li>
+</ol>
 <p>（未完待续）</p>
 
           
@@ -569,7 +583,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-09T10:21:41+08:00">
                 2018-01-09
@@ -694,7 +708,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-05T13:24:08+08:00">
                 2018-01-05
@@ -954,7 +968,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T12:18:14+08:00">
                 2017-11-26
@@ -1125,7 +1139,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-19T11:37:36+08:00">
                 2017-11-19
@@ -1279,7 +1293,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-18T19:40:30+08:00">
                 2017-11-18
@@ -1402,7 +1416,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-18T19:00:30+08:00">
                 2017-11-18
@@ -1554,7 +1568,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">8</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -1567,7 +1581,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -1615,7 +1629,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
