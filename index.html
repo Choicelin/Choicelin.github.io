@@ -228,6 +228,136 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/18/node流程控制之串行/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="林子翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="1024子翔的程序人生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/18/node流程控制之串行/" itemprop="url">node流程控制之串行</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-18T18:22:28+08:00">
+                2018-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function process1() &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">   var process1Result = 1;</span><br><span class="line">   next(null, process1Result)</span><br><span class="line">  &#125;,10)</span><br><span class="line">&#125;</span><br><span class="line">function process2(data) &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">  	if (data === 1) var process2Result = 2;</span><br><span class="line">    next(null, process2Result)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">function process3(data) &#123;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var taskList = [</span><br><span class="line">  process1,</span><br><span class="line">  process2,</span><br><span class="line">  process3</span><br><span class="line">]</span><br><span class="line">next(err, result) &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  </span><br><span class="line">  var current = taskList.shift();</span><br><span class="line">  </span><br><span class="line">  current &amp;&amp; current(result);</span><br><span class="line">&#125;</span><br><span class="line">next();</span><br></pre></td></tr></table></figure>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ul>
+<li><p>在node中让一组异步操作顺序执行的套路叫做流程控制，而这其中又分为串行流程和并行流程</p>
+<h2 id="串行流程"><a href="#串行流程" class="headerlink" title="串行流程"></a>串行流程</h2><ul>
+<li>所谓串行流程，即一个接着一个做的流程叫做串行流程，上述代码即一个串行流程的实现。</li>
+<li>首先有三个操作，顺序依次为process1，process2，process3，</li>
+<li>整个过程的核心是这个next函数，跟node一些框架中交出控制权的next名字是一样的</li>
+<li>思路就是按照索引的顺序执行函数，函数中异步调用的返回值，作为下一个next中执行的函数的参数，保证了数据不会丢失。</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/Node编程基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1578,7 +1708,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -1591,7 +1721,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">Tags</span>
                 
               </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="工作," />
+  <meta name="keywords" content="node," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到">
-<meta name="keywords" content="工作">
+<meta name="description" content="1234567891011121314151617181920212223242526272829function process1() &amp;#123;  setTimeout(function() &amp;#123;   var process1Result = 1;   next(null, process">
+<meta name="keywords" content="node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端工作遇到的小知识点">
-<meta property="og:url" content="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/index.html">
+<meta property="og:title" content="node流程控制之串行">
+<meta property="og:url" content="http://yoursite.com/2018/01/18/node流程控制之串行/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
-<meta property="og:updated_time" content="2018-01-17T10:23:13.648Z">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829function process1() &amp;#123;  setTimeout(function() &amp;#123;   var process1Result = 1;   next(null, process1Result)  &amp;#125;,10)&amp;#125;function process2(data">
+<meta property="og:updated_time" content="2018-01-18T10:33:02.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端工作遇到的小知识点">
-<meta name="twitter:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
+<meta name="twitter:title" content="node流程控制之串行">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829function process1() &amp;#123;  setTimeout(function() &amp;#123;   var process1Result = 1;   next(null, process1Result)  &amp;#125;,10)&amp;#125;function process2(data">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/18/node流程控制之串行/"/>
 
 
 
 
 
-  <title>前端工作遇到的小知识点 | 1024子翔的程序人生</title>
+  <title>node流程控制之串行 | 1024子翔的程序人生</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/18/node流程控制之串行/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林子翔">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">前端工作遇到的小知识点</h1>
+          <h1 class="post-title" itemprop="name headline">node流程控制之串行</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-09T10:21:41+08:00">
-                2018-01-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-18T18:22:28+08:00">
+                2018-01-18
               </time>
             
 
@@ -299,15 +299,17 @@
       
 
       
-        <ol>
-<li>顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟</li>
-<li>微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。</li>
-<li>文本溢出无法实现时，使用height,line-height,overflow做</li>
-<li>做列表勾选同步时，前端修改了数据勾选状态，如果请求后端同步时失败，应回滚前端勾选状态，这中列表数据自带勾选状态的做法，也是一种性能优化的经验</li>
-<li>接口全局配置，如果有两套环境（生产和测试），在页面里用到相关接口url，必须通过配置文件来引用，而不是直接写，如果有不同，就切分字符串，不然你绝对会不停的改来改去。</li>
-<li>原生小程序，setData方法绝对不能set一个undefined值，否则真机会报一个null的错误，同时定位这种错误的方法是打console看这个null的log在console的前面还是后面来定位，巨坑哦</li>
-</ol>
-<p>此文长期更新，遇到什么就写什么，mark</p>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function process1() &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">   var process1Result = 1;</span><br><span class="line">   next(null, process1Result)</span><br><span class="line">  &#125;,10)</span><br><span class="line">&#125;</span><br><span class="line">function process2(data) &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">  	if (data === 1) var process2Result = 2;</span><br><span class="line">    next(null, process2Result)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">function process3(data) &#123;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var taskList = [</span><br><span class="line">  process1,</span><br><span class="line">  process2,</span><br><span class="line">  process3</span><br><span class="line">]</span><br><span class="line">next(err, result) &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  </span><br><span class="line">  var current = taskList.shift();</span><br><span class="line">  </span><br><span class="line">  current &amp;&amp; current(result);</span><br><span class="line">&#125;</span><br><span class="line">next();</span><br></pre></td></tr></table></figure>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ul>
+<li><p>在node中让一组异步操作顺序执行的套路叫做流程控制，而这其中又分为串行流程和并行流程</p>
+<h2 id="串行流程"><a href="#串行流程" class="headerlink" title="串行流程"></a>串行流程</h2><ul>
+<li>所谓串行流程，即一个接着一个做的流程叫做串行流程，上述代码即一个串行流程的实现。</li>
+<li>首先有三个操作，顺序依次为process1，process2，process3，</li>
+<li>整个过程的核心是这个next函数，跟node一些框架中交出控制权的next名字是一样的</li>
+<li>思路就是按照索引的顺序执行函数，函数中异步调用的返回值，作为下一个next中执行的函数的参数，保证了数据不会丢失。</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -325,7 +327,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/工作/" rel="tag"># 工作</a>
+            <a href="/tags/node/" rel="tag"># node</a>
           
         </div>
       
@@ -338,8 +340,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/05/html标签/" rel="next" title="html标签">
-                <i class="fa fa-chevron-left"></i> html标签
+              <a href="/2018/01/11/Node编程基础/" rel="next" title="Node编程基础">
+                <i class="fa fa-chevron-left"></i> Node编程基础
               </a>
             
           </div>
@@ -347,10 +349,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/11/基本视觉格式化/" rel="prev" title="基本视觉格式化">
-                基本视觉格式化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -402,8 +400,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -456,6 +463,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#流程控制"><span class="nav-number">1.</span> <span class="nav-text">流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#串行流程"><span class="nav-number">1.1.</span> <span class="nav-text">串行流程</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
