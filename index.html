@@ -1,2078 +1,844 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+    
+
+    
+
+    
 
 
 
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>1024子翔的程序人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="1024子翔的程序人生">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1024子翔的程序人生">
+    
+        <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
 
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
-
-  <title>1024子翔的程序人生</title>
-  
-
-
-
-
-
-
-
+    <!-- custom head -->
+    
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body>
+    <div id="loading" class="active"></div>
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">1024子翔的程序人生</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">林子翔</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
   </div>
+</aside>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">1024子翔的程序人生</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header index-header">
 
-<nav class="site-nav">
+    <div class="container fade-scale">
+        <h1 class="title">1024子翔的程序人生</h1>
+        <h5 class="subtitle">
+            
+                
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-01-21 13:24:01" datetime="2018-01-21T05:24:01.000Z"  itemprop="datePublished">2018-01-21</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/">带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</a>
+    </h3>
   
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Startseite
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archiv
-          </a>
-        </li>
-      
 
-      
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？
+尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-...
+    
+
+        <a href="/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-node流程控制之串行"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-01-18 18:22:28" datetime="2018-01-18T10:22:28.000Z"  itemprop="datePublished">2018-01-18</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/01/18/node流程控制之串行/">node流程控制之串行</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1234567891011121314151617181920212223242526272829function process1() &#123;  setTimeout(function() &#123;   var process1Result = 1;   next(null, process1Result)  &#125;,10)&#125;function process2(d...
+    
+
+        <a href="/2018/01/18/node流程控制之串行/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-Node编程基础"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-01-11 13:59:29" datetime="2018-01-11T05:59:29.000Z"  itemprop="datePublished">2018-01-11</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/01/11/Node编程基础/">Node编程基础</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Node编程基础如何组织代码
+模块是Node让代码易于重用的一种组织和包装方式
+
+
+传统方式按逻辑把单个文件分为多个文件，但这些文件互相引用的同时会产生全局变量污染的问题
+Node模块打包代码是为了重用，但它们不会改变全局作用域
+Node模块允许你从被引入文件中选择要你暴露给程序的函数和变量，如果模块返回的函数和变量不止一个，可以把它们作为exports对象的属性，否则就使用module.e...
+    
+
+        <a href="/2018/01/11/Node编程基础/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-基本视觉格式化"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-01-11 13:48:33" datetime="2018-01-11T05:48:33.000Z"  itemprop="datePublished">2018-01-11</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/01/11/基本视觉格式化/">基本视觉格式化</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        基本视觉格式化基本框
+css假定每个元素都会生成一个或多个矩形框，这称为元素框。各元素框中心有一个内容区。这个内容区周围有可选的内边距，边框和外边距。
+
+包含块（布局上下文）
+每个元素都相对于其包含块摆放。正常流中的一个元素，其包含块由最近的块级祖先框、表单元格或行内块祖先框的内容边界构成。
+
+
+正常流是指西方语言文本从左向右、从上向下显示。大多数元素都在正常流中，除了浮动或定位元素。
+
+块...
+    
+
+        <a href="/2018/01/11/基本视觉格式化/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css读书笔记/">css读书笔记</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-前端工作遇到的小知识点"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-01-09 10:21:41" datetime="2018-01-09T02:21:41.000Z"  itemprop="datePublished">2018-01-09</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/01/09/前端工作遇到的小知识点/">前端工作遇到的小知识点</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟
+微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。
+...
+    
+
+        <a href="/2018/01/09/前端工作遇到的小知识点/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作/">工作</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-html标签"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-01-05 13:24:08" datetime="2018-01-05T05:24:08.000Z"  itemprop="datePublished">2018-01-05</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/01/05/html标签/">html标签</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        htmls所有标签
+a
+abbr
+acronym
+address
+applet
+area
+article
+aside
+audio
+b
+base
+basefont
+bdi
+bdo
+bgsound
+big
+blink
+blockquote
+body
+br
+button
+canvas
+caption
+center
+cite
+code
+col
+colgroup
+command
+content
+dat...
+    
+
+        <a href="/2018/01/05/html标签/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-JS对象漫谈"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-11-26 12:18:14" datetime="2017-11-26T04:18:14.000Z"  itemprop="datePublished">2017-11-26</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/11/26/JS对象漫谈/">JS对象漫谈</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        如何转为number
+Number(‘1’) === 1
+parseInt(‘1’, 10) === 1
+parseFloat(‘1.23’) === 1.23
+‘1’ - 0 
++‘1’
+
+全局对象window
+浏览器在加载时首先会创建window对象
+window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, his...
+    
+
+        <a href="/2017/11/26/JS对象漫谈/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-武汉光谷国际人工智能产业峰会"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-11-19 11:37:36" datetime="2017-11-19T03:37:36.000Z"  itemprop="datePublished">2017-11-19</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/11/19/武汉光谷国际人工智能产业峰会/">武汉光谷国际人工智能产业峰会</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+本文不探讨人工智能深入的知识，只是个人的一些感受与大家分享
+
+
+                
+                    
+                    
+                
+                人工智能的趋势
+            
+是不是治好了你的颈椎病？（逃）
+人工智能强势登场记得会场上IEEE Fellow蔡自兴院士说了一句让我...
+    
+
+        <a href="/2017/11/19/武汉光谷国际人工智能产业峰会/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-开博大吉"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-11-18 19:40:30" datetime="2017-11-18T11:40:30.000Z"  itemprop="datePublished">2017-11-18</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/11/18/开博大吉/">开博大吉</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        开博大吉
+一名初入行的小前端的个人博客,原博客地址博客园酱板鸡。
+
+​                                                            
+
+    
+
+        <a href="/2017/11/18/开博大吉/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/get-started/">get started</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-Hexo食用教程"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-11-18 19:00:30" datetime="2017-11-18T11:00:30.000Z"  itemprop="datePublished">2017-11-18</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/11/18/Hexo食用教程/">Hexo食用教程</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        安装
+npm install -g hexo-cli
+
+建站
+hexo init  &lt;你博客存储文件夹名字&gt;
+cd &lt;你博客存储文件夹名字&gt;
+npm i
+
+example
+npm init blog
+cd blog
+npm i
+
+修改配置文件_config.yml
+deploy: 
+​    type: git
+​    repo: 
+
+部署
+npm install ...
+    
+
+        <a href="/2017/11/18/Hexo食用教程/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
     </ul>
-  
 
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
     
-      
 
-  
+</div>
 
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
+</p>
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/" itemprop="url">带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <p>
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T13:24:01+08:00">
-                2018-01-21
-              </time>
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h1><p>想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？</p>
-<h1 id="尝试获取资料"><a href="#尝试获取资料" class="headerlink" title="尝试获取资料"></a>尝试获取资料</h1><p>于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unless库，这个库是干嘛的呢，实际是让你指定的路由跳过当前的中间件，那么看看源码。</p>
-<h1 id="阅读koa-unless源码"><a href="#阅读koa-unless源码" class="headerlink" title="阅读koa-unless源码"></a>阅读koa-unless源码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** Creates a wrapper middleware that verifies if the original middleware should be skipped. */</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// If a custom function was passed directly, creates a new object literal that holds it as a property called custom.</span></span><br><span class="line">  <span class="keyword">var</span> opts = <span class="keyword">typeof</span> options === <span class="string">'function'</span> ? &#123; <span class="attr">custom</span>: options &#125; : options;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Returns the middleware that wraps the original one.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> *(<span class="params">next</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> requestedUrl = url.parse((opts.useOriginalUrl ? <span class="keyword">this</span>.originalUrl : <span class="keyword">this</span>.url) || <span class="string">''</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// any match means 'skip original middleware'</span></span><br><span class="line">    <span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>关键地方</p>
-<ol>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"><span class="comment">//这里获取当前要跳过的中间件实例</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next; <span class="comment">//这里判断参数匹配的话，就把控制权转移下个中间件，从而跳过该中间件</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line"><span class="comment">//这一句结合上面一句来看就是参数不匹配就执行当前中间件</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总的思路是不执行jwt的验证的中间件，思路其实也很直接，那我就愉快的借用一下罗。~_~!</p>
-<h1 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h1><p>国外源码注释真的很清晰，其实在工作中应该也效仿。</p>
-
-          
-        
-      
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/18/node流程控制之串行/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+    <div class="bottom">
+        <p><span>林子翔 &copy; 2015 - 2018</span>
+            <span>
                 
-                <a class="post-title-link" href="/2018/01/18/node流程控制之串行/" itemprop="url">node流程控制之串行</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-18T18:22:28+08:00">
-                2018-01-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function process1() &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">   var process1Result = 1;</span><br><span class="line">   next(null, process1Result)</span><br><span class="line">  &#125;,10)</span><br><span class="line">&#125;</span><br><span class="line">function process2(data) &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">  	if (data === 1) var process2Result = 2;</span><br><span class="line">    next(null, process2Result)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">function process3(data) &#123;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var taskList = [</span><br><span class="line">  process1,</span><br><span class="line">  process2,</span><br><span class="line">  process3</span><br><span class="line">]</span><br><span class="line">next(err, result) &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  </span><br><span class="line">  var current = taskList.shift();</span><br><span class="line">  </span><br><span class="line">  current &amp;&amp; current(result);</span><br><span class="line">&#125;</span><br><span class="line">next();</span><br></pre></td></tr></table></figure>
-<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ul>
-<li><p>在node中让一组异步操作顺序执行的套路叫做流程控制，而这其中又分为串行流程和并行流程</p>
-<h2 id="串行流程"><a href="#串行流程" class="headerlink" title="串行流程"></a>串行流程</h2><ul>
-<li>所谓串行流程，即一个接着一个做的流程叫做串行流程，上述代码即一个串行流程的实现。</li>
-<li>首先有三个操作，顺序依次为process1，process2，process3，</li>
-<li>整个过程的核心是这个next函数，跟node一些框架中交出控制权的next名字是一样的</li>
-<li>思路就是按照索引的顺序执行函数，函数中异步调用的返回值，作为下一个next中执行的函数的参数，保证了数据不会丢失。</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
     </div>
-    
-    
-    
+</footer>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/Node编程基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/11/Node编程基础/" itemprop="url">Node编程基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T13:59:29+08:00">
-                2018-01-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Node编程基础"><a href="#Node编程基础" class="headerlink" title="Node编程基础"></a>Node编程基础</h1><h2 id="如何组织代码"><a href="#如何组织代码" class="headerlink" title="如何组织代码"></a>如何组织代码</h2><blockquote>
-<p>模块是Node让代码易于重用的一种组织和包装方式</p>
-</blockquote>
-<ul>
-<li>传统方式按逻辑把单个文件分为多个文件，但这些文件互相引用的同时会产生全局变量污染的问题</li>
-<li>Node模块打包代码是为了重用，但它们不会改变全局作用域</li>
-<li>Node模块允许你从被引入文件中选择要你暴露给程序的函数和变量，如果模块返回的函数和变量不止一个，可以把它们作为exports对象的属性，否则就使用module.exports</li>
-</ul>
-<h3 id="如何创建模块"><a href="#如何创建模块" class="headerlink" title="如何创建模块"></a>如何创建模块</h3><ul>
-<li>模块既可能是一个文件，也可能是包含一个或多个文件的目录。如果模块是一个目录，Node通常会在这个目录下找一个叫index.js的文件作为模块的入口</li>
-<li>使用模块要用到require函数，require是Node中少数几个同步I/O操作之一</li>
-</ul>
-<h4 id="用node-modules重用模块"><a href="#用node-modules重用模块" class="headerlink" title="用node_modules重用模块"></a>用node_modules重用模块</h4><ul>
-<li><p>要求模块在文件系统中使用相对路径存放，对于组织程序特定的代码很有帮助，但是与他人共享代码却用处不大。Node的node_modules机制可以不必知道模块在文件系统中的具体位置。</p>
-</li>
-<li><p>node_modules的搜寻机制如下：</p>
-<p>1.开始在文件同一目录下寻找；</p>
-<p>2.没有找到，就在当前目录node_modules下找</p>
-<p>3.没有找到，进入父目录，再找当前目录node_modules中有没有，重复3；</p>
-<p>4.没有找到，找环境变量NODE_PATH指定目录中是否存在；</p>
-<p>5没有找到，异常。</p>
-</li>
-</ul>
-<h2 id="异步编程技术"><a href="#异步编程技术" class="headerlink" title="异步编程技术"></a>异步编程技术</h2><ul>
-<li><p>事件发生会触发响应逻辑。</p>
-</li>
-<li><p>在Node事件里流行两种响应逻辑的管理方式：</p>
-<ol>
-<li><p>回调</p>
-<blockquote>
-<p>回调通常用来定义一次性响应逻辑。比如数据库查询，可以指定一个回调函数来确定如何处理查询结果。这个回调函数可能会显示数据数据库查询结果，根据这些结果做些计算，或者以查询结果为参数执行另一个回调函数</p>
-</blockquote>
-</li>
-<li><p>事件监听</p>
-<blockquote>
-<p>事件监听器，本质上也是一个回调，不同的是，它跟一个事件相关联。在Node中，当有HTTP请求过来时，此时服务器会产生一个事件，事件监听器就可以监听这个事件，并添加一些响应的逻辑。</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>一个Node HTTP服务器实例就是一个事件发射器</p>
-</li>
-<li><p>能够继承和添加事件发射及处理能力的类（EventEmitter）</p>
-</li>
-</ul>
-<p>（未完待续）</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/基本视觉格式化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/11/基本视觉格式化/" itemprop="url">基本视觉格式化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T13:48:33+08:00">
-                2018-01-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="基本视觉格式化"><a href="#基本视觉格式化" class="headerlink" title="基本视觉格式化"></a>基本视觉格式化</h1><h2 id="基本框"><a href="#基本框" class="headerlink" title="基本框"></a>基本框</h2><ul>
-<li>css假定每个元素都会生成一个或多个矩形框，这称为元素框。各元素框中心有一个内容区。这个内容区周围有可选的内边距，边框和外边距。</li>
-</ul>
-<h2 id="包含块（布局上下文）"><a href="#包含块（布局上下文）" class="headerlink" title="包含块（布局上下文）"></a>包含块（布局上下文）</h2><ul>
-<li>每个元素都相对于其包含块摆放。正常流中的一个元素，其包含块由最近的块级祖先框、表单元格或行内块祖先框的内容边界构成。</li>
-</ul>
-<blockquote>
-<p>正常流是指西方语言文本从左向右、从上向下显示。大多数元素都在正常流中，除了浮动或定位元素。</p>
-</blockquote>
-<h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><ul>
-<li>一般一个基本框从左到右有这几个部分：<ol>
-<li>左外边界</li>
-<li>左外边距</li>
-<li>左边框</li>
-<li>左内边距</li>
-<li>左内边界</li>
-<li>内容区宽度</li>
-<li>右内边界</li>
-<li>右内边距</li>
-<li>右边框</li>
-<li>右外边距</li>
-<li>右外边界</li>
-</ol>
-</li>
-<li>一般地，一个元素的宽度（width）被定义为从左内边界到右内边界的距离，高度同理。高度和宽度属性都可以应用到元素。</li>
-<li>不同的宽度、高度、内边距和外边距相结合，就可以确定文档的布局。</li>
-</ul>
-<h3 id="水平格式化"><a href="#水平格式化" class="headerlink" title="水平格式化"></a>水平格式化</h3><ul>
-<li>区分width和可见元素框的宽度，width属性是不包含padding和margin的（例外的是使用了CSS3的box-sizing），而可见元素框宽度是包含了padding和margin的</li>
-<li>有个规则，正常流中块级元素框的水平部分总和就等于父元素width。这一句话即所有子元素的width加上它们的左、右内边距，边框和外边距就是父元素的width。</li>
-</ul>
-<h4 id="水平属性"><a href="#水平属性" class="headerlink" title="水平属性"></a>水平属性</h4><ul>
-<li>水平格式化有7大属性，从左至右，分别是：margin-left, border-left,padding-left,width,padding-right,border-right,margin-right。这7个属性的值加在一起必须是元素包含块的宽度，这往往是块元素的的父元素的width。</li>
-<li>这7大属性只有其中3个可以设置为auto（width，margin-left,margin-right）</li>
-</ul>
-<h4 id="使用auto（不考虑3个值以外的属性）"><a href="#使用auto（不考虑3个值以外的属性）" class="headerlink" title="使用auto（不考虑3个值以外的属性）"></a>使用auto（不考虑3个值以外的属性）</h4><ol>
-<li>3个auto（margin-left,width,margin-right均为auto），其中width会占满父元素width，而margin-left,margin-right为0</li>
-<li>2个auto（比如margin-left,width为auto），这时设置auto的属性会为0，width会将父元素width的剩余空间占满</li>
-<li>1个auto，如果设置3个值其中一个为auto，那么设置auto的属性会确定所需的长度，保证3个值加起来等于父元素的width</li>
-<li>0个auto同时三者设置的和超过父元素width，则margin-right会为auto。</li>
-</ol>
-<p>（未完待续）</p>
-<h4 id="负外边距"><a href="#负外边距" class="headerlink" title="负外边距"></a>负外边距</h4><ul>
-<li>外边距可以为负</li>
-<li>7个水平属性总和要等于父元素的width，严格的说这个总和不能比包含块更宽。所以当外边距为负时子元素的width会超过父元素width，达到一种超出的效果</li>
-<li>只要所有属性都是大于或等于0的，元素就不会大于父元素的内容区</li>
-</ul>
-<h4 id="百分数"><a href="#百分数" class="headerlink" title="百分数"></a>百分数</h4><ul>
-<li>值声明为长度还是百分数，并没有改变上述水平格式化规则</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/09/前端工作遇到的小知识点/" itemprop="url">前端工作遇到的小知识点</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-09T10:21:41+08:00">
-                2018-01-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟</li>
-<li>微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。</li>
-<li>文本溢出无法实现时，使用height,line-height,overflow做</li>
-<li>做列表勾选同步时，前端修改了数据勾选状态，如果请求后端同步时失败，应回滚前端勾选状态，这中列表数据自带勾选状态的做法，也是一种性能优化的经验</li>
-<li>接口全局配置，如果有两套环境（生产和测试），在页面里用到相关接口url，必须通过配置文件来引用，而不是直接写，如果有不同，就切分字符串，不然你绝对会不停的改来改去。</li>
-<li>原生小程序，setData方法绝对不能set一个undefined值，否则真机会报一个null的错误，同时定位这种错误的方法是打console看这个null的log在console的前面还是后面来定位，巨坑哦</li>
-</ol>
-<p>此文长期更新，遇到什么就写什么，mark</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/html标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/html标签/" itemprop="url">html标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-05T13:24:08+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="htmls所有标签"><a href="#htmls所有标签" class="headerlink" title="htmls所有标签"></a>htmls所有标签</h1><ul>
-<li>a</li>
-<li>abbr</li>
-<li>acronym</li>
-<li>address</li>
-<li>applet</li>
-<li>area</li>
-<li>article</li>
-<li>aside</li>
-<li>audio</li>
-<li>b</li>
-<li>base</li>
-<li>basefont</li>
-<li>bdi</li>
-<li>bdo</li>
-<li>bgsound</li>
-<li>big</li>
-<li>blink</li>
-<li>blockquote</li>
-<li>body</li>
-<li>br</li>
-<li>button</li>
-<li>canvas</li>
-<li>caption</li>
-<li>center</li>
-<li>cite</li>
-<li>code</li>
-<li>col</li>
-<li>colgroup</li>
-<li>command</li>
-<li>content</li>
-<li>data</li>
-<li>datalist</li>
-<li>dd</li>
-<li>del</li>
-<li>details</li>
-<li>dfn</li>
-<li>dialog</li>
-<li>dir</li>
-<li>div</li>
-<li>dl</li>
-<li>dt</li>
-<li>element</li>
-<li>em</li>
-<li>embed</li>
-<li>fieldset</li>
-<li>figcaption</li>
-<li>figure</li>
-<li>font</li>
-<li>footer</li>
-<li>form</li>
-<li>frame</li>
-<li>frameset</li>
-<li>h1~h6</li>
-<li>head</li>
-<li>header</li>
-<li>hgroup</li>
-<li>hr</li>
-<li>html</li>
-<li>i</li>
-<li>iframe</li>
-<li>image(请勿使用，从未实现)</li>
-<li>img</li>
-<li>input</li>
-<li>ins</li>
-<li>isindex</li>
-<li>kbd</li>
-<li>keygen</li>
-<li>label</li>
-<li>legend</li>
-<li>li</li>
-<li>link</li>
-<li>listing</li>
-<li>main</li>
-<li>map</li>
-<li>mark</li>
-<li>marquee</li>
-<li>menu</li>
-<li>menuitem</li>
-<li>meta</li>
-<li>meter</li>
-<li>multicol</li>
-<li>nav</li>
-<li>nextid</li>
-<li>nobr</li>
-<li>noembed</li>
-<li>noframes</li>
-<li>noscript</li>
-<li>object</li>
-<li>ol</li>
-<li>optgroup</li>
-<li>option</li>
-<li>output</li>
-<li>p</li>
-<li>param</li>
-<li>picture</li>
-<li>plaintext</li>
-<li>pre</li>
-<li>progress</li>
-<li>q</li>
-<li>rp</li>
-<li>rt</li>
-<li>rtc</li>
-<li>ruby</li>
-<li>s</li>
-<li>samp</li>
-<li>script</li>
-<li>section</li>
-<li>select</li>
-<li>shadow</li>
-<li>slot</li>
-<li>small</li>
-<li>Source</li>
-<li>spacer</li>
-<li>span</li>
-<li>strike</li>
-<li>strong</li>
-<li>style</li>
-<li>sub</li>
-<li>summary</li>
-<li>sup</li>
-<li>table</li>
-<li>tbody</li>
-<li>td</li>
-<li>template</li>
-<li>textarea</li>
-<li>tfoot</li>
-<li>th</li>
-<li>thead</li>
-<li>time</li>
-<li>title</li>
-<li>tr</li>
-<li>track</li>
-<li>tt</li>
-<li>u</li>
-<li>ul</li>
-<li>var</li>
-<li>video</li>
-<li>wbr</li>
-<li>xmp</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/JS对象漫谈/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/26/JS对象漫谈/" itemprop="url">JS对象漫谈</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T12:18:14+08:00">
-                2017-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="如何转为number"><a href="#如何转为number" class="headerlink" title="如何转为number"></a>如何转为number</h1><ul>
-<li>Number(‘1’) === 1</li>
-<li>parseInt(‘1’, 10) === 1</li>
-<li>parseFloat(‘1.23’) === 1.23</li>
-<li>‘1’ - 0 </li>
-<li>+‘1’</li>
-</ul>
-<h1 id="全局对象window"><a href="#全局对象window" class="headerlink" title="全局对象window"></a>全局对象window</h1><ul>
-<li>浏览器在加载时首先会创建window对象</li>
-<li>window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, history, document等）</li>
-<li>document属于dom规范范畴 ,history属于bom规范范畴</li>
-</ul>
-<h1 id="详解Number"><a href="#详解Number" class="headerlink" title="详解Number"></a>详解Number</h1><ul>
-<li>Number(‘1’) 类型转换</li>
-<li>var n = new Number(1) 1 =&gt; {valueOf(): 1,..},通过valueOf获取到原始值1</li>
-<li>使用直接量赋值 var n = 1;在早期是没有toString方法的，而现在直接使用toString会临时转换为Number对象包装后的“1”然后使用toString，最后把这个包装对象丢掉（磨砂次）,这就是为什么给n.xxx = 1后，然后取n.xxx是undefined的原因</li>
-</ul>
-<h1 id="parseInt-与-toString进制问题"><a href="#parseInt-与-toString进制问题" class="headerlink" title="parseInt 与 toString进制问题"></a>parseInt 与 toString进制问题</h1><ul>
-<li>parseInt第二个形参传入一个进制，代表将第一个实参是什么进制的，然后转化为10进制输出</li>
-<li>toString可以传入一个参数代表将要转化的进制，把调用者转化为对应进制的字符串</li>
-</ul>
-<h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><ul>
-<li>为什么叫slice？外国人切面包叫slice，js slice可以“切”数组，字符串。</li>
-</ul>
-<h1 id="5个falsy值"><a href="#5个falsy值" class="headerlink" title="5个falsy值"></a>5个falsy值</h1><ul>
-<li>0</li>
-<li>NaN</li>
-<li>‘’</li>
-<li>null</li>
-<li>undefined</li>
-<li>false</li>
-</ul>
-<blockquote>
-<p>所有对象都是真值</p>
-</blockquote>
-<h1 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h1><blockquote>
-<p>var o1 = {};</p>
-<p>o1.<strong>proto</strong> ===  Object.prototype</p>
-<p>var n1 = new Number(1)</p>
-</blockquote>
-<p>n1.<strong>proto</strong> === Number.prototype</p>
-<p>n1.<strong>proto</strong>.<strong>proto</strong> === Object.prototype</p>
-<h1 id="proto-和-prototype"><a href="#proto-和-prototype" class="headerlink" title="proto 和 prototype"></a><strong>proto</strong> 和 prototype</h1><p>String.prototype是String的公用属性的引用</p>
-<p>s.<strong>proto</strong> 也是String的公用属性的引用</p>
-<p>var 对象 = new 函数();</p>
-<p>对象.<strong>proto</strong> === 函数.prototype 它们的值是 <a href="原型对象，一个对象或null">[Prototype]</a></p>
-<p>var obj = 函数.prototype</p>
-<p>obj.<strong>proto</strong>  === Object.prototype</p>
-<p>var obj2 = 函数</p>
-<p>obj2.<strong>proto</strong> === Function.prototype</p>
-<p>Function.<strong>proto</strong> === Function.prototype</p>
-<p>Function,prototype.<strong>proto</strong> === Object.prototype</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/19/武汉光谷国际人工智能产业峰会/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/19/武汉光谷国际人工智能产业峰会/" itemprop="url">武汉光谷国际人工智能产业峰会</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-19T11:37:36+08:00">
-                2017-11-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>本文不探讨人工智能深入的知识，只是个人的一些感受与大家分享</p>
-</blockquote>
-<p><img src="./武汉光谷国际人工智能产业峰会/content.jpg" alt="人工智能的趋势"></p>
-<p>是不是治好了你的颈椎病？（逃）</p>
-<h1 id="人工智能强势登场"><a href="#人工智能强势登场" class="headerlink" title="人工智能强势登场"></a>人工智能强势登场</h1><p>记得会场上IEEE Fellow蔡自兴院士说了一句让我印象十分深刻话，他说年轻人不要偷懒哦，小心机器人取代你。对啊，随着人工智能的发展，计算机从计算到感知到认知，可以想象在将来的某一天，机器人也有情感，它将不再是一堆冰冷的钢铁，而是一个有趣的小伙或是一个小姑娘。</p>
-<p>上面这幅图讲述了人工智能可能会替代的职业，从电话推销员到政府职员，涉及面覆盖的很广，我想这只是其中的一部分而不是全部。可见人工智能的威力。</p>
-<h1 id="why-AI？"><a href="#why-AI？" class="headerlink" title="why AI？"></a>why AI？</h1><p>互联网行业是近几年的热门，非计算机专业的人都想来这里捞一桶金，然而随着发展，互联网的流量能挣到的钱正在消失，维护的成本在日益增加。人工智能的处理代替传统人力工作，从一定程度上降低的这方面的成本，所以这是为什么目前国家在大力开展人工智能的建设的原因之一。</p>
-<h1 id="简单的AI思想"><a href="#简单的AI思想" class="headerlink" title="简单的AI思想"></a>简单的AI思想</h1><p>现在有一个场景，国外有些职场人士每天喜欢喝热的咖啡，他们需要看咖啡机里的咖啡是否是满的，是否是热的，是否已经空了等等情况来做出加热，加水等操作，如果把这个交给人工智能来做，应该怎么做呢？</p>
-<p>会上讲到一种思路是使用value function</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th>on</th>
-<th>off</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">full</td>
-<td>-2</td>
-<td>-5</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>value function</p>
-</blockquote>
-<p>左侧代表咖啡机是否装满了，右侧代表是否开启加热功能时的状态，用这种映射关系来指挥计算机。当函数的自变量为-2时，会得到一个状态：咖啡机满了且需要加热。</p>
-<h1 id="个人的奇思妙想"><a href="#个人的奇思妙想" class="headerlink" title="个人的奇思妙想"></a>个人的奇思妙想</h1><p>如果机器人有了情感他会听人类的吗？</p>
-<p>比方说现在用生物技术做出了一种生物，你觉得你能很好的控制它么？</p>
-<p>这就像当老师管学生一样，老师说的大道理再多，学生会去执行吗？</p>
-<p>同理你每天命令有感情的计算机工作，它会不会厌烦了。</p>
-<p>当然，这只是个人拙见，还待科学家解释。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/18/开博大吉/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/18/开博大吉/" itemprop="url">开博大吉</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-18T19:40:30+08:00">
-                2017-11-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="开博大吉"><a href="#开博大吉" class="headerlink" title="开博大吉"></a>开博大吉</h1><blockquote>
-<p>一名初入行的小前端的个人博客,原博客地址博客园酱板鸡。</p>
-</blockquote>
-<p>​                                                            </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/18/Hexo食用教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="林子翔">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1024子翔的程序人生">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/18/Hexo食用教程/" itemprop="url">Hexo食用教程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-18T19:00:30+08:00">
-                2017-11-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote>
-<p>npm install -g hexo-cli</p>
-</blockquote>
-<h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><blockquote>
-<p>hexo init  &lt;你博客存储文件夹名字&gt;</p>
-<p>cd &lt;你博客存储文件夹名字&gt;</p>
-<p>npm i</p>
-</blockquote>
-<h4 id="example"><a href="#example" class="headerlink" title="example"></a>example</h4><blockquote>
-<p>npm init blog</p>
-<p>cd blog</p>
-<p>npm i</p>
-</blockquote>
-<h1 id="修改配置文件-config-yml"><a href="#修改配置文件-config-yml" class="headerlink" title="修改配置文件_config.yml"></a>修改配置文件_config.yml</h1><blockquote>
-<p>deploy: </p>
-<p>​    type: git</p>
-<p>​    repo: <your git="" repository=""></your></p>
-</blockquote>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><blockquote>
-<p>npm install hexo-deployer-git –save</p>
-<p>hexo deploy</p>
-</blockquote>
-<h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><blockquote>
-<p>hexo new <blog name=""> //新建文章</blog></p>
-<p>hexo g       //生成静态件</p>
-<p>hexo deploy          //发布</p>
-</blockquote>
-<h1 id="feel-interesting"><a href="#feel-interesting" class="headerlink" title="feel interesting?"></a>feel interesting?</h1><p>do it!</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">林子翔</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">Artikel</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">8</span>
-                  <span class="site-state-item-name">Tags</span>
-                
-              </div>
-            
-
-          </nav>
-
-          
-
-          <div class="links-of-author motion-element">
-            
-          </div>
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">林子翔</span>
 
-  
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/&title=1024子翔的程序人生&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/&title=1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=1024子翔的程序人生&url=http://yoursite.com/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABW0lEQVR42u3aQQ7DIAxE0dz/0qnUVaUUMjNOF7W/VxVKw8sCMIbjkON8x6r9M/T/PhCwYDVindu4PqO0XNv1vmDBmszaD2y9S/33jQEWLFjC6/QFGBYsWL9muV3CggVrz1KSZmWy0JPvx3J5WLBasCrLbSVRfri+BQvW37JOM9xlOwtYsKax9CLRfhRXtrhGBgELVlPWSpptSvVk+qYvWLBgRUWiynWEL++BBQuW0KUy1BXWsgUWrGEsN2nOQNJRij67wILVlKUUZCvLuVJsks5gYcFqyqqUbt0jE2PqgQVrMMu9fJAdcCqTCCxY01jZQUi2uS2d/MCC1ZpVuXCQlWul1BwWrGGsLOXdd6kv5PVEHBasTqxsUtDTZXcqgQVrMisr/WTbVOkZWLBgyYPcPcMxMgVYsGA9tL1Uik3Lz4AFayQrS5rd1NmYE2DBGsbKrgtkxFI1CxasnqwXXY7FbVPN83MAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
-  <span class="post-meta-divider">|</span>
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
 
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
