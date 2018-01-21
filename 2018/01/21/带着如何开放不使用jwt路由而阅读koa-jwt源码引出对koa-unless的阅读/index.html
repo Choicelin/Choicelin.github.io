@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unl">
-<meta property="og:updated_time" content="2018-01-21T06:06:18.979Z">
+<meta property="og:updated_time" content="2018-01-21T06:07:12.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读">
 <meta name="twitter:description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unl">
@@ -306,7 +306,7 @@
 <ol>
 <li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"><span class="comment">//这里获取当前要跳过的中间件实例</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这里判断参数匹配的话，就把控制权转移下个中间件，从而跳过该中间件</span></span><br></pre></td></tr></table></figure>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next; <span class="comment">//这里判断参数匹配的话，就把控制权转移下个中间件，从而跳过该中间件</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line"><span class="comment">//这一句结合上面一句来看就是参数不匹配就执行当前中间件</span></span><br></pre></td></tr></table></figure>
 </li>
