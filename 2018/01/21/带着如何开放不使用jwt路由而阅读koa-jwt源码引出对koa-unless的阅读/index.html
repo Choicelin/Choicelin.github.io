@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="AI," />
+  <meta name="keywords" content="node," />
 
 
 
@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="本文不探讨人工智能深入的知识，只是个人的一些感受与大家分享   是不是治好了你的颈椎病？（逃） 人工智能强势登场记得会场上IEEE Fellow蔡自兴院士说了一句让我印象十分深刻话，他说年轻人不要偷懒哦，小心机器人取代你。对啊，随着人工智能的发展，计算机从计算到感知到认知，可以想象在将来的某一天，机器人也有情感，它将不">
-<meta name="keywords" content="AI">
+<meta name="description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解">
+<meta name="keywords" content="node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="武汉光谷国际人工智能产业峰会">
-<meta property="og:url" content="http://yoursite.com/2017/11/19/武汉光谷国际人工智能产业峰会/index.html">
+<meta property="og:title" content="带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读">
+<meta property="og:url" content="http://yoursite.com/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="本文不探讨人工智能深入的知识，只是个人的一些感受与大家分享   是不是治好了你的颈椎病？（逃） 人工智能强势登场记得会场上IEEE Fellow蔡自兴院士说了一句让我印象十分深刻话，他说年轻人不要偷懒哦，小心机器人取代你。对啊，随着人工智能的发展，计算机从计算到感知到认知，可以想象在将来的某一天，机器人也有情感，它将不再是一堆冰冷的钢铁，而是一个有趣的小伙或是一个小姑娘。 上面这幅图讲述了人工智">
-<meta property="og:image" content="http://yoursite.com/2017/11/19/武汉光谷国际人工智能产业峰会/武汉光谷国际人工智能产业峰会/content.jpg">
-<meta property="og:updated_time" content="2017-11-19T04:23:19.000Z">
+<meta property="og:description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unl">
+<meta property="og:updated_time" content="2018-01-21T06:06:18.979Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="武汉光谷国际人工智能产业峰会">
-<meta name="twitter:description" content="本文不探讨人工智能深入的知识，只是个人的一些感受与大家分享   是不是治好了你的颈椎病？（逃） 人工智能强势登场记得会场上IEEE Fellow蔡自兴院士说了一句让我印象十分深刻话，他说年轻人不要偷懒哦，小心机器人取代你。对啊，随着人工智能的发展，计算机从计算到感知到认知，可以想象在将来的某一天，机器人也有情感，它将不再是一堆冰冷的钢铁，而是一个有趣的小伙或是一个小姑娘。 上面这幅图讲述了人工智">
-<meta name="twitter:image" content="http://yoursite.com/2017/11/19/武汉光谷国际人工智能产业峰会/武汉光谷国际人工智能产业峰会/content.jpg">
+<meta name="twitter:title" content="带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读">
+<meta name="twitter:description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unl">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/19/武汉光谷国际人工智能产业峰会/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/"/>
 
 
 
 
 
-  <title>武汉光谷国际人工智能产业峰会 | 1024子翔的程序人生</title>
+  <title>带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读 | 1024子翔的程序人生</title>
   
 
 
@@ -234,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/19/武汉光谷国际人工智能产业峰会/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林子翔">
@@ -251,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">武汉光谷国际人工智能产业峰会</h1>
+          <h1 class="post-title" itemprop="name headline">带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</h1>
         
 
         <div class="post-meta">
@@ -263,8 +261,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-19T11:37:36+08:00">
-                2017-11-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T13:24:01+08:00">
+                2018-01-21
               </time>
             
 
@@ -301,41 +299,19 @@
       
 
       
-        <blockquote>
-<p>本文不探讨人工智能深入的知识，只是个人的一些感受与大家分享</p>
-</blockquote>
-<p><img src="./武汉光谷国际人工智能产业峰会/content.jpg" alt="人工智能的趋势"></p>
-<p>是不是治好了你的颈椎病？（逃）</p>
-<h1 id="人工智能强势登场"><a href="#人工智能强势登场" class="headerlink" title="人工智能强势登场"></a>人工智能强势登场</h1><p>记得会场上IEEE Fellow蔡自兴院士说了一句让我印象十分深刻话，他说年轻人不要偷懒哦，小心机器人取代你。对啊，随着人工智能的发展，计算机从计算到感知到认知，可以想象在将来的某一天，机器人也有情感，它将不再是一堆冰冷的钢铁，而是一个有趣的小伙或是一个小姑娘。</p>
-<p>上面这幅图讲述了人工智能可能会替代的职业，从电话推销员到政府职员，涉及面覆盖的很广，我想这只是其中的一部分而不是全部。可见人工智能的威力。</p>
-<h1 id="why-AI？"><a href="#why-AI？" class="headerlink" title="why AI？"></a>why AI？</h1><p>互联网行业是近几年的热门，非计算机专业的人都想来这里捞一桶金，然而随着发展，互联网的流量能挣到的钱正在消失，维护的成本在日益增加。人工智能的处理代替传统人力工作，从一定程度上降低的这方面的成本，所以这是为什么目前国家在大力开展人工智能的建设的原因之一。</p>
-<h1 id="简单的AI思想"><a href="#简单的AI思想" class="headerlink" title="简单的AI思想"></a>简单的AI思想</h1><p>现在有一个场景，国外有些职场人士每天喜欢喝热的咖啡，他们需要看咖啡机里的咖啡是否是满的，是否是热的，是否已经空了等等情况来做出加热，加水等操作，如果把这个交给人工智能来做，应该怎么做呢？</p>
-<p>会上讲到一种思路是使用value function</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th>on</th>
-<th>off</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">full</td>
-<td>-2</td>
-<td>-5</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>value function</p>
-</blockquote>
-<p>左侧代表咖啡机是否装满了，右侧代表是否开启加热功能时的状态，用这种映射关系来指挥计算机。当函数的自变量为-2时，会得到一个状态：咖啡机满了且需要加热。</p>
-<h1 id="个人的奇思妙想"><a href="#个人的奇思妙想" class="headerlink" title="个人的奇思妙想"></a>个人的奇思妙想</h1><p>如果机器人有了情感他会听人类的吗？</p>
-<p>比方说现在用生物技术做出了一种生物，你觉得你能很好的控制它么？</p>
-<p>这就像当老师管学生一样，老师说的大道理再多，学生会去执行吗？</p>
-<p>同理你每天命令有感情的计算机工作，它会不会厌烦了。</p>
-<p>当然，这只是个人拙见，还待科学家解释。</p>
+        <h1 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h1><p>想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？</p>
+<h1 id="尝试获取资料"><a href="#尝试获取资料" class="headerlink" title="尝试获取资料"></a>尝试获取资料</h1><p>于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unless库，这个库是干嘛的呢，实际是让你指定的路由跳过当前的中间件，那么看看源码。</p>
+<h1 id="阅读koa-unless源码"><a href="#阅读koa-unless源码" class="headerlink" title="阅读koa-unless源码"></a>阅读koa-unless源码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** Creates a wrapper middleware that verifies if the original middleware should be skipped. */</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// If a custom function was passed directly, creates a new object literal that holds it as a property called custom.</span></span><br><span class="line">  <span class="keyword">var</span> opts = <span class="keyword">typeof</span> options === <span class="string">'function'</span> ? &#123; <span class="attr">custom</span>: options &#125; : options;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Returns the middleware that wraps the original one.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> *(<span class="params">next</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> requestedUrl = url.parse((opts.useOriginalUrl ? <span class="keyword">this</span>.originalUrl : <span class="keyword">this</span>.url) || <span class="string">''</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// any match means 'skip original middleware'</span></span><br><span class="line">    <span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>关键地方</p>
+<ol>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"><span class="comment">//这里获取当前要跳过的中间件实例</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这里判断参数匹配的话，就把控制权转移下个中间件，从而跳过该中间件</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line"><span class="comment">//这一句结合上面一句来看就是参数不匹配就执行当前中间件</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总的思路是不执行jwt的验证的中间件，思路其实也很直接，那我就愉快的借用一下罗。~_~!</p>
 
       
     </div>
@@ -353,7 +329,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/AI/" rel="tag"># AI</a>
+            <a href="/tags/node/" rel="tag"># node</a>
           
         </div>
       
@@ -366,8 +342,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/18/开博大吉/" rel="next" title="开博大吉">
-                <i class="fa fa-chevron-left"></i> 开博大吉
+              <a href="/2018/01/18/node流程控制之串行/" rel="next" title="node流程控制之串行">
+                <i class="fa fa-chevron-left"></i> node流程控制之串行
               </a>
             
           </div>
@@ -375,10 +351,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/26/JS对象漫谈/" rel="prev" title="JS对象漫谈">
-                JS对象漫谈 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -503,7 +475,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#人工智能强势登场"><span class="nav-number">1.</span> <span class="nav-text">人工智能强势登场</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#why-AI？"><span class="nav-number">2.</span> <span class="nav-text">why AI？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单的AI思想"><span class="nav-number">3.</span> <span class="nav-text">简单的AI思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个人的奇思妙想"><span class="nav-number">4.</span> <span class="nav-text">个人的奇思妙想</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题引入"><span class="nav-number">1.</span> <span class="nav-text">问题引入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试获取资料"><span class="nav-number">2.</span> <span class="nav-text">尝试获取资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阅读koa-unless源码"><span class="nav-number">3.</span> <span class="nav-text">阅读koa-unless源码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

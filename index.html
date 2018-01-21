@@ -228,6 +228,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="林子翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="1024子翔的程序人生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/" itemprop="url">带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T13:24:01+08:00">
+                2018-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h1><p>想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？</p>
+<h1 id="尝试获取资料"><a href="#尝试获取资料" class="headerlink" title="尝试获取资料"></a>尝试获取资料</h1><p>于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unless库，这个库是干嘛的呢，实际是让你指定的路由跳过当前的中间件，那么看看源码。</p>
+<h1 id="阅读koa-unless源码"><a href="#阅读koa-unless源码" class="headerlink" title="阅读koa-unless源码"></a>阅读koa-unless源码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** Creates a wrapper middleware that verifies if the original middleware should be skipped. */</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// If a custom function was passed directly, creates a new object literal that holds it as a property called custom.</span></span><br><span class="line">  <span class="keyword">var</span> opts = <span class="keyword">typeof</span> options === <span class="string">'function'</span> ? &#123; <span class="attr">custom</span>: options &#125; : options;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Returns the middleware that wraps the original one.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> *(<span class="params">next</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> requestedUrl = url.parse((opts.useOriginalUrl ? <span class="keyword">this</span>.originalUrl : <span class="keyword">this</span>.url) || <span class="string">''</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// any match means 'skip original middleware'</span></span><br><span class="line">    <span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>关键地方</p>
+<ol>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"><span class="comment">//这里获取当前要跳过的中间件实例</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这里判断参数匹配的话，就把控制权转移下个中间件，从而跳过该中间件</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line"><span class="comment">//这一句结合上面一句来看就是参数不匹配就执行当前中间件</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总的思路是不执行jwt的验证的中间件，思路其实也很直接，那我就愉快的借用一下罗。~_~!</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/18/node流程控制之串行/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1708,7 +1840,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
