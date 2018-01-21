@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unl">
-<meta property="og:updated_time" content="2018-01-21T06:07:12.747Z">
+<meta property="og:updated_time" content="2018-01-21T06:08:37.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读">
 <meta name="twitter:description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unl">
@@ -312,6 +312,7 @@
 </li>
 </ol>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总的思路是不执行jwt的验证的中间件，思路其实也很直接，那我就愉快的借用一下罗。~_~!</p>
+<h1 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h1><p>国外源码注释真的很清晰，其实在工作中应该也效仿。</p>
 
       
     </div>
@@ -475,7 +476,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题引入"><span class="nav-number">1.</span> <span class="nav-text">问题引入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试获取资料"><span class="nav-number">2.</span> <span class="nav-text">尝试获取资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阅读koa-unless源码"><span class="nav-number">3.</span> <span class="nav-text">阅读koa-unless源码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题引入"><span class="nav-number">1.</span> <span class="nav-text">问题引入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尝试获取资料"><span class="nav-number">2.</span> <span class="nav-text">尝试获取资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阅读koa-unless源码"><span class="nav-number">3.</span> <span class="nav-text">阅读koa-unless源码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ps"><span class="nav-number">5.</span> <span class="nav-text">ps</span></a></li></ol></div>
             
 
           </div>
