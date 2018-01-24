@@ -13,24 +13,24 @@
     
     
     
-    <title>前端工作遇到的小知识点 | 1024子翔的程序人生</title>
+    <title>解决小程序音频自定义组件不同时播放问题 | 1024子翔的程序人生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="工作">
-    <meta name="description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
-<meta name="keywords" content="工作">
+    <meta name="keywords" content="工作经验">
+    <meta name="description" content="需求首先是一个播放的气泡，点击播放src音频，但是是一组列表，有许多这样的气泡，点其中一个播放后，再点其他的，前一个要停止播放。 分析这种其实是很好实现的，如果是直接写的话。但是现在用上了小程序的自定义组件，每个组件都是独立的没有联系，唯一的联系是父组件，这个时候，我们该怎么办呢。 解决方案由于涉及保密协议，就不上代码，说说思路。 思路：  用广播，如果该组件播放时，就发出一个广播，让其他组件关闭">
+<meta name="keywords" content="工作经验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端工作遇到的小知识点">
-<meta property="og:url" content="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/index.html">
+<meta property="og:title" content="解决小程序音频自定义组件不同时播放问题">
+<meta property="og:url" content="http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
-<meta property="og:updated_time" content="2018-01-24T09:41:43.876Z">
+<meta property="og:description" content="需求首先是一个播放的气泡，点击播放src音频，但是是一组列表，有许多这样的气泡，点其中一个播放后，再点其他的，前一个要停止播放。 分析这种其实是很好实现的，如果是直接写的话。但是现在用上了小程序的自定义组件，每个组件都是独立的没有联系，唯一的联系是父组件，这个时候，我们该怎么办呢。 解决方案由于涉及保密协议，就不上代码，说说思路。 思路：  用广播，如果该组件播放时，就发出一个广播，让其他组件关闭">
+<meta property="og:updated_time" content="2018-01-24T16:43:00.565Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端工作遇到的小知识点">
-<meta name="twitter:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
+<meta name="twitter:title" content="解决小程序音频自定义组件不同时播放问题">
+<meta name="twitter:description" content="需求首先是一个播放的气泡，点击播放src音频，但是是一组列表，有许多这样的气泡，点其中一个播放后，再点其他的，前一个要停止播放。 分析这种其实是很好实现的，如果是直接写的话。但是现在用上了小程序的自定义组件，每个组件都是独立的没有联系，唯一的联系是父组件，这个时候，我们该怎么办呢。 解决方案由于涉及保密协议，就不上代码，说说思路。 思路：  用广播，如果该组件播放时，就发出一个广播，让其他组件关闭">
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
@@ -111,7 +111,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">前端工作遇到的小知识点</div>
+        <div class="flex-col header-title ellipsis">解决小程序音频自定义组件不同时播放问题</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -133,11 +133,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">前端工作遇到的小知识点</h1>
+        <h1 class="title">解决小程序音频自定义组件不同时播放问题</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-01-09T02:21:41.000Z" itemprop="datePublished" class="page-time">
-  2018-01-09
+                <time datetime="2018-01-24T16:22:07.000Z" itemprop="datePublished" class="page-time">
+  2018-01-25
 </time>
 
 
@@ -153,14 +153,21 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#需求"><span class="post-toc-number">1.</span> <span class="post-toc-text">需求</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">分析</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#解决方案"><span class="post-toc-number">3.</span> <span class="post-toc-text">解决方案</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">4.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        </nav>
+    </aside>
 
-<article id="post-前端工作遇到的小知识点"
+
+<article id="post-解决小程序音频自定义组件不同时播放问题"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">前端工作遇到的小知识点</h1>
+        <h1 class="post-card-title">解决小程序音频自定义组件不同时播放问题</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-01-09 10:21:41" datetime="2018-01-09T02:21:41.000Z"  itemprop="datePublished">2018-01-09</time>
+            <time class="post-time" title="2018-01-25 00:22:07" datetime="2018-01-24T16:22:07.000Z"  itemprop="datePublished">2018-01-25</time>
 
             
 
@@ -173,17 +180,19 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <ol>
-<li>顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟</li>
-<li>微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。</li>
-<li>文本溢出无法实现时，使用height,line-height,overflow做</li>
-<li>做列表勾选同步时，前端修改了数据勾选状态，如果请求后端同步时失败，应回滚前端勾选状态，这中列表数据自带勾选状态的做法，也是一种性能优化的经验</li>
-<li>接口全局配置，如果有两套环境（生产和测试），在页面里用到相关接口url，必须通过配置文件来引用，而不是直接写，如果有不同，就切分字符串，不然你绝对会不停的改来改去。</li>
-<li>原生小程序，setData方法绝对不能set一个undefined值，否则真机会报一个null的错误，同时定位这种错误的方法是打console看这个null的log在console的前面还是后面来定位，巨坑哦</li>
-<li>原生小程序组件在一个页面多次使用，并且要实现使用父组件的data作为组件的property，即在子组件要改变父组件data，来引起子组件properties变化，从而引起视图变化，达到一中父子组件通信的目的，可以充分使用triggerEvent方法，并且在触发时传入type字符串，以实现多态。</li>
-<li>遇到一个问题，小程序在audio播放toggle时flag不生效，起初以为是flag的原因，结果是因为每次都生成了新的播放实例，在新的播放实例上调stop是无效的</li>
+            <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>首先是一个播放的气泡，点击播放src音频，但是是一组列表，有许多这样的气泡，点其中一个播放后，再点其他的，前一个要停止播放。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>这种其实是很好实现的，如果是直接写的话。但是现在用上了小程序的自定义组件，每个组件都是独立的没有联系，唯一的联系是父组件，这个时候，我们该怎么办呢。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>由于涉及保密协议，就不上代码，说说思路。</p>
+<p>思路：</p>
+<ol>
+<li>用广播，如果该组件播放时，就发出一个广播，让其他组件关闭播放。</li>
 </ol>
-<p>此文长期更新，遇到什么就写什么，mark</p>
+<p>这里知识用到观察者模式（订阅与发布），具体怎么实现，有很多方式，本项目中的实现是我的师父写的，然而他写的有个地方有问题，他用了Promise处理监听的回调，然而Promise resolve以后，它的生命就到此为止了（个人目前的理解是这样的，如有勘误，请务必指出），所以只能执行一次回调，而不能多次监听，触发回调。我把这里改了，实现了一次监听，有触发随时执行。</p>
+<ol>
+<li>关键问题，我怎么样只广播非当前播放的气泡呢。设一个属性，每次给一个变化的值进去，利用observer确定是当前组件，当前组件执行一个逻辑，这个逻辑就是避免被广播到</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>程序出不来，大部分是代码原因，继续搞，继续搞就能看到光明。</p>
+<p>我的每篇文章都不长，但都可以说明一个问题，欢迎阅读。</p>
 
         </div>
 
@@ -192,7 +201,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-01-24T09:41:43.876Z" itemprop="dateUpdated">2018-01-24 17:41:43</time>
+    Last updated: <time datetime="2018-01-24T16:43:00.565Z" itemprop="dateUpdated">2018-01-25 00:43:00</time>
 </span><br>
 
 
@@ -218,7 +227,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作/">工作</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作经验/">工作经验</a></li></ul>
 
 
             
@@ -228,7 +237,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/&title=《前端工作遇到的小知识点》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/&title=《解决小程序音频自定义组件不同时播放问题》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -238,22 +247,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/&title=《前端工作遇到的小知识点》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/&title=《解决小程序音频自定义组件不同时播放问题》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端工作遇到的小知识点》 — 1024子翔的程序人生&url=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《解决小程序音频自定义组件不同时播放问题》 — 1024子翔的程序人生&url=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -273,21 +282,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/01/11/基本视觉格式化/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">基本视觉格式化</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/01/05/html标签/" id="post-next" class="post-nav-link">
+      <a href="/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">html标签</h4>
+        <h4 class="title">带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</h4>
       </a>
     </div>
   
@@ -402,7 +404,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/&title=《前端工作遇到的小知识点》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/&title=《解决小程序音频自定义组件不同时播放问题》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -412,22 +414,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/&title=《前端工作遇到的小知识点》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/&title=《解决小程序音频自定义组件不同时播放问题》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端工作遇到的小知识点》 — 1024子翔的程序人生&url=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《解决小程序音频自定义组件不同时播放问题》 — 1024子翔的程序人生&url=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/09/前端工作遇到的小知识点/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -438,7 +440,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACu0lEQVR42u3cQW4jMQwEwPz/015gbwsncTcpJV6gdDKC8Vg1hyHRIvLxEa/H3/X8+fma5yufr388re9/66srjy08PDy80da/WslGk7sl32ofcfJbeHh4ePd4eTF4xCsB57C8OOHh4eG9Dy8Bb+6cN994eHh4/yOvjRWSlCApSHh4eHjvw8sb3+LW3z6a/R4OZy14eHh4MW9zAPZbn3/ofA8PDw+vfB3nr902REjCiDwO/nKfeHh4eBd4s1B1MxqVM459Fw8PD+8Crw0F8iOxWYgwGz6IGm48PDy8o7z8GWw2930Lnj+OujDg4eHhXeDlgJyxufMmVh421nh4eHgBbxY9zM6Y8qGuZHQg+gseHh7eBV47PJpvsW2OZ4MCRZSMh4eHd5SXN8ctNYedKlQvqh8eHh7emndqRODUgVmyk2LPeHh4eNd47at5Ezd8jNbwGAwPDw/vAq8dn8oHDtpNzAat6gAXDw8Pb81rG9bZ+NTsYeXF4EWAi4eHh3eNlzfWL1LhcgAr/3tStP75XTw8PLxrvNkB2D6SaBvotkHHw8PDu8HLg4A64YiLRN7Wt/EuHh4e3g1efrtNrNA+71lhKFpqPDw8vKO8PFbYRAZ5QJwXp0+ux8PDw7vGa2PWPbvdbhuI4OHh4d3mJWFBHr/mp/Z5yJusYRiBh4eHN09Th//qbh8ltA9u2L7j4eHhHeLlP9Ae/J+KHmZHZZ+01Hh4eHiHeLOIIbndfoRr1lgP+248PDy8ESZZ7dhTXnLyuxWtPx4eHt4FXvuO3Wzl1DBBXorw8PDw7vGSYjALVfPHcWo8Cw8PD+8nefvYtA2F2zGvNnnAw8PDex/eDDwbTdgMgeHh4eG9Ay8pGLPCMBvnikoLHh4e3jXeLJbdb6UtP/WYAh4eHt4F3uYALD8kaxvx2fHbMM7Aw8PDS3l/ANTcp6yR9nHKAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJklEQVR42u3aQW7jQAwEQP//015grwsr3aS9sCY1pyCRpanxgSFbj0e8nn/Xq988L9era/79/b/3z5/7+MTCxsbGvgk73/T19e229vdJDvflHrCxsbGPY18Xrbzw5Nc/g3X92euffzBiY2Nj/0r2po2ZkfIjw8bGxsbeF7B8c8kBJcf3FXUbGxsb+2vYbZnJC96mdOXhxAdnadjY2Nhfz26D3m/++YP5NjY2NvZXsp/lSgY9bTOzb1pqBTY2NvZB7GS7s8Bg08y0+5m1N9jY2NgnsWcjoVkbk4+ZZge3+s6xsbGxb87Oo9a28ZgN6/PWpa1N2NjY2L+HvV9twPCuw61LLzY2NvbN2e3o//oxs5C4LaXt6KqIB7CxsbFvxU4G6zNwPuhvS9SsQXr5PWNjY2MfxE6C1dn4aVYm9y/6vPwKsbGxsQ9i5zFtXsaS40gK4SZ4ngUS2NjY2Hdkz86jLRhtO7EphFHYgI2NjX0Qu00SZrC25OwLajFawsbGxr45ez+IT5BteJAXpFlUgI2NjX0Se/PPfT7c30ezySiqHU5hY2Njn8HeD+jb1242heptQytsbGzs49j5rWekvFC1Vw6HU9jY2NjHsdvb7bc7K3jtkOvlfbCxsbEPYuc3akPfT7QQ7RPzl5CwsbGx78t+BitpYPK1OaxZH4GNjY19NjvfaHI0s81ttth+qq7k2NjY2DdkJwUsuX7zks0mZmj/io2NjX0GO990O45vA4Y9+7qNeSQfw8bGxr4Vu91KG7vOxkPvTT9+yLexsbGxD2LPgt68wUiahHxtCi02Njb2SexN+Lp/3ScH1KQkPMDGxsY+gj0b688aibZpSXY7iyuwsbGxz2O3bUPbxuTg2XG0BRUbGxv7PPasAbg+oDxI2DQzwwgBGxsb+yD2rBjkW0y28n9K3RCPjY2NfRP2rGglV7Yz+Xw/ySDph5KJjY2NfRx7EwDPeElpLPLqsuhiY2Nj/052/oB3jZ/aADhvWrCxsbGx2xFSXoTaO7QlExsbG/tUdjIqmkWtM+QsMMhLJjY2NvZJ7NnmNhFsGxIkz0pybGxsbOzj2H8AjvhFKEiuE6UAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 

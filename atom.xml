@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-21T06:08:37.784Z</updated>
+  <updated>2018-01-24T16:43:00.565Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决小程序音频自定义组件不同时播放问题</title>
+    <link href="http://yoursite.com/2018/01/25/%E8%A7%A3%E5%86%B3%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%9F%B3%E9%A2%91%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E4%B8%8D%E5%90%8C%E6%97%B6%E6%92%AD%E6%94%BE%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/01/25/解决小程序音频自定义组件不同时播放问题/</id>
+    <published>2018-01-24T16:22:07.000Z</published>
+    <updated>2018-01-24T16:43:00.565Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>首先是一个播放的气泡，点击播放src音频，但是是一组列表，有许多这样的气泡，点其中一个播放后，再点其他的，前一个要停止播放。</p><h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>这种其实是很好实现的，如果是直接写的话。但是现在用上了小程序的自定义组件，每个组件都是独立的没有联系，唯一的联系是父组件，这个时候，我们该怎么办呢。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>由于涉及保密协议，就不上代码，说说思路。</p><p>思路：</p><ol><li>用广播，如果该组件播放时，就发出一个广播，让其他组件关闭播放。</li></ol><p>这里知识用到观察者模式（订阅与发布），具体怎么实现，有很多方式，本项目中的实现是我的师父写的，然而他写的有个地方有问题，他用了Promise处理监听的回调，然而Promise resolve以后，它的生命就到此为止了（个人目前的理解是这样的，如有勘误，请务必指出），所以只能执行一次回调，而不能多次监听，触发回调。我把这里改了，实现了一次监听，有触发随时执行。</p><ol><li>关键问题，我怎么样只广播非当前播放的气泡呢。设一个属性，每次给一个变化的值进去，利用observer确定是当前组件，当前组件执行一个逻辑，这个逻辑就是避免被广播到</li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>程序出不来，大部分是代码原因，继续搞，继续搞就能看到光明。</p><p>我的每篇文章都不长，但都可以说明一个问题，欢迎阅读。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h1&gt;&lt;p&gt;首先是一个播放的气泡，点击播放src音频，但是是一组列表，有许多这样的气泡，点其中一个播放后，再点其他的，前一个要停止播放。&lt;/p&gt;
+&lt;h1
+      
+    
+    </summary>
+    
+    
+      <category term="工作经验" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</title>
@@ -114,9 +138,9 @@
     <link href="http://yoursite.com/2018/01/09/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>http://yoursite.com/2018/01/09/前端工作遇到的小知识点/</id>
     <published>2018-01-09T02:21:41.000Z</published>
-    <updated>2018-01-23T07:05:36.293Z</updated>
+    <updated>2018-01-24T09:41:43.876Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟</li><li>微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。</li><li>文本溢出无法实现时，使用height,line-height,overflow做</li><li>做列表勾选同步时，前端修改了数据勾选状态，如果请求后端同步时失败，应回滚前端勾选状态，这中列表数据自带勾选状态的做法，也是一种性能优化的经验</li><li>接口全局配置，如果有两套环境（生产和测试），在页面里用到相关接口url，必须通过配置文件来引用，而不是直接写，如果有不同，就切分字符串，不然你绝对会不停的改来改去。</li><li>原生小程序，setData方法绝对不能set一个undefined值，否则真机会报一个null的错误，同时定位这种错误的方法是打console看这个null的log在console的前面还是后面来定位，巨坑哦</li><li>原生小程序组件在一个页面多次使用，并且要实现使用父组件的data作为组件的property，即在子组件要改变父组件data，来引起子组件properties变化，从而引起视图变化，达到一中父子组件通信的目的，可以充分使用triggerEvent方法，并且在触发时传入type字符串，以实现多态。</li></ol><p>此文长期更新，遇到什么就写什么，mark</p>]]></content>
+    <content type="html"><![CDATA[<ol><li>顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟</li><li>微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。</li><li>文本溢出无法实现时，使用height,line-height,overflow做</li><li>做列表勾选同步时，前端修改了数据勾选状态，如果请求后端同步时失败，应回滚前端勾选状态，这中列表数据自带勾选状态的做法，也是一种性能优化的经验</li><li>接口全局配置，如果有两套环境（生产和测试），在页面里用到相关接口url，必须通过配置文件来引用，而不是直接写，如果有不同，就切分字符串，不然你绝对会不停的改来改去。</li><li>原生小程序，setData方法绝对不能set一个undefined值，否则真机会报一个null的错误，同时定位这种错误的方法是打console看这个null的log在console的前面还是后面来定位，巨坑哦</li><li>原生小程序组件在一个页面多次使用，并且要实现使用父组件的data作为组件的property，即在子组件要改变父组件data，来引起子组件properties变化，从而引起视图变化，达到一中父子组件通信的目的，可以充分使用triggerEvent方法，并且在触发时传入type字符串，以实现多态。</li><li>遇到一个问题，小程序在audio播放toggle时flag不生效，起初以为是flag的原因，结果是因为每次都生成了新的播放实例，在新的播放实例上调stop是无效的</li></ol><p>此文长期更新，遇到什么就写什么，mark</p>]]></content>
     
     <summary type="html">
     
