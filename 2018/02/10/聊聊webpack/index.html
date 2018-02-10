@@ -13,24 +13,24 @@
     
     
     
-    <title>陪自己走过白天黑夜 | 1024子翔的程序人生</title>
+    <title>聊聊webpack | 1024子翔的程序人生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="随笔">
-    <meta name="description" content="cnode论坛好像是狼叔建的，一个很有趣的地方，一个卧虎藏龙的地方。 比如昨天，我在上面发现了一位我很欣赏的前辈，他叫邹业盛。起初并不认识他，我只是在cnode上面瞎逛，把一些有可能会用到帖子打开，寻找一点营养吸收一下，我在几篇可能出现干货的帖子下发现了一个人，他把问题分析得极其透彻，就是用自己的话说出来的那种，而且一看就是踩过了那些坑并有很深体会的人。我顿时在github中寻找他，还真给我找到，">
-<meta name="keywords" content="随笔">
+    <meta name="keywords" content="心得体会">
+    <meta name="description" content="原创申明 该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正  webpack个人对它的介绍 webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括c">
+<meta name="keywords" content="心得体会">
 <meta property="og:type" content="article">
-<meta property="og:title" content="陪自己走过白天黑夜">
-<meta property="og:url" content="http://yoursite.com/2018/01/25/陪自己走过白天黑夜/index.html">
+<meta property="og:title" content="聊聊webpack">
+<meta property="og:url" content="http://yoursite.com/2018/02/10/聊聊webpack/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="cnode论坛好像是狼叔建的，一个很有趣的地方，一个卧虎藏龙的地方。 比如昨天，我在上面发现了一位我很欣赏的前辈，他叫邹业盛。起初并不认识他，我只是在cnode上面瞎逛，把一些有可能会用到帖子打开，寻找一点营养吸收一下，我在几篇可能出现干货的帖子下发现了一个人，他把问题分析得极其透彻，就是用自己的话说出来的那种，而且一看就是踩过了那些坑并有很深体会的人。我顿时在github中寻找他，还真给我找到，">
-<meta property="og:updated_time" content="2018-01-25T05:48:51.062Z">
+<meta property="og:description" content="原创申明 该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正  webpack个人对它的介绍 webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括c">
+<meta property="og:updated_time" content="2018-02-10T10:24:29.309Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陪自己走过白天黑夜">
-<meta name="twitter:description" content="cnode论坛好像是狼叔建的，一个很有趣的地方，一个卧虎藏龙的地方。 比如昨天，我在上面发现了一位我很欣赏的前辈，他叫邹业盛。起初并不认识他，我只是在cnode上面瞎逛，把一些有可能会用到帖子打开，寻找一点营养吸收一下，我在几篇可能出现干货的帖子下发现了一个人，他把问题分析得极其透彻，就是用自己的话说出来的那种，而且一看就是踩过了那些坑并有很深体会的人。我顿时在github中寻找他，还真给我找到，">
+<meta name="twitter:title" content="聊聊webpack">
+<meta name="twitter:description" content="原创申明 该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正  webpack个人对它的介绍 webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括c">
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
@@ -111,7 +111,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">陪自己走过白天黑夜</div>
+        <div class="flex-col header-title ellipsis">聊聊webpack</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -133,11 +133,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">陪自己走过白天黑夜</h1>
+        <h1 class="title">聊聊webpack</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-01-25T05:13:15.000Z" itemprop="datePublished" class="page-time">
-  2018-01-25
+                <time datetime="2018-02-10T10:04:19.000Z" itemprop="datePublished" class="page-time">
+  2018-02-10
 </time>
 
 
@@ -153,14 +153,21 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#原创申明"><span class="post-toc-number">1.</span> <span class="post-toc-text">原创申明</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#webpack个人对它的介绍"><span class="post-toc-number">2.</span> <span class="post-toc-text">webpack个人对它的介绍</span></a></li></ol>
+        </nav>
+    </aside>
 
-<article id="post-陪自己走过白天黑夜"
+
+<article id="post-聊聊webpack"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">陪自己走过白天黑夜</h1>
+        <h1 class="post-card-title">聊聊webpack</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-01-25 13:13:15" datetime="2018-01-25T05:13:15.000Z"  itemprop="datePublished">2018-01-25</time>
+            <time class="post-time" title="2018-02-10 18:04:19" datetime="2018-02-10T10:04:19.000Z"  itemprop="datePublished">2018-02-10</time>
 
             
 
@@ -173,13 +180,16 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>cnode论坛好像是狼叔建的，一个很有趣的地方，一个卧虎藏龙的地方。</p>
-<p>比如昨天，我在上面发现了一位我很欣赏的前辈，他叫邹业盛。起初并不认识他，我只是在cnode上面瞎逛，把一些有可能会用到帖子打开，寻找一点营养吸收一下，我在几篇可能出现干货的帖子下发现了一个人，他把问题分析得极其透彻，就是用自己的话说出来的那种，而且一看就是踩过了那些坑并有很深体会的人。我顿时在github中寻找他，还真给我找到，于是进入到他的博客里面，文章都很朴实，满满干货，还带个人体会，读完收获不小。今天仔细看他的title，原来是阿里的。</p>
-<p>记得狼叔曾经开个一个玩笑，所有的前端程序员的归宿不是阿里就是在去阿里的路上。确实从侧面也反映了一个问题，就是阿里的员工真的很优秀。我目前网上见到的阿里的人都是很全面的人。强到可怕，普通公司的人跟阿里的一比，差距就是十万八千里，不过也夸张了一点，只是想说，他们很强。</p>
-<p>昨天我问同事，我说你的职业规划是怎样的，他说估计以后是往管理或者创业发展。我又问其他同事，答案也差不多。我总结一下，他们的看法是35岁要做成管理或者架构师。对我来说还有10年，10年是很长的。如果这10年，每日精进，他们的想法都是可以实现的。也有很多这样的人，他们只花了几年。</p>
-<p>链家的鸟哥说要脱离自己的舒适区，上面说的其实就要做到鸟叔说的那样才好实现。如果停留在自己的舒适区，就是网上流行的1年经验重复3年。我想的是，劳逸结合，带点紧迫感的顺其自然，这样比较适合我这种人，有松有紧。</p>
-<p>以前迷吉他指弹的时候，老是看日本押尾桑的视频，他说学习的时候跟吉他老师交流，与同学交流进步更快，也更有乐趣。这里有两个关键词，进步和乐趣，这两点相辅相成。虽然已经工作了，我也类似的报了一个班，接触了一些朋友和老师，老师都是阿里或者一些知名公司的。于是就有了一个氛围，是在线的。我一般是看录播，因为平时都在加班。看过一遍，老师说的话对我很有指导作用。了解一些骚操作。偶尔会在群里问一下node的问题，除了node问题的基本不会问。问也是问一些通用的解决方案，也就是套路。当然我还问过狼叔，狼叔人很好的，回答也很赞。所以我学习有很多途径，一方面自己看书看博客文章，二方面工作积累用博客记录，三方面各种我自己营造的氛围，比如知识星球，微信群，qq群，报的班的资料，四方面向高手请教，论坛提问。</p>
-<p>我的博客技术为主，辅助一些自己个人随笔，蝼蚁之词，见笑了。</p>
+            <h1 id="原创申明"><a href="#原创申明" class="headerlink" title="原创申明"></a>原创申明</h1><ul>
+<li>该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正</li>
+</ul>
+<h1 id="webpack个人对它的介绍"><a href="#webpack个人对它的介绍" class="headerlink" title="webpack个人对它的介绍"></a>webpack个人对它的介绍</h1><ul>
+<li>webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括css也是类似的道理，会被引到head的link标签里。</li>
+<li>上述过程生成的东西会产生一个文件夹，这个文件夹你可以指定，这个文件夹包含了一套的前端所需要的东西，是什么呢？那就是现代浏览器可以执行的html，css，js。</li>
+<li>为什么要加上现代浏览器可以执行的，因为这很重要，而且也因为我们写的代码都是浏览器不支持的，我们把这个文件夹的内容放到服务器上部署，就有一个前端的内容了。</li>
+<li>为什么要写浏览器不支持的代码？其中很重要的一点，是程序员里面很常见的词汇，那就是优雅。对，这些代码很优雅，有很多语法糖。什么是语法糖，我个人理解，是通过约定把本来需要一大堆代码实现的东西变成简单的写法。这就很优雅，那么优雅是什么，优雅就是开发效率，与开发时的快感的增加。</li>
+<li>webpack有很多东西在官网上浅尝则止，并没有说的很深入，如果想要深入可以阅读《深入浅出webpack》，我也在读，不过我经过搭了一个react react-router v4 按需加载的项目之后在读，体会更佳，欢迎加入。</li>
+</ul>
 
         </div>
 
@@ -188,7 +198,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-01-25T05:48:51.062Z" itemprop="dateUpdated">2018-01-25 13:48:51</time>
+    Last updated: <time datetime="2018-02-10T10:24:29.309Z" itemprop="dateUpdated">2018-02-10 18:24:29</time>
 </span><br>
 
 
@@ -214,7 +224,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心得体会/">心得体会</a></li></ul>
 
 
             
@@ -224,7 +234,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/&title=《陪自己走过白天黑夜》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/10/聊聊webpack/&title=《聊聊webpack》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -234,22 +244,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/&title=《陪自己走过白天黑夜》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/10/聊聊webpack/&title=《聊聊webpack》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/10/聊聊webpack/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《陪自己走过白天黑夜》 — 1024子翔的程序人生&url=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《聊聊webpack》 — 1024子翔的程序人生&url=http://yoursite.com/2018/02/10/聊聊webpack/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/10/聊聊webpack/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -269,21 +279,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/01/30/日期-学习到的知识点/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">日期+学习到的知识点</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/01/25/解决小程序音频自定义组件不同时播放问题/" id="post-next" class="post-nav-link">
+      <a href="/2018/01/30/日期-学习到的知识点/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">解决小程序音频自定义组件不同时播放问题</h4>
+        <h4 class="title">日期+学习到的知识点</h4>
       </a>
     </div>
   
@@ -398,7 +401,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/&title=《陪自己走过白天黑夜》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/10/聊聊webpack/&title=《聊聊webpack》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -408,22 +411,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/&title=《陪自己走过白天黑夜》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/10/聊聊webpack/&title=《聊聊webpack》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/10/聊聊webpack/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《陪自己走过白天黑夜》 — 1024子翔的程序人生&url=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《聊聊webpack》 — 1024子翔的程序人生&url=http://yoursite.com/2018/02/10/聊聊webpack/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/25/陪自己走过白天黑夜/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/10/聊聊webpack/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -434,7 +437,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aS46DMBAFwNz/0pntjBTI67YzUtrFKoIALhZW/x6P+Hj+OpKrV2fun3b/lg0HBgbG1zKet0fyn+Suq+dUz19SMTAwDmBc7WD3v3dtuPm7Ls9jYGBgBOHa/eLWeRgYGBhVRpKU5lernw8DA+NMRpKO3gOS83nd7IO5OAYGxhcyeo/+n98f6W9gYGB8FaNX7q+GdHmroLkqDAyM0Yz1UtrKwEQhQU0SYwwMjKGMZCnVlLKXBueNhBf/xMDAGM1YKeL30s71kBEDA+M0RnUYYu8WuRI+/rmKgYExmlEtn1UDwTzRXQ8WMTAwzmGsp6m7Etpq2IqBgTGbkSjz7bh6b5LoJp8DAwPjBMauV+ZhZUItBJ0YGBgHMHaNguXpa2EzTT4HBgbGUEYvaUzSznyJ+ahZob+BgYExiJGHetVBil742CvSYWBgnMBIEsVdYxl7uxlvqoYYGBiDGPl4RL6/7S3GLQ1bYGBgjGDkwxP5+aQN0AslMTAwMPJCWO/MriGMNxEuBgbGUMZK8pmHleX+ajW2xcDAOICxnoLmQWG1CRE1BjAwMMYxnsWjOh7RS2XLLUwMDIzRjOogRS8p7bUcti0dAwNjBKO6yfYCuLy41lwDBgbGAYxy7puUwIofrvqZMDAwMNZLbCsxafleDAwMjGKCWm18VsPNF/diYGAcwOgtKy+frY9TvNniMTAwRjN2FdGqG2gSbiZ3YWBgjGb8ALjTA/GOjkUjAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aSY7DMAwF0dz/0m6gd4107PqkDMRUaRUgHvSyYDjo9cLr+F3k2/fP7+v8OefXtJYMGTIeyzhOF7nm/cWfYHwPfG8yZMjYh0HCaH+7PEDzvcmQIUMGf9l5YkcCtAwZMmSsYvAkr8aWIUOGjE4Rmzbjzp9DYLfU4jJkyHggo1923vf5xvmGDBkyHsI4wtWfHq7ayZ/ny5AhYzSj1uriY4M7ToUEGa4MGTIGMdLQeX5lfwia/qAyZMjYgUFu5kPHtN2Wjjxb/xsyZMh4IKMzvOQt/lo4DgpjGTJkbMBIS1Ce6tWacSTQv9LYL0OGjEEMdBu4d1XiiH4IGTJkjGbUgl0ndPIAzQtdGTJkzGbwoJmWmnwAmb79n29lyJAxmrGqid8vjHn4vmgFypAhYwMGLyDXfssPXqAjFzJkyBjESJM8kvZ1Dp7yIvmiCpchQ8YgBh8A8IFi0OdrhOyLIlaGDBlDGf3RY21sgErT8MiaDBkydmPwMMfTyvQJMViGDBmDGHFPLgzKvCfWaQXKkCFjH0ZaXnIqSfh4IY2OhcmQIWMQY1WbLG39p0OF4PCHDBkyxjGOcKWpHsfzUhb9b8iQIWMQIy1ca4/oDAYWbF2GDBkjGOlhrDQpTEcFxaNpMmTI2IARt+PDLfJDGMWxhAwZMmTgBI4PEmqB+GOMlSFDhgw8NujjeaiVIUPGboy0iCWM2iGM2jUyZMiYzVg7GCi+oDRUuHG+IUOGjG9h/AAjb2WrNhyu7gAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 

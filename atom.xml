@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-25T05:48:51.062Z</updated>
+  <updated>2018-02-10T10:24:29.309Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>聊聊webpack</title>
+    <link href="http://yoursite.com/2018/02/10/%E8%81%8A%E8%81%8Awebpack/"/>
+    <id>http://yoursite.com/2018/02/10/聊聊webpack/</id>
+    <published>2018-02-10T10:04:19.000Z</published>
+    <updated>2018-02-10T10:24:29.309Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="原创申明"><a href="#原创申明" class="headerlink" title="原创申明"></a>原创申明</h1><ul><li>该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正</li></ul><h1 id="webpack个人对它的介绍"><a href="#webpack个人对它的介绍" class="headerlink" title="webpack个人对它的介绍"></a>webpack个人对它的介绍</h1><ul><li>webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括css也是类似的道理，会被引到head的link标签里。</li><li>上述过程生成的东西会产生一个文件夹，这个文件夹你可以指定，这个文件夹包含了一套的前端所需要的东西，是什么呢？那就是现代浏览器可以执行的html，css，js。</li><li>为什么要加上现代浏览器可以执行的，因为这很重要，而且也因为我们写的代码都是浏览器不支持的，我们把这个文件夹的内容放到服务器上部署，就有一个前端的内容了。</li><li>为什么要写浏览器不支持的代码？其中很重要的一点，是程序员里面很常见的词汇，那就是优雅。对，这些代码很优雅，有很多语法糖。什么是语法糖，我个人理解，是通过约定把本来需要一大堆代码实现的东西变成简单的写法。这就很优雅，那么优雅是什么，优雅就是开发效率，与开发时的快感的增加。</li><li>webpack有很多东西在官网上浅尝则止，并没有说的很深入，如果想要深入可以阅读《深入浅出webpack》，我也在读，不过我经过搭了一个react react-router v4 按需加载的项目之后在读，体会更佳，欢迎加入。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;原创申明&quot;&gt;&lt;a href=&quot;#原创申明&quot; class=&quot;headerlink&quot; title=&quot;原创申明&quot;&gt;&lt;/a&gt;原创申明&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=
+      
+    
+    </summary>
+    
+    
+      <category term="心得体会" scheme="http://yoursite.com/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日期+学习到的知识点</title>
+    <link href="http://yoursite.com/2018/01/30/%E6%97%A5%E6%9C%9F-%E5%AD%A6%E4%B9%A0%E5%88%B0%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>http://yoursite.com/2018/01/30/日期-学习到的知识点/</id>
+    <published>2018-01-30T13:26:20.000Z</published>
+    <updated>2018-01-30T13:31:49.646Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2018-1-30"><a href="#2018-1-30" class="headerlink" title="2018-1-30"></a>2018-1-30</h1><ul><li>css filter: drop-shadow()</li><li>sass draken()</li><li>sass placeholder</li><li>sass @include</li><li>sass @content</li><li>redux mapDispatchToProps dispatched function(bindActionCreator)</li><li>react-router onEnter hook(20%)</li><li>react-router IndexRoute IndexRedirect</li><li>高阶函数例子及定义</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;2018-1-30&quot;&gt;&lt;a href=&quot;#2018-1-30&quot; class=&quot;headerlink&quot; title=&quot;2018-1-30&quot;&gt;&lt;/a&gt;2018-1-30&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;css filter: drop-shadow()&lt;/li&gt;
+&lt;li&gt;s
+      
+    
+    </summary>
+    
+    
+      <category term="学习记录" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>陪自己走过白天黑夜</title>
@@ -162,9 +213,9 @@
     <link href="http://yoursite.com/2018/01/09/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>http://yoursite.com/2018/01/09/前端工作遇到的小知识点/</id>
     <published>2018-01-09T02:21:41.000Z</published>
-    <updated>2018-01-24T09:41:43.876Z</updated>
+    <updated>2018-01-30T09:35:42.696Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟</li><li>微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。</li><li>文本溢出无法实现时，使用height,line-height,overflow做</li><li>做列表勾选同步时，前端修改了数据勾选状态，如果请求后端同步时失败，应回滚前端勾选状态，这中列表数据自带勾选状态的做法，也是一种性能优化的经验</li><li>接口全局配置，如果有两套环境（生产和测试），在页面里用到相关接口url，必须通过配置文件来引用，而不是直接写，如果有不同，就切分字符串，不然你绝对会不停的改来改去。</li><li>原生小程序，setData方法绝对不能set一个undefined值，否则真机会报一个null的错误，同时定位这种错误的方法是打console看这个null的log在console的前面还是后面来定位，巨坑哦</li><li>原生小程序组件在一个页面多次使用，并且要实现使用父组件的data作为组件的property，即在子组件要改变父组件data，来引起子组件properties变化，从而引起视图变化，达到一中父子组件通信的目的，可以充分使用triggerEvent方法，并且在触发时传入type字符串，以实现多态。</li><li>遇到一个问题，小程序在audio播放toggle时flag不生效，起初以为是flag的原因，结果是因为每次都生成了新的播放实例，在新的播放实例上调stop是无效的</li></ol><p>此文长期更新，遇到什么就写什么，mark</p>]]></content>
+    <content type="html"><![CDATA[<ol><li>顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟</li><li>微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。</li><li>文本溢出无法实现时，使用height,line-height,overflow做</li><li>做列表勾选同步时，前端修改了数据勾选状态，如果请求后端同步时失败，应回滚前端勾选状态，这中列表数据自带勾选状态的做法，也是一种性能优化的经验</li><li>接口全局配置，如果有两套环境（生产和测试），在页面里用到相关接口url，必须通过配置文件来引用，而不是直接写，如果有不同，就切分字符串，不然你绝对会不停的改来改去。</li><li>原生小程序，setData方法绝对不能set一个undefined值，否则真机会报一个null的错误，同时定位这种错误的方法是打console看这个null的log在console的前面还是后面来定位，巨坑哦</li><li>原生小程序组件在一个页面多次使用，并且要实现使用父组件的data作为组件的property，即在子组件要改变父组件data，来引起子组件properties变化，从而引起视图变化，达到一中父子组件通信的目的，可以充分使用triggerEvent方法，并且在触发时传入type字符串，以实现多态。</li><li>遇到一个问题，小程序在audio播放toggle时flag不生效，起初以为是flag的原因，结果是因为每次都生成了新的播放实例，在新的播放实例上调stop是无效的</li><li>calc运算符号是要空格的，要不然calc出不来</li></ol><p>此文长期更新，遇到什么就写什么，mark</p>]]></content>
     
     <summary type="html">
     
