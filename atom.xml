@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-10T10:24:29.309Z</updated>
+  <updated>2018-02-12T11:06:00.261Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html5的data-*</title>
+    <link href="http://yoursite.com/2018/02/12/html5%E7%9A%84data/"/>
+    <id>http://yoursite.com/2018/02/12/html5的data/</id>
+    <published>2018-02-12T10:51:30.000Z</published>
+    <updated>2018-02-12T11:06:00.261Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>看公司的表单组件，发现一个data-name属性，这个在最早做react的todo时，遇到过，因为获取不到直接定义的属性，还写过一篇肤浅的博客。其实这个并不是react里面的内容，而是html5里面的</p><h1 id="data-用法"><a href="#data-用法" class="headerlink" title="data-*用法"></a>data-*用法</h1><p>目前我没有参考文档，所以不知道它为什么会出现，但是我知道怎么用，在什么场景用，直接讲自己理解的用法。</p><p>获取这个属性，可以利用</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">domNode.getAttribute(<span class="string">'data-foo'</span>)</span><br></pre></td></tr></table></figure><p>这个其中一个应用场景就是你在react中获取节点后，想获取这个data-属性里面的值</p><p>还可以在事件对象的当前对象下的dataset属性中获取</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.currentTarget.dataset.foo;</span><br></pre></td></tr></table></figure><p>这个让我想到了小程序，它内部实现也估计用了这个。</p><h1 id="延伸题外话"><a href="#延伸题外话" class="headerlink" title="延伸题外话"></a>延伸题外话</h1><p>html5很重要，很多东西经常用到，我们应该怎么学习html5，我的体会是从html5名字去搜书名得到的书是不行的。但是有一本书，我最近翻了翻，发现里面有很多html5的内容，那就是大家都知道的《JavaScript高级程序设计》，很厚，一天读10页，也要很久读完，推荐大家如果忙的话，把它当字典查，当然最好是读一遍。</p><p>我之前项目搜data-name没搜到，后来看了mdn以后，我说不可能搜不到，肯定是之前没搜好，果然就是我的想法，搜到了，也是上述用法用的。</p><h1 id="REACT16以后"><a href="#REACT16以后" class="headerlink" title="REACT16以后"></a>REACT16以后</h1><p>可以不用data-*，不带data-的属性也会渲染到原生dom节点上了</p><p>更多内容待大家一起探讨，下次见</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerlink&quot; title=&quot;引入&quot;&gt;&lt;/a&gt;引入&lt;/h1&gt;&lt;p&gt;看公司的表单组件，发现一个data-name属性，这个在最早做react的todo时，遇到过，因为获取不到直接定义的属性，还写过一篇肤浅的博
+      
+    
+    </summary>
+    
+    
+      <category term="html5" scheme="http://yoursite.com/tags/html5/"/>
+    
+  </entry>
   
   <entry>
     <title>聊聊webpack</title>

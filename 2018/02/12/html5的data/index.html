@@ -13,24 +13,24 @@
     
     
     
-    <title>聊聊webpack | 1024子翔的程序人生</title>
+    <title>html5的data-* | 1024子翔的程序人生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="心得体会">
-    <meta name="description" content="原创申明 该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正  webpack个人对它的介绍 webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括c">
-<meta name="keywords" content="心得体会">
+    <meta name="keywords" content="html5">
+    <meta name="description" content="引入看公司的表单组件，发现一个data-name属性，这个在最早做react的todo时，遇到过，因为获取不到直接定义的属性，还写过一篇肤浅的博客。其实这个并不是react里面的内容，而是html5里面的 data-*用法目前我没有参考文档，所以不知道它为什么会出现，但是我知道怎么用，在什么场景用，直接讲自己理解的用法。 获取这个属性，可以利用 1domNode.getAttribute(&apos;dat">
+<meta name="keywords" content="html5">
 <meta property="og:type" content="article">
-<meta property="og:title" content="聊聊webpack">
-<meta property="og:url" content="http://yoursite.com/2018/02/10/聊聊webpack/index.html">
+<meta property="og:title" content="html5的data-*">
+<meta property="og:url" content="http://yoursite.com/2018/02/12/html5的data/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="原创申明 该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正  webpack个人对它的介绍 webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括c">
-<meta property="og:updated_time" content="2018-02-10T10:24:29.309Z">
+<meta property="og:description" content="引入看公司的表单组件，发现一个data-name属性，这个在最早做react的todo时，遇到过，因为获取不到直接定义的属性，还写过一篇肤浅的博客。其实这个并不是react里面的内容，而是html5里面的 data-*用法目前我没有参考文档，所以不知道它为什么会出现，但是我知道怎么用，在什么场景用，直接讲自己理解的用法。 获取这个属性，可以利用 1domNode.getAttribute(&apos;dat">
+<meta property="og:updated_time" content="2018-02-12T11:06:00.261Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="聊聊webpack">
-<meta name="twitter:description" content="原创申明 该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正  webpack个人对它的介绍 webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括c">
+<meta name="twitter:title" content="html5的data-*">
+<meta name="twitter:description" content="引入看公司的表单组件，发现一个data-name属性，这个在最早做react的todo时，遇到过，因为获取不到直接定义的属性，还写过一篇肤浅的博客。其实这个并不是react里面的内容，而是html5里面的 data-*用法目前我没有参考文档，所以不知道它为什么会出现，但是我知道怎么用，在什么场景用，直接讲自己理解的用法。 获取这个属性，可以利用 1domNode.getAttribute(&apos;dat">
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
@@ -111,7 +111,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">聊聊webpack</div>
+        <div class="flex-col header-title ellipsis">html5的data-*</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -133,11 +133,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">聊聊webpack</h1>
+        <h1 class="title">html5的data-*</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-02-10T10:04:19.000Z" itemprop="datePublished" class="page-time">
-  2018-02-10
+                <time datetime="2018-02-12T10:51:30.000Z" itemprop="datePublished" class="page-time">
+  2018-02-12
 </time>
 
 
@@ -156,18 +156,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#原创申明"><span class="post-toc-number">1.</span> <span class="post-toc-text">原创申明</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#webpack个人对它的介绍"><span class="post-toc-number">2.</span> <span class="post-toc-text">webpack个人对它的介绍</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#引入"><span class="post-toc-number">1.</span> <span class="post-toc-text">引入</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#data-用法"><span class="post-toc-number">2.</span> <span class="post-toc-text">data-*用法</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#延伸题外话"><span class="post-toc-number">3.</span> <span class="post-toc-text">延伸题外话</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#REACT16以后"><span class="post-toc-number">4.</span> <span class="post-toc-text">REACT16以后</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-聊聊webpack"
+<article id="post-html5的data"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">聊聊webpack</h1>
+        <h1 class="post-card-title">html5的data-*</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-02-10 18:04:19" datetime="2018-02-10T10:04:19.000Z"  itemprop="datePublished">2018-02-10</time>
+            <time class="post-time" title="2018-02-12 18:51:30" datetime="2018-02-12T10:51:30.000Z"  itemprop="datePublished">2018-02-12</time>
 
             
 
@@ -180,16 +180,18 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="原创申明"><a href="#原创申明" class="headerlink" title="原创申明"></a>原创申明</h1><ul>
-<li>该空间内所有博客所有内容均为原创，由于是个人的理解，可能有所勘误，敬请指正</li>
-</ul>
-<h1 id="webpack个人对它的介绍"><a href="#webpack个人对它的介绍" class="headerlink" title="webpack个人对它的介绍"></a>webpack个人对它的介绍</h1><ul>
-<li>webpack会从一个文件或者多个文件开始，它里面的依赖的模块，会被以webpack的方式优雅的合成一个或多个bundle文件，这里是对js的构建，那么这时，你可以把它引用到html的script标签中。但是一般不是你手动引入，webpack可以帮你做到，用到的就是它的插件，包括css也是类似的道理，会被引到head的link标签里。</li>
-<li>上述过程生成的东西会产生一个文件夹，这个文件夹你可以指定，这个文件夹包含了一套的前端所需要的东西，是什么呢？那就是现代浏览器可以执行的html，css，js。</li>
-<li>为什么要加上现代浏览器可以执行的，因为这很重要，而且也因为我们写的代码都是浏览器不支持的，我们把这个文件夹的内容放到服务器上部署，就有一个前端的内容了。</li>
-<li>为什么要写浏览器不支持的代码？其中很重要的一点，是程序员里面很常见的词汇，那就是优雅。对，这些代码很优雅，有很多语法糖。什么是语法糖，我个人理解，是通过约定把本来需要一大堆代码实现的东西变成简单的写法。这就很优雅，那么优雅是什么，优雅就是开发效率，与开发时的快感的增加。</li>
-<li>webpack有很多东西在官网上浅尝则止，并没有说的很深入，如果想要深入可以阅读《深入浅出webpack》，我也在读，不过我经过搭了一个react react-router v4 按需加载的项目之后在读，体会更佳，欢迎加入。</li>
-</ul>
+            <h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>看公司的表单组件，发现一个data-name属性，这个在最早做react的todo时，遇到过，因为获取不到直接定义的属性，还写过一篇肤浅的博客。其实这个并不是react里面的内容，而是html5里面的</p>
+<h1 id="data-用法"><a href="#data-用法" class="headerlink" title="data-*用法"></a>data-*用法</h1><p>目前我没有参考文档，所以不知道它为什么会出现，但是我知道怎么用，在什么场景用，直接讲自己理解的用法。</p>
+<p>获取这个属性，可以利用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">domNode.getAttribute(<span class="string">'data-foo'</span>)</span><br></pre></td></tr></table></figure>
+<p>这个其中一个应用场景就是你在react中获取节点后，想获取这个data-属性里面的值</p>
+<p>还可以在事件对象的当前对象下的dataset属性中获取</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.currentTarget.dataset.foo;</span><br></pre></td></tr></table></figure>
+<p>这个让我想到了小程序，它内部实现也估计用了这个。</p>
+<h1 id="延伸题外话"><a href="#延伸题外话" class="headerlink" title="延伸题外话"></a>延伸题外话</h1><p>html5很重要，很多东西经常用到，我们应该怎么学习html5，我的体会是从html5名字去搜书名得到的书是不行的。但是有一本书，我最近翻了翻，发现里面有很多html5的内容，那就是大家都知道的《JavaScript高级程序设计》，很厚，一天读10页，也要很久读完，推荐大家如果忙的话，把它当字典查，当然最好是读一遍。</p>
+<p>我之前项目搜data-name没搜到，后来看了mdn以后，我说不可能搜不到，肯定是之前没搜好，果然就是我的想法，搜到了，也是上述用法用的。</p>
+<h1 id="REACT16以后"><a href="#REACT16以后" class="headerlink" title="REACT16以后"></a>REACT16以后</h1><p>可以不用data-*，不带data-的属性也会渲染到原生dom节点上了</p>
+<p>更多内容待大家一起探讨，下次见</p>
 
         </div>
 
@@ -198,7 +200,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-02-10T10:24:29.309Z" itemprop="dateUpdated">2018-02-10 18:24:29</time>
+    Last updated: <time datetime="2018-02-12T11:06:00.261Z" itemprop="dateUpdated">2018-02-12 19:06:00</time>
 </span><br>
 
 
@@ -224,7 +226,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心得体会/">心得体会</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
 
 
             
@@ -234,7 +236,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/10/聊聊webpack/&title=《聊聊webpack》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/12/html5的data/&title=《html5的data-*》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -244,22 +246,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/10/聊聊webpack/&title=《聊聊webpack》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/12/html5的data/&title=《html5的data-*》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/10/聊聊webpack/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/12/html5的data/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《聊聊webpack》 — 1024子翔的程序人生&url=http://yoursite.com/2018/02/10/聊聊webpack/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《html5的data-*》 — 1024子翔的程序人生&url=http://yoursite.com/2018/02/12/html5的data/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/10/聊聊webpack/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/12/html5的data/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -279,21 +281,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/02/12/html5的data/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">html5的data-*</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/01/30/日期-学习到的知识点/" id="post-next" class="post-nav-link">
+      <a href="/2018/02/10/聊聊webpack/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">日期+学习到的知识点</h4>
+        <h4 class="title">聊聊webpack</h4>
       </a>
     </div>
   
@@ -408,7 +403,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/10/聊聊webpack/&title=《聊聊webpack》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/12/html5的data/&title=《html5的data-*》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -418,22 +413,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/10/聊聊webpack/&title=《聊聊webpack》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/12/html5的data/&title=《html5的data-*》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/10/聊聊webpack/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/12/html5的data/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《聊聊webpack》 — 1024子翔的程序人生&url=http://yoursite.com/2018/02/10/聊聊webpack/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《html5的data-*》 — 1024子翔的程序人生&url=http://yoursite.com/2018/02/12/html5的data/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/10/聊聊webpack/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/12/html5的data/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -444,7 +439,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aSY7DMAwF0dz/0m6gd4107PqkDMRUaRUgHvSyYDjo9cLr+F3k2/fP7+v8OefXtJYMGTIeyzhOF7nm/cWfYHwPfG8yZMjYh0HCaH+7PEDzvcmQIUMGf9l5YkcCtAwZMmSsYvAkr8aWIUOGjE4Rmzbjzp9DYLfU4jJkyHggo1923vf5xvmGDBkyHsI4wtWfHq7ayZ/ny5AhYzSj1uriY4M7ToUEGa4MGTIGMdLQeX5lfwia/qAyZMjYgUFu5kPHtN2Wjjxb/xsyZMh4IKMzvOQt/lo4DgpjGTJkbMBIS1Ce6tWacSTQv9LYL0OGjEEMdBu4d1XiiH4IGTJkjGbUgl0ndPIAzQtdGTJkzGbwoJmWmnwAmb79n29lyJAxmrGqid8vjHn4vmgFypAhYwMGLyDXfssPXqAjFzJkyBjESJM8kvZ1Dp7yIvmiCpchQ8YgBh8A8IFi0OdrhOyLIlaGDBlDGf3RY21sgErT8MiaDBkydmPwMMfTyvQJMViGDBmDGHFPLgzKvCfWaQXKkCFjH0ZaXnIqSfh4IY2OhcmQIWMQY1WbLG39p0OF4PCHDBkyxjGOcKWpHsfzUhb9b8iQIWMQIy1ca4/oDAYWbF2GDBkjGOlhrDQpTEcFxaNpMmTI2IARt+PDLfJDGMWxhAwZMmTgBI4PEmqB+GOMlSFDhgw8NujjeaiVIUPGboy0iCWM2iGM2jUyZMiYzVg7GCi+oDRUuHG+IUOGjG9h/AAjb2WrNhyu7gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aS46DMBAFwLn/pZntSAnhdTcZCbu8QoiAKwurfz8/8Tr+rNf7yfOv12dvO3vnDQsDA+OxjOPjOnum+uH5+8+ewcDA2Idx9uGzZ3q/ykn5VzAwMDByUr7p5GjGwMDAmDOSMHFyBwMDA6OXxPZCxl6w+MVcHAMD44GMvOr+/9df6W9gYGA8inEUV5LEzgPB8q4wMDCWZuQH3LyUP0pQk+EPDAyMDRjzoK13ZPdaDhe5OAYGxkKMJOyrgqvltmpY+ebNGBgY2zDubTcmvPzgvvhDMTAwNmBMDsdeu3FyTL+5xsDAWJqRDEl8/kyvVJe3S8vFOAwMjOUYeRLbu5/X/HojX+VcHAMD4+GMKF2MQ7dqEht1MPJcHAMDYyFGnnzmg1zJ1u8dPsPAwNiBMRneqrYke/g8WMTAwFibkZfvJ0X8yUBYYcYNAwNjUcZ8wKIH7oWAFwEiBgbGQoxJUaw35jVvoJ4W2jAwMBZlVIcb8pZnvrneX4mBgbEzo1pomxzT1SGPiyQWAwNjA0Z1RDUvkOV3bohzMTAwlmb0Xto7fKshZqEZgIGBsRzjKK48TOwFjtVxDQwMjB0Y+cq3NR+YqLZLMTAwdmAkB2U1xb0LXzhkMTAwNmDMC/p5S7Latizn4hgYGBitSPO27X4uumFgYGDELc+kWJbDosAUAwNjA0Z1tDQfxahut9qKwMDA2IFRDdSqR20vTMzHzjAwMJZm/AIqynRyNQcVPAAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
