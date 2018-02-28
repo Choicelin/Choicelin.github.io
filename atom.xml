@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-22T11:04:42.194Z</updated>
+  <updated>2018-02-28T15:20:13.910Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>函数式编程入门</title>
+    <link href="http://yoursite.com/2018/02/28/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2018/02/28/函数式编程入门/</id>
+    <published>2018-02-28T14:02:09.000Z</published>
+    <updated>2018-02-28T15:20:13.910Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是函数式编程"><a href="#什么是函数式编程" class="headerlink" title="什么是函数式编程"></a>什么是函数式编程</h1><p>函数式编程，个人理解是在编写纯函数。</p><p>据印度Anto Aravinth的解释的函数式编程是一种范式，我们能依靠这种范式创建仅依赖输入就可以完成自身逻辑的函数。</p><p>而这种函数就是我所理解的纯函数。</p><h2 id="纯函数特点"><a href="#纯函数特点" class="headerlink" title="纯函数特点"></a>纯函数特点</h2><ul><li>同样的输入，输出一定相同</li><li>函数不会改变任何外部环境的变量</li></ul><h2 id="函数式编程的引用透明性"><a href="#函数式编程的引用透明性" class="headerlink" title="函数式编程的引用透明性"></a>函数式编程的引用透明性</h2><blockquote><p>即所有函数对于相同输入都返回相同的值，那么据此产生了一个术语，叫替换模型，即把一个函数的调用用它的返回值替换，这将带来可以缓存的代码，当函数调用以后，我们将它的返回值存在内存里（比如用一个对象的属性存起来），下次使用就直接取对象这个属性映射的值。</p></blockquote><h2 id="并发优势"><a href="#并发优势" class="headerlink" title="并发优势"></a>并发优势</h2><ul><li>在并发层面上，由于函数不会对外部环境变量进行修改，只依赖传入的参数，所以，并发执行两个或多个一样的函数时相互之间不会受到影响</li></ul><h1 id="抽象与高阶函数"><a href="#抽象与高阶函数" class="headerlink" title="抽象与高阶函数"></a>抽象与高阶函数</h1><h2 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h2><ul><li>个人总结维基百科的表述，抽象即是一种管理复杂度的方法，把复杂度限定到你能处理的范围。这个范围层面的确定即是一种抽象。</li><li>比如高级程序语言就是一种抽象，它的底层是复杂的汇编语言以及机器语言，然而你把它抽象出来进行问题的处理，而不考虑底层复杂的调用和实现</li></ul><h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul><li>高阶函数就是接受函数作为参数并且/或者返回函数作为输出的函数</li><li>经常用到的比如map，forEach等</li></ul><h1 id="柯里化"><a href="#柯里化" class="headerlink" title="柯里化"></a>柯里化</h1><h2 id="一元函数与多元函数"><a href="#一元函数与多元函数" class="headerlink" title="一元函数与多元函数"></a>一元函数与多元函数</h2><ul><li>只接受一个参数的函数叫一元函数，可以以此类推，几元函数就是接受几个参数的函数</li></ul><h2 id="变参函数"><a href="#变参函数" class="headerlink" title="变参函数"></a>变参函数</h2><ul><li>函数接受的参数不确定的函数叫做变参函数</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function vary(...args) &#123;</span><br><span class="line">  console.log(args)</span><br><span class="line">  //do something to args</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="curry"><a href="#curry" class="headerlink" title="curry"></a>curry</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function curry(fn) &#123;</span><br><span class="line">  if (typeof fn !== &apos;function&apos;) &#123;</span><br><span class="line">    throw new Error(&apos;fn is not a function&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  return function curryInner(...args) =&gt; &#123;</span><br><span class="line">  if (fn.length &gt; args.length)&#123;</span><br><span class="line">       return function() &#123;</span><br><span class="line">       return curryInner.apply(null, args.concat([].slice.call(arguments)))</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return fn.apply(null, args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;什么是函数式编程&quot;&gt;&lt;a href=&quot;#什么是函数式编程&quot; class=&quot;headerlink&quot; title=&quot;什么是函数式编程&quot;&gt;&lt;/a&gt;什么是函数式编程&lt;/h1&gt;&lt;p&gt;函数式编程，个人理解是在编写纯函数。&lt;/p&gt;
+&lt;p&gt;据印度Anto Aravinth的解释的
+      
+    
+    </summary>
+    
+    
+      <category term="心得体会" scheme="http://yoursite.com/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    
+  </entry>
   
   <entry>
     <title>mark</title>
