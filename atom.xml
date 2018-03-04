@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-04T05:24:43.172Z</updated>
+  <updated>2018-03-04T07:29:09.267Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序api之setEnableDebug说明</title>
+    <link href="http://yoursite.com/2018/03/04/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8Fapi%E4%B9%8BsetEnableDebug%E8%AF%B4%E6%98%8E/"/>
+    <id>http://yoursite.com/2018/03/04/微信小程序api之setEnableDebug说明/</id>
+    <published>2018-03-04T07:20:01.000Z</published>
+    <updated>2018-03-04T07:29:09.267Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line">onLaunch() &#123;</span><br><span class="line">  <span class="comment">//开启调试</span></span><br><span class="line">  wx.setEnableDebug(&#123;</span><br><span class="line">    enableDebug: <span class="literal">true</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><ul><li>这个接口相当于是用代码来在预览时开启调试，预览后打开小程序后会提示“重新打开小程序后生效”，点击确定后，在微信-发现-小程序中打开小程序，此时右下角会出现一个绿色可拖动的vConsole，可以显示调试信息</li><li>另一种非代码开启方式是点击小程序右上角的胶囊中三个点符号，在这里点击打开调试，会和上面讲的一样，出现同样的过程</li><li>如果设置enableDebug为false，会同样出现上述过程的逆过程，是一样的道理</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h1&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter
+      
+    
+    </summary>
+    
+    
+      <category term="微信小程序" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>函数式编程入门</title>
