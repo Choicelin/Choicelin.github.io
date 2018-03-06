@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
-<meta property="og:updated_time" content="2018-03-01T03:42:46.663Z">
+<meta property="og:updated_time" content="2018-03-06T13:49:40.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端工作遇到的小知识点">
 <meta name="twitter:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
@@ -184,7 +184,8 @@
 <li>遇到一个问题，小程序在audio播放toggle时flag不生效，起初以为是flag的原因，结果是因为每次都生成了新的播放实例，在新的播放实例上调stop是无效的</li>
 <li>calc运算符号是要空格的，要不然calc出不来;</li>
 <li>小程序wxs出错弹层类型拿数据后会在真机直接奔溃，如果你确定template等传值都是对的，那么这个时候你需要看看wxs传入的值是否正确，这在控制台是不会报错的</li>
-<li>列表点击弹出列表选取列表项逻辑应该是，点第一个列表时记录该列表项id，然后在第二个列表点确定时设置下一个id，并跑接口，取消则清空两个id</li>
+<li>列表点击弹出列表选取列表项逻辑应该是，点第一个列表时记录该列表项id，然后在第二个列表点确定时设置下一个id，并跑接口，取消则清空两个id；</li>
+<li>生产环境小程序在打开时有两种情况，第一种是打开后到首页，这种无疑会触发onLaunch；还有一种是打开后进入其它页面然后关闭，再马上打开，这时还在之前显示的页面，这时并没有触发onLaunch</li>
 </ol>
 <p>此文长期更新，遇到什么就写什么，mark</p>
 
@@ -195,7 +196,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-03-01T03:42:46.663Z" itemprop="dateUpdated">2018-03-01 11:42:46</time>
+    Last updated: <time datetime="2018-03-06T13:49:40.887Z" itemprop="dateUpdated">2018-03-06 21:49:40</time>
 </span><br>
 
 
