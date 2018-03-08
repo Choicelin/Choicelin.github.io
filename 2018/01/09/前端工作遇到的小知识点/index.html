@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
-<meta property="og:updated_time" content="2018-03-07T12:10:59.248Z">
+<meta property="og:updated_time" content="2018-03-08T08:34:10.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端工作遇到的小知识点">
 <meta name="twitter:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
@@ -187,6 +187,9 @@
 <li>列表点击弹出列表选取列表项逻辑应该是，点第一个列表时记录该列表项id，然后在第二个列表点确定时设置下一个id，并跑接口，取消则清空两个id；</li>
 <li>生产环境小程序在打开时有两种情况，第一种是打开后到首页，这种无疑会触发onLaunch；还有一种是打开后进入其它页面然后关闭，再马上打开，这时还在之前显示的页面，这时并没有触发onLaunch;</li>
 <li>小程序中innerAudioContext使用必须开启铃声状态才有声音哦,同时oncanplay可能会有问题</li>
+<li>防止同时播放问题，保证运行的父组件中只有一个播放context，同时再播放前将其他全部标志设置为false</li>
+<li>cpm config set registry <a href="http://fjdsklajf.com" target="_blank" rel="noopener">http://fjdsklajf.com</a>;</li>
+<li>scss _前缀是用在一个文件不需要编译时，引入时可以去掉下划线</li>
 </ol>
 <p>此文长期更新，遇到什么就写什么，mark</p>
 
@@ -197,7 +200,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-03-07T12:10:59.248Z" itemprop="dateUpdated">2018-03-07 20:10:59</time>
+    Last updated: <time datetime="2018-03-08T08:34:10.597Z" itemprop="dateUpdated">2018-03-08 16:34:10</time>
 </span><br>
 
 
