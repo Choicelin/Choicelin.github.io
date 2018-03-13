@@ -173,9 +173,8 @@
 
     
         
-事件bindtap=”click”替换为@tap=”click”,防止冒泡@tap.stop,防止捕获@tap.capture.stop，如果是@someEvent.user=”somefunction”，这种通过this.$emit(‘someEvent’),someFunction写在父组件methods里面，同时父组件events加入someEvent
-events示例
-123456...
+事件bindtap=”click”替换为@tap=”click”,防止冒泡@tap.stop,防止捕获@tap.capture.stop，如果是@someEvent.user=”somefunction”，这种通过this.$emit(‘someEvent’),someFunction会触发而且写在父组件methods里面，同时父组件events里面的someEvent时不会执行
+even...
     
 
         <a href="/2018/03/11/wepy开发速查手册/" class="post-more waves-effect waves-button">
