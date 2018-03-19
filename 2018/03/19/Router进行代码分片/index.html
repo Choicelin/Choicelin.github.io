@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Router进行代码分片 | 1024子翔的程序人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="翻译">
+    <meta name="description" content="使用React和React Router进行代码分片 本文翻译自Medium   代码分片可以让你把应用分成多个包，使你的用户能逐步加载应用而变得流行起来。 在这篇文章中，我们将会看一下什么是代码分片和怎么去做，了解怎么去配合React Router去实现它。  现在是2018年。你的用户不需要为了一小块内容而去下载整个应用。如果一个用户下载所有的代码，仅仅是为了请求一个注册页面是毫无意义的。而且">
+<meta name="keywords" content="翻译">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Router进行代码分片">
+<meta property="og:url" content="http://yoursite.com/2018/03/19/Router进行代码分片/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:description" content="使用React和React Router进行代码分片 本文翻译自Medium   代码分片可以让你把应用分成多个包，使你的用户能逐步加载应用而变得流行起来。 在这篇文章中，我们将会看一下什么是代码分片和怎么去做，了解怎么去配合React Router去实现它。  现在是2018年。你的用户不需要为了一小块内容而去下载整个应用。如果一个用户下载所有的代码，仅仅是为了请求一个注册页面是毫无意义的。而且">
+<meta property="og:image" content="http://yoursite.com/2018/03/19/Router进行代码分片/chunk.png">
+<meta property="og:updated_time" content="2018-03-19T01:03:10.493Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Router进行代码分片">
+<meta name="twitter:description" content="使用React和React Router进行代码分片 本文翻译自Medium   代码分片可以让你把应用分成多个包，使你的用户能逐步加载应用而变得流行起来。 在这篇文章中，我们将会看一下什么是代码分片和怎么去做，了解怎么去配合React Router去实现它。  现在是2018年。你的用户不需要为了一小块内容而去下载整个应用。如果一个用户下载所有的代码，仅仅是为了请求一个注册页面是毫无意义的。而且">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/19/Router进行代码分片/chunk.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Choicelin</h5>
+          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/choicelin" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Router进行代码分片</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Router进行代码分片</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-19T00:58:50.000Z" itemprop="datePublished" class="page-time">
+  2018-03-19
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用React和React-Router进行代码分片"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用React和React Router进行代码分片</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="使用react和react-Router进行代码分片"
+  class="post-article article-type-使用react和react fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Router进行代码分片</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-19 08:58:50" datetime="2018-03-19T00:58:50.000Z"  itemprop="datePublished">2018-03-19</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="使用React和React-Router进行代码分片"><a href="#使用React和React-Router进行代码分片" class="headerlink" title="使用React和React Router进行代码分片"></a>使用React和React Router进行代码分片</h1><blockquote>
+<p>本文翻译自<a href="https://medium.freecodecamp.org/code-splitting-with-react-and-react-router-62e174382d4c" target="_blank" rel="noopener">Medium</a></p>
+</blockquote>
+<ul>
+<li><p>代码分片可以让你把应用分成多个包，使你的用户能逐步加载应用而变得流行起来。</p>
+<p>在这篇文章中，我们将会看一下什么是代码分片和怎么去做，了解怎么去配合React Router去实现它。</p>
+</li>
+<li><p>现在是2018年。你的用户不需要为了一小块内容而去下载整个应用。如果一个用户下载所有的代码，仅仅是为了请求一个注册页面是毫无意义的。而且用户在注册时并不需要下载用户设置页的巨大富文本编辑器代码。如果要下载那么多内容的话，是很浪费的。而且对于一些用户，他们会抱怨不尊重没有特别好带宽的他们。这个点子近年不仅很热，而且实现难度以指数级降低。甚至还有有了一个很酷的名字，代码分片。</p>
+</li>
+<li><p>这个点子很简单，即按需加载。实践的话，它可能有一点复杂。而复杂的原因并不是代码分片本身，而是现在有各种各样的工具来做这个事情。而且每个人对哪个方式最好都有自己的看法。当你第一次开始着手的时候，可能很困难分析什么是什么。</p>
+</li>
+<li><p>最常见的两种做法是使用Webpack和它的包加载器（bundle-loader），或者使用ECMAScript的stage3提案的动态import()。任何机会不用Webpack，我就不用，因此在这篇文章中，我将会使用动态import()。</p>
+</li>
+<li><p>如果你很熟悉ES模块，你应该知道它们是静态的。意思就是说你必须在编译时确定你要引入和导出的内容，而不是运行时。这也意味着你不能基于一些条件来动态导入一个模块。导入的内容必须声明在文件的最开头否则会抛出一个错误。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!user) &#123;</span><br><span class="line">    <span class="keyword">import</span> * <span class="keyword">as</span> api <span class="keyword">from</span> <span class="string">'./api'</span> <span class="comment">//不能这样做，“import”和“export”只能出现在文件顶部</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在，如果import不需要是静态的怎么办？意味着上面的代码可以工作?将会给我们带来什么好处？首先这意味着我可以按着需要加载某个模块。这非常强大，它让我们更接近按用户需要下载代码的想象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (editPost === <span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">import</span> * <span class="keyword">as</span> edit <span class="keyword">from</span> <span class="string">'./editpost'</span></span><br><span class="line">    </span><br><span class="line">    edit.showEditor()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>假设<strong>editpost</strong>包含一个非常大的富文本编辑器，我们需要保证用户在没有使用它的时候不会去下载它。</p>
+</li>
+<li><p>另外一个很酷的例子用于遗留支持。你可以在浏览器确定确实没有的时候才下载对应代码。</p>
+</li>
+<li><p>好消息（我在上文中曾间接提及）。这种类型的方法确实存在，它被Create React App（React项目的一种官方创建方法）支持,而且它是ECMAScript stage3的提案。不同的是替换了你之前使用import的方式。它使用起来像一个方法，并返回一个Promise，一旦模块完全加载，就会把这个模块resolve回来。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (editPost === <span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'./editpost'</span>)</span><br><span class="line">      .then(<span class="function"><span class="params">module</span> =&gt;</span> <span class="built_in">module</span>.showEditor())</span><br><span class="line">      .catch(<span class="function"><span class="params">e</span> =&gt;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>特别好，对吧？</p>
+</li>
+<li><p>现在我们知道怎么动态引入模块了，下一步是找出怎么结合React和React Router来使用它。</p>
+</li>
+<li><p>第一个（可能是最大的一个）问题，我们对React代码分片时，我们应该对哪里进行分片？典型的回答有两个</p>
+<ol>
+<li>在路由的层次上分片</li>
+<li>在组件的层次上分片</li>
+</ol>
+</li>
+<li><p>而更加常见的做法是在路由的层次上进行分片。你已经把你的应用分成了不同的路由，因此根据这个来代码分片是自然而然的事情。</p>
+</li>
+<li><p>让我以一个简单的React Router例子开始。我们将有三条路由分别是： <strong>/</strong>，<strong>/topics</strong>，<strong>/settings</strong>。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    BrowserRouter <span class="keyword">as</span> Router,</span><br><span class="line">    Route,</span><br><span class="line">    Link,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./Home'</span></span><br><span class="line"><span class="keyword">import</span> Topics <span class="keyword">from</span> <span class="string">'./Topics'</span></span><br><span class="line"><span class="keyword">import</span> Settings <span class="keyword">from</span> <span class="string">'./Settings'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">          &lt;Router&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">              &lt;ul&gt;</span><br><span class="line">              	&lt;li&gt;&lt;Link to='/'&gt;Home&lt;/Link&gt;&lt;/li&gt;</span><br><span class="line">			   &lt;li&gt;&lt;Link to='/topics'&gt;Topics&lt;/Link&gt;&lt;/li&gt; </span><br><span class="line">                &lt;li&gt;&lt;Link to='/settings'&gt;Settings&lt;/Link&gt;&lt;/li&gt;</span><br><span class="line">              &lt;<span class="regexp">/ul&gt;    </span></span><br><span class="line"><span class="regexp">                </span></span><br><span class="line"><span class="regexp">              &lt;hr /</span>&gt;</span><br><span class="line">              </span><br><span class="line">              &lt;Route exact path=<span class="string">'/'</span> component=&#123;Home&#125; /&gt;</span><br><span class="line">              &lt;Route exact path=<span class="string">'/topics'</span> component=&#123;Topics&#125; /&gt;</span><br><span class="line"> 			 &lt;Route exact path=<span class="string">'/settings'</span> component=&#123;Settings&#125; /&gt;</span><br><span class="line">            &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">          &lt;/</span>Router&gt;  </span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在，假设我们的<strong>/settings</strong>路由内容非常多。它包含一个富文本编辑器，和一个原始超级马里奥兄弟的拷贝，和盖伊法利的高清图片。当用户不在<strong>/settings</strong>路由上时，我们不想让他们下载全部这些内容。让我们使用我们React和动态引入（import()）的知识来分片<strong>/settings</strong>路由。</p>
+</li>
+<li><p>就像我们在React里解决任何问题一样，我们先写一个组件。我们将叫它<strong>DynamicImport</strong>。这个组件的目的是动态的加载一个模块，只要模块加载好了，就把它传给它子节点（children）。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Settings = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">  &lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">    &#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">       ? &lt;Loading /&gt; </span><br><span class="line">       : &lt;Component &#123;...props&#125; /&gt;&#125;</span><br><span class="line">  &lt;/DynamicImport&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面的代码告诉我们两个重要的要素。第一，这个组件在执行时会接受一个属性<strong>load</strong>，将使用我们前面提到的语法动态引入一个模块。第二，这个组件会接受一个函数作为他的子节点，这个函数需要和引入进来的模块一起调用。</p>
+</li>
+<li><p>在我们深入思考<strong>DynamicImport</strong>的实现的之前，让我们想一下我们会怎么实现。第一件事我们需要确定的是要调用props.load。这让我们返回一个Promise，当它resolve的时候应该返回模块。接着，一旦我们有了模块，我们需要一种方式去触发重渲染，因此我们要把模块传给props.children并且调用它。怎样在React里面触发重渲染呢？设置state（setState）。通过把动态引入的模块加入到<strong>DynamicImport</strong>的state里面，就像我们之前使用的一样，我们遵循和React同样的过程- 获取数据 -&gt; 设置到state里 -&gt; 重渲染。而这一次我们只是把获取数据替换成了引入模块。</p>
+</li>
+<li><p>好了，首先，让我们加入初始的状态到组件里。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在，我们需要调props.load方法。这将返回一个promise同时在resolve后有一个模块</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125; </span><br><span class="line">    componentWillMount () &#123;</span><br><span class="line">        <span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function"><span class="params">component</span> =&gt;</span> &#123;</span><br><span class="line">            	<span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span>｛</span><br><span class="line">                  	component</span><br><span class="line">                 )&#125;           </span><br><span class="line">        	&#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这里有一个疑难杂症。如果我们ES模块和commonjs模块混用时，ES模块会有一个.default属性，而commonjs模块并没有。让我们改变一下代码，适应一下上面的情况。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.props.load()</span><br><span class="line">    .then(<span class="function"><span class="params">component</span> =&gt;</span> &#123;</span><br><span class="line">    	<span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        	component: component.default ?</span><br><span class="line">component.default : component</span><br><span class="line">    	&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在我们动态引入的模块并且把它加入到了state里面，最后一件事就是render方法长什么样了。如果你会记得，当<strong>DynamicImport</strong>使用的时候，它看起来像这样</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Settings = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">	&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">        &#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">            ? ＜Loading/&gt;</span><br><span class="line">        	: &lt;Component &#123;...props&#125; /&gt;&#125;</span><br><span class="line">    &lt;/DynamicImport&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意我们给组件传了一个函数作为子节点。这意味着我们需要执行这个函数，传递的是这个引入在state里的组件。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">	componentWillMount () &#123;</span><br><span class="line">    	<span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function">(<span class="params">component</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">				  component: component.default </span><br><span class="line">                    ? component.default</span><br><span class="line">                    : component</span><br><span class="line">                &#125;)</span><br><span class="line">        	&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.props.children(<span class="keyword">this</span>.state.component)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>欧了，现在任何时候我们动态引入一个模块，我们可以把它包裹在<strong>DynamicImport</strong>。如果我们之前尝试用这种方法到我们路由上，我们的代码会看起来像这样</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    BrowserRouter <span class="keyword">as</span> Router,</span><br><span class="line">    Route,</span><br><span class="line">    Link</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">	componentWillMount () &#123;</span><br><span class="line">    	<span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function">(<span class="params">component</span>) =&gt;</span>　&#123;</span><br><span class="line">            	<span class="keyword">this</span>.setState(&#123;</span><br><span class="line">                    component: component.default </span><br><span class="line">                    ? component.default</span><br><span class="line">                    : component</span><br><span class="line">                &#125;)</span><br><span class="line">        	&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	render() &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.props.children(<span class="keyword">this</span>.state.component)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Home = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">	&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Home'</span>)&#125;&gt;</span><br><span class="line">    	&#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">          	? &lt;p&gt;Loading&lt;/p&gt;</span><br><span class="line">            : &lt;Component &#123;...props&#125; /&gt;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/DynamicImport&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Topics = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">	&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">    	&#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">        	? &lt;p&gt;Loading&lt;/p&gt;</span><br><span class="line">            : &lt;Component &#123;...props&#125;/&gt;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/DynamicImport&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">        	&lt;Router&gt;</span><br><span class="line">            	&lt;div&gt;</span><br><span class="line">                	&lt;ul&gt;</span><br><span class="line">                    	&lt;li&gt;&lt;Link to='/'&gt;Home&lt;/Link&gt;&lt;/li&gt;</span><br><span class="line">                        &lt;li&gt;&lt;Link to='/topics'&gt;Topics&lt;/Link&gt;&lt;/li&gt;</span><br><span class="line">                        &lt;li&gt;&lt;Link to='/settings'&gt;Settings&lt;/Link&gt;&lt;/li&gt;</span><br><span class="line">                    &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;hr /</span>&gt;</span><br><span class="line">                    &lt;Route exact path=<span class="string">'/'</span> component=&#123;Home&#125; /&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">'/topics'</span> component=&#123;Topics&#125; /&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">'/settings'</span> component=&#123;Settings&#125; /&gt;</span><br><span class="line">                &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/</span>Router&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+<p>我们怎么知道这个确实起作用并且分片了我们的路由呢？如果你用一个React官方的Create React App创建一个应用跑一下<strong>npm run build</strong>，你将看到应用被分片了。</p>
+<p><img src="./chunk.png" alt="包"></p>
+</li>
+<li><p>每一个包被一一引入进了我们的应用</p>
+</li>
+<li><p>你到了这一步，可以跳个舞轻松一下了</p>
+</li>
+<li><p>还记得我讲到有两种层级的代码分片方式吗？我们曾放在手边的引导</p>
+<ol>
+<li>以路由层级分片</li>
+<li>以组建层级分片</li>
+</ol>
+</li>
+<li><p>至此，我们只讲了路由层级的代码分片。到这里很多人就停止了。在路由层级上代码分片，就像刷牙一样，你天天刷，牙齿大部分很干净，但是还会有蛀牙。</p>
+</li>
+<li><p>除了思考用路由的分片方式，你应该想想怎么用组件的方式去分片。如果你在弹层里面有很多内容，路由分片还是会下载弹层的代码，无论这个弹层是否显示。</p>
+</li>
+<li><p>从这一点看，它更多是在你大脑里的一种变更而不是新知识。你已经知道如何使用动态引入，现在你需要找出哪些组件是在用到时才要下载的。</p>
+</li>
+<li><p>如果我不提React Loadable那我就是哑巴了。它是一个“通过动态引入加载组件的高阶组件”。重要的是，它处理所有我们提到的事情，并把它做成了一个精致的API。它甚至处理了很多很边角的事情，比如我们没有考虑服务端渲染和错误处理。看看它吧，如果你想要一个简单，开箱即用的解决方案的话。</p>
+<p>​</p>
+<p>(完，逃)</p>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-03-19T01:03:10.493Z" itemprop="dateUpdated">2018-03-19 09:03:10</time>
+</span><br>
+
+
+        
+        作者只是一个小菜鸡，请轻喷！！
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="Choicelin">
+            Choicelin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/03/19/Router进行代码分片/&title=《Router进行代码分片》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/03/19/Router进行代码分片/&title=《Router进行代码分片》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/19/Router进行代码分片/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Router进行代码分片》 — 1024子翔的程序人生&url=http://yoursite.com/2018/03/19/Router进行代码分片/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/19/Router进行代码分片/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/11/wepy开发速查手册/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">wepy开发速查手册</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyNy85OTgz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Choicelin &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/03/19/Router进行代码分片/&title=《Router进行代码分片》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/03/19/Router进行代码分片/&title=《Router进行代码分片》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/19/Router进行代码分片/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Router进行代码分片》 — 1024子翔的程序人生&url=http://yoursite.com/2018/03/19/Router进行代码分片/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/19/Router进行代码分片/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aQW7DMAwEwPz/0ynQW1FYXlIKWkujU5DElscHgqT4esXr/b2Sz1ff/P71apfxf6YWBgbGYxnv4co3GD/u1bX5vjevAwMD4wBGEmTzsDu+f/6ykmfDwMDAyNPBMSAJrMlLwcDAwFjFqKZ6yb4YGBgYeUAcb1B9BXlKuqwWx8DAeCBj7cHA2s9/dr6BgYHxbxjv4hofEuQhePFTYWBgbM1ICs5kJCK/tpdoRgMZGBgYmzLyYjUnVQ9B8ybd5b4YGBhbM6rt+N7wRC8oV4c8MDAw9mb0RiLyZDG5alwYR0cCGBgYWzNm0riZcNkra6PzWAwMjGMYeXL2iTBdvRYDA2NXRu8wssrO/19t7WFgYJzMyJtredidSRYLMyMYGBhbM+abX0ngTgJxfk8MDIwzGb0UcAxLfk3uf/lsGBgYxzB6idqqVl2vAYeBgXEaY75Nnx9Azg9b/PgnBgbGAYxq6785ITvRvLt5QRgYGFszZoLgzOhqMv1RPUbFwMDYldFrtK0KwTm4XItjYGBsyqiuJO1LAmvvDuVhCwwMjMcyqqlYUqDmSWEvEbwplTEwMLZj9IJsL6WbOQy4STQxMDC2ZswHxF57rlymFu+GgYGxH6MaZPN2W/5qlh1hYmBgbM2YH7bopXc9fGE4DAMD4zBGLzR/LpXEwMDAyB+uWojO3H9ZwMXAwHggY6aIzccy8mK4WmZjYGDszZhpja1aeXOtCcDAwHgq4wuSs2WrQRD+jwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
