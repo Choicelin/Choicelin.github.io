@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/09/前端工作遇到的小知识点/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
-<meta property="og:updated_time" content="2018-03-28T02:49:09.966Z">
+<meta property="og:updated_time" content="2018-03-29T08:22:34.786Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端工作遇到的小知识点">
 <meta name="twitter:description" content="顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟 微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。 文本溢">
@@ -117,7 +117,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -195,6 +195,7 @@
 <li>背景大圆弧可以用border-bottom-left-radius结合right来做，给具体的值</li>
 <li>wepy中报找不到wxss目前发现了两个原因，第一子组件sass引用路径错误，第二命名使用了toast这种的保留组件名</li>
 <li>小程序wepy框架 unexpected attribute near .sync(.once),检查是否在components中引入了组件</li>
+<li>textarea的换行符，可以用white-space: pre-wrap显示生效</li>
 </ol>
 <p>此文长期更新，遇到什么就写什么，mark</p>
 
@@ -205,7 +206,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-03-28T02:49:09.966Z" itemprop="dateUpdated">2018-03-28 10:49:09</time>
+    最終更新：<time datetime="2018-03-29T08:22:34.786Z" itemprop="dateUpdated">2018-03-29 16:22:34</time>
 </span><br>
 
 
@@ -393,7 +394,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
