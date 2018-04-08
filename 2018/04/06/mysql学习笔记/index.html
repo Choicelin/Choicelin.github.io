@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>mysql学习笔记 | 1024子翔的程序人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="mysql">
+    <meta name="description" content="mysql命令行mysql登录 查看版本 1mysql -V  root权限登录 p密码 P端口 h主机地址 回车后输入密码或者-p后跟密码 1mysql -uroot -p -P3306 -h127.0.0.1   登录后退出123exit;quit;\q; 修改提示符 \D完整日期 \d当前数据库 \h服务器名称\u当前用户   可以互相组合  1mysql -uroot -proot --p">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/04/06/mysql学习笔记/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:description" content="mysql命令行mysql登录 查看版本 1mysql -V  root权限登录 p密码 P端口 h主机地址 回车后输入密码或者-p后跟密码 1mysql -uroot -p -P3306 -h127.0.0.1   登录后退出123exit;quit;\q; 修改提示符 \D完整日期 \d当前数据库 \h服务器名称\u当前用户   可以互相组合  1mysql -uroot -proot --p">
+<meta property="og:updated_time" content="2018-04-08T03:03:28.587Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql学习笔记">
+<meta name="twitter:description" content="mysql命令行mysql登录 查看版本 1mysql -V  root权限登录 p密码 P端口 h主机地址 回车后输入密码或者-p后跟密码 1mysql -uroot -p -P3306 -h127.0.0.1   登录后退出123exit;quit;\q; 修改提示符 \D完整日期 \d当前数据库 \h服务器名称\u当前用户   可以互相组合  1mysql -uroot -proot --p">
+    
+        <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Choicelin</h5>
+          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/choicelin" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">mysql学习笔记</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">mysql学习笔记</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-04-06T00:17:08.000Z" itemprop="datePublished" class="page-time">
+  2018-04-06
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mysql命令行"><span class="post-toc-number">1.</span> <span class="post-toc-text">mysql命令行</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mysql登录"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">mysql登录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#登录后退出"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">登录后退出</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改提示符"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">修改提示符</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用命令"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">常用命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#规范"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">规范</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建数据库示例"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">创建数据库示例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看当前服务器下的数据列表"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">查看当前服务器下的数据列表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改数据库示例"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">修改数据库示例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#删除数据库示例"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">删除数据库示例</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MySQL数据类型"><span class="post-toc-number">2.</span> <span class="post-toc-text">MySQL数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#整型"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">整型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浮点型"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">浮点型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#日期类型"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">日期类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符型"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">字符型</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#表"><span class="post-toc-number">3.</span> <span class="post-toc-text">表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#USE"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">USE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建数据表"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">创建数据表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看数据表"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">查看数据表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看数据表结构"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">查看数据表结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入记录与查询记录"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">插入记录与查询记录</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#空值与非空"><span class="post-toc-number">4.</span> <span class="post-toc-text">空值与非空</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自动编号"><span class="post-toc-number">5.</span> <span class="post-toc-text">自动编号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主键约束"><span class="post-toc-number">6.</span> <span class="post-toc-text">主键约束</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#唯一约束"><span class="post-toc-number">7.</span> <span class="post-toc-text">唯一约束</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#默认约束"><span class="post-toc-number">8.</span> <span class="post-toc-text">默认约束</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#再谈约束"><span class="post-toc-number">9.</span> <span class="post-toc-text">再谈约束</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#外键约束"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">外键约束</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#外键约束要求"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">外键约束要求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#编辑数据表的默认存储引擎"><span class="post-toc-number">9.2.1.</span> <span class="post-toc-text">编辑数据表的默认存储引擎</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#外键约束示例"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">外键约束示例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#外键约束的参照操作"><span class="post-toc-number">9.4.</span> <span class="post-toc-text">外键约束的参照操作</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-mysql学习笔记"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">mysql学习笔记</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-04-06 08:17:08" datetime="2018-04-06T00:17:08.000Z"  itemprop="datePublished">2018-04-06</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="mysql命令行"><a href="#mysql命令行" class="headerlink" title="mysql命令行"></a>mysql命令行</h2><h3 id="mysql登录"><a href="#mysql登录" class="headerlink" title="mysql登录"></a>mysql登录</h3><ul>
+<li><p>查看版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -V</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>root权限登录 p密码 P端口 h主机地址 回车后输入密码或者-p后跟密码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p -P3306 -h127.0.0.1</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="登录后退出"><a href="#登录后退出" class="headerlink" title="登录后退出"></a>登录后退出</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br><span class="line">quit;</span><br><span class="line">\q;</span><br></pre></td></tr></table></figure>
+<h3 id="修改提示符"><a href="#修改提示符" class="headerlink" title="修改提示符"></a>修改提示符</h3><ul>
+<li>\D完整日期 \d当前数据库 \h服务器名称\u当前用户   可以互相组合</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -proot --prompt \h</span><br></pre></td></tr></table></figure>
+<ul>
+<li>登录以后</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prompt mysql&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li><p>查版本、显示当前日期、显示当前用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT VERSION();</span><br><span class="line">SELECT NOW();</span><br><span class="line">SELECT USER();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><ul>
+<li>关键字、函数名称全部大写</li>
+<li>数据库名称、表名称、字段名称全部小写</li>
+<li>SQL语句必须以分号结尾</li>
+</ul>
+<h3 id="创建数据库示例"><a href="#创建数据库示例" class="headerlink" title="创建数据库示例"></a>创建数据库示例</h3><ul>
+<li><p>最简单的版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE t1;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在未存在该数据库时才创建</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE IF NOT EXISTS t1;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此时数据库存在，所以可以用SHOW WARNINGS;查看警告信息，SHOW CREATE DATABASE t1;可以查看创建t1的命令</p>
+</blockquote>
+</li>
+<li><p>再加入编码方式</p>
+</li>
+</ul>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE IF NOT EXIST t2 CHARACTER SET gbk;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果想修改编码方式则参考下面的内容</p>
+</blockquote>
+<h3 id="查看当前服务器下的数据列表"><a href="#查看当前服务器下的数据列表" class="headerlink" title="查看当前服务器下的数据列表"></a>查看当前服务器下的数据列表</h3><ul>
+<li><p>基本示例</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW DATABASES;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="修改数据库示例"><a href="#修改数据库示例" class="headerlink" title="修改数据库示例"></a>修改数据库示例</h3><ul>
+<li><p>修改除了没有IF NOT EXISTS 和 CREATE改为ALTER其他部分都一样，下面修改字符集</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE t1 CHARACTER SET utf8;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="删除数据库示例"><a href="#删除数据库示例" class="headerlink" title="删除数据库示例"></a>删除数据库示例</h3><ul>
+<li><p>删除</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP DATABASE IF EXISTS t1;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="MySQL数据类型"><a href="#MySQL数据类型" class="headerlink" title="MySQL数据类型"></a>MySQL数据类型</h2><h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><ul>
+<li>TINYINT(-128-127,0-255) 1字节</li>
+<li>SMALLINT(-32768-32767,0-65535) 2字节</li>
+<li>MEDIUMINT(-8388608-8388607,0-4294967295) 3字节</li>
+<li>INT(-2^31-2^31-1,0-2^32-1) 4字节</li>
+<li>BIGINT(-2^63–2^63-1,0-2^64-1) 8字节</li>
+</ul>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><ul>
+<li>FLOAT[(M,D)]    M表示总位数D表示小数位数（小数最大7位）</li>
+<li>DOUBLE[(M,D)] </li>
+</ul>
+<h3 id="日期类型"><a href="#日期类型" class="headerlink" title="日期类型"></a>日期类型</h3><ul>
+<li>YEAR 1</li>
+<li>TIME 3</li>
+<li>DATE 3</li>
+<li>DATETIME 8</li>
+<li>TIMESTAMP(时间戳) 4</li>
+</ul>
+<h3 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h3><ul>
+<li>CHAR(M)   0&lt;=M&lt;=255字节  定长类型，不足以空格补位</li>
+<li>VARCHAR(M)  L+1个字节，其中L&lt;=M且0&lt;=M&lt;=65535  变长类型，有多长存多长</li>
+<li>TINYTEXT L+1个字节，其中L&lt;2^8</li>
+<li>TEXT L+2个字节，其中L&lt;2^16</li>
+<li>MEDIUMTEXT 3 24</li>
+<li>LONGTEXT 4 32</li>
+<li>ENUM(‘value1’,’value2’,…) 1或2个字节，取决于枚举个数（最多65535个值）</li>
+<li>SET(‘value1’,’value2’,…) 1 2 3 4 8字节 取决于SET成员的数目最大64个成员</li>
+</ul>
+<h2 id="表"><a href="#表" class="headerlink" title="表"></a>表</h2><h3 id="USE"><a href="#USE" class="headerlink" title="USE"></a>USE</h3><ul>
+<li><p>打开数据库(必须已经创建或已存在)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE t1;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h3><ul>
+<li><p>创建一个存储用户信息的表</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE tb1(</span><br><span class="line">	username VARCHAR(20),</span><br><span class="line">	age TINYINT UNSIGNED,</span><br><span class="line">	salary FLOAT(8,2) UNSIGHED</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="查看数据表"><a href="#查看数据表" class="headerlink" title="查看数据表"></a>查看数据表</h3><ul>
+<li><p>查看数据表列表</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW TABLES [FROM dbName(mysql)];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="查看数据表结构"><a href="#查看数据表结构" class="headerlink" title="查看数据表结构"></a>查看数据表结构</h3><ul>
+<li><p>查看表结构是查看列</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW COLUMNS FROM tb1;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="插入记录与查询记录"><a href="#插入记录与查询记录" class="headerlink" title="插入记录与查询记录"></a>插入记录与查询记录</h3><ul>
+<li><p>插入记录示例，如果省略列名称，需要全部赋值，还是以上面创建的用户信息表举例</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT tb1 VALUES('Anger', 21, 7863.25);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>插入记录示例,不省略列名称</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT tb1(username, age) VALUES('Kira', 25);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>简单查询示例，*匹配的是字段而不是记录，有人会说*是匹配所有记录，这是有点问题的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM tb1;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="空值与非空"><a href="#空值与非空" class="headerlink" title="空值与非空"></a>空值与非空</h2><ul>
+<li>NULL 字段值可以为空，设置的时候可以省略</li>
+<li>NOT NULL 字段值禁止为空</li>
+</ul>
+<h2 id="自动编号"><a href="#自动编号" class="headerlink" title="自动编号"></a>自动编号</h2><ul>
+<li>自动编号，必须与主键结合使用</li>
+<li>默认情况下，起始值为1，每次的增量为1</li>
+</ul>
+<h2 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h2><ul>
+<li><p>一张数据表中只能存在一个主键</p>
+</li>
+<li><p>主键保证记录的唯一性</p>
+</li>
+<li><p>主键自动为NOT NULL</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE tb3(</span><br><span class="line">	id SMALLINT UNSIGHED AUTO_INCREMENT PRIMARY KEY,</span><br><span class="line">	username VARCHAR(20) NOT NULL</span><br><span class="line">);</span><br><span class="line">SHOW COLUMNS FROM tb3;</span><br><span class="line">INSERT tb3(username) VALUES('Kira');</span><br><span class="line">SELECT * FROM tb3;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="唯一约束"><a href="#唯一约束" class="headerlink" title="唯一约束"></a>唯一约束</h2><ul>
+<li>唯一约束可以保证记录的唯一性</li>
+<li>唯一约束的字段可以为空值（NULL）</li>
+<li>每张数据表可以存在多个唯一约束</li>
+</ul>
+<h2 id="默认约束"><a href="#默认约束" class="headerlink" title="默认约束"></a>默认约束</h2><ul>
+<li><p>当插入记录时，如果未明确为字段赋值，则会赋予默认值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE tb4(</span><br><span class="line">	id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,</span><br><span class="line">	username VARCHAR(20) NOT NULL UNIQUE KEY,</span><br><span class="line">	sex ENUM('1', '2', '3') DEFAULT '3'</span><br><span class="line">);</span><br><span class="line">SHOW COLUMNS FROM tb4;</span><br><span class="line">INSERT tb6(username, sex) VALUES('Tom', 1);</span><br><span class="line">INSERT tb6(username) VALUES('Rose');</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="再谈约束"><a href="#再谈约束" class="headerlink" title="再谈约束"></a>再谈约束</h2><ol>
+<li>约束保证数据的完整性和一致性</li>
+<li>约束分为表级约束和列级约束，如果约束只针对某一个字段来约束，我们称之为列级约束，如果针对两个或两个以上字段来使用约束，则成为表级约束</li>
+<li>约束类型包括（按功能分类）<ul>
+<li>NOT NULL (非空约束)</li>
+<li>PRIMARY KEY(主键约束)</li>
+<li>UNIQUE KEY(唯一约束)</li>
+<li>DEFAULT(默认约束)</li>
+<li>FOREIGN KEY(外键约束)</li>
+</ul>
+</li>
+</ol>
+<h3 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h3><ol>
+<li>保持数据完整性和一致性</li>
+<li>实现一对一或一对多的关系</li>
+</ol>
+<h3 id="外键约束要求"><a href="#外键约束要求" class="headerlink" title="外键约束要求"></a>外键约束要求</h3><ol>
+<li>父表和子表必须使用相同的存储引擎，而且禁止使用临时表</li>
+<li>数据表的存储引擎只能为InnoDB</li>
+<li>外键列和参照列必须具有相似的数据类型。其中数字的长度或是是否有符号位必须相同，而字符长度则可以不同</li>
+<li>外键列和参照列必须创建索引。如果外键列不存在索引的话，MySQL将会自动创建索引</li>
+</ol>
+<p>PS : </p>
+<ul>
+<li>子表是具有外键列的表，而子表所参照的表叫父表</li>
+<li>外键列是加过FOREIGN关键字的列，而参照列则是外键列参照的列</li>
+</ul>
+<h4 id="编辑数据表的默认存储引擎"><a href="#编辑数据表的默认存储引擎" class="headerlink" title="编辑数据表的默认存储引擎"></a>编辑数据表的默认存储引擎</h4><ul>
+<li><p>MySQL配置文件my.ini,修改完需重启MySQL服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default-storage-engine=INNODB</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="外键约束示例"><a href="#外键约束示例" class="headerlink" title="外键约束示例"></a>外键约束示例</h3><ul>
+<li><p>省份表</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE provinces(</span><br><span class="line">	id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line">	pname VARCAHR(20) NOT NULL</span><br><span class="line">);</span><br><span class="line">SHOW CREATE TABLE provinces;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用户表,pid参照省份表（父表）的id字段</p>
+</li>
+</ul>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE users(</span><br><span class="line">  	id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line">  	username VARCHAR(10) NOT NULL,</span><br><span class="line">  	pid BIGINT,</span><br><span class="line">  	FOREIGN KEY (pid) REFERENCES provinces(id)</span><br><span class="line">  );</span><br></pre></td></tr></table></figure>
+<p>  上述操作会报错，因为父表的id与子表的pid数据类型不相似</p>
+<ul>
+<li><p>修正后</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE users(</span><br><span class="line"> 	id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line"> 	username VARCHAR(10) NOT NULL,</span><br><span class="line"> 	pid SMALLINT UNSIGNED,</span><br><span class="line"> 	FOREIGN KEY (pid) REFERENCES provinces(id)</span><br><span class="line"> );</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="外键约束的参照操作"><a href="#外键约束的参照操作" class="headerlink" title="外键约束的参照操作"></a>外键约束的参照操作</h3><ol>
+<li>CASCADE</li>
+</ol>
+<p>( 未完待续)</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-04-08T03:03:28.587Z" itemprop="dateUpdated">2018-04-08 11:03:28</time>
+</span><br>
+
+
+        
+        作者只是一个小菜鸡，请轻喷！！
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="Choicelin">
+            Choicelin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/06/mysql学习笔记/&title=《mysql学习笔记》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/06/mysql学习笔记/&title=《mysql学习笔记》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/06/mysql学习笔记/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mysql学习笔记》 — 1024子翔的程序人生&url=http://yoursite.com/2018/04/06/mysql学习笔记/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/06/mysql学习笔记/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/04/04/css可以继承的属性/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">css可以继承的属性</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyNy85OTgz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Choicelin &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/06/mysql学习笔记/&title=《mysql学习笔记》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/06/mysql学习笔记/&title=《mysql学习笔记》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/06/mysql学习笔记/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mysql学习笔记》 — 1024子翔的程序人生&url=http://yoursite.com/2018/04/06/mysql学习笔记/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/06/mysql学习笔记/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aQW6DQAwF0Nz/0lTqKlUU8m1DFYY3q4ggmMfC8th+POK1/a7n389XXu98/Te5vv/kAxYGBsZlGdvuemXsI989M/80+9ffPhMDA+MGjOQ1k2Cdf6bkvRgYGBiTgFjd1n7SiYGBgTEJuPukJOzmMAwMDIw8datuvZosJoH+gLM4BgbGBRm9xsD//D69v4GBgfH1jK21krQyPwzPFwYGxtqMeXpXHZuYDG182CEGBsbSjGoi2HtBLzSPnomBgbEEIw+11TsnxbUqHgMDY21G3mLsDbP28Em7tNDIxMDAuDhjUkrrpY9JG7I8fIaBgbE0I9l0wstfnKeb+RAGBgbG2ow8CcuTyN7Tep8MAwPjPow8geuVyebH4w88DAyMpRl5GyA57lY32ivkJUknBgbGSow8Fesdd3ul/zysjzaNgYFxEUZ1oKEcuYvH4Lw6WKgXYmBgLMGYHD7zdLAZRnvRFQMDYyHGpBCWh8Lm2EQegjEwMJZmJK/pBdPeaNdkJxgYGPdh9MYmzhuzKHczMDAwlmYkwa6XPs4r+QdPjmBgYFyQkQTB6rhY9c7D6oUYGBjLMbbiqiZtvYQvL8n9GQvDwMBYlNELc0npf5IIVotxGBgYd2DkQbZZsg8qYwcEXAwMjBswqkG2Gkx7zYOk8o+BgYGRBNzqOEV17CxqZGJgYGAUE8ccfMo5GwMDY1FGtRkweWYOKw9YYGBgLMroFevzZuR5cxEH9DcwMDC+nfEDtluTYWnYufYAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
