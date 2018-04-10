@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-08T03:03:28.587Z</updated>
+  <updated>2018-04-10T12:58:40.438Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>给今后解决bug作参考-bug心路</title>
+    <link href="http://yoursite.com/2018/04/10/%E7%BB%99%E4%BB%8A%E5%90%8E%E8%A7%A3%E5%86%B3bug%E4%BD%9C%E5%8F%82%E8%80%83-bug%E5%BF%83%E8%B7%AF/"/>
+    <id>http://yoursite.com/2018/04/10/给今后解决bug作参考-bug心路/</id>
+    <published>2018-04-10T12:57:59.000Z</published>
+    <updated>2018-04-10T12:58:40.438Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>解决标准分bug的过程，或许对以后会有所启示，首先觉得是对的，与测试沟通，然后需求说确认要改，然后改，发现代码确实是跳结果页，找不到原因，询问小师父，发现是后台接口的一个问题导致不能支付，然后支付试一下，可以了，但是页面白屏，停一下，到这一步其实是关键，这个白屏的链接获取到，这是个突破点，然后就靠自己了，发现在结果页又发生了跳转，是一个参数控制是否跳转，打印该参数为undefined，取反，正好是触发了跳转，问题就集中在这里，继续刷新看获取该参数的接口跑了没，发现跑了，看是不是时机不对,果然，在render中写跳转，redux中数据还没有过来，换到componentWillReceiveProps里面，成功，bug终结</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;解决标准分bug的过程，或许对以后会有所启示，首先觉得是对的，与测试沟通，然后需求说确认要改，然后改，发现代码确实是跳结果页，找不到原因，询问小师父，发现是后台接口的一个问题导致不能支付，然后支付试一下，可以了，但是页面白屏，停一下，到这一步其实是关键，这个白屏
+      
+    
+    </summary>
+    
+    
+      <category term="程序人生" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>mysql学习笔记</title>
@@ -431,7 +455,7 @@
     <link href="http://yoursite.com/2018/01/09/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>http://yoursite.com/2018/01/09/前端工作遇到的小知识点/</id>
     <published>2018-01-09T02:21:41.000Z</published>
-    <updated>2018-04-10T02:55:14.992Z</updated>
+    <updated>2018-04-10T12:57:10.567Z</updated>
     
     <content type="html"><![CDATA[<ol><li>顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟</li><li>微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。</li><li>文本溢出无法实现时，使用height,line-height,overflow做</li><li>做列表勾选同步时，前端修改了数据勾选状态，如果请求后端同步时失败，应回滚前端勾选状态，这中列表数据自带勾选状态的做法，也是一种性能优化的经验</li><li>接口全局配置，如果有两套环境（生产和测试），在页面里用到相关接口url，必须通过配置文件来引用，而不是直接写，如果有不同，就切分字符串，不然你绝对会不停的改来改去。</li><li>原生小程序，setData方法绝对不能set一个undefined值，否则真机会报一个null的错误，同时定位这种错误的方法是打console看这个null的log在console的前面还是后面来定位，巨坑哦</li><li>原生小程序组件在一个页面多次使用，并且要实现使用父组件的data作为组件的property，即在子组件要改变父组件data，来引起子组件properties变化，从而引起视图变化，达到一中父子组件通信的目的，可以充分使用triggerEvent方法，并且在触发时传入type字符串，以实现多态。</li><li>遇到一个问题，小程序在audio播放toggle时flag不生效，起初以为是flag的原因，结果是因为每次都生成了新的播放实例，在新的播放实例上调stop是无效的</li><li>calc运算符号是要空格的，要不然calc出不来;</li><li>小程序wxs出错弹层类型拿数据后会在真机直接奔溃，如果你确定template等传值都是对的，那么这个时候你需要看看wxs传入的值是否正确，这在控制台是不会报错的</li><li>列表点击弹出列表选取列表项逻辑应该是，点第一个列表时记录该列表项id，然后在第二个列表点确定时设置下一个id，并跑接口，取消则清空两个id；</li><li>生产环境小程序在打开时有两种情况，第一种是打开后到首页，这种无疑会触发onLaunch；还有一种是打开后进入其它页面然后关闭，再马上打开，这时还在之前显示的页面，这时并没有触发onLaunch;</li><li>小程序中innerAudioContext使用必须开启铃声状态才有声音哦,同时oncanplay可能会有问题</li><li>防止同时播放问题，保证运行的父组件中只有一个播放context，同时再播放前将其他全部标志设置为false</li><li>cpm config set registry <a href="http://fjdsklajf.com" target="_blank" rel="noopener">http://fjdsklajf.com</a>;</li><li>scss _前缀是用在一个文件不需要编译时，引入时可以去掉下划线</li><li>this.$parent就是app实例，在wepy的page中</li><li>调试一个框架的api，可以在方法里面console.log(arguments),看看需要传什么，然后可以相应知道怎么用</li><li>背景大圆弧可以用border-bottom-left-radius结合right来做，给具体的值</li><li>wepy中报找不到wxss目前发现了两个原因，第一子组件sass引用路径错误，第二命名使用了toast这种的保留组件名</li><li>小程序wepy框架 unexpected attribute near .sync(.once),检查是否在components中引入了组件</li><li>textarea的换行符，可以用white-space: pre-wrap显示生效</li><li>font-size，text-indent百分数值表示总是根据父元素继承的大小来计算，font-size可以继承（小程序button下子元素字体大小不能继承），继承的是计算值而不是百分数也就是计算了以后得到的具体的值，border，margin，padding，background不能继承，继承的值没有特殊性，连0都不如，比如通配选择器的样式就可以覆盖继承值</li><li>特殊性：id 0100 .some-class（类）  *[alt]（属性选择器） :first-child（伪类） 0010 img :before（伪元素）0001  </li><li>text-indent只用于块级元素（如果块级首行有一个图像，则图像也会移动），同时可以为负</li><li>margin-top,margin-bottom的百分数值是相对于父元素宽度而不是高度，否则会出现高度地狱</li><li>行内非替换元素上下位置的margin现实上与没有是一样，同时负外边距时，上下外边距和行高不受影响</li><li>输入框要加样式，占满整行，并且要有高度</li><li>子view有margin-top会有滚动条，可以flex column 和min-height 100%，来解决</li></ol><p>此文长期更新，遇到什么就写什么，mark</p>]]></content>
     
@@ -474,29 +498,6 @@
     
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS对象漫谈</title>
-    <link href="http://yoursite.com/2017/11/26/JS%E5%AF%B9%E8%B1%A1%E6%BC%AB%E8%B0%88/"/>
-    <id>http://yoursite.com/2017/11/26/JS对象漫谈/</id>
-    <published>2017-11-26T04:18:14.000Z</published>
-    <updated>2017-11-26T04:22:56.288Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="如何转为number"><a href="#如何转为number" class="headerlink" title="如何转为number"></a>如何转为number</h1><ul><li>Number(‘1’) === 1</li><li>parseInt(‘1’, 10) === 1</li><li>parseFloat(‘1.23’) === 1.23</li><li>‘1’ - 0 </li><li>+‘1’</li></ul><h1 id="全局对象window"><a href="#全局对象window" class="headerlink" title="全局对象window"></a>全局对象window</h1><ul><li>浏览器在加载时首先会创建window对象</li><li>window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, history, document等）</li><li>document属于dom规范范畴 ,history属于bom规范范畴</li></ul><h1 id="详解Number"><a href="#详解Number" class="headerlink" title="详解Number"></a>详解Number</h1><ul><li>Number(‘1’) 类型转换</li><li>var n = new Number(1) 1 =&gt; {valueOf(): 1,..},通过valueOf获取到原始值1</li><li>使用直接量赋值 var n = 1;在早期是没有toString方法的，而现在直接使用toString会临时转换为Number对象包装后的“1”然后使用toString，最后把这个包装对象丢掉（磨砂次）,这就是为什么给n.xxx = 1后，然后取n.xxx是undefined的原因</li></ul><h1 id="parseInt-与-toString进制问题"><a href="#parseInt-与-toString进制问题" class="headerlink" title="parseInt 与 toString进制问题"></a>parseInt 与 toString进制问题</h1><ul><li>parseInt第二个形参传入一个进制，代表将第一个实参是什么进制的，然后转化为10进制输出</li><li>toString可以传入一个参数代表将要转化的进制，把调用者转化为对应进制的字符串</li></ul><h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><ul><li>为什么叫slice？外国人切面包叫slice，js slice可以“切”数组，字符串。</li></ul><h1 id="5个falsy值"><a href="#5个falsy值" class="headerlink" title="5个falsy值"></a>5个falsy值</h1><ul><li>0</li><li>NaN</li><li>‘’</li><li>null</li><li>undefined</li><li>false</li></ul><blockquote><p>所有对象都是真值</p></blockquote><h1 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h1><blockquote><p>var o1 = {};</p><p>o1.<strong>proto</strong> ===  Object.prototype</p><p>var n1 = new Number(1)</p></blockquote><p>n1.<strong>proto</strong> === Number.prototype</p><p>n1.<strong>proto</strong>.<strong>proto</strong> === Object.prototype</p><h1 id="proto-和-prototype"><a href="#proto-和-prototype" class="headerlink" title="proto 和 prototype"></a><strong>proto</strong> 和 prototype</h1><p>String.prototype是String的公用属性的引用</p><p>s.<strong>proto</strong> 也是String的公用属性的引用</p><p>var 对象 = new 函数();</p><p>对象.<strong>proto</strong> === 函数.prototype 它们的值是 <a href="原型对象，一个对象或null">[Prototype]</a></p><p>var obj = 函数.prototype</p><p>obj.<strong>proto</strong>  === Object.prototype</p><p>var obj2 = 函数</p><p>obj2.<strong>proto</strong> === Function.prototype</p><p>Function.<strong>proto</strong> === Function.prototype</p><p>Function,prototype.<strong>proto</strong> === Object.prototype</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;如何转为number&quot;&gt;&lt;a href=&quot;#如何转为number&quot; class=&quot;headerlink&quot; title=&quot;如何转为number&quot;&gt;&lt;/a&gt;如何转为number&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Number(‘1’) === 1&lt;/li&gt;
-&lt;li&gt;parse
-      
-    
-    </summary>
-    
     
   </entry>
   
