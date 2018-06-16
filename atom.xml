@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-15T15:14:34.967Z</updated>
+  <updated>2018-06-16T02:37:02.267Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读王勇人生前28年有感</title>
+    <link href="http://yoursite.com/2018/06/16/%E8%AF%BB%E7%8E%8B%E5%8B%87%E4%BA%BA%E7%94%9F%E5%89%8D28%E5%B9%B4%E6%9C%89%E6%84%9F/"/>
+    <id>http://yoursite.com/2018/06/16/读王勇人生前28年有感/</id>
+    <published>2018-06-16T01:56:54.000Z</published>
+    <updated>2018-06-16T02:37:02.267Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关于名字"><a href="#关于名字" class="headerlink" title="关于名字"></a>关于名字</h2><p>王勇，前deepIn linux项目负责人，最近因为个人原因离职了。我也是因为公司的同事才知道他这个人的。于是想搜索一下关于他的介绍，然后搜索到了他的一篇文章《我人生的前28年》。</p><h2 id="个人感受"><a href="#个人感受" class="headerlink" title="个人感受"></a>个人感受</h2><p>整体浏览了他的文章，感觉是个做事很直接的人，学习上直击要点，如果要干什么就会直接开始从要学的入手，而且不会有科班生的畏难，可能是他最开始的时候是初生牛犊不怕虎，但是正是这种精神让他敢于去学习一门科班生可能觉得难的东西。这只是个人看法，可能他本人不是这样想的，后来他继续钻研难的技术，我觉得就是他已经掌握了一套学习的方法。他是不像很多现在的普通程序员分java还是php，他基本用什么就学什么，不会区分语言。这一点我听过一个facebook的工程师说过，facebook招人主考算法，人招进去以后，会在各个部门实习两周左右，他们要求无论是前端还是后端，只要公司需要，你都能很快的转入进去，这其实就是考验一个人的思维能力，因为语言到后面只是工具，用这个工具的还是你这个人，人的思维好了，对什么都能快速上手，并且能够举一反三。回到王勇身上，这位前辈体验到了很多人生的辛酸苦辣，但是感觉他一直在编码，这对我也是一种激励，</p><p>就是再多挫折也要抗住，就是跌到以后微笑爬起来，而且我希望国内大龄的编码者越来越多，这样就不用所谓的程序员到35岁要转管理这种说法。如果你热爱技术，为什么要转管理，好好做技术不好么。感觉很多喜欢技术的人，都是无法抗拒外界因素转的管理，当然也有最后没机会做管理被淘汰的人，所以我理想的是，没有外界因素，只有一个很直接的工作，coder，能够做到最后。但是目前IT行业年纪最大的估计国内也没有到退休年龄，这些事情不知道最后是个怎么样的。</p><h2 id="自我"><a href="#自我" class="headerlink" title="自我"></a>自我</h2><p>今后我需要学习他的钻劲，啃。无论如何，我都要微笑迎接人生的困难，最后用王勇前辈的一句话结束：</p><blockquote><p>中国教育最大的失败在于他们没有给这些未成年人看到真实残酷的社会， 他们没有教在社会上生存最重要的东西： 就是跌到以后微笑爬起来， 人在社会上最重要的就是你每天都会面对痛苦的事情， 你不喜欢的事情， 不顺心的事情， 最起码在你能力还不能支撑你个人理想的时候， 你要怎么去面对你个人， 你的家人</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;关于名字&quot;&gt;&lt;a href=&quot;#关于名字&quot; class=&quot;headerlink&quot; title=&quot;关于名字&quot;&gt;&lt;/a&gt;关于名字&lt;/h2&gt;&lt;p&gt;王勇，前deepIn linux项目负责人，最近因为个人原因离职了。我也是因为公司的同事才知道他这个人的。于是想搜索一下关于
+      
+    
+    </summary>
+    
+    
+      <category term="读后感" scheme="http://yoursite.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>异步流程控制的两种思路</title>
@@ -475,29 +498,6 @@
       
         &lt;h1 id=&quot;问题引入&quot;&gt;&lt;a href=&quot;#问题引入&quot; class=&quot;headerlink&quot; title=&quot;问题引入&quot;&gt;&lt;/a&gt;问题引入&lt;/h1&gt;&lt;p&gt;想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？&lt;/p&gt;
 
-      
-    
-    </summary>
-    
-    
-      <category term="node" scheme="http://yoursite.com/tags/node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node流程控制之串行</title>
-    <link href="http://yoursite.com/2018/01/18/node%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E4%B9%8B%E4%B8%B2%E8%A1%8C/"/>
-    <id>http://yoursite.com/2018/01/18/node流程控制之串行/</id>
-    <published>2018-01-18T10:22:28.000Z</published>
-    <updated>2018-01-18T10:33:02.050Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function process1() &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">   var process1Result = 1;</span><br><span class="line">   next(null, process1Result)</span><br><span class="line">  &#125;,10)</span><br><span class="line">&#125;</span><br><span class="line">function process2(data) &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">  if (data === 1) var process2Result = 2;</span><br><span class="line">    next(null, process2Result)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">function process3(data) &#123;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var taskList = [</span><br><span class="line">  process1,</span><br><span class="line">  process2,</span><br><span class="line">  process3</span><br><span class="line">]</span><br><span class="line">next(err, result) &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  </span><br><span class="line">  var current = taskList.shift();</span><br><span class="line">  </span><br><span class="line">  current &amp;&amp; current(result);</span><br><span class="line">&#125;</span><br><span class="line">next();</span><br></pre></td></tr></table></figure><h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ul><li><p>在node中让一组异步操作顺序执行的套路叫做流程控制，而这其中又分为串行流程和并行流程</p><h2 id="串行流程"><a href="#串行流程" class="headerlink" title="串行流程"></a>串行流程</h2><ul><li>所谓串行流程，即一个接着一个做的流程叫做串行流程，上述代码即一个串行流程的实现。</li><li>首先有三个操作，顺序依次为process1，process2，process3，</li><li>整个过程的核心是这个next函数，跟node一些框架中交出控制权的next名字是一样的</li><li>思路就是按照索引的顺序执行函数，函数中异步调用的返回值，作为下一个next中执行的函数的参数，保证了数据不会丢失。</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
       
     
     </summary>
