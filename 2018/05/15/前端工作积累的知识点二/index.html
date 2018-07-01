@@ -20,17 +20,17 @@
     
     
     <meta name="keywords" content="前端">
-    <meta name="description" content="picker、scroll-view上使用flex是无效的，需要在内部嵌套一层view再使用flex效果 filter(), concat() 和 slice()均不会修改原数组而是返回一个新数组 php var_dump()查看表达式的值和类型，gettype()类似js typeof, is_type()判断是否是type类型 php 布尔字面量是大写，(bool)可以强转，但是boolea">
+    <meta name="description" content="picker、scroll-view上使用flex是无效的，需要在内部嵌套一层view再使用flex效果  filter(), concat() 和 slice()均不会修改原数组而是返回一个新数组  php var_dump()查看表达式的值和类型，gettype()类似js typeof, is_type()判断是否是type类型  php 布尔字面量是大写，(bool)可以强转，但是boo">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端工作积累的知识点二">
 <meta property="og:url" content="http://yoursite.com/2018/05/15/前端工作积累的知识点二/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="picker、scroll-view上使用flex是无效的，需要在内部嵌套一层view再使用flex效果 filter(), concat() 和 slice()均不会修改原数组而是返回一个新数组 php var_dump()查看表达式的值和类型，gettype()类似js typeof, is_type()判断是否是type类型 php 布尔字面量是大写，(bool)可以强转，但是boolea">
-<meta property="og:updated_time" content="2018-05-25T15:01:43.882Z">
+<meta property="og:description" content="picker、scroll-view上使用flex是无效的，需要在内部嵌套一层view再使用flex效果  filter(), concat() 和 slice()均不会修改原数组而是返回一个新数组  php var_dump()查看表达式的值和类型，gettype()类似js typeof, is_type()判断是否是type类型  php 布尔字面量是大写，(bool)可以强转，但是boo">
+<meta property="og:updated_time" content="2018-07-01T09:33:30.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端工作积累的知识点二">
-<meta name="twitter:description" content="picker、scroll-view上使用flex是无效的，需要在内部嵌套一层view再使用flex效果 filter(), concat() 和 slice()均不会修改原数组而是返回一个新数组 php var_dump()查看表达式的值和类型，gettype()类似js typeof, is_type()判断是否是type类型 php 布尔字面量是大写，(bool)可以强转，但是boolea">
+<meta name="twitter:description" content="picker、scroll-view上使用flex是无效的，需要在内部嵌套一层view再使用flex效果  filter(), concat() 和 slice()均不会修改原数组而是返回一个新数组  php var_dump()查看表达式的值和类型，gettype()类似js typeof, is_type()判断是否是type类型  php 布尔字面量是大写，(bool)可以强转，但是boo">
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
@@ -174,23 +174,45 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <ol>
-<li>picker、scroll-view上使用flex是无效的，需要在内部嵌套一层view再使用flex效果</li>
-<li>filter(), concat() 和 slice()均不会修改原数组而是返回一个新数组</li>
-<li>php var_dump()查看表达式的值和类型，gettype()类似js typeof, is_type()判断是否是type类型</li>
-<li>php 布尔字面量是大写，(bool)可以强转，但是boolean才是类型字符 falsy值： FALSE，0，0.0，””, “0”, [], NULL尚未赋值变量还有一个空标记生成的Si没票了XML对象</li>
-<li>php round()四舍五入，int()截断，php没有整除运算符</li>
-<li>永远不要比较两个浮点数是否相等，如果硬要比较，可以使用机器极小值（epsilon）或最小单元取整数， 是计算中所能接受的最小的差别值</li>
-<li>NAN用is_nan比较检查</li>
-<li>用超出字符串长度的下标写入将会拉长该字符串并以空格填充，用负数下标读取字符串时返回空字符串， 写入时只用到了赋值字符串的第一个字符。用空字符串赋值则赋给的值是 NULL 字符</li>
-<li>strval()可以转换为字符串，TRUE会被转为”1”,FALSE会被转为””</li>
-<li>小程序app.js中所有接口获取到的内容都可以在小程序全部页面共享，app.global,切记</li>
-<li>open页面是为了在A小程序中分享这个open页面，然后根据options，拼参数跳转到B小程序</li>
-<li>koa2 ctx.type可以设置Content-Type</li>
-<li>getter 后面跟的类似function的东西，其实名字是一个对象的属性，在用取值的时候执行里面的逻辑</li>
-<li>最佳实践，在初始化生命周期中，拿数据及其配置操作时，最好加loading，在所有数据到位以后再做处理，这也是对异步流程的一种控制，所以说异步走到最后还是类似于同步的处理，也就是异步流程控制</li>
-<li>query需要encodeURIComponent的时候不要把整个query进行encode，而是需要排除=，&amp;这种符号，否则会出问题</li>
-<li>做手持弹幕，旋转90度时把宽为100vh高为100vw时，变形，是因为旋转中心没有居中，先把div居中(通过定位居中，flex居中会有问题)，再旋转，注意，不是调旋转中心，而是让要旋转的div居中</li>
-<li>做定位居中和动画同时使用不同transform时，需要在动画里重复写</li>
+<li><p>picker、scroll-view上使用flex是无效的，需要在内部嵌套一层view再使用flex效果</p>
+</li>
+<li><p>filter(), concat() 和 slice()均不会修改原数组而是返回一个新数组</p>
+</li>
+<li><p>php var_dump()查看表达式的值和类型，gettype()类似js typeof, is_type()判断是否是type类型</p>
+</li>
+<li><p>php 布尔字面量是大写，(bool)可以强转，但是boolean才是类型字符 falsy值： FALSE，0，0.0，””, “0”, [], NULL尚未赋值变量还有一个空标记生成的Si没票了XML对象</p>
+</li>
+<li><p>php round()四舍五入，int()截断，php没有整除运算符</p>
+</li>
+<li><p>永远不要比较两个浮点数是否相等，如果硬要比较，可以使用机器极小值（epsilon）或最小单元取整数， 是计算中所能接受的最小的差别值</p>
+</li>
+<li><p>NAN用is_nan比较检查</p>
+</li>
+<li><p>用超出字符串长度的下标写入将会拉长该字符串并以空格填充，用负数下标读取字符串时返回空字符串， 写入时只用到了赋值字符串的第一个字符。用空字符串赋值则赋给的值是 NULL 字符</p>
+</li>
+<li><p>strval()可以转换为字符串，TRUE会被转为”1”,FALSE会被转为””</p>
+</li>
+<li><p>小程序app.js中所有接口获取到的内容都可以在小程序全部页面共享，app.global,切记</p>
+</li>
+<li><p>open页面是为了在A小程序中分享这个open页面，然后根据options，拼参数跳转到B小程序</p>
+</li>
+<li><p>koa2 ctx.type可以设置Content-Type</p>
+</li>
+<li><p>getter 后面跟的类似function的东西，其实名字是一个对象的属性，在用取值的时候执行里面的逻辑</p>
+</li>
+<li><p>最佳实践，在初始化生命周期中，拿数据及其配置操作时，最好加loading，在所有数据到位以后再做处理，这也是对异步流程的一种控制，所以说异步走到最后还是类似于同步的处理，也就是异步流程控制</p>
+</li>
+<li><p>query需要encodeURIComponent的时候不要把整个query进行encode，而是需要排除=，&amp;这种符号，否则会出问题</p>
+</li>
+<li><p>做手持弹幕，旋转90度时把宽为100vh高为100vw时，变形，是因为旋转中心没有居中，先把div居中(通过定位居中，flex居中会有问题)，再旋转，注意，不是调旋转中心，而是让要旋转的div居中</p>
+</li>
+<li><p>做定位居中和动画同时使用不同transform时，需要在动画里重复写</p>
+</li>
+<li><p>设置picker-view value需要setTimeout,但是此时会触发bindchange事件，所以</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.pickChangeFlag = <span class="literal">false</span></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.pickChangeFlag = <span class="literal">true</span></span><br><span class="line">&#125;, <span class="number">200</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图片加载可以加loading效果，未加载出来的时候，加上background-image给一个loading图片</p>
+</li>
 </ol>
 
         </div>
@@ -200,7 +222,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-05-25T15:01:43.882Z" itemprop="dateUpdated">2018-05-25 23:01:43</time>
+    Last updated: <time datetime="2018-07-01T09:33:30.145Z" itemprop="dateUpdated">2018-07-01 17:33:30</time>
 </span><br>
 
 
