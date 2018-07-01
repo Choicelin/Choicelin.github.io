@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-16T02:37:02.267Z</updated>
+  <updated>2018-07-01T03:36:38.225Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈BEM命名法则</title>
+    <link href="http://yoursite.com/2018/07/01/%E6%B5%85%E8%B0%88BEM%E5%91%BD%E5%90%8D%E6%B3%95%E5%88%99/"/>
+    <id>http://yoursite.com/2018/07/01/浅谈BEM命名法则/</id>
+    <published>2018-07-01T03:16:33.000Z</published>
+    <updated>2018-07-01T03:36:38.225Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Block"><a href="#Block" class="headerlink" title="Block"></a>Block</h2><ul><li><p>独立的有意义的实体</p><blockquote><p>比如<code>header</code>, <code>container</code>,<code>menu</code>,<code>checkbox</code>,<code>input</code></p></blockquote></li></ul><h2 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h2><ul><li><p>Block中的没有独立意义，但是语义上与Block有联系的部分</p><blockquote><p>比如<code>menu item</code>,<code>list item</code>,<code>checkbox caption</code>,<code>title</code>,<code>header</code></p></blockquote></li></ul><h2 id="Modifier"><a href="#Modifier" class="headerlink" title="Modifier"></a>Modifier</h2><ul><li><p>Block和Element的标志，用来改变Block和Element的行为</p><blockquote><p>比如<code>disabled</code>,<code>highlighted</code>,<code>checked</code>,<code>fixed</code>,<code>size big</code>,<code>color yellow</code></p></blockquote></li></ul><h2 id="常见使用方式举例"><a href="#常见使用方式举例" class="headerlink" title="常见使用方式举例"></a>常见使用方式举例</h2><blockquote><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button"</span>&gt;</span></span><br><span class="line">&gt; Normal button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button button--state-success"</span>&gt;</span></span><br><span class="line">&gt; Success button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button button--state-danger"</span>&gt;</span></span><br><span class="line">&gt; Danger button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>上面的例子用中划线分隔的三个部分就分别是Block,Element,Modifier。为什么要使用BEM方式来命名，从表现形式来看，是为了做到防止命名冲突，同时见名知意，目前有些项目会采取这种方式。</p><p>为了防止命名冲突有一种类似的方案是CSS MODULES。</p><p>总之命名还是比较重要，大家可以自行取舍，欢迎发邮件与我讨论。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Block&quot;&gt;&lt;a href=&quot;#Block&quot; class=&quot;headerlink&quot; title=&quot;Block&quot;&gt;&lt;/a&gt;Block&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;独立的有意义的实体&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;比如&lt;code&gt;header&lt;/cod
+      
+    
+    </summary>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>读王勇人生前28年有感</title>
@@ -480,30 +506,6 @@
     
     
       <category term="工作经验" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</title>
-    <link href="http://yoursite.com/2018/01/21/%E5%B8%A6%E7%9D%80%E5%A6%82%E4%BD%95%E5%BC%80%E6%94%BE%E4%B8%8D%E4%BD%BF%E7%94%A8jwt%E8%B7%AF%E7%94%B1%E8%80%8C%E9%98%85%E8%AF%BBkoa-jwt%E6%BA%90%E7%A0%81%E5%BC%95%E5%87%BA%E5%AF%B9koa-unless%E7%9A%84%E9%98%85%E8%AF%BB/"/>
-    <id>http://yoursite.com/2018/01/21/带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读/</id>
-    <published>2018-01-21T05:24:01.000Z</published>
-    <updated>2018-01-21T06:08:37.784Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h1><p>想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？</p><h1 id="尝试获取资料"><a href="#尝试获取资料" class="headerlink" title="尝试获取资料"></a>尝试获取资料</h1><p>于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unless库，这个库是干嘛的呢，实际是让你指定的路由跳过当前的中间件，那么看看源码。</p><h1 id="阅读koa-unless源码"><a href="#阅读koa-unless源码" class="headerlink" title="阅读koa-unless源码"></a>阅读koa-unless源码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** Creates a wrapper middleware that verifies if the original middleware should be skipped. */</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// If a custom function was passed directly, creates a new object literal that holds it as a property called custom.</span></span><br><span class="line">  <span class="keyword">var</span> opts = <span class="keyword">typeof</span> options === <span class="string">'function'</span> ? &#123; <span class="attr">custom</span>: options &#125; : options;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Returns the middleware that wraps the original one.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> *(<span class="params">next</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> requestedUrl = url.parse((opts.useOriginalUrl ? <span class="keyword">this</span>.originalUrl : <span class="keyword">this</span>.url) || <span class="string">''</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// any match means 'skip original middleware'</span></span><br><span class="line">    <span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>关键地方</p><ol><li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> originalMiddleware = <span class="keyword">this</span>;</span><br><span class="line"><span class="comment">//这里获取当前要跳过的中间件实例</span></span><br></pre></td></tr></table></figure></li><li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (matchesCustom(<span class="keyword">this</span>, opts) || matchesPath(requestedUrl, opts) ||</span><br><span class="line">        matchesExtension(requestedUrl, opts) || matchesMethod(<span class="keyword">this</span>.method, opts)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">yield</span> *next; <span class="comment">//这里判断参数匹配的话，就把控制权转移下个中间件，从而跳过该中间件</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li><li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">yield</span> *originalMiddleware.call(<span class="keyword">this</span>, next);</span><br><span class="line"><span class="comment">//这一句结合上面一句来看就是参数不匹配就执行当前中间件</span></span><br></pre></td></tr></table></figure></li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总的思路是不执行jwt的验证的中间件，思路其实也很直接，那我就愉快的借用一下罗。~_~!</p><h1 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h1><p>国外源码注释真的很清晰，其实在工作中应该也效仿。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;问题引入&quot;&gt;&lt;a href=&quot;#问题引入&quot; class=&quot;headerlink&quot; title=&quot;问题引入&quot;&gt;&lt;/a&gt;问题引入&lt;/h1&gt;&lt;p&gt;想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="node" scheme="http://yoursite.com/tags/node/"/>
     
   </entry>
   
