@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/08/05/JAVA学习一/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="LinuxLinux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。 我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。 面向接口开发需求 =&amp;gt; 接口 =&amp;gt; 实现 Linux架构​    应用程序 shell     library ​    系统调用 ​        内核 ​    硬件 ​    L">
-<meta property="og:updated_time" content="2018-08-05T12:01:18.386Z">
+<meta property="og:updated_time" content="2018-08-05T12:10:08.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA学习一">
 <meta name="twitter:description" content="LinuxLinux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。 我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。 面向接口开发需求 =&amp;gt; 接口 =&amp;gt; 实现 Linux架构​    应用程序 shell     library ​    系统调用 ​        内核 ​    硬件 ​    L">
@@ -117,7 +117,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -156,7 +156,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linux</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面向接口开发"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">面向接口开发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Linux架构"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Linux架构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件系统"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">文件系统</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linux</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面向接口开发"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">面向接口开发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Linux架构"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Linux架构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件系统"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">文件系统</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#终端-SHELL-管道"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">终端 SHELL 管道</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#命令行"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">命令行</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#管道"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">管道</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#精髓"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">精髓</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -200,7 +200,21 @@
 <p>/lib, /lib64 系统库文件</p>
 <p>/etc 配置文件</p>
 <p>/proc 进程信息</p>
-<p>关于分区，我们不需要关注底层是如何分区，只需关心文件的这些目录，这样就把底层解耦了</p>
+<p>关于分区，我们不需要关注底层是如何分区，只需关心文件的这些目录，这样就把底层解耦了，所以文件系统也是一种接口。</p>
+<h3 id="终端-SHELL-管道"><a href="#终端-SHELL-管道" class="headerlink" title="终端 SHELL 管道"></a>终端 SHELL 管道</h3><p>终端（终端模拟器）</p>
+<p>SHELL 执行命令 用户与系统的交互接口</p>
+<p>管道 连接输出与输入</p>
+<p>程序与进程的关系，没有加载到内存中运行的叫程序，否则叫进程</p>
+<p>Linux中一切都是文件</p>
+<p>包括标准输入，标准输出，标准错误都是文件的名字</p>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>chmod修改文件权限</p>
+<p>文件权限有10位</p>
+<p>第一位代码文件是目录是文件还是链接，然后每隔三位代表读写可执行权限</p>
+<p>赋权 chmod (u|g|o)  (+|-)  (r|w|x)</p>
+<h4 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h4><p>示例</p>
+<p>cat  a.log | grep error |wx -l </p>
+<p>统计a.log中错误error出现的行数</p>
+<h3 id="精髓"><a href="#精髓" class="headerlink" title="精髓"></a>精髓</h3><p>学习时整体要有一个宏观的把握，包括api层，业务逻辑层，数据存储层，每到一个阶段要知道学到哪里了。</p>
 
         </div>
 
@@ -209,7 +223,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-08-05T12:01:18.386Z" itemprop="dateUpdated">2018-08-05 20:01:18</time>
+    Last updated: <time datetime="2018-08-05T12:10:08.335Z" itemprop="dateUpdated">2018-08-05 20:10:08</time>
 </span><br>
 
 
@@ -390,7 +404,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
