@@ -13,24 +13,24 @@
     
     
     
-    <title>浅谈BEM命名法则 | 1024子翔的程序人生</title>
+    <title>在vue中配置使用SCSS预编译 | 1024子翔的程序人生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="css">
-    <meta name="description" content="Block 独立的有意义的实体  比如header, container,menu,checkbox,input    Element Block中的没有独立意义，但是语义上与Block有联系的部分  比如menu item,list item,checkbox caption,title,header    Modifier Block和Element的标志，用来改变Block和Element的">
-<meta name="keywords" content="css">
+    <meta name="keywords" content="vue">
+    <meta name="description" content="前言 vue-cli 使用webpack模板生成的项目需要引入scss预处理器，网上散人教程不够官方，这里参照官方文档写一个简化步骤  步骤 1234# use npmnpm install sass-loader node-sass --save-dev# use yarnyarn add -D sass-loader node-sass  1234567891011// bulid文件夹下的w">
+<meta name="keywords" content="vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈BEM命名法则">
-<meta property="og:url" content="http://yoursite.com/2018/07/01/浅谈BEM命名法则/index.html">
+<meta property="og:title" content="在vue中配置使用SCSS预编译">
+<meta property="og:url" content="http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="Block 独立的有意义的实体  比如header, container,menu,checkbox,input    Element Block中的没有独立意义，但是语义上与Block有联系的部分  比如menu item,list item,checkbox caption,title,header    Modifier Block和Element的标志，用来改变Block和Element的">
-<meta property="og:updated_time" content="2018-07-01T03:36:38.225Z">
+<meta property="og:description" content="前言 vue-cli 使用webpack模板生成的项目需要引入scss预处理器，网上散人教程不够官方，这里参照官方文档写一个简化步骤  步骤 1234# use npmnpm install sass-loader node-sass --save-dev# use yarnyarn add -D sass-loader node-sass  1234567891011// bulid文件夹下的w">
+<meta property="og:updated_time" content="2018-08-05T11:35:33.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈BEM命名法则">
-<meta name="twitter:description" content="Block 独立的有意义的实体  比如header, container,menu,checkbox,input    Element Block中的没有独立意义，但是语义上与Block有联系的部分  比如menu item,list item,checkbox caption,title,header    Modifier Block和Element的标志，用来改变Block和Element的">
+<meta name="twitter:title" content="在vue中配置使用SCSS预编译">
+<meta name="twitter:description" content="前言 vue-cli 使用webpack模板生成的项目需要引入scss预处理器，网上散人教程不够官方，这里参照官方文档写一个简化步骤  步骤 1234# use npmnpm install sass-loader node-sass --save-dev# use yarnyarn add -D sass-loader node-sass  1234567891011// bulid文件夹下的w">
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
@@ -111,7 +111,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">浅谈BEM命名法则</div>
+        <div class="flex-col header-title ellipsis">在vue中配置使用SCSS预编译</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -133,11 +133,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">浅谈BEM命名法则</h1>
+        <h1 class="title">在vue中配置使用SCSS预编译</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-07-01T03:16:33.000Z" itemprop="datePublished" class="page-time">
-  2018-07-01
+                <time datetime="2018-07-18T11:12:15.000Z" itemprop="datePublished" class="page-time">
+  2018-07-18
 </time>
 
 
@@ -156,18 +156,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Block"><span class="post-toc-number">1.</span> <span class="post-toc-text">Block</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Element"><span class="post-toc-number">2.</span> <span class="post-toc-text">Element</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Modifier"><span class="post-toc-number">3.</span> <span class="post-toc-text">Modifier</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见使用方式举例"><span class="post-toc-number">4.</span> <span class="post-toc-text">常见使用方式举例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">5.</span> <span class="post-toc-text">总结</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">2.</span> <span class="post-toc-text">步骤</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-浅谈BEM命名法则"
+<article id="post-在vue中配置使用SCSS预编译"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">浅谈BEM命名法则</h1>
+        <h1 class="post-card-title">在vue中配置使用SCSS预编译</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-07-01 11:16:33" datetime="2018-07-01T03:16:33.000Z"  itemprop="datePublished">2018-07-01</time>
+            <time class="post-time" title="2018-07-18 19:12:15" datetime="2018-07-18T11:12:15.000Z"  itemprop="datePublished">2018-07-18</time>
 
             
 
@@ -180,35 +180,20 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="Block"><a href="#Block" class="headerlink" title="Block"></a>Block</h2><ul>
-<li><p>独立的有意义的实体</p>
-<blockquote>
-<p>比如<code>header</code>, <code>container</code>,<code>menu</code>,<code>checkbox</code>,<code>input</code></p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>vue-cli 使用webpack模板生成的项目需要引入scss预处理器，网上散人教程不够官方，这里参照官方文档写一个简化步骤</p>
 </blockquote>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> use npm</span><br><span class="line">npm install sass-loader node-sass --save-dev</span><br><span class="line"><span class="meta">#</span> use yarn</span><br><span class="line">yarn add -D sass-loader node-sass</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h2 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h2><ul>
-<li><p>Block中的没有独立意义，但是语义上与Block有联系的部分</p>
-<blockquote>
-<p>比如<code>menu item</code>,<code>list item</code>,<code>checkbox caption</code>,<code>title</code>,<code>header</code></p>
-</blockquote>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bulid文件夹下的webpack base配置中的module的rules数组加入以下对象</span></span><br><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">  loader: <span class="string">'vue-loader'</span>,</span><br><span class="line">  options: &#123;</span><br><span class="line">    loaders: &#123;</span><br><span class="line">      scss: <span class="string">'vue-style-loader!css-loader!sass-loader'</span>, <span class="comment">// &lt;style lang="scss"&gt;</span></span><br><span class="line">      sass: <span class="string">'vue-style-loader!css-loader!sass-loader?indentedSyntax'</span> <span class="comment">// &lt;style lang="sass"&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h2 id="Modifier"><a href="#Modifier" class="headerlink" title="Modifier"></a>Modifier</h2><ul>
-<li><p>Block和Element的标志，用来改变Block和Element的行为</p>
-<blockquote>
-<p>比如<code>disabled</code>,<code>highlighted</code>,<code>checked</code>,<code>fixed</code>,<code>size big</code>,<code>color yellow</code></p>
-</blockquote>
+<li><p>style中lang改为scss即可 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h2 id="常见使用方式举例"><a href="#常见使用方式举例" class="headerlink" title="常见使用方式举例"></a>常见使用方式举例</h2><blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button"</span>&gt;</span></span><br><span class="line">&gt; 	Normal button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button button--state-success"</span>&gt;</span></span><br><span class="line">&gt; 	Success button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button button--state-danger"</span>&gt;</span></span><br><span class="line">&gt; 	Danger button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
-<p>上面的例子用中划线分隔的三个部分就分别是Block,Element,Modifier。为什么要使用BEM方式来命名，从表现形式来看，是为了做到防止命名冲突，同时见名知意，目前有些项目会采取这种方式。</p>
-<p>为了防止命名冲突有一种类似的方案是CSS MODULES。</p>
-<p>总之命名还是比较重要，大家可以自行取舍，欢迎发邮件与我讨论。</p>
-</blockquote>
+</ol>
+<p>需要的同学可以收藏</p>
+<p>（逃）</p>
 
         </div>
 
@@ -217,7 +202,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-07-01T03:36:38.225Z" itemprop="dateUpdated">2018-07-01 11:36:38</time>
+    Last updated: <time datetime="2018-08-05T11:35:33.580Z" itemprop="dateUpdated">2018-08-05 19:35:33</time>
 </span><br>
 
 
@@ -243,7 +228,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
 
 
             
@@ -253,7 +238,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/07/01/浅谈BEM命名法则/&title=《浅谈BEM命名法则》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/&title=《在vue中配置使用SCSS预编译》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -263,22 +248,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/07/01/浅谈BEM命名法则/&title=《浅谈BEM命名法则》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/&title=《在vue中配置使用SCSS预编译》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/01/浅谈BEM命名法则/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浅谈BEM命名法则》 — 1024子翔的程序人生&url=http://yoursite.com/2018/07/01/浅谈BEM命名法则/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《在vue中配置使用SCSS预编译》 — 1024子翔的程序人生&url=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/01/浅谈BEM命名法则/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -301,18 +286,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/07/06/在mpvue中使用图表插件wx-charts/" id="post-prev" class="post-nav-link">
+      <a href="/2018/07/23/谈谈引用和求值策略/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">在mpvue中使用图表插件wx-charts</h4>
+        <h4 class="title">谈谈引用和求值策略</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/06/16/读王勇人生前28年有感/" id="post-next" class="post-nav-link">
+      <a href="/2018/07/06/在mpvue中使用图表插件wx-charts/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">读王勇人生前28年有感</h4>
+        <h4 class="title">在mpvue中使用图表插件wx-charts</h4>
       </a>
     </div>
   
@@ -427,7 +412,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/07/01/浅谈BEM命名法则/&title=《浅谈BEM命名法则》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/&title=《在vue中配置使用SCSS预编译》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -437,22 +422,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/07/01/浅谈BEM命名法则/&title=《浅谈BEM命名法则》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/&title=《在vue中配置使用SCSS预编译》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/01/浅谈BEM命名法则/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浅谈BEM命名法则》 — 1024子翔的程序人生&url=http://yoursite.com/2018/07/01/浅谈BEM命名法则/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《在vue中配置使用SCSS预编译》 — 1024子翔的程序人生&url=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/01/浅谈BEM命名法则/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/18/在vue中配置使用SCSS预编译/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -463,7 +448,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3ay07EMAwFUP7/p4vECmnUzrWdQTQ9WbEoTU6RjB/5+orX8bPyJ38/f7yss+fPnlm2MDAwbss4Ltcr4+znBNPbN6JiYGA8gHEdZJMD/X0kxMDAwDgLfAmmd8RkFwwMDIzkWGtL0PxzYGBgYMyLyYQxeeeyWhwDA+OGjGpY/MufPzjfwMDAuAnjaK1Vzbhj0cLAwNibkad019vnBW3vEkYUiDEwMB7D6B1u1cWy/NCFWhwDA2MLxjylS96TfIjeGTAwMPZm9A5aHUDml8aq78HAwHgCo/kLxfBaHUY2Py4GBsamjPxCWG9skCSCvUtghdQQAwPj5ozepYdqU+w6oGNgYGAkATcvU3vjxlUjzzd/BwwMjE0ZvRbYnD0Zjhaex8DA2IKRHDdJ76qXLfKiN0pDMTAwtmbMBwOTMrj3ET8ywsTAwPj3jOrliWpzvxpG81COgYHxBEbesq+21fKBaLXCPi1iMTAwNmX0ho7VVlo16ZynjBgYGPsxqlccrl86uRDWbLRhYGA8npEMCfJytHq4wo4YGBhbMybt/nlbv9pcKw9QMTAwbs44imtVclkdYb4J3xgYGFsz8tVr9+dvmAd6DAyMvRnVYnVeoFaTy+gMGBgYD2BUN5uE0V569waGgYGBESeCSaCsvmfZJBYDA+MBjDxpyzv213uN6mwMDIztGMk2+fb523qBHgMD42mMyWBgMtqcsJf9b8HAwPjvjG91e7wqvZ5ofQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtUlEQVR42u3aQW7jQAwEwPz/01lgr7uWu8mZxIfSyYAhaUoGNHSTX1/x8f33eP723yO5wvO5z9c8duDh4eGNlt7eJrlxS311VrsePDw8vJ/hPW8GCb7dAPKlt3fBw8PD+xzepoJtkbP14OHh4X0yL/k22QDaR4aHh4f3Oby2aH4OGjalc0K6krXg4eHhdYlr0QD7hM8X+3t4eHh4i6562wzbbADJ53q1eHh4eBd4ecMpjwk2ra98hKtYCR4eHt5R3mxkavYSn8Wysx/gP/seHh4e3lFeQprFpkkZfXEEAQ8PD+8ab9Pgb6lnB6reBBl4eHh413hnS+HZq3xTOr98cHh4eHjXeHn7KicdG4calen1voeHh4fX9ei/kqZUXuzmL/c9OzoXDw8P7wIv+mN/dNQgCRfyHyBaAx4eHt4F3qkytx2rygcRhlsCHh4e3mVe8Sd/FM7msUK7zUR4PDw8vDVvVhZvyus8+Mjbci9XgoeHh3eB17av8uJ4U0y33755uHh4eHhHeclS9gV3slW0AwdR/IGHh4d3gddGDO2rfFYi51eIromHh4d3lHe7QdWOVdWjqM/BLh4eHt5lXh2PLkLeZOmzcYHiHwMeHh7eIV59iVEZ3Ta3DowO4OHh4R3iJRFD3oKaxRnt3WeNNzw8PLxTvOdXc/Fsyg0jv+8sjMDDw8P7Xd5mTGrT0MoDiDdlNB4eHt5RXj4Q0MYHbfE9izkKJB4eHt4h3nd5tE/u7HLzjQoPDw/vHm+zn+zHsDYxxGywAA8PD+8UL79xvqzNGMGwg/fq4eLh4eFd4yXlbDsWsI+GZ6V8PZmFh4eHd42Xxw2zc/dNrzfTZHh4eHi/xMtHqdq3dDJk0JbmeHh4ePd4eRiR3Cxvp50a4Rp2+fDw8PBGvFkLfxgNLJpns6gCDw8P7yjvD16DxTpuPJozAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

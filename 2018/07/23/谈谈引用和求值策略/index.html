@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>谈谈引用和求值策略 | 1024子翔的程序人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="计算机科学">
+    <meta name="description" content="说说引用值搞清楚引用之前先看看值是什么。在计算机科学中，一个值代表了一个程序可操作控制的实体。某种数据类型的一些成员就是这种类型的一些值。 指针在计算机科学中，指针是一个对象，它存储了另一个在内存中值的内存地址。一个指针引用了内存中的一个位置。 地址在计算机中，一个内存地址是一个对一块特定内存位置的引用。 引用在计算机科学中，引用是一个值，它能够让程序在内存或其他设备存储中间接获取到特定的数据，比">
+<meta name="keywords" content="计算机科学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谈谈引用和求值策略">
+<meta property="og:url" content="http://yoursite.com/2018/07/23/谈谈引用和求值策略/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:description" content="说说引用值搞清楚引用之前先看看值是什么。在计算机科学中，一个值代表了一个程序可操作控制的实体。某种数据类型的一些成员就是这种类型的一些值。 指针在计算机科学中，指针是一个对象，它存储了另一个在内存中值的内存地址。一个指针引用了内存中的一个位置。 地址在计算机中，一个内存地址是一个对一块特定内存位置的引用。 引用在计算机科学中，引用是一个值，它能够让程序在内存或其他设备存储中间接获取到特定的数据，比">
+<meta property="og:updated_time" content="2018-08-05T11:35:33.580Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="谈谈引用和求值策略">
+<meta name="twitter:description" content="说说引用值搞清楚引用之前先看看值是什么。在计算机科学中，一个值代表了一个程序可操作控制的实体。某种数据类型的一些成员就是这种类型的一些值。 指针在计算机科学中，指针是一个对象，它存储了另一个在内存中值的内存地址。一个指针引用了内存中的一个位置。 地址在计算机中，一个内存地址是一个对一块特定内存位置的引用。 引用在计算机科学中，引用是一个值，它能够让程序在内存或其他设备存储中间接获取到特定的数据，比">
+    
+        <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Choicelin</h5>
+          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/choicelin" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">谈谈引用和求值策略</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">谈谈引用和求值策略</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-07-23T02:32:25.000Z" itemprop="datePublished" class="page-time">
+  2018-07-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#说说引用"><span class="post-toc-number">1.</span> <span class="post-toc-text">说说引用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#值"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">值</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#指针"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">指针</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#地址"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">地址</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#引用"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">引用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小结"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">小结</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#说说求值策略"><span class="post-toc-number">2.</span> <span class="post-toc-text">说说求值策略</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过值调用"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">通过值调用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过引用调用"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">通过引用调用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过共享调用"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">通过共享调用</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-谈谈引用和求值策略"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">谈谈引用和求值策略</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-07-23 10:32:25" datetime="2018-07-23T02:32:25.000Z"  itemprop="datePublished">2018-07-23</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="说说引用"><a href="#说说引用" class="headerlink" title="说说引用"></a>说说引用</h1><h2 id="值"><a href="#值" class="headerlink" title="值"></a>值</h2><p>搞清楚引用之前先看看值是什么。在计算机科学中，一个值代表了一个程序可操作控制的实体。某种数据类型的一些成员就是这种类型的一些值。</p>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><p>在计算机科学中，指针是一个对象，它存储了另一个在内存中值的内存地址。一个指针引用了内存中的一个位置。</p>
+<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p>在计算机中，一个内存地址是一个对一块特定内存位置的引用。</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>在计算机科学中，引用是一个值，它能够让程序在内存或其他设备存储中间接获取到特定的数据，比如变量的值或者一个记录。对一个给定系统中存储在内存中的引用，它的实现是数据存储在内存或其他设备存储空间中的物理地址。但是正是由于刚才这种说法导致了大家对指针和地址的错误的混淆，并说一个引用是指向了这个数据。然而，引用的可能以其他的方式来实现。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>引用不是指针，因为它可能实现方式是保存了一个物理地址，也可能是别的方式，比存的一个相对的地址偏移，而指针则是保存一个物理地址，显得更加狭义一点。同时，引用是一个值。</p>
+<h1 id="说说求值策略"><a href="#说说求值策略" class="headerlink" title="说说求值策略"></a>说说求值策略</h1><p>求值策略是程序语言决定什么时候来求一个函数调用的实参的值，同时计算什么类型的值来传递给一个函数。</p>
+<h2 id="通过值调用"><a href="#通过值调用" class="headerlink" title="通过值调用"></a>通过值调用</h2><p>通过值调用也被说是传递值。在这种方式中，实参表达式被计算的结果会绑定到调用后相匹配的变量上（对应于形参的位置），并且将这个值复制后放到一个新的内存区域。这种方式的特点是，函数作用域外的被传递的变量是不变的。</p>
+<h2 id="通过引用调用"><a href="#通过引用调用" class="headerlink" title="通过引用调用"></a>通过引用调用</h2><p>通过引用调用也被说是传递引用。在这种方式中，函数接受一个变量的隐式引用作为实参，而不是它的值的拷贝。这种方式的特点是，函数作用域外被传递的变量也会被改变。</p>
+<h2 id="通过共享调用"><a href="#通过共享调用" class="headerlink" title="通过共享调用"></a>通过共享调用</h2><p>通过共享调用也被说是通过对象或通过对象共享调用，Java，Python，JavaScript中都存在这中求值策略。关键在于传递的是一个对象，这个对象并没有被复制放到一个新的内存区域，而是在调用者和被调用者的作用域中共享着。和通过值调用的不同是，这个对象在调用者作用域中被修改了。和通过引用调用的不同是，获取值的权限并不在调用者，因为传递的不是一个引用，而是一个对象。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-08-05T11:35:33.580Z" itemprop="dateUpdated">2018-08-05 19:35:33</time>
+</span><br>
+
+
+        
+        作者只是一个小菜鸡，请轻喷！！
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="Choicelin">
+            Choicelin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机科学/">计算机科学</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/07/23/谈谈引用和求值策略/&title=《谈谈引用和求值策略》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/07/23/谈谈引用和求值策略/&title=《谈谈引用和求值策略》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/23/谈谈引用和求值策略/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《谈谈引用和求值策略》 — 1024子翔的程序人生&url=http://yoursite.com/2018/07/23/谈谈引用和求值策略/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/23/谈谈引用和求值策略/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/08/05/JAVA学习一/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JAVA学习一</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/07/18/在vue中配置使用SCSS预编译/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">在vue中配置使用SCSS预编译</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyNy85OTgz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Choicelin &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/07/23/谈谈引用和求值策略/&title=《谈谈引用和求值策略》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/07/23/谈谈引用和求值策略/&title=《谈谈引用和求值策略》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/23/谈谈引用和求值策略/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《谈谈引用和求值策略》 — 1024子翔的程序人生&url=http://yoursite.com/2018/07/23/谈谈引用和求值策略/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/23/谈谈引用和求值策略/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aS27DMAwFwN7/0um2QGDhkXQKhB6tAsdxNF4Q/OjnJ16vP+t8z/v977+9ek7yL6OFgYHxtYzXcSX3JNudPOF8DwYGxnMYSQC9uv/895NwnOwNAwMDI/mcp4A5DwMDA2PCyK+cr+cwDAwMjF45miSFVwVn3m77SC2OgYHxhYy86/7/nz8y38DAwPgqxrzdX03vzr/tLQwMjN2MPMBNSJMgXjj8gYGBsZTRc1fHk717zi8FAwPjOYz52LLa+s8bbaOgjIGBsY4xKV97G8qDaYGNgYGxmlE9TpEneclW5u05DAyM3Yw8IcuPU/QK2iqgmVdiYGB8IeMcBJuPCJ6ZFL1J4I7abRgYGOsYk/5VHnaraWg16cTAwNjKOG8rT92qrbTbqnAMDIwHMPJjFvmAs1fENlNADAyM1Yxe+KsWt5Pw2jxsgYGBsYJxb+M+b9slr6DwLQYGxmpG75hFtWXWa8DlgRsDA+NpjF6TKz8YMT8uhoGBgVEl5YVufj0PspepIQYGxmrG/MhFHkCrg8nCDBYDA2Mpozo4zNPB6hBiVMRiYGCsY7yKqzpizGGjkSoGBsZqRr4mG6qG9Zu3joGBsYLRK1AnLf6k6C2njxgYGA9gVDdRbdVVA3F1txgYGBi9Zty9A86PBFwMDIyljGpKN2nGnV9KdNgCAwNjESMpYuflbt7/qx5Kw8DA2M3olY6TzUUBdJ4sYmBgbGD8AqxDLLpqZnRNAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
