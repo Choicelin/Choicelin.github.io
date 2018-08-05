@@ -20,19 +20,17 @@
     
     
     <meta name="keywords" content="JAVA">
-    <meta name="description" content="LinuxLinux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。 我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。 面向接口开发需求 =&amp;gt; 接口 =&amp;gt; 实现 Linux架构">
+    <meta name="description" content="LinuxLinux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。 我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。 面向接口开发需求 =&amp;gt; 接口 =&amp;gt; 实现 Linux架构​    应用程序 shell     library ​    系统调用 ​        内核 ​    硬件 ​    L">
 <meta name="keywords" content="JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JAVA学习一">
 <meta property="og:url" content="http://yoursite.com/2018/08/05/JAVA学习一/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
-<meta property="og:description" content="LinuxLinux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。 我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。 面向接口开发需求 =&amp;gt; 接口 =&amp;gt; 实现 Linux架构">
-<meta property="og:image" content="http://yoursite.com/2018/08/05/JAVA学习一/linux-structure.png">
-<meta property="og:updated_time" content="2018-08-05T11:50:27.632Z">
+<meta property="og:description" content="LinuxLinux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。 我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。 面向接口开发需求 =&amp;gt; 接口 =&amp;gt; 实现 Linux架构​    应用程序 shell     library ​    系统调用 ​        内核 ​    硬件 ​    L">
+<meta property="og:updated_time" content="2018-08-05T12:01:18.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA学习一">
-<meta name="twitter:description" content="LinuxLinux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。 我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。 面向接口开发需求 =&amp;gt; 接口 =&amp;gt; 实现 Linux架构">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/05/JAVA学习一/linux-structure.png">
+<meta name="twitter:description" content="LinuxLinux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。 我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。 面向接口开发需求 =&amp;gt; 接口 =&amp;gt; 实现 Linux架构​    应用程序 shell     library ​    系统调用 ​        内核 ​    硬件 ​    L">
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
@@ -119,7 +117,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -158,7 +156,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linux</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面向接口开发"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">面向接口开发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Linux架构"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Linux架构</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linux</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面向接口开发"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">面向接口开发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Linux架构"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Linux架构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件系统"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">文件系统</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -185,13 +183,24 @@
             <h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>Linux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。</p>
 <p>我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。</p>
 <h3 id="面向接口开发"><a href="#面向接口开发" class="headerlink" title="面向接口开发"></a>面向接口开发</h3><p>需求 =&gt; 接口 =&gt; 实现</p>
-<h3 id="Linux架构"><a href="#Linux架构" class="headerlink" title="Linux架构"></a>Linux架构</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="./linux-structure.png" alt="Linux架构" title="">
-                </div>
-                <div class="image-caption">Linux架构</div>
-            </figure>
+<h3 id="Linux架构"><a href="#Linux架构" class="headerlink" title="Linux架构"></a>Linux架构</h3><p>​    应用程序</p>
+<p>shell     library</p>
+<p>​    系统调用</p>
+<p>​        内核</p>
+<p>​    硬件</p>
+<p>​    Linux架构</p>
+<p>系统调用指操作系统内核提供“函数调用”，内核和应用的唯一的接口</p>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>/ 根目录</p>
+<p>/home 用户目录</p>
+<p>/var 经常变化的文件，比如日志（分区可以使用ssd硬盘）</p>
+<p>/usr 用户程序</p>
+<p>/bin 可执行程序</p>
+<p>/boot 引导系统启动</p>
+<p>/tmp 临时文件</p>
+<p>/lib, /lib64 系统库文件</p>
+<p>/etc 配置文件</p>
+<p>/proc 进程信息</p>
+<p>关于分区，我们不需要关注底层是如何分区，只需关心文件的这些目录，这样就把底层解耦了</p>
 
         </div>
 
@@ -200,7 +209,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-08-05T11:50:27.632Z" itemprop="dateUpdated">2018-08-05 19:50:27</time>
+    最終更新：<time datetime="2018-08-05T12:01:18.386Z" itemprop="dateUpdated">2018-08-05 20:01:18</time>
 </span><br>
 
 
@@ -381,7 +390,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
