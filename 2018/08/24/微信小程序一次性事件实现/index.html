@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>微信小程序一次性事件实现 | 1024子翔的程序人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="记录">
+    <meta name="description" content="场景在开发原生小程序时，可能会一种场景，比如我对某一个点击事件，多次点击只触发一次，这是常见的once函数做的事情，但是如何用在小程序里面呢，下面给大家看看我的处理方法。 once函数123456789101112131415function once(fn, context) &amp;#123;   return function() &amp;#123;       if (fn) &amp;#123;">
+<meta name="keywords" content="记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序一次性事件实现">
+<meta property="og:url" content="http://yoursite.com/2018/08/24/微信小程序一次性事件实现/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:description" content="场景在开发原生小程序时，可能会一种场景，比如我对某一个点击事件，多次点击只触发一次，这是常见的once函数做的事情，但是如何用在小程序里面呢，下面给大家看看我的处理方法。 once函数123456789101112131415function once(fn, context) &amp;#123;   return function() &amp;#123;       if (fn) &amp;#123;">
+<meta property="og:updated_time" content="2018-08-24T08:17:46.505Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信小程序一次性事件实现">
+<meta name="twitter:description" content="场景在开发原生小程序时，可能会一种场景，比如我对某一个点击事件，多次点击只触发一次，这是常见的once函数做的事情，但是如何用在小程序里面呢，下面给大家看看我的处理方法。 once函数123456789101112131415function once(fn, context) &amp;#123;   return function() &amp;#123;       if (fn) &amp;#123;">
+    
+        <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Choicelin</h5>
+          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/choicelin" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">微信小程序一次性事件实现</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">微信小程序一次性事件实现</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-08-24T08:14:56.000Z" itemprop="datePublished" class="page-time">
+  2018-08-24
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#场景"><span class="post-toc-number">1.</span> <span class="post-toc-text">场景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#once函数"><span class="post-toc-number">2.</span> <span class="post-toc-text">once函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序代码示例"><span class="post-toc-number">3.</span> <span class="post-toc-text">小程序代码示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">4.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-微信小程序一次性事件实现"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">微信小程序一次性事件实现</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-08-24 16:14:56" datetime="2018-08-24T08:14:56.000Z"  itemprop="datePublished">2018-08-24</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>在开发原生小程序时，可能会一种场景，比如我对某一个点击事件，多次点击只触发一次，这是常见的once函数做的事情，但是如何用在小程序里面呢，下面给大家看看我的处理方法。</p>
+<h2 id="once函数"><a href="#once函数" class="headerlink" title="once函数"></a>once函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">once</span>(<span class="params">fn, context</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> (fn) &#123;</span><br><span class="line"></span><br><span class="line">           fn.apply(context || <span class="keyword">this</span>, <span class="built_in">arguments</span>)</span><br><span class="line"></span><br><span class="line">           fn = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="小程序代码示例"><a href="#小程序代码示例" class="headerlink" title="小程序代码示例"></a>小程序代码示例</h2><ul>
+<li>wxml</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">bindtap</span>=<span class="string">"click"</span>&gt;</span>点我<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>js</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line"></span><br><span class="line">  data: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">  result: <span class="literal">null</span>,</span><br><span class="line"></span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.result = once(<span class="keyword">this</span>.actualClick, <span class="keyword">this</span>)</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">  actualClick() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  click() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.result()</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">once</span>(<span class="params">fn, context</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (fn) &#123;</span><br><span class="line"></span><br><span class="line">      fn.apply(context || <span class="keyword">this</span>, <span class="built_in">arguments</span>)</span><br><span class="line"></span><br><span class="line">      fn = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>once返回的函数要存起来，而且只存一次，并且要获取到page实例，所以需要在onload里面初始化。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-08-24T08:17:46.505Z" itemprop="dateUpdated">2018-08-24 16:17:46</time>
+</span><br>
+
+
+        
+        作者只是一个小菜鸡，请轻喷！！
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="Choicelin">
+            Choicelin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/记录/">记录</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/&title=《微信小程序一次性事件实现》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/&title=《微信小程序一次性事件实现》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《微信小程序一次性事件实现》 — 1024子翔的程序人生&url=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/08/24/JAVA基本语法cheatsheet/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JAVA基本语法cheatsheet</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyNy85OTgz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Choicelin &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/&title=《微信小程序一次性事件实现》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/&title=《微信小程序一次性事件实现》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《微信小程序一次性事件实现》 — 1024子翔的程序人生&url=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/08/24/微信小程序一次性事件实现/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACwUlEQVR42u3awW7qQAwFUP7/p6nULQSu7XGh0smqegSSM4ux3x3fbvF1/70e/+XxuvrW46evfzm589iFh4eH13r11697BUg+TajJs67ueb3EeHh4eHu85IWu2MkjJ78wKTN4eHh4n+XlJSEH5O01Hh4e3n/nJZ/mQUOeJ+Dh4eF9D6/XzlZh1TC3177j4eHhbfOqB2Df8Pfi+R4eHh7e4FQ92XCr90wWrvy2eHh4eAu8/HBrMgKVjyNURxaiRcTDw8Nb4OWbb77RJwddvd+pjmfh4eHhbfDywtALWyehbdJkv1kyPDw8vKO8s2NPvTDiVIz75E48PDy8Bd5ZQNIuVwcC8oV7E0Pg4eHhrfGqbXEeFlQD2WpcGxUGPDw8vDGvN9KUh7NJmckDi/IYFh4eHt4CL2mpT8W7p+KMaryLh4eHt8HL/3t/KibIj8167X5U0/Dw8PAWes55VNE7HsunHqKn4+Hh4S3w8kfmBWA+hlVt8QthMR4eHt6Yl3+t2rsmm35enJoFAw8PD+8oL2lk88Y6Lyf5CEKvIOHh4eHt8XqRaz5MUD3K6g0uNFtqPDw8vDEvHyM4nHy0RgcKv4CHh4e3xquOWFUHpPKgtjn1gIeHh/cnvCRgnTxsEsL2wo5C1oKHh4c33tXzMCIpJEnAUQ01ekuAh4eHd5ZXjW6rcUASbeSLVQ6d8fDw8JZ5eTMdHdjH7XgyspC/w5OhKzw8PLyjvGRDrx5NFcah4kb5Nr/w8PDwDvHuxStpjqvBa3XRCyUBDw8Pb4E3mTioFpJJ9DApXXh4eHgbvHlDnG/NvdAhOsF7PXqFh4eHt8CbHGUl+3B1HCGvZm+WCQ8PD++jvOR1e0WlFyhE38XDw8P7Al61yZ601IUCcKow4OHh4cW8fHOft8iTULi6cHh4eHgbvFNH+JP4oHcAlge7eHh4eId4P6lDVLk66cWIAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
