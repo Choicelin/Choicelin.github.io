@@ -146,6 +146,53 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="post-异步流程控制的两种思路"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-05-15 23:13:49" datetime="2018-05-15T15:13:49.000Z"  itemprop="datePublished">2018-05-15</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/05/15/异步流程控制的两种思路/">异步流程控制的两种思路</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        异步流程控制的两种思路
+第一种在异步回调里面执行操作，这是最为常见的，扩展一下可以在回调参数里面再传回调，然后这个传入的回调里面执行可以保证异步逻辑走完了
+思路二，我称之为赛跑回调，跟第一种有点类似，但是有细微的区别，有一个赛跑的感觉，也是在异步回调里面注册一个回调，把数据放到回调形参，这个回调可以在其他地方调用，在其他地方使用时，判断一下数据是否到位，如果到位了执行你的逻辑，如果没到位，执...
+    
+
+        <a href="/2018/05/15/异步流程控制的两种思路/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-node写接口无响应原因总结"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -607,53 +654,6 @@ even...
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wepy/">wepy</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-微信小程序api之setEnableDebug说明"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-03-04 15:20:01" datetime="2018-03-04T07:20:01.000Z"  itemprop="datePublished">2018-03-04</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/03/04/微信小程序api之setEnableDebug说明/">微信小程序api之setEnableDebug说明</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        使用方法1234567//app.jsonLaunch() &#123;  //开启调试  wx.setEnableDebug(&#123;    enableDebug: true  &#125;)&#125;
-解释
-这个接口相当于是用代码来在预览时开启调试，预览后打开小程序后会提示“重新打开小程序后生效”，点击确定后，在微信-发现-小程序中打开小程序，此时右下角会出现一个绿色可拖动的vC...
-    
-
-        <a href="/2018/03/04/微信小程序api之setEnableDebug说明/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
 
     </div>
     
