@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-25T01:36:33.667Z</updated>
+  <updated>2018-09-17T09:14:42.459Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决nginx反向代理net::ERR_CONTENT_LENGTH_MISMATCH</title>
+    <link href="http://yoursite.com/2018/09/17/%E8%A7%A3%E5%86%B3nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86net-ERR-CONTENT-LENGTH-MISMATCH/"/>
+    <id>http://yoursite.com/2018/09/17/解决nginx反向代理net-ERR-CONTENT-LENGTH-MISMATCH/</id>
+    <published>2018-09-17T09:12:55.000Z</published>
+    <updated>2018-09-17T09:14:42.459Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>当使用nginx代理的时候报net::ERR_CONTENT_LENGTH_MISMATCH错误</p><p>y</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;当使用nginx代理的时候报net::ERR_CONTENT_LENGTH_MISMATCH错误&lt;/p&gt;
+&lt;p&gt;y&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="nguni" scheme="http://yoursite.com/tags/nguni/"/>
+    
+  </entry>
   
   <entry>
     <title>ESLIN配置airbnb标准</title>
@@ -486,30 +511,6 @@
     
     
       <category term="翻译" scheme="http://yoursite.com/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>wepy开发速查手册</title>
-    <link href="http://yoursite.com/2018/03/11/wepy%E5%BC%80%E5%8F%91%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/"/>
-    <id>http://yoursite.com/2018/03/11/wepy开发速查手册/</id>
-    <published>2018-03-11T08:25:24.000Z</published>
-    <updated>2018-03-13T09:49:35.449Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>事件bindtap=”click”替换为@tap=”click”,防止冒泡@tap.stop,防止捕获@tap.capture.stop，如果是@someEvent.user=”somefunction”，这种通过this.$emit(‘someEvent’),someFunction会触发而且写在父组件methods里面，同时父组件events里面的someEvent时不会执行</p><p>events示例</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// events对象中所声明的函数为用于监听组件之间的通信与交互事件的事件处理函数</span></span><br><span class="line">    events = &#123;</span><br><span class="line">        <span class="string">'someEvent'</span>: <span class="function">(<span class="params">p1, p2, p3, $event</span>) =&gt;</span> &#123;</span><br><span class="line">               <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.$name&#125;</span> receive <span class="subst">$&#123;$event.name&#125;</span> from <span class="subst">$&#123;$event.source.$name&#125;</span>`</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure><p>​</p></li><li><p>事件传参变更，bindtap=”click” data-index=”“更改为@tap=”click()”</p></li><li><p>repeat使用实例</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注意，使用for属性，而不是使用wx:for属性 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">repeat</span> <span class="attr">for</span>=<span class="string">"&#123;&#123;list&#125;&#125;"</span> <span class="attr">key</span>=<span class="string">"index"</span> <span class="attr">index</span>=<span class="string">"index"</span> <span class="attr">item</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 插入&lt;script&gt;脚本部分所声明的child组件，同时传入item --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">child</span> <span class="attr">:item</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">repeat</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>computed计算属性，只要是组件中有任何数据发生了改变，那么所有计算属性就都会被重新计算，代码中可通过<code>this.计算属性名</code>来引用，模板中也可通过<code></code>来绑定数据</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">  a: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算属性aPlus，在脚本中可通过this.aPlus来引用，在模板中可通过&#123;&#123; aPlus &#125;&#125;来插值</span></span><br><span class="line">computed = &#123;</span><br><span class="line">  aPlus () &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>​</p></li><li><p>watcher监听器， 通过监听器<code>watcher</code>能够监听到任何属性的更新</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">  num: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听器函数名必须跟需要被监听的data对象中的属性num同名，</span></span><br><span class="line"><span class="comment">// 其参数中的newValue为属性改变后的新值，oldValue为改变前的旧值</span></span><br><span class="line">watch = &#123;</span><br><span class="line">  num (newValue, oldValue) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`num value: <span class="subst">$&#123;oldValue&#125;</span> -&gt; <span class="subst">$&#123;newValue&#125;</span>`</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>数据绑定使用:号比如，不使用冒号是绑定字符串常量，sync不加，父组件这个变量变化就不会影响子组件，加了sync，同时，写了twoWay: true时就是双向绑定，即同一个属性（props）的变化，父修改了影响子，子修改了影响父</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">child</span> <span class="attr">:title</span>=<span class="string">"parentTitle"</span> <span class="attr">:syncTitle.sync</span>=<span class="string">"parentTitle"</span> <span class="attr">:twoWayTitle</span>=<span class="string">"parentTitle"</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">props = &#123;</span><br><span class="line">    <span class="comment">// 静态传值</span></span><br><span class="line">    title: <span class="built_in">String</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 父向子单向动态传值</span></span><br><span class="line">    syncTitle: &#123;</span><br><span class="line">        type: <span class="built_in">String</span>,</span><br><span class="line">        <span class="keyword">default</span>: <span class="string">'null'</span></span><br><span class="line">    &#125;,</span><br><span class="line"><span class="comment">//这里即twoWay</span></span><br><span class="line">    twoWayTitle: &#123;</span><br><span class="line">        type: <span class="built_in">Number</span>,</span><br><span class="line">        <span class="keyword">default</span>: <span class="string">'nothing'</span>,</span><br><span class="line">        twoWay: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><p>通信</p><p>父组件发起的：$broadcast（特性：所有子组件都会收到此广播事件，顺序由上至下，广度优先）</p><p>子组件发起的：$emit（特性：事件发起组件的所有祖先组件会依次接收到事件,顺序由下至上)</p><p>组件间发起的：$invoke (特性：一个页面或组件对另一个组件中的方法的直接调用)</p><p>$invoke示例(这里能否用到alias路径，大家可以试试)</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$invoke(<span class="string">'./../ComB/ComG'</span>, <span class="string">'someMethod'</span>, <span class="string">'someArgs'</span>);</span><br></pre></td></tr></table></figure><p>回调均在events对象里面写</p></li><li><p>wxs</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  text: &apos;This is from wxs&apos;,</span><br><span class="line">  filter: function (num) &#123;</span><br><span class="line">    return num.toFixed(2);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// index.wpy</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;text&gt;&#123;&#123;m1.text&#125;&#125;&lt;/text&gt;</span><br><span class="line">  &lt;text&gt;&#123;&#123;m1.filter(num)&#125;&#125;&lt;/text&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import wepy from &apos;wepy&apos;;</span><br><span class="line">  import mywxs from &apos;../wxs/mywxs.wxs&apos;;</span><br><span class="line"></span><br><span class="line">  export default class Index extends wepy.page &#123;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">      num: 10</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    wxs = &#123;</span><br><span class="line">      m1: mywxs</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>​</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;事件bindtap=”click”替换为@tap=”click”,防止冒泡@tap.stop,防止捕获@tap.capture.stop，如果是@someEvent.user=”somefunction”，这种通过this.$emit(‘someEvent
-      
-    
-    </summary>
-    
-    
-      <category term="wepy" scheme="http://yoursite.com/tags/wepy/"/>
     
   </entry>
   
