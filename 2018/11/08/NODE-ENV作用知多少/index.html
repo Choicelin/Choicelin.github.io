@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/08/NODE-ENV作用知多少/NODE_ENV_1.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/08/NODE-ENV作用知多少/NODE_ENV_2.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/08/NODE-ENV作用知多少/NODE_ENV_3.png">
-<meta property="og:updated_time" content="2018-11-08T08:17:15.197Z">
+<meta property="og:updated_time" content="2018-11-08T08:20:40.154Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NODE_ENV作用知多少">
 <meta name="twitter:description" content="场景我们在开发的时候经常会有生产环境和开发环境，这两种环境中可能用到不同的配置，比如本地域名和线上域名，如何去区别它们，是我今天要谈到的一个问题。 process对象与NODE_ENVNode.js中有一个全局的对象process，这个对象无需require(),它控制着Node.js的进程的信息。 它有一个属性，叫做env。我下面将会使用这个属性，在它里面挂载一个NODE_ENV属性，我们通过这">
@@ -197,35 +197,16 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export NODE_ENV=dev node index.js</span><br></pre></td></tr></table></figure>
 <p>现在在当前窗口下，输出的url就是<a href="http://localhost:3000，关闭窗口后需要重新设置" target="_blank" rel="noopener">http://localhost:3000，关闭窗口后需要重新设置</a></p>
 <h2 id="在webstorm中设置NODE-ENV"><a href="#在webstorm中设置NODE-ENV" class="headerlink" title="在webstorm中设置NODE_ENV"></a>在webstorm中设置NODE_ENV</h2><ol>
-<li>点击右上角的edit configuration<ul>
-<li><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="./NODE_ENV_1.png" alt="avatar" title="">
-                </div>
-                <div class="image-caption">avatar</div>
-            </figure></li>
-</ul>
+<li><p>点击右上角的edit configuration</p>
+<p><img src="./NODE_ENV_1.png" alt="1"></p>
 </li>
-<li>找到environment variables</li>
+<li><p>找到environment variables</p>
+<p><img src="./NODE_ENV_2.png" alt="2"></p>
+</li>
+<li><p>设置NODE_ENV</p>
+<p><img src="./NODE_ENV_3.png" alt="3"></p>
+</li>
 </ol>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="./NODE_ENV_2.png" alt="avatar" title="">
-                </div>
-                <div class="image-caption">avatar</div>
-            </figure>
-<ol>
-<li>设置NODE_ENV</li>
-</ol>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="./NODE_ENV_3.png" alt="avatar" title="">
-                </div>
-                <div class="image-caption">avatar</div>
-            </figure>
 <h2 id="使用cross-env实现跨平台设置NODE-ENV"><a href="#使用cross-env实现跨平台设置NODE-ENV" class="headerlink" title="使用cross-env实现跨平台设置NODE_ENV"></a>使用cross-env实现跨平台设置NODE_ENV</h2><p>首先初始化一个package.json</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
 <p>然后安装cross-env</p>
@@ -242,7 +223,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-08T08:17:15.197Z" itemprop="dateUpdated">2018-11-08 16:17:15</time>
+    Last updated: <time datetime="2018-11-08T08:20:40.154Z" itemprop="dateUpdated">2018-11-08 16:20:40</time>
 </span><br>
 
 
