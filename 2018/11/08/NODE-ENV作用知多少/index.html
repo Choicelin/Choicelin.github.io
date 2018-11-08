@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>NODE_ENV作用知多少 | 1024子翔的程序人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="node">
+    <meta name="description" content="场景我们在开发的时候经常会有生产环境和开发环境，这两种环境中可能用到不同的配置，比如本地域名和线上域名，如何去区别它们，是我今天要谈到的一个问题。 process对象与NODE_ENVNode.js中有一个全局的对象process，这个对象无需require(),它控制着Node.js的进程的信息。 它有一个属性，叫做env。我下面将会使用这个属性，在它里面挂载一个NODE_ENV属性，我们通过这">
+<meta name="keywords" content="node">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NODE_ENV作用知多少">
+<meta property="og:url" content="http://yoursite.com/2018/11/08/NODE-ENV作用知多少/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:description" content="场景我们在开发的时候经常会有生产环境和开发环境，这两种环境中可能用到不同的配置，比如本地域名和线上域名，如何去区别它们，是我今天要谈到的一个问题。 process对象与NODE_ENVNode.js中有一个全局的对象process，这个对象无需require(),它控制着Node.js的进程的信息。 它有一个属性，叫做env。我下面将会使用这个属性，在它里面挂载一个NODE_ENV属性，我们通过这">
+<meta property="og:image" content="http://yoursite.com/2018/11/08/NODE-ENV作用知多少/NODE_ENV_1.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/08/NODE-ENV作用知多少/NODE_ENV_2.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/08/NODE-ENV作用知多少/NODE_ENV_3.png">
+<meta property="og:updated_time" content="2018-11-08T08:17:15.197Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NODE_ENV作用知多少">
+<meta name="twitter:description" content="场景我们在开发的时候经常会有生产环境和开发环境，这两种环境中可能用到不同的配置，比如本地域名和线上域名，如何去区别它们，是我今天要谈到的一个问题。 process对象与NODE_ENVNode.js中有一个全局的对象process，这个对象无需require(),它控制着Node.js的进程的信息。 它有一个属性，叫做env。我下面将会使用这个属性，在它里面挂载一个NODE_ENV属性，我们通过这">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/08/NODE-ENV作用知多少/NODE_ENV_1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Choicelin</h5>
+          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/choicelin" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">NODE_ENV作用知多少</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">NODE_ENV作用知多少</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-08T08:13:58.000Z" itemprop="datePublished" class="page-time">
+  2018-11-08
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#场景"><span class="post-toc-number">1.</span> <span class="post-toc-text">场景</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#process对象与NODE-ENV"><span class="post-toc-number">2.</span> <span class="post-toc-text">process对象与NODE_ENV</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获取NODE-ENV"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">获取NODE_ENV</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置NODE-ENV"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">设置NODE_ENV</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在webstorm中设置NODE-ENV"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">在webstorm中设置NODE_ENV</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用cross-env实现跨平台设置NODE-ENV"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">使用cross-env实现跨平台设置NODE_ENV</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">3.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-NODE-ENV作用知多少"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">NODE_ENV作用知多少</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-08 16:13:58" datetime="2018-11-08T08:13:58.000Z"  itemprop="datePublished">2018-11-08</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h1><p>我们在开发的时候经常会有生产环境和开发环境，这两种环境中可能用到不同的配置，比如本地域名和线上域名，如何去区别它们，是我今天要谈到的一个问题。</p>
+<h1 id="process对象与NODE-ENV"><a href="#process对象与NODE-ENV" class="headerlink" title="process对象与NODE_ENV"></a>process对象与NODE_ENV</h1><p>Node.js中有一个全局的对象process，这个对象无需require(),它控制着Node.js的进程的信息。</p>
+<p>它有一个属性，叫做env。我下面将会使用这个属性，在它里面挂载一个NODE_ENV属性，我们通过这个NODE_ENV来判断开发环境和生产环境。</p>
+<h2 id="获取NODE-ENV"><a href="#获取NODE-ENV" class="headerlink" title="获取NODE_ENV"></a>获取NODE_ENV</h2><p>由于我们有process对象，所以可以直接在任意代码处获取到NODE_ENV，并根据该对象的值判断环境，新建一个index.js，如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Creator: JIZHUA&lt;413807584@qq.com&gt;</span></span><br><span class="line"><span class="comment"> * Date: 2018/11/8</span></span><br><span class="line"><span class="comment"> * Time: 3:37 PM</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> url = <span class="string">''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV == <span class="string">'dev'</span>) &#123;</span><br><span class="line">  url = <span class="string">`http://localhost:3000`</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  url = <span class="string">`http://www.fenxiangtech.com`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(url)</span><br></pre></td></tr></table></figure>
+<h2 id="设置NODE-ENV"><a href="#设置NODE-ENV" class="headerlink" title="设置NODE_ENV"></a>设置NODE_ENV</h2><p>我们既然能够获取到NODE_ENV，那么我们如何设置这个NODE_ENV。即我们要在生产环境设置NODE_ENV值为production，在开发环境设置NODE_ENV的值为dev。</p>
+<p>首先开起你的命令行，在windows下是CMD，在mac下是terminal。</p>
+<p>windows下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set NODE_ENV=dev node index.js</span><br></pre></td></tr></table></figure>
+<p>mac下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export NODE_ENV=dev node index.js</span><br></pre></td></tr></table></figure>
+<p>现在在当前窗口下，输出的url就是<a href="http://localhost:3000，关闭窗口后需要重新设置" target="_blank" rel="noopener">http://localhost:3000，关闭窗口后需要重新设置</a></p>
+<h2 id="在webstorm中设置NODE-ENV"><a href="#在webstorm中设置NODE-ENV" class="headerlink" title="在webstorm中设置NODE_ENV"></a>在webstorm中设置NODE_ENV</h2><ol>
+<li>点击右上角的edit configuration<ul>
+<li><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="./NODE_ENV_1.png" alt="avatar" title="">
+                </div>
+                <div class="image-caption">avatar</div>
+            </figure></li>
+</ul>
+</li>
+<li>找到environment variables</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="./NODE_ENV_2.png" alt="avatar" title="">
+                </div>
+                <div class="image-caption">avatar</div>
+            </figure>
+<ol>
+<li>设置NODE_ENV</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="./NODE_ENV_3.png" alt="avatar" title="">
+                </div>
+                <div class="image-caption">avatar</div>
+            </figure>
+<h2 id="使用cross-env实现跨平台设置NODE-ENV"><a href="#使用cross-env实现跨平台设置NODE-ENV" class="headerlink" title="使用cross-env实现跨平台设置NODE_ENV"></a>使用cross-env实现跨平台设置NODE_ENV</h2><p>首先初始化一个package.json</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+<p>然后安装cross-env</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i cross-env -D</span><br></pre></td></tr></table></figure>
+<p>接着在package.json的scripts中加入下面的代码</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"node-test"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"cross-env NODE_ENV=dev node index.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span>,</span><br><span class="line">  <span class="attr">"dependencies"</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"cross-env"</span>: <span class="string">"^5.2.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接着在命令行中运行npm run test既可看到结果</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这就是NODE_ENV的作用，这个变量是自定义的名字，但是env这个属性不是哦。大家了解了吗？欢迎指正，交流！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-11-08T08:17:15.197Z" itemprop="dateUpdated">2018-11-08 16:17:15</time>
+</span><br>
+
+
+        
+        作者只是一个小菜鸡，请轻喷！！
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="Choicelin">
+            Choicelin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/&title=《NODE_ENV作用知多少》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/&title=《NODE_ENV作用知多少》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《NODE_ENV作用知多少》 — 1024子翔的程序人生&url=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/09/28/近况/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">近况</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyNy85OTgz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Choicelin &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/&title=《NODE_ENV作用知多少》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/&title=《NODE_ENV作用知多少》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《NODE_ENV作用知多少》 — 1024子翔的程序人生&url=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/08/NODE-ENV作用知多少/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aW3KDMAwF0Ox/03QBDfRKgs5gH391QsCcfKh6+POJ1/FrnX3n7PtnV892+TyxMDAwXss4Lle+QXLX9Sf51S9vgoGBsQEjCaDVQJzfdbZX8m4YGBgYZ9+5DovX4fWunw8DAwMj376XMuY/EAYGBkZexOYla9Keu2Y/WItjYGC8kNF79P/8/ch8AwMD41WMo7iqd+WJ4GRhYGCszcgDXJ6cVQ9k9AIuBgbGPoz8hebjyR4gOkCGgYGxNCMJkXmLbV4A5+PPL59gYGAszbi+kJeyVerksEWhO4iBgfFyRu84V/6E3pAyP6iBgYGxGyNvq1UbannS2XwCBgbG0oxJWpYf0uq16ibPwcDAWI9RvXky+KyWrwUwBgbGooy8mJwcvJiPOf/4Z4CBgbElI9ks2SYpTXsjhCjgYmBgLMG4a1VHCMldo8MWGBgYyzF6YTRPDXulbDnpxMDAWJRxV3I2GXaOylcMDIwNGPOzCtXCstdia+a2GBgYCzGq21cb/ZNm2ShBxMDAWI7RK1zzdn+eYlYLWgwMjN0Y1e2rk4fCaxVHCxgYGKsyjuLqJYt5wVwN3BgYGDswesEuP/41h918ZgQDA+O1jLxA7SWCeaitjjYLPT8MDIwlGNXAVx039sJ04afBwMDAiEl5mtgL1hgYGBjzmWCvrXbDvRgYGBsw8oMU1WbZZGyZjzMxMDDWZtwVLqsHUqtl7W3zDQwMjDcxfgDKe35MNQDHWgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
