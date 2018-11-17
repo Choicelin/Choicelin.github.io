@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-08T08:20:40.154Z</updated>
+  <updated>2018-11-17T10:34:19.435Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>升级React:Redux</title>
+    <link href="http://yoursite.com/2018/11/17/%E5%8D%87%E7%BA%A7React-Redux/"/>
+    <id>http://yoursite.com/2018/11/17/升级React-Redux/</id>
+    <published>2018-11-17T02:33:59.000Z</published>
+    <updated>2018-11-17T10:34:19.435Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文翻译于<a href="https://css-tricks.com/learning-react-redux/" target="_blank" rel="noopener">原文链接</a></p></blockquote><p>Redux是一个在javascript应用中同时管理数据和UI视图状态的工具。它被认为是完美管理单页应用复杂状态的杰作。同时它不是一定要用于一个特定的框架上（比如React），虽然它的作者心中是想解决React的复杂状态管理，但是它依然可以用在Angular，甚至jQuery应用之上。</p><p>告诉大家更多的是，它是经过一项“time travel”的实验而想出来的——这是它被开发出来的真实的原因，我们将在后面讨论。</p><p>就像我们之前的教程中看到的一样，React在组件间流动数据，更具体的说，这被叫做单向数据流——数据流向是从父到子一个方向的。对于这个单向数据流特征，React没有明显表示如何处理两个没有父子关系的组件的通信：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://css-tricks.com/wp-content/uploads/2016/03/redux-article-3-01.svg" alt="很low的方式来处理没有父子关系的组件通信" title="">                </div>                <div class="image-caption">很low的方式来处理没有父子关系的组件通信</div>            </figure><p>React不推荐直接像上图那样组件与组件间通信。即使它特性支持上面的通信，也不要这样做。因为这种实践被认为是不好，极易导致代码写得像面条一样混乱。</p><p>React确实提供了一种解决上述问题的方案，但是它并没有在框架层面实现，而是需要开发者，也就是你，自己去实现它。下面是一段React文档的原文：</p><blockquote><p>For communication between two components that don’t have a parent-child relationship, you can set up your own global event system. … Flux pattern is one of the possible ways to arrange this.</p></blockquote><p>翻译为：对于无父子关系的两个组件间的通信，你可以搭建你自己的全局事件系统。…Flux模式是可能处理这个问题的多种方式之一。</p><p>这就是Redux出来的原因。Redux提供了一种方案把你所有的应用状态保存在一个地方，叫做”store“。然后组件把状态的变化通知到store，同时组件订阅store，就可以察觉到状态的变化，从而不直接在组件间通信。</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://css-tricks.com/wp-content/uploads/2016/03/redux-article-3-02.svg" alt="dispatch and subscribe" title="">                </div>                <div class="image-caption">dispatch and subscribe</div>            </figure><p>store在整个应用中可以看做所有状态变化的中间人。引入Redux，组件之间不直接交流，而是遵循”single source of truth“（译：单真理之源)，也就是store这个真理之源。这和其他方式中，应用的各部分直接互相交流有很大不同。有时，那些方式被认为是错误的或者令人混淆的：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://css-tricks.com/wp-content/uploads/2016/03/redux-article-3-03.svg" alt="without redux or with redux" title="">                </div>                <div class="image-caption">without redux or with redux</div>            </figure><p>引入redux,很清晰地知道组件获取它们的状态通过唯一的store。同时也清晰地知道，组件在何处通知状态的改变，也是store。一个组件的通知状态改变只聚焦在dispatch（译：派遣）一个改变到store上，而不需要关心其他的组件是否需要这个状态的变化。所以Redux使数据流容易去推测。</p><p>使用store去协调一个应用的状态实际上是一种模式，也就是上文提到的Flux 模式。它是一个设计模式赞扬了像React那样的单向数据流的工程。Redux与Flux相似，但是它们怎样相似呢？</p><h3 id="Redux-is-“Flux-like”（译：Redux是”像Flux的“）"><a href="#Redux-is-“Flux-like”（译：Redux是”像Flux的“）" class="headerlink" title="Redux is “Flux-like”（译：Redux是”像Flux的“）"></a>Redux is “Flux-like”（译：Redux是”像Flux的“）</h3><p>Flux是一种模式，而不是像Redux是个工具，因此不是一个你可以下载的东西。尽管Redux是一个在其它东西像Elm,被Flux影响的工具。有很多指导文章在那里去比较Redux和Flux。它们大多数总结Redux是Flux或者像Flux，取决于一个人定义Flux规则有多严格。最终，这都不重要。Facebook非常喜欢和支持Redux，以至于最后聘请了Redux的核心开发者Dan Abramov。</p><p>这篇文章假设你一点也不熟悉Flux模式。但是如果你很熟悉，你会发现一些小的不同，特别是考虑Redux的三大指导法则：</p><ol><li><p>Single source of truth(译者注：单真理之源)</p><p>Redux对于整个应用的状态仅仅使用一个store。因为所有的状态放在一个地方，Redux把这个叫做Single source of truth。</p><p>store的数据结构最终取决于你，但是它对于一个真实的应用，是一个典型的深度嵌套的对象。</p><p>Redux一个store的方式是与多个store的Flux众多的不同之一。</p></li><li><p>状态（state）是只读的</p><p>根据Redux文档，”改变状态的唯一方式是发出一个action，一个描述发生了什么的对象。“</p><p>这意味着这个应用不能直接改变状态，而是通过action来表达一种去改变store里面的状态的意图。</p><p>store对象本身只有一个非常小的API对应4个方法：</p><ul><li>store.dispatch(action)</li><li>store.subscribe(listener)</li><li>store.getState()</li><li>replaceReducer(nextReducer)</li></ul><p>因此你可以看到，没有一个方法是设置状态的。因此，对于一个应用来说，发出一个action是唯一可以反映一个状态变化的方式：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> action = &#123;</span><br><span class="line">    type: <span class="string">'ADD_USER'</span>,</span><br><span class="line">    user: &#123;<span class="attr">name</span>: <span class="string">'Dan'</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 假设一个store对象已经被创建了</span></span><br><span class="line">store.dispatch(action);</span><br></pre></td></tr></table></figure><p>dispatch()方法发送一个对象到Redux，这个对象被我们称为action。这个action被描述为一个”payload(译：载荷，承载着状态修改时要用到的信息)“持有一个type和其他修改状态时要用到的数据——这个例子里面是一个user对象。记住，除了type这个属性，其他的载荷数据就看你如何去设计，不是固定的，比如这里使用一个user对象，用在reducer中。</p></li><li><p>修改由纯函数组成</p><p>就像刚才描述的那样，Redux不允许应用直接修改状态，而是用传递的action表明状态的变化，并意图去修改状态。Reducers是一些函数可以接收发送过来的action，并真正的去操作状态的修改。</p><p>一个reducer接收当前的状态作为一个参数，并能够通过构造出一个新状态来修改原来状态：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Reducer 函数</span></span><br><span class="line"><span class="keyword">var</span> someReducer = <span class="function"><span class="keyword">function</span>(<span class="params">state, action</span>) </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> state;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Reducer应该使用纯函数来编写。纯函数描述了一个函数具有下述四个特点：</p><ul><li>它不调用外部网络和数据库</li><li>它的返回值仅仅依赖于它的参数</li><li>它的参数应该是不能改变的</li><li>用同样的实参调用一个纯函数将总是返回相同的结果</li></ul><p>这些被称作”纯“，因为它什么也不做但是返回的值基于它的参数。它对系统其它部分没有任何副作用。</p></li></ol><h3 id="我们的第一个Redux-Store"><a href="#我们的第一个Redux-Store" class="headerlink" title="我们的第一个Redux Store"></a>我们的第一个Redux Store</h3><p>首先，用Redux.createStore()创建一个store并且传递所有的reducer作为它的参数。让我们看看一个仅有一个reducer的简单例子：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注意使用.push()不是一个最好的方式。这里只是为了简单的示例。</span></span><br><span class="line"><span class="comment">// 我们将在后面的章节讲述为什么</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// reducer函数</span></span><br><span class="line"><span class="keyword">var</span> userReducer = <span class="function"><span class="keyword">function</span>(<span class="params">state, action</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (state === <span class="literal">undefined</span>) &#123;</span><br><span class="line">        state = [];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (action.type === <span class="string">'ADD_USER'</span>) &#123;</span><br><span class="line">        state.push(action.user);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> state;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过传入一个reducer创建一个store</span></span><br><span class="line"><span class="keyword">var</span> store = Redux.createStore(userReducer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 传递我们第一个action来传达一个改变状态的意图</span></span><br><span class="line">store.dispatch(&#123;</span><br><span class="line">    type: <span class="string">'ADD_USER'</span>,</span><br><span class="line">    user: &#123;<span class="attr">name</span>: <span class="string">'Dan'</span>&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>简单的总结一下上面发生了什么：</p><ol><li>store通过一个reducer创建；</li><li>reducer创建了这个应用的初始状态为一个空的数组；</li><li>store.dispatch()用一个新的user对象派遣了action</li><li>reducer将新的user对象加入到状态里并且返回了它，这个返回的过程更新了store</li></ol><p><code>reducer实际上被调用了两次在这个例子里面</code>——一次是当store创建的时候，而另一次则是派遣action的时候。</p><p>当store被创建，Redux立即调用了reducers并且使用了它们返回的值作为初始的状态。第一次调用reducer时state是undefined。reducer的代码预期到这种情况，于是返回了一个空的数组来作用store的初始状态。</p><p>Reducers也在actions被派遣的时候被调用。因为从reducer返回的状态总是变成一个store的新的状态，所以Redux总是期望reducers返回一个状态。</p><p>在这个例子中，对我们reducer的第二个调用来自于我们的对action的派遣（译者注：store.dispatch()）。记住，一个派遣的action描述了修改状态的意图，并且经常每次都承载着数据用于新状态。我们这次，Redux传递一个当前的状态（译者注：state）和一个action对象给reducer函数。这个action对象，现在有一个type属性叫做”ADD_USER“，允许了这个reducer来知道如何去改变状态。</p><p>(未完待续)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;本文翻译于&lt;a href=&quot;https://css-tricks.com/learning-react-redux/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Red
+      
+    
+    </summary>
+    
+    
+      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+  </entry>
   
   <entry>
     <title>NODE_ENV作用知多少</title>
@@ -485,31 +511,6 @@
     
     
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不要做一个初级工程师（译）</title>
-    <link href="http://yoursite.com/2018/03/24/%E4%B8%8D%E8%A6%81%E5%81%9A%E4%B8%80%E4%B8%AA%E5%88%9D%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%EF%BC%88%E8%AF%91%EF%BC%89/"/>
-    <id>http://yoursite.com/2018/03/24/不要做一个初级工程师（译）/</id>
-    <published>2018-03-24T00:35:12.000Z</published>
-    <updated>2018-03-24T02:22:53.415Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文由林子翔翻译于<a href="https://hackernoon.com/dont-be-a-junior-developer-608c255b3056" target="_blank" rel="noopener">原文链接</a></p><ul><li><p>严肃地说，不要做一个初级工程师。一个初级工程师，把这个头衔放到他简历，邮箱和其他社交信息里，把它告诉世界。不要这样！</p></li><li><p>当你这样做了，人事和公司会这样看</p><blockquote><p>你好，我拼命想成为你们公司的一名开发者。我还是个新手，但是请你请你请你请请你在我身上赌一把而且希望我能够成为公司的一笔财富而不是债务，而且我在前6个月还需要其他同事的帮助。。。</p></blockquote></li><li><p>但是你说你就是一个初级工程师。这样的话，如果你专注于提高自己的技能去成为中级工程师会获得长远的成功，只有这样你才应该去申请一个工作。当你奉献你全部的时间去学习合理的技能，这时，你并不用把自己归为一个初级工程师这个品牌。记住，第一印象是很重要的，通过被录用为初级工程师，你将花费很长一段时间来摆脱这个头衔。如果你花一段时间去适应中级这个头衔，你将很快被录用为一个中级工程师。</p></li><li><p>但是你会问，什么时候你才知道自己不是一个中级工程师呢？你将永远不会知道。你将总是觉得自己知道得不够多，你将总是觉得其他人比你聪明，这被称作<a href="https://medium.com/@aliciatweet/overcoming-impostor-syndrome-bdae04e46ec5" target="_blank" rel="noopener">冒充者综合症</a>。这很正常，大部分开发者都会有这个症状。但是这里有一个小的测试针对网站开发者：你能清晰地给家人介绍Internet怎样工作？电脑怎么工作？网站怎么工作？是否对HTML,CSS,JavaScript有基础的认识而能够做一个网站？知道一点React吗？能够通过github做几个项目并不费力地发布到线上？如果以上你都能做到，很好，你不是一个初级的工程师。</p></li><li><p>但是，你说你现在就需要一个工作。停止这个不长远的想法。除非你的工作是被一群特别优秀一批人所围绕然后可以每天从他们那里学习到东西，而且是最新的相关技术。你的时间将会投资到学习技能去摆脱初级头衔。长远的来看，可能你会得到更多的钱、处在一个更好的团队、而且你将更可能去为一个可以教你和使用前沿技术的公司每天工作。不要做一个常驻的法律公司开发者，去做什么WordPress插件这种。那将不会长远的帮助你。</p></li></ul><p>注：这篇文章有点广告性质，所以只翻译了核心观点，作为一个开发者可以参考一下他的观点，个人觉得自己也有冒充者综合症，对该作者的大部分的观点是比较赞成的，但是我觉得有时候找工作涉及到的因素很多，这里有点片面，但不失为一篇不错的文章。这个冒充者综合症乃是直译，欢迎围观者提出更准确的翻译。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;本文由林子翔翻译于&lt;a href=&quot;https://hackernoon.com/dont-be-a-junior-developer-608c255b3056&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p
-      
-    
-    </summary>
-    
-    
-      <category term="翻译" scheme="http://yoursite.com/tags/%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
