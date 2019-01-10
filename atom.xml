@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-17T10:34:19.435Z</updated>
+  <updated>2019-01-10T10:51:53.032Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大人的世界</title>
+    <link href="http://yoursite.com/2019/01/10/%E5%A4%A7%E4%BA%BA%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+    <id>http://yoursite.com/2019/01/10/大人的世界/</id>
+    <published>2019-01-10T10:38:29.000Z</published>
+    <updated>2019-01-10T10:51:53.032Z</updated>
+    
+    <content type="html"><![CDATA[<p>到现在才发现所谓的年轻人的不易，有一群人积极的奋斗，他们扛着压力，顶着难受的感觉，走在人生的道路上，这就是所谓的生存吧。</p><p>以前总是像个孩子，从未体会到这些，当我真正的遇到了人生的小坎，才觉得有点静不下心来，难受的感觉像水流一样慢慢淹没了自己。</p><p>老妈说，过年就在家里休息，不慌。感谢支持，这几天就好好的听着音乐学习吧。当听到方方老师的课的时候，内心开始有了一丝平静，浮躁渐渐消散。</p><p>老爸说，他总是有一股信念。信念是啥，我问。他说的我不记得了，我感受到的，那种就算革命就算快要失败，也有一丝希望的感觉，或许就是柳岸花明又一村。天无绝人之路，老话都是有道理的，不论如何，我要保持我最后的一丝信念。</p><p>话说，还有很多坎坷要走，就像小韩同学说的，这是一场历练吧，也是给曾经幼稚的我一次成长机会。困难很多，不要被困难打垮。</p><p>就像做平安的私活的时候，遇到了canvas的bug，也是坚信能够搞出来，就搞出来了，就像考驾照，坚信不会挂，就不会挂，四次全过一样。就像之前的我那样，一直对技术抱有热情，你会的，给我时间，我也可以搞出来。这些事情都会给自己一丝信念和信心。</p><p>加油，小林，命运之轮慢慢开启了，好戏还在后头！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;到现在才发现所谓的年轻人的不易，有一群人积极的奋斗，他们扛着压力，顶着难受的感觉，走在人生的道路上，这就是所谓的生存吧。&lt;/p&gt;
+&lt;p&gt;以前总是像个孩子，从未体会到这些，当我真正的遇到了人生的小坎，才觉得有点静不下心来，难受的感觉像水流一样慢慢淹没了自己。&lt;/p&gt;
+&lt;p&gt;老
+      
+    
+    </summary>
+    
+    
+      <category term="心情" scheme="http://yoursite.com/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
   
   <entry>
     <title>升级React:Redux</title>
@@ -481,36 +506,6 @@
     
     
       <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>css可以继承的属性</title>
-    <link href="http://yoursite.com/2018/04/04/css%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E7%9A%84%E5%B1%9E%E6%80%A7/"/>
-    <id>http://yoursite.com/2018/04/04/css可以继承的属性/</id>
-    <published>2018-04-03T22:16:29.000Z</published>
-    <updated>2018-04-03T22:43:32.278Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>font-size</li><li>text-indent</li><li>text-align</li><li>line-height</li><li>word-spacing</li><li>letter-spacing</li><li>text-transform</li><li>color</li><li>visibility</li><li>cursor</li><li>direction</li><li>font</li><li>font-family</li><li>font-style</li><li>font-weight</li><li>list-style</li></ol><p>———————————————— 不常用 —————————————————–</p><ol><li>caption-side</li><li>font-variant</li><li>list-style-position</li><li>list-style-type</li><li>border-collapse</li><li>border-spacing</li><li>empty-cells</li><li>table-layout</li><li>list-style-type</li><li>list-style-image</li><li>quotes</li><li>page</li><li>page-break-inside</li><li>widows</li><li>orphans</li><li>speak</li><li>speak-punctuation</li><li>speak-numeral</li><li>speak-header</li><li>speech-rate</li><li>volume</li><li>voice-family</li><li>pitch</li><li>pitch-range</li><li>stress</li><li>richness</li><li>azimuth</li><li>​</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;font-size&lt;/li&gt;
-&lt;li&gt;text-indent&lt;/li&gt;
-&lt;li&gt;text-align&lt;/li&gt;
-&lt;li&gt;line-height&lt;/li&gt;
-&lt;li&gt;word-spacing&lt;/li&gt;
-&lt;li&gt;letter-spacing&lt;/li&gt;
-&lt;li&gt;text
-      
-    
-    </summary>
-    
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
