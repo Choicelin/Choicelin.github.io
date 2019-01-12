@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-10T10:51:53.032Z</updated>
+  <updated>2018-11-17T10:34:19.435Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>大人的世界</title>
-    <link href="http://yoursite.com/2019/01/10/%E5%A4%A7%E4%BA%BA%E7%9A%84%E4%B8%96%E7%95%8C/"/>
-    <id>http://yoursite.com/2019/01/10/大人的世界/</id>
-    <published>2019-01-10T10:38:29.000Z</published>
-    <updated>2019-01-10T10:51:53.032Z</updated>
-    
-    <content type="html"><![CDATA[<p>到现在才发现所谓的年轻人的不易，有一群人积极的奋斗，他们扛着压力，顶着难受的感觉，走在人生的道路上，这就是所谓的生存吧。</p><p>以前总是像个孩子，从未体会到这些，当我真正的遇到了人生的小坎，才觉得有点静不下心来，难受的感觉像水流一样慢慢淹没了自己。</p><p>老妈说，过年就在家里休息，不慌。感谢支持，这几天就好好的听着音乐学习吧。当听到方方老师的课的时候，内心开始有了一丝平静，浮躁渐渐消散。</p><p>老爸说，他总是有一股信念。信念是啥，我问。他说的我不记得了，我感受到的，那种就算革命就算快要失败，也有一丝希望的感觉，或许就是柳岸花明又一村。天无绝人之路，老话都是有道理的，不论如何，我要保持我最后的一丝信念。</p><p>话说，还有很多坎坷要走，就像小韩同学说的，这是一场历练吧，也是给曾经幼稚的我一次成长机会。困难很多，不要被困难打垮。</p><p>就像做平安的私活的时候，遇到了canvas的bug，也是坚信能够搞出来，就搞出来了，就像考驾照，坚信不会挂，就不会挂，四次全过一样。就像之前的我那样，一直对技术抱有热情，你会的，给我时间，我也可以搞出来。这些事情都会给自己一丝信念和信心。</p><p>加油，小林，命运之轮慢慢开启了，好戏还在后头！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;到现在才发现所谓的年轻人的不易，有一群人积极的奋斗，他们扛着压力，顶着难受的感觉，走在人生的道路上，这就是所谓的生存吧。&lt;/p&gt;
-&lt;p&gt;以前总是像个孩子，从未体会到这些，当我真正的遇到了人生的小坎，才觉得有点静不下心来，难受的感觉像水流一样慢慢淹没了自己。&lt;/p&gt;
-&lt;p&gt;老
-      
-    
-    </summary>
-    
-    
-      <category term="心情" scheme="http://yoursite.com/tags/%E5%BF%83%E6%83%85/"/>
-    
-  </entry>
   
   <entry>
     <title>升级React:Redux</title>
@@ -87,30 +62,6 @@
     
     
       <category term="node" scheme="http://yoursite.com/tags/node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>近况</title>
-    <link href="http://yoursite.com/2018/09/28/%E8%BF%91%E5%86%B5/"/>
-    <id>http://yoursite.com/2018/09/28/近况/</id>
-    <published>2018-09-28T09:00:15.000Z</published>
-    <updated>2018-09-28T09:13:03.136Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="入秋"><a href="#入秋" class="headerlink" title="入秋"></a>入秋</h1><p>最近做了一些h5，把vue这个东西熟悉了一下。vue的生态文档基本过了一遍。</p><p>关于小程序，小程序的框架出了一个taro，这个框架比较有趣，但是对于小程序框架这种东西，坑肯定是有的。taro如果做电商小程序，应该是没得话说的。wepy和taro的文档我都改过了，我个人特别不喜欢mpvue的生态，估计是个kpi项目，已经3个月没有commit了。但是wepy2.0即将内测，感觉还是挺期待，毕竟会修复此前的组件化不完善的问题，还有一些重大bug。</p><p>关于后端的东西，最近准备看看计算机网络的课程，要体会什么是语言的无关性，就体现在这些基础的东西上，上次和栗子讨论抓包的解码问题，他说我网络知识太少了，确实惭愧，我回答大学打游戏去了，技术债总是要还的。</p><p>关于生活，最近在学驾照，特别不想去驾校，工作日且过且珍惜，都不会知道今天星期几。可怕的假期，可怕的周末</p><p>关于规划，规划就是没有规划，顺其自然，每天进步一点点，积累再积累。以前的同事都是研究生，最近他们都在校招，找的工作挺好，恭喜他们。</p><p>关于自己的爱好，最近在玩噬神者，一次10几分钟吧。</p><p>关于感情，最近家里介绍的懒得去见面了，不了了之吧。</p><p>就这样吧，下次再记录一点。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;入秋&quot;&gt;&lt;a href=&quot;#入秋&quot; class=&quot;headerlink&quot; title=&quot;入秋&quot;&gt;&lt;/a&gt;入秋&lt;/h1&gt;&lt;p&gt;最近做了一些h5，把vue这个东西熟悉了一下。vue的生态文档基本过了一遍。&lt;/p&gt;
-&lt;p&gt;关于小程序，小程序的框架出了一个taro，这个框
-      
-    
-    </summary>
-    
-    
-      <category term="心情" scheme="http://yoursite.com/tags/%E5%BF%83%E6%83%85/"/>
     
   </entry>
   
@@ -188,57 +139,6 @@
   </entry>
   
   <entry>
-    <title>JAVA基本语法cheatsheet</title>
-    <link href="http://yoursite.com/2018/08/24/JAVA%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95cheatsheet/"/>
-    <id>http://yoursite.com/2018/08/24/JAVA基本语法cheatsheet/</id>
-    <published>2018-08-24T07:55:37.000Z</published>
-    <updated>2018-08-24T08:11:11.889Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ul><li>整数</li><li>浮点数</li><li>字符</li><li>数组</li><li>布尔</li></ul><h2 id="表达式和语句"><a href="#表达式和语句" class="headerlink" title="表达式和语句"></a>表达式和语句</h2><h2 id="变量和赋值"><a href="#变量和赋值" class="headerlink" title="变量和赋值"></a>变量和赋值</h2><h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><h2 id="循环控制语句"><a href="#循环控制语句" class="headerlink" title="循环控制语句"></a>循环控制语句</h2><h2 id="JAVA类型模型"><a href="#JAVA类型模型" class="headerlink" title="JAVA类型模型"></a>JAVA类型模型</h2><h3 id="类与对象-（抽象与具体）"><a href="#类与对象-（抽象与具体）" class="headerlink" title="类与对象 （抽象与具体）"></a>类与对象 （抽象与具体）</h3><h4 id="类"><a href="#类" class="headerlink" title="类"></a>类</h4><ul><li>类是一个模板</li></ul><h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><ul><li>JAVA语言一等公民，对象可以赋值到一个变量</li></ul><h4 id="行为与状态（方法与成员变量）"><a href="#行为与状态（方法与成员变量）" class="headerlink" title="行为与状态（方法与成员变量）"></a>行为与状态（方法与成员变量）</h4><p>执行行为改变状态</p><ul><li>成员方法</li><li>静态方法</li></ul><h4 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h4><ul><li>由方法名与参数类型确定</li></ul><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><ul><li><p>final</p><blockquote><p>类将不能继承，变量将是常量，方法防重写， 常量如果是对象其内部也是可以修改的</p></blockquote></li><li><p>访问修饰符</p></li></ul><table><thead><tr><th></th><th>public</th><th>protected</th><th>default</th><th>private</th></tr></thead><tbody><tr><td>同一个类</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>同一个包</td><td>1</td><td>1</td><td>1</td><td>0</td></tr><tr><td>子父类</td><td>1</td><td>1</td><td>0</td><td>0</td></tr><tr><td>不同包</td><td>1</td><td>0</td><td>0</td><td>0</td></tr></tbody></table><h2 id="包和层次结构"><a href="#包和层次结构" class="headerlink" title="包和层次结构"></a>包和层次结构</h2><ul><li>命名空间</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;基本数据类型&quot;&gt;&lt;a href=&quot;#基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;基本数据类型&quot;&gt;&lt;/a&gt;基本数据类型&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;整数&lt;/li&gt;
-&lt;li&gt;浮点数&lt;/li&gt;
-&lt;li&gt;字符&lt;/li&gt;
-&lt;li&gt;数组&lt;/li&gt;
-&lt;li
-      
-    
-    </summary>
-    
-    
-      <category term="JAVA" scheme="http://yoursite.com/tags/JAVA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA学习一</title>
-    <link href="http://yoursite.com/2018/08/05/JAVA%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
-    <id>http://yoursite.com/2018/08/05/JAVA学习一/</id>
-    <published>2018-08-05T11:35:58.000Z</published>
-    <updated>2018-08-05T12:27:09.339Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>Linux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了接口。</p><p>我们需要掌握的是：文件系统，内存管理（调度算法），进程，进程间通信。</p><h3 id="面向接口开发"><a href="#面向接口开发" class="headerlink" title="面向接口开发"></a>面向接口开发</h3><p>需求 =&gt; 接口 =&gt; 实现</p><h3 id="Linux架构"><a href="#Linux架构" class="headerlink" title="Linux架构"></a>Linux架构</h3><p>​    应用程序</p><p>shell     library</p><p>​    系统调用</p><p>​        内核</p><p>​    硬件</p><p>​    Linux架构</p><p>系统调用指操作系统内核提供“函数调用”，内核和应用的唯一的接口</p><h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>/ 根目录</p><p>/home 用户目录</p><p>/var 经常变化的文件，比如日志（分区可以使用ssd硬盘）</p><p>/usr 用户程序</p><p>/bin 可执行程序</p><p>/boot 引导系统启动</p><p>/tmp 临时文件</p><p>/lib, /lib64 系统库文件</p><p>/etc 配置文件</p><p>/proc 进程信息</p><p>关于分区，我们不需要关注底层是如何分区，只需关心文件的这些目录，这样就把底层解耦了，所以文件系统也是一种接口。</p><h3 id="终端-SHELL-管道"><a href="#终端-SHELL-管道" class="headerlink" title="终端 SHELL 管道"></a>终端 SHELL 管道</h3><p>终端（终端模拟器）</p><p>SHELL 执行命令 用户与系统的交互接口</p><p>管道 连接输出与输入</p><p>程序与进程的关系，没有加载到内存中运行的叫程序，否则叫进程</p><p>Linux中一切都是文件</p><p>包括标准输入，标准输出，标准错误都是文件的名字</p><h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>chmod修改文件权限</p><p>文件权限有10位</p><p>第一位代码文件是目录是文件还是链接，然后每隔三位代表读写可执行权限</p><p>赋权 chmod (u|g|o)  (+|-)  (r|w|x)</p><h4 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h4><p>示例</p><p>cat  a.log | grep error |wx -l </p><p>统计a.log中错误error出现的行数</p><h3 id="精髓"><a href="#精髓" class="headerlink" title="精髓"></a>精髓</h3><p>学习时整体要有一个宏观的把握，包括api层，业务逻辑层，数据存储层，每到一个阶段要知道学到哪里了。</p><blockquote><p>欢迎加入Java工坊 qq群570535816 全栈工坊qq群306204564</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot; title=&quot;Linux&quot;&gt;&lt;/a&gt;Linux&lt;/h2&gt;&lt;p&gt;Linux是一个内核负责管理硬件的计算与存储。内核包含很多驱动，它们都是内核的一个个模块。软件驱动了硬件，向上提供了
-      
-    
-    </summary>
-    
-    
-      <category term="JAVA" scheme="http://yoursite.com/tags/JAVA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>谈谈引用和求值策略</title>
     <link href="http://yoursite.com/2018/07/23/%E8%B0%88%E8%B0%88%E5%BC%95%E7%94%A8%E5%92%8C%E6%B1%82%E5%80%BC%E7%AD%96%E7%95%A5/"/>
     <id>http://yoursite.com/2018/07/23/谈谈引用和求值策略/</id>
@@ -305,55 +205,6 @@
     
     
       <category term="心得体会" scheme="http://yoursite.com/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浅谈BEM命名法则</title>
-    <link href="http://yoursite.com/2018/07/01/%E6%B5%85%E8%B0%88BEM%E5%91%BD%E5%90%8D%E6%B3%95%E5%88%99/"/>
-    <id>http://yoursite.com/2018/07/01/浅谈BEM命名法则/</id>
-    <published>2018-07-01T03:16:33.000Z</published>
-    <updated>2018-07-01T03:36:38.225Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Block"><a href="#Block" class="headerlink" title="Block"></a>Block</h2><ul><li><p>独立的有意义的实体</p><blockquote><p>比如<code>header</code>, <code>container</code>,<code>menu</code>,<code>checkbox</code>,<code>input</code></p></blockquote></li></ul><h2 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h2><ul><li><p>Block中的没有独立意义，但是语义上与Block有联系的部分</p><blockquote><p>比如<code>menu item</code>,<code>list item</code>,<code>checkbox caption</code>,<code>title</code>,<code>header</code></p></blockquote></li></ul><h2 id="Modifier"><a href="#Modifier" class="headerlink" title="Modifier"></a>Modifier</h2><ul><li><p>Block和Element的标志，用来改变Block和Element的行为</p><blockquote><p>比如<code>disabled</code>,<code>highlighted</code>,<code>checked</code>,<code>fixed</code>,<code>size big</code>,<code>color yellow</code></p></blockquote></li></ul><h2 id="常见使用方式举例"><a href="#常见使用方式举例" class="headerlink" title="常见使用方式举例"></a>常见使用方式举例</h2><blockquote><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button"</span>&gt;</span></span><br><span class="line">&gt; Normal button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button button--state-success"</span>&gt;</span></span><br><span class="line">&gt; Success button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button button--state-danger"</span>&gt;</span></span><br><span class="line">&gt; Danger button</span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>上面的例子用中划线分隔的三个部分就分别是Block,Element,Modifier。为什么要使用BEM方式来命名，从表现形式来看，是为了做到防止命名冲突，同时见名知意，目前有些项目会采取这种方式。</p><p>为了防止命名冲突有一种类似的方案是CSS MODULES。</p><p>总之命名还是比较重要，大家可以自行取舍，欢迎发邮件与我讨论。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Block&quot;&gt;&lt;a href=&quot;#Block&quot; class=&quot;headerlink&quot; title=&quot;Block&quot;&gt;&lt;/a&gt;Block&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;独立的有意义的实体&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;比如&lt;code&gt;header&lt;/cod
-      
-    
-    </summary>
-    
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读王勇人生前28年有感</title>
-    <link href="http://yoursite.com/2018/06/16/%E8%AF%BB%E7%8E%8B%E5%8B%87%E4%BA%BA%E7%94%9F%E5%89%8D28%E5%B9%B4%E6%9C%89%E6%84%9F/"/>
-    <id>http://yoursite.com/2018/06/16/读王勇人生前28年有感/</id>
-    <published>2018-06-16T01:56:54.000Z</published>
-    <updated>2018-06-16T02:37:02.267Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="关于名字"><a href="#关于名字" class="headerlink" title="关于名字"></a>关于名字</h2><p>王勇，前deepIn linux项目负责人，最近因为个人原因离职了。我也是因为公司的同事才知道他这个人的。于是想搜索一下关于他的介绍，然后搜索到了他的一篇文章《我人生的前28年》。</p><h2 id="个人感受"><a href="#个人感受" class="headerlink" title="个人感受"></a>个人感受</h2><p>整体浏览了他的文章，感觉是个做事很直接的人，学习上直击要点，如果要干什么就会直接开始从要学的入手，而且不会有科班生的畏难，可能是他最开始的时候是初生牛犊不怕虎，但是正是这种精神让他敢于去学习一门科班生可能觉得难的东西。这只是个人看法，可能他本人不是这样想的，后来他继续钻研难的技术，我觉得就是他已经掌握了一套学习的方法。他是不像很多现在的普通程序员分java还是php，他基本用什么就学什么，不会区分语言。这一点我听过一个facebook的工程师说过，facebook招人主考算法，人招进去以后，会在各个部门实习两周左右，他们要求无论是前端还是后端，只要公司需要，你都能很快的转入进去，这其实就是考验一个人的思维能力，因为语言到后面只是工具，用这个工具的还是你这个人，人的思维好了，对什么都能快速上手，并且能够举一反三。回到王勇身上，这位前辈体验到了很多人生的辛酸苦辣，但是感觉他一直在编码，这对我也是一种激励，</p><p>就是再多挫折也要抗住，就是跌到以后微笑爬起来，而且我希望国内大龄的编码者越来越多，这样就不用所谓的程序员到35岁要转管理这种说法。如果你热爱技术，为什么要转管理，好好做技术不好么。感觉很多喜欢技术的人，都是无法抗拒外界因素转的管理，当然也有最后没机会做管理被淘汰的人，所以我理想的是，没有外界因素，只有一个很直接的工作，coder，能够做到最后。但是目前IT行业年纪最大的估计国内也没有到退休年龄，这些事情不知道最后是个怎么样的。</p><h2 id="自我"><a href="#自我" class="headerlink" title="自我"></a>自我</h2><p>今后我需要学习他的钻劲，啃。无论如何，我都要微笑迎接人生的困难，最后用王勇前辈的一句话结束：</p><blockquote><p>中国教育最大的失败在于他们没有给这些未成年人看到真实残酷的社会， 他们没有教在社会上生存最重要的东西： 就是跌到以后微笑爬起来， 人在社会上最重要的就是你每天都会面对痛苦的事情， 你不喜欢的事情， 不顺心的事情， 最起码在你能力还不能支撑你个人理想的时候， 你要怎么去面对你个人， 你的家人</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;关于名字&quot;&gt;&lt;a href=&quot;#关于名字&quot; class=&quot;headerlink&quot; title=&quot;关于名字&quot;&gt;&lt;/a&gt;关于名字&lt;/h2&gt;&lt;p&gt;王勇，前deepIn linux项目负责人，最近因为个人原因离职了。我也是因为公司的同事才知道他这个人的。于是想搜索一下关于
-      
-    
-    </summary>
-    
-    
-      <category term="读后感" scheme="http://yoursite.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
   </entry>
   
@@ -463,30 +314,6 @@
   </entry>
   
   <entry>
-    <title>给今后解决bug作参考-bug心路</title>
-    <link href="http://yoursite.com/2018/04/10/%E7%BB%99%E4%BB%8A%E5%90%8E%E8%A7%A3%E5%86%B3bug%E4%BD%9C%E5%8F%82%E8%80%83-bug%E5%BF%83%E8%B7%AF/"/>
-    <id>http://yoursite.com/2018/04/10/给今后解决bug作参考-bug心路/</id>
-    <published>2018-04-10T12:57:59.000Z</published>
-    <updated>2018-04-11T03:13:15.882Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>解决标准分bug的过程，或许对以后会有所启示，首先觉得是对的，与测试沟通，然后需求说确认要改，然后改，发现代码确实是跳结果页，找不到原因，询问小师父，发现是后台接口的一个问题导致不能支付，然后支付试一下，可以了，但是页面白屏，停一下，到这一步其实是关键，这个白屏的链接获取到，这是个突破点，然后就靠自己了，发现在结果页又发生了跳转，是一个参数控制是否跳转，打印该参数为undefined，取反，正好是触发了跳转，问题就集中在这里，继续刷新看获取该参数的接口跑了没，发现跑了，看是不是时机不对,果然，在render中写跳转，redux中数据还没有过来，换到componentWillReceiveProps里面，成功，bug终结</li></ol><p>思考：为什么自己没有坚持到找到白屏链接那一步？值得反思。值得赞赏的是，找到突破口以后，每一步的决策都是对的，从发现突破口到解决只花了很短一段时间。今后应该如何参考这个？首先，我少了一步，就是重现这个bug，只看代码，而不实际去测一下，值得批评。加油，阿翔，今后要成为全栈哦，从自己能够做的入手，不要跟别人比，脚踏实地去做。</p><p>分享一下，与我共勉</p><hr><p>第二天一来，发现事情并没有结束，支付以后还是跳回stats，没有考虑到一点，componentWillReceiveProps是服务全局的，任何新props来都会触发，就可能出现undefined的情况。</p><p>又要批评一下，改完了还是要自己多测一下。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;解决标准分bug的过程，或许对以后会有所启示，首先觉得是对的，与测试沟通，然后需求说确认要改，然后改，发现代码确实是跳结果页，找不到原因，询问小师父，发现是后台接口的一个问题导致不能支付，然后支付试一下，可以了，但是页面白屏，停一下，到这一步其实是关键，这个白屏
-      
-    
-    </summary>
-    
-    
-      <category term="程序人生" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>mysql学习笔记</title>
     <link href="http://yoursite.com/2018/04/06/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2018/04/06/mysql学习笔记/</id>
@@ -506,6 +333,176 @@
     
     
       <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css可以继承的属性</title>
+    <link href="http://yoursite.com/2018/04/04/css%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E7%9A%84%E5%B1%9E%E6%80%A7/"/>
+    <id>http://yoursite.com/2018/04/04/css可以继承的属性/</id>
+    <published>2018-04-03T22:16:29.000Z</published>
+    <updated>2018-04-03T22:43:32.278Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>font-size</li><li>text-indent</li><li>text-align</li><li>line-height</li><li>word-spacing</li><li>letter-spacing</li><li>text-transform</li><li>color</li><li>visibility</li><li>cursor</li><li>direction</li><li>font</li><li>font-family</li><li>font-style</li><li>font-weight</li><li>list-style</li></ol><p>———————————————— 不常用 —————————————————–</p><ol><li>caption-side</li><li>font-variant</li><li>list-style-position</li><li>list-style-type</li><li>border-collapse</li><li>border-spacing</li><li>empty-cells</li><li>table-layout</li><li>list-style-type</li><li>list-style-image</li><li>quotes</li><li>page</li><li>page-break-inside</li><li>widows</li><li>orphans</li><li>speak</li><li>speak-punctuation</li><li>speak-numeral</li><li>speak-header</li><li>speech-rate</li><li>volume</li><li>voice-family</li><li>pitch</li><li>pitch-range</li><li>stress</li><li>richness</li><li>azimuth</li><li>​</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;font-size&lt;/li&gt;
+&lt;li&gt;text-indent&lt;/li&gt;
+&lt;li&gt;text-align&lt;/li&gt;
+&lt;li&gt;line-height&lt;/li&gt;
+&lt;li&gt;word-spacing&lt;/li&gt;
+&lt;li&gt;letter-spacing&lt;/li&gt;
+&lt;li&gt;text
+      
+    
+    </summary>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Router进行代码分片</title>
+    <link href="http://yoursite.com/2018/03/19/%E4%BD%BF%E7%94%A8React%E5%92%8CReact%20Router%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%88%86%E7%89%87/"/>
+    <id>http://yoursite.com/2018/03/19/使用React和React Router进行代码分片/</id>
+    <published>2018-03-19T00:58:50.000Z</published>
+    <updated>2018-03-19T12:02:40.470Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用React和React-Router进行代码分片"><a href="#使用React和React-Router进行代码分片" class="headerlink" title="使用React和React Router进行代码分片"></a>使用React和React Router进行代码分片</h1><blockquote><p>本文由林子翔翻译自<a href="https://medium.freecodecamp.org/code-splitting-with-react-and-react-router-62e174382d4c" target="_blank" rel="noopener">原文链接</a></p></blockquote><ul><li><p>代码分片可以让你把应用分成多个包，使你的用户能逐步加载应用而变得流行起来。在这篇文章中，我们将会看一下什么是代码分片和怎么去做，了解怎么去配合React Router去实现它。</p></li><li><p>现在是2018年。你的用户不需要为了一小块内容而去下载整个应用。如果一个用户下载所有的代码，仅仅是为了请求一个注册页面是毫无意义的。而且用户在注册时并不需要下载用户设置页的巨大富文本编辑器代码。如果要下载那么多内容的话，是很浪费的。而且对于一些用户，他们会抱怨不尊重没有特别好带宽的他们。这个点子近年不仅很热，而且实现难度以指数级降低。甚至还有有了一个很酷的名字，代码分片。</p></li><li><p>这个点子很简单，即按需加载。实践的话，它可能有一点复杂。而复杂的原因并不是代码分片本身，而是现在有各种各样的工具来做这个事情。而且每个人对哪个方式最好都有自己的看法。当你第一次开始着手的时候，可能很困难分析什么是什么。</p></li><li><p>最常见的两种做法是使用Webpack和它的包加载器（bundle-loader），或者使用ECMAScript的stage3提案的动态import()。任何机会不用Webpack，我就不用，因此在这篇文章中，我将会使用动态import()。</p></li><li><p>如果你很熟悉ES模块，你应该知道它们是静态的。意思就是说你必须在编译时确定你要引入和导出的内容，而不是运行时。这也意味着你不能基于一些条件来动态导入一个模块。导入的内容必须声明在文件的最开头否则会抛出一个错误。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!user) &#123;</span><br><span class="line">    <span class="keyword">import</span> * <span class="keyword">as</span> api <span class="keyword">from</span> <span class="string">'./api'</span> <span class="comment">//不能这样做，“import”和“export”只能出现在文件顶部</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>现在，如果import不需要是静态的怎么办？意味着上面的代码可以工作?将会给我们带来什么好处？首先这意味着我可以按着需要加载某个模块。这非常强大，它让我们更接近按用户需要下载代码的想象。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (editPost === <span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">import</span> * <span class="keyword">as</span> edit <span class="keyword">from</span> <span class="string">'./editpost'</span></span><br><span class="line">    </span><br><span class="line">    edit.showEditor()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>假设<strong>editpost</strong>包含一个非常大的富文本编辑器，我们需要保证用户在没有使用它的时候不会去下载它。</p></li><li><p>另外一个很酷的例子用于遗留支持。你可以在浏览器确定确实没有的时候才下载对应代码。</p></li><li><p>好消息（我在上文中曾间接提及）。这种类型的方法确实存在，它被Create React App（React项目的一种官方创建方法）支持,而且它是ECMAScript stage3的提案。不同的是替换了你之前使用import的方式。它使用起来像一个方法，并返回一个Promise，一旦模块完全加载，就会把这个模块resolve回来。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (editPost === <span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'./editpost'</span>)</span><br><span class="line">      .then(<span class="function"><span class="params">module</span> =&gt;</span> <span class="built_in">module</span>.showEditor())</span><br><span class="line">      .catch(<span class="function"><span class="params">e</span> =&gt;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>特别好，对吧？</p></li><li><p>现在我们知道怎么动态引入模块了，下一步是找出怎么结合React和React Router来使用它。</p></li><li><p>第一个（可能是最大的一个）问题，我们对React代码分片时，我们应该对哪里进行分片？典型的回答有两个</p><ol><li>在路由的层次上分片</li><li>在组件的层次上分片</li></ol></li><li><p>而更加常见的做法是在路由的层次上进行分片。你已经把你的应用分成了不同的路由，因此根据这个来代码分片是自然而然的事情。</p></li><li><p>让我以一个简单的React Router例子开始。我们将有三条路由分别是： <strong>/</strong>，<strong>/topics</strong>，<strong>/settings</strong>。</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    BrowserRouter <span class="keyword">as</span> Router,</span><br><span class="line">    Route,</span><br><span class="line">    Link,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./Home'</span></span><br><span class="line"><span class="keyword">import</span> Topics <span class="keyword">from</span> <span class="string">'./Topics'</span></span><br><span class="line"><span class="keyword">import</span> Settings <span class="keyword">from</span> <span class="string">'./Settings'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">          &lt;Router&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">              &lt;ul&gt;</span><br><span class="line">              &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/'</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">   &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/topics'</span>&gt;</span>Topics<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span> </span><br><span class="line">                &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/settings'</span>&gt;</span>Settings<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">              &lt;<span class="regexp">/ul&gt;    </span></span><br><span class="line"><span class="regexp">                </span></span><br><span class="line"><span class="regexp">              &lt;hr /</span>&gt;</span><br><span class="line">              </span><br><span class="line">              &lt;Route exact path=<span class="string">'/'</span> component=&#123;Home&#125; /&gt;</span><br><span class="line">              &lt;Route exact path=<span class="string">'/topics'</span> component=&#123;Topics&#125; /&gt;</span><br><span class="line">  &lt;Route exact path=<span class="string">'/settings'</span> component=&#123;Settings&#125; /&gt;</span><br><span class="line">            &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">          &lt;/</span>Router&gt;  </span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure></li><li><p>现在，假设我们的<strong>/settings</strong>路由内容非常多。它包含一个富文本编辑器，和一个原始超级马里奥兄弟的拷贝，和盖伊法利的高清图片。当用户不在<strong>/settings</strong>路由上时，我们不想让他们下载全部这些内容。让我们使用我们React和动态引入（import()）的知识来分片<strong>/settings</strong>路由。</p></li><li><p>就像我们在React里解决任何问题一样，我们先写一个组件。我们将叫它<strong>DynamicImport</strong>。这个组件的目的是动态的加载一个模块，只要模块加载好了，就把它传给它子节点（children）。</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Settings = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">  &lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">    &#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">       ? <span class="xml"><span class="tag">&lt;<span class="name">Loading</span> /&gt;</span> </span></span><br><span class="line">       : &lt;Component &#123;...props&#125; /&gt;&#125;</span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">DynamicImport</span>&gt;</span></span></span><br><span class="line"><span class="xml">)</span></span><br></pre></td></tr></table></figure></li><li><p>上面的代码告诉我们两个重要的要素。第一，这个组件在执行时会接受一个属性<strong>load</strong>，将使用我们前面提到的语法动态引入一个模块。第二，这个组件会接受一个函数作为他的子节点，这个函数需要和引入进来的模块一起调用。</p></li><li><p>在我们深入思考<strong>DynamicImport</strong>的实现的之前，让我们想一下我们会怎么实现。第一件事我们需要确定的是要调用props.load。这让我们返回一个Promise，当它resolve的时候应该返回模块。接着，一旦我们有了模块，我们需要一种方式去触发重渲染，因此我们要把模块传给props.children并且调用它。怎样在React里面触发重渲染呢？设置state（setState）。通过把动态引入的模块加入到<strong>DynamicImport</strong>的state里面，就像我们之前使用的一样，我们遵循和React同样的过程- 获取数据 -&gt; 设置到state里 -&gt; 重渲染。而这一次我们只是把获取数据替换成了引入模块。</p></li><li><p>好了，首先，让我们加入初始的状态到组件里。</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>现在，我们需要调props.load方法。这将返回一个promise同时在resolve后有一个模块</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125; </span><br><span class="line">    componentWillMount () &#123;</span><br><span class="line">        <span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function"><span class="params">component</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span>｛</span><br><span class="line">                  component</span><br><span class="line">                 )&#125;           </span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>这里有一个疑难杂症。如果我们ES模块和commonjs模块混用时，ES模块会有一个.default属性，而commonjs模块并没有。让我们改变一下代码，适应一下上面的情况。</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.props.load()</span><br><span class="line">    .then(<span class="function"><span class="params">component</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        component: component.default ?</span><br><span class="line">component.default : component</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li><li><p>现在我们动态引入的模块并且把它加入到了state里面，最后一件事就是render方法长什么样了。如果你会记得，当<strong>DynamicImport</strong>使用的时候，它看起来像这样</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Settings = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">        &#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">            ? ＜Loading/&gt;</span><br><span class="line">        : <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span>&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">DynamicImport</span>&gt;</span></span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></li><li><p>注意我们给组件传了一个函数作为子节点。这意味着我们需要执行这个函数，传递的是这个引入在state里的组件。</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">componentWillMount () &#123;</span><br><span class="line">    <span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function">(<span class="params">component</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">  component: component.default </span><br><span class="line">                    ? component.default</span><br><span class="line">                    : component</span><br><span class="line">                &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">&#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.props.children(<span class="keyword">this</span>.state.component)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>欧了，现在任何时候我们动态引入一个模块，我们可以把它包裹在<strong>DynamicImport</strong>。如果我们之前尝试用这种方法到我们路由上，我们的代码会看起来像这样</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    BrowserRouter <span class="keyword">as</span> Router,</span><br><span class="line">    Route,</span><br><span class="line">    Link</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">componentWillMount () &#123;</span><br><span class="line">    <span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function">(<span class="params">component</span>) =&gt;</span>　&#123;</span><br><span class="line">            <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">                    component: component.default </span><br><span class="line">                    ? component.default</span><br><span class="line">                    : component</span><br><span class="line">                &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.props.children(<span class="keyword">this</span>.state.component)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Home = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Home'</span>)&#125;&gt;</span><br><span class="line">    &#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">          ? <span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Loading<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">            : <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">DynamicImport</span>&gt;</span></span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Topics = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">    &#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">        ? <span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Loading<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">            : <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...props</span>&#125;/&gt;</span></span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">DynamicImport</span>&gt;</span></span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">        &lt;Router&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;ul&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/'</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">                        &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/topics'</span>&gt;</span>Topics<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">                        &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/settings'</span>&gt;</span>Settings<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">                    &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;hr /</span>&gt;</span><br><span class="line">                    &lt;Route exact path=<span class="string">'/'</span> component=&#123;Home&#125; /&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">'/topics'</span> component=&#123;Topics&#125; /&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">'/settings'</span> component=&#123;Settings&#125; /&gt;</span><br><span class="line">                &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/</span>Router&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure><p>我们怎么知道这个确实起作用并且分片了我们的路由呢？如果你用一个React官方的Create React App创建一个应用跑一下<strong>npm run build</strong>，你将看到应用被分片了。</p><p><img src="./chunk.png" alt="包"></p></li><li><p>每一个包被一一引入进了我们的应用</p></li><li><p>你到了这一步，可以跳个舞轻松一下了</p></li><li><p>还记得我讲到有两种层级的代码分片方式吗？我们曾放在手边的引导</p><ol><li>以路由层级分片</li><li>以组建层级分片</li></ol></li><li><p>至此，我们只讲了路由层级的代码分片。到这里很多人就停止了。在路由层级上代码分片，就像刷牙一样，你天天刷，牙齿大部分很干净，但是还会有蛀牙。</p></li><li><p>除了思考用路由的分片方式，你应该想想怎么用组件的方式去分片。如果你在弹层里面有很多内容，路由分片还是会下载弹层的代码，无论这个弹层是否显示。</p></li><li><p>从这一点看，它更多是在你大脑里的一种变更而不是新知识。你已经知道如何使用动态引入，现在你需要找出哪些组件是在用到时才要下载的。</p></li><li><p>如果我不提React Loadable那我就是哑巴了。它是一个“通过动态引入加载组件的高阶组件”。重要的是，它处理所有我们提到的事情，并把它做成了一个精致的API。它甚至处理了很多很边角的事情，比如我们没有考虑服务端渲染和错误处理。看看它吧，如果你想要一个简单，开箱即用的解决方案的话。</p><p>​</p><p>(完，逃)</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;使用React和React-Router进行代码分片&quot;&gt;&lt;a href=&quot;#使用React和React-Router进行代码分片&quot; class=&quot;headerlink&quot; title=&quot;使用React和React Router进行代码分片&quot;&gt;&lt;/a&gt;使用React和
+      
+    
+    </summary>
+    
+    
+      <category term="翻译" scheme="http://yoursite.com/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wepy开发速查手册</title>
+    <link href="http://yoursite.com/2018/03/11/wepy%E5%BC%80%E5%8F%91%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/"/>
+    <id>http://yoursite.com/2018/03/11/wepy开发速查手册/</id>
+    <published>2018-03-11T08:25:24.000Z</published>
+    <updated>2018-03-13T09:49:35.449Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>事件bindtap=”click”替换为@tap=”click”,防止冒泡@tap.stop,防止捕获@tap.capture.stop，如果是@someEvent.user=”somefunction”，这种通过this.$emit(‘someEvent’),someFunction会触发而且写在父组件methods里面，同时父组件events里面的someEvent时不会执行</p><p>events示例</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// events对象中所声明的函数为用于监听组件之间的通信与交互事件的事件处理函数</span></span><br><span class="line">    events = &#123;</span><br><span class="line">        <span class="string">'someEvent'</span>: <span class="function">(<span class="params">p1, p2, p3, $event</span>) =&gt;</span> &#123;</span><br><span class="line">               <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.$name&#125;</span> receive <span class="subst">$&#123;$event.name&#125;</span> from <span class="subst">$&#123;$event.source.$name&#125;</span>`</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure><p>​</p></li><li><p>事件传参变更，bindtap=”click” data-index=”“更改为@tap=”click()”</p></li><li><p>repeat使用实例</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注意，使用for属性，而不是使用wx:for属性 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">repeat</span> <span class="attr">for</span>=<span class="string">"&#123;&#123;list&#125;&#125;"</span> <span class="attr">key</span>=<span class="string">"index"</span> <span class="attr">index</span>=<span class="string">"index"</span> <span class="attr">item</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 插入&lt;script&gt;脚本部分所声明的child组件，同时传入item --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">child</span> <span class="attr">:item</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">repeat</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>computed计算属性，只要是组件中有任何数据发生了改变，那么所有计算属性就都会被重新计算，代码中可通过<code>this.计算属性名</code>来引用，模板中也可通过<code></code>来绑定数据</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">  a: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算属性aPlus，在脚本中可通过this.aPlus来引用，在模板中可通过&#123;&#123; aPlus &#125;&#125;来插值</span></span><br><span class="line">computed = &#123;</span><br><span class="line">  aPlus () &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>​</p></li><li><p>watcher监听器， 通过监听器<code>watcher</code>能够监听到任何属性的更新</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">  num: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听器函数名必须跟需要被监听的data对象中的属性num同名，</span></span><br><span class="line"><span class="comment">// 其参数中的newValue为属性改变后的新值，oldValue为改变前的旧值</span></span><br><span class="line">watch = &#123;</span><br><span class="line">  num (newValue, oldValue) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`num value: <span class="subst">$&#123;oldValue&#125;</span> -&gt; <span class="subst">$&#123;newValue&#125;</span>`</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>数据绑定使用:号比如，不使用冒号是绑定字符串常量，sync不加，父组件这个变量变化就不会影响子组件，加了sync，同时，写了twoWay: true时就是双向绑定，即同一个属性（props）的变化，父修改了影响子，子修改了影响父</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">child</span> <span class="attr">:title</span>=<span class="string">"parentTitle"</span> <span class="attr">:syncTitle.sync</span>=<span class="string">"parentTitle"</span> <span class="attr">:twoWayTitle</span>=<span class="string">"parentTitle"</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">props = &#123;</span><br><span class="line">    <span class="comment">// 静态传值</span></span><br><span class="line">    title: <span class="built_in">String</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 父向子单向动态传值</span></span><br><span class="line">    syncTitle: &#123;</span><br><span class="line">        type: <span class="built_in">String</span>,</span><br><span class="line">        <span class="keyword">default</span>: <span class="string">'null'</span></span><br><span class="line">    &#125;,</span><br><span class="line"><span class="comment">//这里即twoWay</span></span><br><span class="line">    twoWayTitle: &#123;</span><br><span class="line">        type: <span class="built_in">Number</span>,</span><br><span class="line">        <span class="keyword">default</span>: <span class="string">'nothing'</span>,</span><br><span class="line">        twoWay: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><p>通信</p><p>父组件发起的：$broadcast（特性：所有子组件都会收到此广播事件，顺序由上至下，广度优先）</p><p>子组件发起的：$emit（特性：事件发起组件的所有祖先组件会依次接收到事件,顺序由下至上)</p><p>组件间发起的：$invoke (特性：一个页面或组件对另一个组件中的方法的直接调用)</p><p>$invoke示例(这里能否用到alias路径，大家可以试试)</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$invoke(<span class="string">'./../ComB/ComG'</span>, <span class="string">'someMethod'</span>, <span class="string">'someArgs'</span>);</span><br></pre></td></tr></table></figure><p>回调均在events对象里面写</p></li><li><p>wxs</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  text: &apos;This is from wxs&apos;,</span><br><span class="line">  filter: function (num) &#123;</span><br><span class="line">    return num.toFixed(2);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// index.wpy</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;text&gt;&#123;&#123;m1.text&#125;&#125;&lt;/text&gt;</span><br><span class="line">  &lt;text&gt;&#123;&#123;m1.filter(num)&#125;&#125;&lt;/text&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import wepy from &apos;wepy&apos;;</span><br><span class="line">  import mywxs from &apos;../wxs/mywxs.wxs&apos;;</span><br><span class="line"></span><br><span class="line">  export default class Index extends wepy.page &#123;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">      num: 10</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    wxs = &#123;</span><br><span class="line">      m1: mywxs</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>​</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;事件bindtap=”click”替换为@tap=”click”,防止冒泡@tap.stop,防止捕获@tap.capture.stop，如果是@someEvent.user=”somefunction”，这种通过this.$emit(‘someEvent
+      
+    
+    </summary>
+    
+    
+      <category term="wepy" scheme="http://yoursite.com/tags/wepy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序api之setEnableDebug说明</title>
+    <link href="http://yoursite.com/2018/03/04/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8Fapi%E4%B9%8BsetEnableDebug%E8%AF%B4%E6%98%8E/"/>
+    <id>http://yoursite.com/2018/03/04/微信小程序api之setEnableDebug说明/</id>
+    <published>2018-03-04T07:20:01.000Z</published>
+    <updated>2018-03-04T07:29:09.267Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line">onLaunch() &#123;</span><br><span class="line">  <span class="comment">//开启调试</span></span><br><span class="line">  wx.setEnableDebug(&#123;</span><br><span class="line">    enableDebug: <span class="literal">true</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><ul><li>这个接口相当于是用代码来在预览时开启调试，预览后打开小程序后会提示“重新打开小程序后生效”，点击确定后，在微信-发现-小程序中打开小程序，此时右下角会出现一个绿色可拖动的vConsole，可以显示调试信息</li><li>另一种非代码开启方式是点击小程序右上角的胶囊中三个点符号，在这里点击打开调试，会和上面讲的一样，出现同样的过程</li><li>如果设置enableDebug为false，会同样出现上述过程的逆过程，是一样的道理</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h1&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter
+      
+    
+    </summary>
+    
+    
+      <category term="微信小程序" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>函数式编程入门</title>
+    <link href="http://yoursite.com/2018/02/28/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2018/02/28/函数式编程入门/</id>
+    <published>2018-02-28T14:02:09.000Z</published>
+    <updated>2018-03-04T05:24:43.172Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是函数式编程"><a href="#什么是函数式编程" class="headerlink" title="什么是函数式编程"></a>什么是函数式编程</h1><p>函数式编程，个人理解是在编写纯函数。</p><p>据印度Anto Aravinth的解释的函数式编程是一种范式，我们能依靠这种范式创建仅依赖输入就可以完成自身逻辑的函数。</p><p>而这种函数就是我所理解的纯函数。</p><h2 id="纯函数特点"><a href="#纯函数特点" class="headerlink" title="纯函数特点"></a>纯函数特点</h2><ul><li>同样的输入，输出一定相同</li><li>函数不会改变任何外部环境的变量</li></ul><h2 id="函数式编程的引用透明性"><a href="#函数式编程的引用透明性" class="headerlink" title="函数式编程的引用透明性"></a>函数式编程的引用透明性</h2><blockquote><p>即所有函数对于相同输入都返回相同的值，那么据此产生了一个术语，叫替换模型，即把一个函数的调用用它的返回值替换，这将带来可以缓存的代码，当函数调用以后，我们将它的返回值存在内存里（比如用一个对象的属性存起来），下次使用就直接取对象这个属性映射的值。</p></blockquote><h2 id="并发优势"><a href="#并发优势" class="headerlink" title="并发优势"></a>并发优势</h2><ul><li>在并发层面上，由于函数不会对外部环境变量进行修改，只依赖传入的参数，所以，并发执行两个或多个一样的函数时相互之间不会受到影响</li></ul><h1 id="抽象与高阶函数"><a href="#抽象与高阶函数" class="headerlink" title="抽象与高阶函数"></a>抽象与高阶函数</h1><h2 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h2><ul><li>个人总结维基百科的表述，抽象即是一种管理复杂度的方法，把复杂度限定到你能处理的范围。这个范围层面的确定即是一种抽象。</li><li>比如高级程序语言就是一种抽象，它的底层是复杂的汇编语言以及机器语言，然而你把它抽象出来进行问题的处理，而不考虑底层复杂的调用和实现</li><li>抽象使我们关注预定的目标而不去考虑底层的细节实现</li></ul><h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul><li>高阶函数就是接受函数作为参数并且/或者返回函数作为输出的函数</li><li>经常用到的比如map，forEach等</li></ul><h3 id="高阶函数的思维"><a href="#高阶函数的思维" class="headerlink" title="高阶函数的思维"></a>高阶函数的思维</h3><ul><li>高阶函数是一种声明式的抽象，声明式即研究“做什么”而不是“如何做”，而抽象使问题关注的地方更加单一，简单化</li><li>比如forEach函数抽象出了遍历数组这个过程，我们不用去关心如何去做遍历，而是专注于对每次遍历的结果的操作</li></ul><h1 id="柯里化"><a href="#柯里化" class="headerlink" title="柯里化"></a>柯里化</h1><h2 id="一元函数与多元函数"><a href="#一元函数与多元函数" class="headerlink" title="一元函数与多元函数"></a>一元函数与多元函数</h2><ul><li>只接受一个参数的函数叫一元函数，可以以此类推，几元函数就是接受几个参数的函数</li></ul><h2 id="变参函数"><a href="#变参函数" class="headerlink" title="变参函数"></a>变参函数</h2><ul><li>函数接受的参数不确定的函数叫做变参函数（比如使用arguments）</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 变参函数</span><br><span class="line"> */</span><br><span class="line">function vary(...args) &#123;</span><br><span class="line">  console.log(args)</span><br><span class="line">  //do something to args</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="柯里化思想"><a href="#柯里化思想" class="headerlink" title="柯里化思想"></a>柯里化思想</h2><ul><li>所谓柯里化就是把多参函数转化为嵌套的单参函数</li></ul><h2 id="currying的一种实现"><a href="#currying的一种实现" class="headerlink" title="currying的一种实现"></a>currying的一种实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将多参函数转换为单参函数的一种实现</span></span><br><span class="line"><span class="comment"> * @params fn 需要转化的多参函数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curry</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//异常处理</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> fn !== <span class="string">'function'</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'fn is not a function'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//转换处理</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">curryInner</span>(<span class="params">...args</span>) =&gt; </span>&#123;</span><br><span class="line">    <span class="comment">//当传入函数的参数数目大于返回curryInner的参数长度时</span></span><br><span class="line">  <span class="keyword">if</span> (fn.length &gt; args.length)&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> curryInner.apply(<span class="literal">null</span>, args.concat([].slice.call(<span class="built_in">arguments</span>)))</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fn.apply(<span class="literal">null</span>, args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="分析举例"><a href="#分析举例" class="headerlink" title="分析举例"></a>分析举例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 测试函数作为实参传递</span></span><br><span class="line"><span class="comment"> * @params x, y, z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">x, y, z</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> curriedFn = curry(foo);</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 此时curriedFn为 </span></span><br><span class="line"><span class="comment"> * function curryInner(...args) =&gt; &#123;  </span></span><br><span class="line"><span class="comment"> * if (fn.length &gt; args.length)&#123;</span></span><br><span class="line"><span class="comment"> *      return function() &#123;</span></span><br><span class="line"><span class="comment"> *       return curryInner.apply(null, args.concat([].slice.call(arguments)))</span></span><br><span class="line"><span class="comment"> *      &#125;</span></span><br><span class="line"><span class="comment"> *   &#125;</span></span><br><span class="line"><span class="comment"> *   return fn.apply(null, args)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//调用并传入实参1, 2 ,3</span></span><br><span class="line">curriedFn(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)</span><br></pre></td></tr></table></figure><ul><li><p>当执行到curriedFn(1)时，因为args.length为1，fn.length为3所以进入if块将args的参数连接，此时args.length为2</p></li><li><p>上一步返回的还是curryInner函数，再执行curriedFn(1)(2),此时由于args.length为2还是小于3，再重复上述步骤执行curriedFn(1)(2)(3)</p></li><li><p>此时args.length为3，if条件不满足，执行fn.apply(null, args),即相当于执行了foo(1,2,3)</p></li></ul><h1 id="文献参考："><a href="#文献参考：" class="headerlink" title="文献参考："></a>文献参考：</h1><p>《JavaScript ES6 函数式编程入门经典》                            【印】Anto Aravinth 著  梁宵 译</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;什么是函数式编程&quot;&gt;&lt;a href=&quot;#什么是函数式编程&quot; class=&quot;headerlink&quot; title=&quot;什么是函数式编程&quot;&gt;&lt;/a&gt;什么是函数式编程&lt;/h1&gt;&lt;p&gt;函数式编程，个人理解是在编写纯函数。&lt;/p&gt;
+&lt;p&gt;据印度Anto Aravinth的解释的
+      
+    
+    </summary>
+    
+    
+      <category term="心得体会" scheme="http://yoursite.com/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mark</title>
+    <link href="http://yoursite.com/2018/02/22/mark/"/>
+    <id>http://yoursite.com/2018/02/22/mark/</id>
+    <published>2018-02-22T10:57:35.000Z</published>
+    <updated>2018-02-22T11:04:42.194Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  test(a, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">SomeComponent</span> <span class="attr">callback</span>=<span class="string">&#123;(a,</span> <span class="attr">b</span>) =&gt;</span> &#123;this.test(a, b)&#125;&#125; /&gt;</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">test</span>) </span>&#123;</span><br><span class="line">  test(a, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;SomeComponent callback=&#123;::this.test&#125; /&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
+      
+    
+    </summary>
+    
+    
+      <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html5的data-*</title>
+    <link href="http://yoursite.com/2018/02/12/html5%E7%9A%84data/"/>
+    <id>http://yoursite.com/2018/02/12/html5的data/</id>
+    <published>2018-02-12T10:51:30.000Z</published>
+    <updated>2018-02-12T11:06:00.261Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>看公司的表单组件，发现一个data-name属性，这个在最早做react的todo时，遇到过，因为获取不到直接定义的属性，还写过一篇肤浅的博客。其实这个并不是react里面的内容，而是html5里面的</p><h1 id="data-用法"><a href="#data-用法" class="headerlink" title="data-*用法"></a>data-*用法</h1><p>目前我没有参考文档，所以不知道它为什么会出现，但是我知道怎么用，在什么场景用，直接讲自己理解的用法。</p><p>获取这个属性，可以利用</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">domNode.getAttribute(<span class="string">'data-foo'</span>)</span><br></pre></td></tr></table></figure><p>这个其中一个应用场景就是你在react中获取节点后，想获取这个data-属性里面的值</p><p>还可以在事件对象的当前对象下的dataset属性中获取</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.currentTarget.dataset.foo;</span><br></pre></td></tr></table></figure><p>这个让我想到了小程序，它内部实现也估计用了这个。</p><h1 id="延伸题外话"><a href="#延伸题外话" class="headerlink" title="延伸题外话"></a>延伸题外话</h1><p>html5很重要，很多东西经常用到，我们应该怎么学习html5，我的体会是从html5名字去搜书名得到的书是不行的。但是有一本书，我最近翻了翻，发现里面有很多html5的内容，那就是大家都知道的《JavaScript高级程序设计》，很厚，一天读10页，也要很久读完，推荐大家如果忙的话，把它当字典查，当然最好是读一遍。</p><p>我之前项目搜data-name没搜到，后来看了mdn以后，我说不可能搜不到，肯定是之前没搜好，果然就是我的想法，搜到了，也是上述用法用的。</p><h1 id="REACT16以后"><a href="#REACT16以后" class="headerlink" title="REACT16以后"></a>REACT16以后</h1><p>可以不用data-*，不带data-的属性也会渲染到原生dom节点上了</p><p>更多内容待大家一起探讨，下次见</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerlink&quot; title=&quot;引入&quot;&gt;&lt;/a&gt;引入&lt;/h1&gt;&lt;p&gt;看公司的表单组件，发现一个data-name属性，这个在最早做react的todo时，遇到过，因为获取不到直接定义的属性，还写过一篇肤浅的博
+      
+    
+    </summary>
+    
+    
+      <category term="html5" scheme="http://yoursite.com/tags/html5/"/>
     
   </entry>
   
