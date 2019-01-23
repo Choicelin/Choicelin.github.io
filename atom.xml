@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-12T06:41:37.954Z</updated>
+  <updated>2019-01-23T12:38:10.443Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>加油，小林</title>
+    <link href="http://yoursite.com/2019/01/23/%E5%8A%A0%E6%B2%B9%EF%BC%8C%E5%B0%8F%E6%9E%97/"/>
+    <id>http://yoursite.com/2019/01/23/加油，小林/</id>
+    <published>2019-01-23T12:16:09.000Z</published>
+    <updated>2019-01-23T12:38:10.443Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近频繁感到成年人的生活不易，晚上吃饭看到央视节目越战越勇，一个在网上被广泛传播的外卖哥痛哭的视频的主角参加了这个节目。看到那个痛哭流涕的视频，我觉得很难受，杨帆问他，“你为什么哭了？”。他说晚上1点送外卖，孩子发烧了，回去给孩子买药，耽误了送外卖，一天几单都白费了，一时控制不住，就哭了。这个男人描述得轻描淡写，实际情况是，他的小孩染上了白血病，为了照顾儿子，只好选择做外卖，这样既可以照顾家人，又可以补贴家用。他从6点起来，一直送到晚上1点。杨帆送了他的孩子们一人一个奥特曼，杨帆说：“奥特曼是超人，其实有时候超人不一定是奥特曼，爸爸也是你们的超人。”</p><p>还有一位29岁的女选手，得了白塞病，身材一度胖到150斤，被迫离开了文工团。白塞病是一种眼疾，症状是眼睛内有大量絮状和黑色物体，严重情况甚至会失明。她在治疗的过程中，遇到了一位大哥，那位大哥说：“你看过夜晚石景山的星星吗？”。她非常疑惑，后来她得知白塞病在夜晚时，眼睛的黑色物体会和夜晚的夜色融为一体就好像自己没有得过这个病一样。于是，她和她的男友一起去看了石景山的夜空，当星星出来的那一刹那，她泪流满面。她曾经问她的男友，自己变得又胖又丑，你还会喜欢我吗。很幸运的是，她的男友用行动告诉她，yes。她的男友在节目中对她求婚成功。</p><p>今天我爸对我说，你晚上说梦话，说的很清楚，你还记得吗？我说不记得了，怎么了。他说，你现在是不是有压力。我本来没想这个问题，突然这么一说，浑身都不自在，真的好像有点压力一样。</p><p>不过，这就成年人的世界，大家都承受着自己的压力和难受，坚强地向前进步。无论如何，艰难的日子都会过去，我们要看到光明的明天。想到这里，我觉得即使有点压力，也能够承受。并且我要像豆丝的钉钉签名一样，好好工作，好好做人才是王道。</p><p>与大家共勉，加油，小林！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近频繁感到成年人的生活不易，晚上吃饭看到央视节目越战越勇，一个在网上被广泛传播的外卖哥痛哭的视频的主角参加了这个节目。看到那个痛哭流涕的视频，我觉得很难受，杨帆问他，“你为什么哭了？”。他说晚上1点送外卖，孩子发烧了，回去给孩子买药，耽误了送外卖，一天几单都白费了，一时控
+      
+    
+    </summary>
+    
+    
+      <category term="心情" scheme="http://yoursite.com/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS布局</title>
@@ -485,29 +508,6 @@
     
     
       <category term="心得体会" scheme="http://yoursite.com/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mark</title>
-    <link href="http://yoursite.com/2018/02/22/mark/"/>
-    <id>http://yoursite.com/2018/02/22/mark/</id>
-    <published>2018-02-22T10:57:35.000Z</published>
-    <updated>2018-02-22T11:04:42.194Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  test(a, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">SomeComponent</span> <span class="attr">callback</span>=<span class="string">&#123;(a,</span> <span class="attr">b</span>) =&gt;</span> &#123;this.test(a, b)&#125;&#125; /&gt;</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">test</span>) </span>&#123;</span><br><span class="line">  test(a, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;SomeComponent callback=&#123;::this.test&#125; /&gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
-      
-    
-    </summary>
-    
-    
-      <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
