@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/02/21/2019前端windows环境搭建指南/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="前言2019年写的这篇开发环境搭建指南，本文旨在说明最基础的环境，关于项目搭建将不做涉及。 Node.js官网 下载LTS版本安装即可。 安装成功后会默认安装上npm，npm是node的包管理工具，npm的源连接的是国外，国内使用会比较慢，所以需要替换一下源，打开cmd（windows命令行提示），输入下列命令回车即可 1npm config set registry http://registr">
-<meta property="og:updated_time" content="2019-02-21T08:07:36.348Z">
+<meta property="og:updated_time" content="2019-02-21T08:11:09.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019前端windows环境搭建指南">
 <meta name="twitter:description" content="前言2019年写的这篇开发环境搭建指南，本文旨在说明最基础的环境，关于项目搭建将不做涉及。 Node.js官网 下载LTS版本安装即可。 安装成功后会默认安装上npm，npm是node的包管理工具，npm的源连接的是国外，国内使用会比较慢，所以需要替换一下源，打开cmd（windows命令行提示），输入下列命令回车即可 1npm config set registry http://registr">
@@ -194,13 +194,10 @@
 <blockquote>
 <p> 配置ssh key</p>
 <p>找到git安装的目录，比如D:\Program Files\Git\usr\bin</p>
-<p>在命令行中cd到这个目录下，运行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> ssh-keygen -t rsa -C "youremail@example.com"</span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在命令行中cd到这个目录下，运行下面命令</p>
+<p>下面的引号内，填你的邮箱，然后一路回车即可完成</p>
 </blockquote>
-<p>&gt;</p>
-<blockquote>
-<p>上面的引号内，填你的邮箱，然后一路回车即可完成</p>
-</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C "youremail@example.com"</span><br></pre></td></tr></table></figure>
 <h3 id="IDE和编辑器"><a href="#IDE和编辑器" class="headerlink" title="IDE和编辑器"></a>IDE和编辑器</h3><p>编辑器百度VSCode</p>
 <p>IDE百度WebStorm（请支持正版，一个月$5.9，约40RMB，支持微信支付宝，按年买有优惠）</p>
 <p>免费才是最贵的</p>
@@ -213,7 +210,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-02-21T08:07:36.348Z" itemprop="dateUpdated">2019-02-21 16:07:36</time>
+    Last updated: <time datetime="2019-02-21T08:11:09.092Z" itemprop="dateUpdated">2019-02-21 16:11:09</time>
 </span><br>
 
 
