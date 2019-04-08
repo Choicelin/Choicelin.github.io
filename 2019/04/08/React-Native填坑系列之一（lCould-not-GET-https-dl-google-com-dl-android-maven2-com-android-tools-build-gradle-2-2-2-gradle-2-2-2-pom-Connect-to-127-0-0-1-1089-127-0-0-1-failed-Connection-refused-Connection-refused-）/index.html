@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>React Native填坑系列之一（lCould not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)） | 1024子翔的程序人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="React Native">
+    <meta name="description" content="为什么开始React Native开发和朋友一起准备给网站配套做一款android app。经过宋小菜的scott老师在他文章中对宋小菜架构的介绍，其中提到了对React Native的使用，让我重拾信心，再加上之前有过相关经验，于是决定使用它来进行app的开发。 第一个bug当我装好android studio并把项目初始化好了以后，我自信满满的运行react-native run-androi">
+<meta name="keywords" content="React Native">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native填坑系列之一（lCould not GET &#39;https:&#x2F;&#x2F;dl.google.com&#x2F;dl&#x2F;android&#x2F;maven2&#x2F;com&#x2F;android&#x2F;tools&#x2F;build&#x2F;gradle&#x2F;3.2.1&#x2F;gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [&#x2F;127.0.0.1] failed: Connection refused (Connection refused)）">
+<meta property="og:url" content="http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:description" content="为什么开始React Native开发和朋友一起准备给网站配套做一款android app。经过宋小菜的scott老师在他文章中对宋小菜架构的介绍，其中提到了对React Native的使用，让我重拾信心，再加上之前有过相关经验，于是决定使用它来进行app的开发。 第一个bug当我装好android studio并把项目初始化好了以后，我自信满满的运行react-native run-androi">
+<meta property="og:updated_time" content="2019-04-08T05:36:36.936Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React Native填坑系列之一（lCould not GET &#39;https:&#x2F;&#x2F;dl.google.com&#x2F;dl&#x2F;android&#x2F;maven2&#x2F;com&#x2F;android&#x2F;tools&#x2F;build&#x2F;gradle&#x2F;3.2.1&#x2F;gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [&#x2F;127.0.0.1] failed: Connection refused (Connection refused)）">
+<meta name="twitter:description" content="为什么开始React Native开发和朋友一起准备给网站配套做一款android app。经过宋小菜的scott老师在他文章中对宋小菜架构的介绍，其中提到了对React Native的使用，让我重拾信心，再加上之前有过相关经验，于是决定使用它来进行app的开发。 第一个bug当我装好android studio并把项目初始化好了以后，我自信满满的运行react-native run-androi">
+    
+        <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Choicelin</h5>
+          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/choicelin" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">React Native填坑系列之一（lCould not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">React Native填坑系列之一（lCould not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-04-08T05:16:32.000Z" itemprop="datePublished" class="page-time">
+  2019-04-08
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#为什么开始React-Native开发"><span class="post-toc-number">1.</span> <span class="post-toc-text">为什么开始React Native开发</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第一个bug"><span class="post-toc-number">2.</span> <span class="post-toc-text">第一个bug</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#转机"><span class="post-toc-number">3.</span> <span class="post-toc-text">转机</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#结语"><span class="post-toc-number">4.</span> <span class="post-toc-text">结语</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">React Native填坑系列之一（lCould not GET 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'. > Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-08 13:16:32" datetime="2019-04-08T05:16:32.000Z"  itemprop="datePublished">2019-04-08</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="为什么开始React-Native开发"><a href="#为什么开始React-Native开发" class="headerlink" title="为什么开始React Native开发"></a>为什么开始React Native开发</h1><p>和朋友一起准备给网站配套做一款android app。经过宋小菜的scott老师在他文章中对宋小菜架构的介绍，其中提到了对React Native的使用，让我重拾信心，再加上之前有过相关经验，于是决定使用它来进行app的开发。</p>
+<h1 id="第一个bug"><a href="#第一个bug" class="headerlink" title="第一个bug"></a>第一个bug</h1><p>当我装好android studio并把项目初始化好了以后，我自信满满的运行react-native run-android,扎心的错误铺面而来</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">JS server already running.</span><br><span class="line">Building and installing the app on the device (cd android &amp;&amp; ./gradlew installDebug)...</span><br><span class="line"></span><br><span class="line">FAILURE: Build failed with an exception.</span><br><span class="line"></span><br><span class="line">* What went wrong:</span><br><span class="line">A problem occurred configuring root project 'idea_app'.</span><br><span class="line"><span class="meta">&gt;</span> Could not resolve all artifacts for configuration ':classpath'.</span><br><span class="line"><span class="meta">   &gt;</span> Could not resolve com.android.tools.build:gradle:3.2.1.</span><br><span class="line">     Required by:</span><br><span class="line">         project :</span><br><span class="line">      &gt; Could not resolve com.android.tools.build:gradle:3.2.1.</span><br><span class="line">         &gt; Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'.</span><br><span class="line">            &gt; Could not GET 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'.</span><br><span class="line">               &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)</span><br><span class="line">      &gt; Could not resolve com.android.tools.build:gradle:3.2.1.</span><br><span class="line">         &gt; Could not get resource 'https://jcenter.bintray.com/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'.</span><br><span class="line">            &gt; Could not GET 'https://jcenter.bintray.com/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'.</span><br><span class="line">               &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)</span><br><span class="line"></span><br><span class="line">* Try:</span><br><span class="line">Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.</span><br><span class="line"></span><br><span class="line">* Get more help at https://help.gradle.org</span><br><span class="line"></span><br><span class="line">BUILD FAILED in 0s</span><br><span class="line">Could not install the app on the device, read the error above for details.</span><br><span class="line">Make sure you have an Android emulator running or a device connected and have</span><br><span class="line">set up your Android development environment:</span><br><span class="line">https://facebook.github.io/react-native/docs/getting-started.html</span><br><span class="line"></span><br><span class="line">Command failed: ./gradlew installDebug</span><br><span class="line"></span><br><span class="line">Error: Command failed: ./gradlew installDebug</span><br><span class="line">    at checkExecSyncError (child_process.js:616:11)</span><br><span class="line">    at Object.execFileSync (child_process.js:634:13)</span><br><span class="line">    at runOnAllDevices (/Users/kiralin/lixiang/idea_app/node_modules/react-native/local-cli/runAndroid/runAndroid.js:299:19)</span><br><span class="line">    at buildAndRun (/Users/kiralin/lixiang/idea_app/node_modules/react-native/local-cli/runAndroid/runAndroid.js:135:12)</span><br><span class="line">    at isPackagerRunning.then.result (/Users/kiralin/lixiang/idea_app/node_modules/react-native/local-cli/runAndroid/runAndroid.js:65:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:68:7)</span><br></pre></td></tr></table></figure>
+<p>注明一下，我使用的RN版本是0.58.6是58系列最后一个版本。于是想到的第一件事情就是谷歌。最早我搜索的是Could not resolve com.android.tools.build:gradle:3.2.1.,结果发现谷歌到的第一个就是在build.gradle中加入google()方法，然而当我打开我的build.gradle文件，我发现RN官方已经加入了该方法，我顿时感到很诧异，这一招怕是行不通了。其他回答里面还有加入maven配置的，基本上也都行不通。</p>
+<h1 id="转机"><a href="#转机" class="headerlink" title="转机"></a>转机</h1><p>通过仔细观察报错的栈，发现最底层的才是核心的错误，于是我搜索127.0.01:1089相关的RN回答，于是找到了一个方法，那就是将RN里的android文件夹在android studio里面打开，让android studio来帮你把依赖安好，我一看内心就觉得靠谱。</p>
+<p>But，在AS中connection refused。于是我分析是代理的问题，恰巧吃饭了，询问了一下同事代理方面的问题，提到了端口占用，我回来检测了一下，并没有该情况，不过还好，我基本也有把握，因为这种问题应该是安卓常见问题， 接着谷歌，AS中connection refused，果然第二个答案就solve了我的problem。</p>
+<p>下面贴一下链接<a href="https://www.jianshu.com/p/dc12c965abbc" target="_blank" rel="noopener">解决studio Connection refused (Connection refused)</a></p>
+<p>解决这个问题后，于是我react-native run-android，成功build，然后在avd中出现欢迎界面。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这是RN填坑第一弹，后期有坑会继续填满</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-04-08T05:36:36.936Z" itemprop="dateUpdated">2019-04-08 13:36:36</time>
+</span><br>
+
+
+        
+        作者只是一个小菜鸡，请轻喷！！
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="Choicelin">
+            Choicelin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Native/">React Native</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/&title=《React Native填坑系列之一（lCould not GET 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'. > Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/&title=《React Native填坑系列之一（lCould not GET 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'. > Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React Native填坑系列之一（lCould not GET 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'. > Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）》 — 1024子翔的程序人生&url=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/02/21/2019前端windows环境搭建指南/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">2019前端windows环境搭建指南</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyNy85OTgz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Choicelin &copy; 2017 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/&title=《React Native填坑系列之一（lCould not GET 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'. > Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/&title=《React Native填坑系列之一（lCould not GET 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'. > Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React Native填坑系列之一（lCould not GET 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom'. > Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）》 — 1024子翔的程序人生&url=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,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" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
