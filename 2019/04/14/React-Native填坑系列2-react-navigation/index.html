@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>React Native填坑系列2---react navigation | 1024子翔的程序人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="React Native">
+    <meta name="description" content="引言继上期填坑后，笔者继续推进安卓app的开发，web上都有导航路由的功能，app要实现这个，需要模拟类似web导航的特性，目前有一个静态路由的库比较好，叫react-navigation，于是笔者开启了第二段填坑之旅。 关于要实现的路由形式在准备阶段，我们大多数都会想尽可能的覆盖很多情况，所以笔者也是，关于路由的构成，首先有鉴权，然后有底部导航，接着每层导航对应的页面组件有内页，同时内页不会有底">
+<meta name="keywords" content="React Native">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native填坑系列2---react navigation">
+<meta property="og:url" content="http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:description" content="引言继上期填坑后，笔者继续推进安卓app的开发，web上都有导航路由的功能，app要实现这个，需要模拟类似web导航的特性，目前有一个静态路由的库比较好，叫react-navigation，于是笔者开启了第二段填坑之旅。 关于要实现的路由形式在准备阶段，我们大多数都会想尽可能的覆盖很多情况，所以笔者也是，关于路由的构成，首先有鉴权，然后有底部导航，接着每层导航对应的页面组件有内页，同时内页不会有底">
+<meta property="og:image" content="http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/tabBar.png">
+<meta property="og:updated_time" content="2019-04-14T05:59:31.043Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React Native填坑系列2---react navigation">
+<meta name="twitter:description" content="引言继上期填坑后，笔者继续推进安卓app的开发，web上都有导航路由的功能，app要实现这个，需要模拟类似web导航的特性，目前有一个静态路由的库比较好，叫react-navigation，于是笔者开启了第二段填坑之旅。 关于要实现的路由形式在准备阶段，我们大多数都会想尽可能的覆盖很多情况，所以笔者也是，关于路由的构成，首先有鉴权，然后有底部导航，接着每层导航对应的页面组件有内页，同时内页不会有底">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/tabBar.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Choicelin</h5>
+          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/choicelin" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">React Native填坑系列2---react navigation</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">React Native填坑系列2---react navigation</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-04-14T03:59:08.000Z" itemprop="datePublished" class="page-time">
+  2019-04-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#引言"><span class="post-toc-number">1.</span> <span class="post-toc-text">引言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于要实现的路由形式"><span class="post-toc-number">2.</span> <span class="post-toc-text">关于要实现的路由形式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-Navigation简介"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">React Navigation简介</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何实现这种路由形式"><span class="post-toc-number">3.</span> <span class="post-toc-text">如何实现这种路由形式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#createSwitchNavigator是什么？"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">createSwitchNavigator是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义根视图的子切换视图"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">定义根视图的子切换视图</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Auth-Component"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Auth Component</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PageStack-Navigator"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">PageStack Navigator</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#createStackNavigator"><span class="post-toc-number">3.4.1.</span> <span class="post-toc-text">createStackNavigator</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BottomNavigator"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">BottomNavigator</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#createBottomTabNavigator"><span class="post-toc-number">3.5.1.</span> <span class="post-toc-text">createBottomTabNavigator</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结语"><span class="post-toc-number">4.</span> <span class="post-toc-text">结语</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-React-Native填坑系列2-react-navigation"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">React Native填坑系列2---react navigation</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-14 11:59:08" datetime="2019-04-14T03:59:08.000Z"  itemprop="datePublished">2019-04-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>继上期填坑后，笔者继续推进安卓app的开发，web上都有导航路由的功能，app要实现这个，需要模拟类似web导航的特性，目前有一个静态路由的库比较好，叫react-navigation，于是笔者开启了第二段填坑之旅。</p>
+<h2 id="关于要实现的路由形式"><a href="#关于要实现的路由形式" class="headerlink" title="关于要实现的路由形式"></a>关于要实现的路由形式</h2><p>在准备阶段，我们大多数都会想尽可能的覆盖很多情况，所以笔者也是，关于路由的构成，首先有鉴权，然后有底部导航，接着每层导航对应的页面组件有内页，同时内页不会有底部导航。这是笔者目前的一个形式。</p>
+<h3 id="React-Navigation简介"><a href="#React-Navigation简介" class="headerlink" title="React Navigation简介"></a>React Navigation简介</h3><p>就像引言提到的这是在app中模拟的一个导航历史功能的库。浏览器的导航历史维持在一个堆栈中，每次的后退就是出栈，前进就是进栈，栈顶就是当前显示的页面。React Navigation除了提供了这些基础的功能以外，还提供了手势和动画的效果。</p>
+<h2 id="如何实现这种路由形式"><a href="#如何实现这种路由形式" class="headerlink" title="如何实现这种路由形式"></a>如何实现这种路由形式</h2><p>首先React Native和web中的单页应用(Vue SPA和React SPA等)有些相似，都会有一个根视图，然后向下包含内容。比如在Vue中的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>)</span><br></pre></td></tr></table></figure>
+<p>这里的根就是id为app的节点。</p>
+<p>而在React Native中也有类似的行为。</p>
+<p>所以第一件事情就是确定这个根视图。根据react-navigation官方推荐的鉴权是使用createSwitchNavigator。由于用户进来第一件事情对开发者来说，笔者认为是鉴权，也就是确定用户是否有权限进入一些页面，同时确定用户会进哪里，所以笔者将该组件作为app的根视图。</p>
+<h3 id="createSwitchNavigator是什么？"><a href="#createSwitchNavigator是什么？" class="headerlink" title="createSwitchNavigator是什么？"></a>createSwitchNavigator是什么？</h3><p>下面引用官方的一段介绍：</p>
+<blockquote>
+<p>The purpose of SwitchNavigator is to only ever show one screen at a time. By default, it does not handle back actions and it resets routes to their default state when you switch away.</p>
+</blockquote>
+<p>笔者翻译：SwitchNavigator的目的在于在同一时间下仅显示一个页面。它的默认行为：</p>
+<ol>
+<li>不处理返回动作，可以理解为点不了返回，无需担心还会返回到了之前的页面</li>
+<li>其正在显示的页面会重置为其最初的设置，也就是重新加载了对应的页面，会重头初始化</li>
+</ol>
+<p>SwitchNavigator如其名称一样，是在多个视图之间切换（switch），那么我们的根视图下面就会有子视图的显示切换，这些切换的视图如何定义呢？</p>
+<h3 id="定义根视图的子切换视图"><a href="#定义根视图的子切换视图" class="headerlink" title="定义根视图的子切换视图"></a>定义根视图的子切换视图</h3><p>talk is cheap，show me the code.好，那么就上代码。</p>
+<blockquote>
+<p>/ 指代项目根目录，本项目由react-native-cli搭建</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /routes/AppNavigator.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> &#123;createSwitchNavigator&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ....省略部分代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createSwitchNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    AuthPage: Auth,</span><br><span class="line">    Pages: PageStack</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">'AuthPage'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /App.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React, &#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;createAppContainer&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">import</span> AppNavigator <span class="keyword">from</span> <span class="string">'./routes/AppNavigator'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createAppContainer(AppNavigator)</span><br></pre></td></tr></table></figure>
+<p>在AppNavigator.js中可以看到createSwitchNavigator中有两个参数，第二个参数里面的initialRouteName是指默认显示的视图(已切换上的视图)，第一个参数里面配置的是可供切换的视图，AuthPage和Pages是指的切换的视图的名字，后面跟的值是实际的Navigator对象或者Component，说人话就是实际的视图对象，目前笔者用到的视图对象是上述提到的两种，Navigator对象是createStackNavigator和createBottomTabNavigator等创建出来的，而Compnenent则是指React创建的视图组件。当然，现在这段有点奇怪，因为Auth和PageStack都还没创建和引入，它们在省略的代码里，所以莫慌，我们接下来，慢慢实现省略的代码。</p>
+<h3 id="Auth-Component"><a href="#Auth-Component" class="headerlink" title="Auth Component"></a>Auth Component</h3><p>下面笔者将会定义上文提到Auth，它是一个React Component，由本文仅介绍路由的实现形式，具体鉴权代码是没有的。但是鉴权的逻辑会放在这个组件里。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /views/Auth.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React, &#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;View, Text, StyleSheet&#125; <span class="keyword">from</span> <span class="string">'react-native'</span></span><br><span class="line"><span class="keyword">import</span> Icon <span class="keyword">from</span> <span class="string">'react-native-vector-icons/AntDesign'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Auth</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;View style=&#123;[styles.fc, styles.flex1]&#125;&gt;</span><br><span class="line">        &lt;Text style=&#123;styles.f38&#125;&gt;auth&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">        &lt;Icon name="yuque" size=&#123;30&#125; color="#004aff"/</span>&gt;</span><br><span class="line">      &lt;<span class="regexp">/View&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const styles = StyleSheet.create(&#123;</span></span><br><span class="line"><span class="regexp">  fc: &#123;</span></span><br><span class="line"><span class="regexp">    alignItems: 'center',</span></span><br><span class="line"><span class="regexp">    justifyContent: 'center'</span></span><br><span class="line"><span class="regexp">  &#125;,</span></span><br><span class="line"><span class="regexp">  flex1: &#123;</span></span><br><span class="line"><span class="regexp">    flex: 1</span></span><br><span class="line"><span class="regexp">  &#125;,</span></span><br><span class="line"><span class="regexp">  f38: &#123;</span></span><br><span class="line"><span class="regexp">    fontSize: 38</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;)</span></span><br></pre></td></tr></table></figure>
+<p>这就是Auth的一个静态的壳，下面笔者在/routes/AppNavigator.js中引入该组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /routes/AppNavigator.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> &#123;createSwitchNavigator&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">import</span> Auth <span class="keyword">from</span> <span class="string">'../views/Auth'</span>  <span class="comment">// 新增的代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ....省略部分代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createSwitchNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    AuthPage: Auth,</span><br><span class="line">    Pages: PageStack</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">'AuthPage'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="PageStack-Navigator"><a href="#PageStack-Navigator" class="headerlink" title="PageStack Navigator"></a>PageStack Navigator</h3><p>上文中引入了Auth组件，笔者的路由又进了一步。那么现在来看下这个PageStack怎么做。还记得最初想的路由形式吗？</p>
+<p>有鉴权和底部导航还有内页。这里AuthPage就是鉴权，所以逻辑可以梳理一下，首先用户进来会显示initialRouteName提供的AuthPage视图，即/views/Auth.js组件展示的内容；接着通过Auth内的判断是否有后端的token后，如果有token，会跳转到Pages视图，显示PageStack的内容，如果没有token，那么我们可以再加一个视图，跳转过去。但是目前笔者准备暂时将其停留在原地。需要注意的是，跳转的代码和判断的逻辑还木有加上，笔者需要先完成现在路由的构建。当我们进入PageStack后，底部导航就需要显示出来，然后显示对应的页面，并备好内页(即当前导航的页面的深层页面)。下面笔者来添加点代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /routes/AppNavigator.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  createSwitchNavigator, </span><br><span class="line">  createStackNavigator</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">import</span> Auth <span class="keyword">from</span> <span class="string">'../views/Auth'</span>  </span><br><span class="line"><span class="keyword">import</span> MyTests <span class="keyword">from</span> <span class="string">'../views/MyTests'</span> <span class="comment">// 新增的代码</span></span><br><span class="line"><span class="keyword">import</span> TestDetail <span class="keyword">from</span> <span class="string">'../views/TestDetail'</span> <span class="comment">// 新增的代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ....省略部分代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 新增的代码</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> PageStack = createStackNavigator(&#123;</span><br><span class="line">  MyTests: &#123;</span><br><span class="line">    screen: MyTests	 <span class="comment">// Component</span></span><br><span class="line">  &#125;,</span><br><span class="line">  TestDetail: &#123;</span><br><span class="line">    screen: TestDetail	<span class="comment">// Component</span></span><br><span class="line">  &#125;,</span><br><span class="line">  Bottom: &#123;</span><br><span class="line">    screen: BottomNavigator</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  initialRouteName: <span class="string">'Bottom'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createSwitchNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    AuthPage: Auth,</span><br><span class="line">    Pages: PageStack</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">'AuthPage'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>上述代码注明Component的都是指和Auth类似的React组件，它们的定义可以仿照Auth的定义来实现，只是没有了鉴权逻辑。同时这里的两个Component指的就是上文中的内页。</p>
+<h4 id="createStackNavigator"><a href="#createStackNavigator" class="headerlink" title="createStackNavigator"></a>createStackNavigator</h4><p>上面的代码用到了一个方法叫createStackNavigator，这个方法即创建页面路由栈的方法，第一个参数是包含的路由，第二参数里面的initialRouteName指定这个Navigator视图激活后的默认显示的Navigator或者Component(激活是指当前视图显示的是该Navigator)</p>
+<h3 id="BottomNavigator"><a href="#BottomNavigator" class="headerlink" title="BottomNavigator"></a>BottomNavigator</h3><p>下面我们来定义底部导航，在前端里有个专业术语叫tabBar，指的就是这个。这个是一个Navigator对象，通过createBottomTabNavigator方法来创建</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /routes/AppNavigator.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;Platform&#125; <span class="keyword">from</span> <span class="string">'react-native'</span></span><br><span class="line"><span class="keyword">import</span> &#123;createBottomTabNavigator, createStackNavigator, createSwitchNavigator&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">import</span> Icon <span class="keyword">from</span> <span class="string">'react-native-vector-icons/AntDesign'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'../views/Home'</span> <span class="comment">// Component</span></span><br><span class="line"><span class="keyword">import</span> User <span class="keyword">from</span> <span class="string">'../views/User'</span> <span class="comment">// Component</span></span><br><span class="line"><span class="keyword">import</span> Auth <span class="keyword">from</span> <span class="string">'../views/Auth'</span> <span class="comment">// Component</span></span><br><span class="line"><span class="keyword">import</span> MyTests <span class="keyword">from</span> <span class="string">'../views/MyTests'</span> <span class="comment">// Component</span></span><br><span class="line"><span class="keyword">import</span> TestDetail <span class="keyword">from</span> <span class="string">'../views/TestDetail'</span> <span class="comment">// Component</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> BottomNavigator = createBottomTabNavigator(&#123;</span><br><span class="line">  Home: &#123;</span><br><span class="line">    screen: Home,</span><br><span class="line">    navigationOptions: &#123;</span><br><span class="line">      tabBarLabel: <span class="string">'测验'</span>,</span><br><span class="line">      tabBarIcon: <span class="function">(<span class="params">&#123;tintColor, focused&#125;</span>) =&gt;</span> (</span><br><span class="line">        &lt;Icon</span><br><span class="line">          name=<span class="string">"calculator"</span></span><br><span class="line">          color=&#123;tintColor&#125;</span><br><span class="line">          size=&#123;<span class="number">26</span>&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  User: &#123;</span><br><span class="line">    screen: User,</span><br><span class="line">    navigationOptions: &#123;</span><br><span class="line">      tabBarLabel: <span class="string">'个人'</span>,</span><br><span class="line">      tabBarIcon: <span class="function">(<span class="params">&#123;tintColor, focused&#125;</span>) =&gt;</span></span><br><span class="line">        (</span><br><span class="line">          &lt;Icon</span><br><span class="line">            name=<span class="string">"user"</span></span><br><span class="line">            color=&#123;tintColor&#125;</span><br><span class="line">            size=&#123;<span class="number">26</span>&#125;</span><br><span class="line">          /&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  tabBarOptions: &#123;</span><br><span class="line">    activeTintColor: Platform.OS === <span class="string">'ios'</span> ? <span class="string">'#e91e63'</span> : <span class="string">'#004aff'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">const</span> PageStack = createStackNavigator(&#123;</span><br><span class="line">  MyTests: &#123;</span><br><span class="line">    screen: MyTests</span><br><span class="line">  &#125;,</span><br><span class="line">  TestDetail: &#123;</span><br><span class="line">    screen: TestDetail</span><br><span class="line">  &#125;,</span><br><span class="line">  Bottom: &#123;</span><br><span class="line">    screen: BottomNavigator</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  initialRouteName: <span class="string">'Bottom'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createSwitchNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    Auth,</span><br><span class="line">    Pages: PageStack</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">'Pages'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>上述代码中的Component跟PageStack Navigator提到的Component注释是同一个意思。</p>
+<h4 id="createBottomTabNavigator"><a href="#createBottomTabNavigator" class="headerlink" title="createBottomTabNavigator"></a>createBottomTabNavigator</h4><p>这个方法用来创建一个底部导航，显示效果如下图：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="./tabBar.png" alt="tabbar" title="">
+                </div>
+                <div class="image-caption">tabbar</div>
+            </figure>
+<p>(用长方形圈起来的部分是tabbar，用椭圆圈起来的部分是tabbar激活的部分承载的视图)</p>
+<p>createBottomTabNavigator有两个参数，第一个参数是配置视图有多少个，即承载的视图和下方的tabbar文字和图标，第二个参数时是对第一个参数里的视图，配置公共的属性，比如这里用到的activeTintColor是指的tabbar激活(即被选中)时的颜色，这里的#004aff是蓝色，Platform.OS是用来是区分是iOS平台还是安卓平台，笔者展示的图片是安卓平台，所以读者看到的激活状态是蓝色的。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>到这里，其实整个路由的形式已经做好了，接下来就是对它进行添砖加瓦，或者进行更进一步的扩展，目前笔者的需求暂时只会用到这些，后期会根据新的需求做调整。</p>
+<p>最后，感谢大家的观看，欢迎使用全栈工坊微信小程序并关注java技术大本营微信公众号。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-04-14T05:59:31.043Z" itemprop="dateUpdated">2019-04-14 13:59:31</time>
+</span><br>
+
+
+        
+        作者只是一个小菜鸡，请轻喷！！
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="Choicelin">
+            Choicelin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Native/">React Native</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">React Native填坑系列之一（Could not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzQyNy85OTgz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Choicelin &copy; 2017 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtElEQVR42u3aQU5jMRAE0Nz/0ow0m9EI8anqtiGL51WUQL6fkeym2q9XPD7+judPN+PzU54/PTzw8PDwRlPPH/z8u8+T+/x+O6t8znh4eHi3ec+HwfNXJPj9gubLjYeHh/c+vFkdW2/l8bfh4eHhvT9vthD7ghsPDw/vPXn5P/8to93027DjWNaCh4eHN69gX/nW/1uvL/b38PDw8BZd9bzMvf2Tw9ni4eHhXeAlraZNPJE0zGYhRVG+4+Hh4R3lfazHvnGVbP35dYT/XuPh4eFd4M0C2f12v8HX18Lw8PDwjvL2Tf1TUe+p9hgeHh7ebV4eNCSBRTKVTbCbxCVFBw8PDw9vxDsVQJwKKfIFij7Fw8PDu8ZrD4NNg3/2rDxZ+TJlwcPDwzvKm5Hywncf1+aHyrD/hoeHhxfz2lZTXli3l7TyJGEYiODh4eEd5bWlbRsEt4vVRrffzBAPDw/vKC8PTPMoYR8EHwhw8fDw8K7xksigjV83x0b7fgTGw8PDO8rblMuzzT2/ktUu8ZcxBB4eHt4FXt5qOsuYRcbFZQI8PDy8C7y2uZVvzbPieBaCfDN/PDw8vKO82cFwthRum17FFS48PDy8H+fNrhfkE8oDjiTk7TtjeHh4eHPerB2VT2IWXjwfIVG4jIeHh3eNl7e4Zles2uVI/gBRdIKHh4d3gdceD/t4Nync8xZX1JzDw8PDO8rLHzxr/OffmV81yOeGh4eHd5vXtv83W3keLuThSHHi4eHh4S14+UhC2H3ZvQptNwMPDw+v5LXbd15q55cM2lZZHpfg4eHh3eO1G3q7NLOyex/+4uHh4f0uL7+wtdmfZ4236OoVHh4e3i/xkpI3j2LzArpdbjw8PLzbvLwsbkvnU42r4WUsPDw8vAu8fQOsvVLQtr7aA+lwfw8PDw/v3/gDUm8YPELXRbYAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
