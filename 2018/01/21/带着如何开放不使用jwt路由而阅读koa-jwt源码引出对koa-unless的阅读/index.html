@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
 
-    
 
-    
+
+
+
 
 
 
     <meta charset="utf-8">
-    
-    
-    
+
+
+
     <title>带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读 | 1024子翔的程序人生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
     <meta name="theme-color" content="#3F51B5">
-    
-    
+
+
     <meta name="keywords" content="node">
     <meta name="description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unl">
 <meta name="keywords" content="node">
@@ -31,15 +31,15 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读">
 <meta name="twitter:description" content="问题引入想往项目里面加入401状态，而考虑使用比较公认的jwt技术，遇到一个问题，就是如何开放一些不需要token的路由？ 尝试获取资料于是寻找github上面一些使用jwt验证的项目阅读其中的源码，然而发现都不是自己原生使用jsonwebtoken而是用的express-jwt和koa-jwt，而这两个库都有我尝试解决的问题的解决方案，于是我找到koa-jwt的源码，发现里面使用了koa-unl">
-    
+
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
-    
+
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
-    
+
 
 </head>
 
@@ -64,42 +64,42 @@
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
-        
+
             <li class="waves-block waves-effect">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
-        
+
             <li class="waves-block waves-effect">
               <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
-        
+
             <li class="waves-block waves-effect">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
-        
+
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
               </a>
             </li>
-        
+
             <li class="waves-block waves-effect">
               <a href="https://github.com/choicelin" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
-        
+
       </ul>
     </div>
   </div>
@@ -112,7 +112,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</div>
-        
+
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
@@ -122,12 +122,12 @@
                 <i class="icon icon-lg icon-search"></i>
             </a>
         </div>
-        
-        
+
+
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
-        
+
     </div>
 </header>
 <header class="content-header post-header">
@@ -135,24 +135,24 @@
     <div class="container fade-scale">
         <h1 class="title">带着如何开放不使用jwt路由而阅读koa-jwt源码引出对koa-unless的阅读</h1>
         <h5 class="subtitle">
-            
+
                 <time datetime="2018-01-21T05:24:01.000Z" itemprop="datePublished" class="page-time">
   2018-01-21
 </time>
 
 
-            
+
         </h5>
     </div>
 
-    
+
 
 
 </header>
 
 
 <div class="container body-wrap">
-    
+
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
@@ -169,10 +169,10 @@
         <div class="post-meta">
             <time class="post-time" title="2018-01-21 13:24:01" datetime="2018-01-21T05:24:01.000Z"  itemprop="datePublished">2018-01-21</time>
 
-            
 
 
-            
+
+
 <span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
     <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
 </span>
@@ -198,19 +198,19 @@
         </div>
 
         <blockquote class="post-copyright">
-    
+
     <div class="content">
-        
+
 <span class="post-time">
     Last updated: <time datetime="2018-01-21T06:08:37.784Z" itemprop="dateUpdated">2018-01-21 14:08:37</time>
 </span><br>
 
 
-        
+
         作者只是一个小菜鸡，请轻喷！！
-        
+
     </div>
-    
+
     <footer>
         <a href="http://yoursite.com">
             <img src="/img/avatar.png" alt="Choicelin">
@@ -219,7 +219,7 @@
     </footer>
 </blockquote>
 
-        
+
 <div class="page-reward">
     <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
@@ -227,13 +227,13 @@
 
 
         <div class="post-footer">
-            
+
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
 
 
-            
+
 <div class="page-share-wrap">
-    
+
 
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
@@ -282,30 +282,30 @@
         </div>
     </div>
 
-    
+
 <nav class="post-nav flex-row flex-justify-between">
-  
+
     <div class="waves-block waves-effect prev">
       <a href="/2018/01/25/解决小程序音频自定义组件不同时播放问题/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
         <h4 class="title">解决小程序音频自定义组件不同时播放问题</h4>
       </a>
     </div>
-  
 
-  
+
+
     <div class="waves-block waves-effect next">
       <a href="/2018/01/18/node流程控制之串行/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
         <h4 class="title">node流程控制之串行</h4>
       </a>
     </div>
-  
+
 </nav>
 
 
 
-    
+
 
 
 
@@ -325,13 +325,13 @@
   <script type="text/javascript">
      (function(d, s) {
          var j, e = d.getElementsByTagName(s)[0];
-  
+
          if (typeof LivereTower === 'function') { return; }
-  
+
          j = d.createElement(s);
          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
          j.async = true;
-  
+
          e.parentNode.insertBefore(j, e);
      })(document, 'script');
   </script>
@@ -351,11 +351,11 @@
         <i class="icon icon-quote-right"></i>
     </h3>
     <div class="reward-content">
-        
+
         <div class="reward-code">
             <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
         </div>
-        
+
         <label class="reward-toggle">
             <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
                 data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
@@ -365,7 +365,7 @@
                 <span class="reward-toggle-item alipay">支付宝</span>
             </div>
         </label>
-        
+
     </div>
 </div>
 
@@ -375,7 +375,7 @@
 
         <footer class="footer">
     <div class="top">
-        
+
 <p>
     <span id="busuanzi_container_site_uv" style='display:none'>
         站点总访客数：<span id="busuanzi_value_site_uv"></span>
@@ -387,16 +387,16 @@
 
 
         <p>
-            
+
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
+
             <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
         <p><span>Choicelin &copy; 2017 - 2019</span>
             <span>
-                
+
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
             </span>
         </p>
@@ -488,7 +488,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

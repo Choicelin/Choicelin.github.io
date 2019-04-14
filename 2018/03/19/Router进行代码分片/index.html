@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
 
-    
 
-    
+
+
+
 
 
 
     <meta charset="utf-8">
-    
-    
-    
+
+
+
     <title>Router进行代码分片 | 1024子翔的程序人生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
     <meta name="theme-color" content="#3F51B5">
-    
-    
+
+
     <meta name="keywords" content="翻译">
     <meta name="description" content="使用React和React Router进行代码分片 本文由林子翔翻译自原文链接   代码分片可以让你把应用分成多个包，使你的用户能逐步加载应用而变得流行起来。在这篇文章中，我们将会看一下什么是代码分片和怎么去做，了解怎么去配合React Router去实现它。  现在是2018年。你的用户不需要为了一小块内容而去下载整个应用。如果一个用户下载所有的代码，仅仅是为了请求一个注册页面是毫无意义的。而">
 <meta name="keywords" content="翻译">
@@ -33,15 +33,15 @@
 <meta name="twitter:title" content="Router进行代码分片">
 <meta name="twitter:description" content="使用React和React Router进行代码分片 本文由林子翔翻译自原文链接   代码分片可以让你把应用分成多个包，使你的用户能逐步加载应用而变得流行起来。在这篇文章中，我们将会看一下什么是代码分片和怎么去做，了解怎么去配合React Router去实现它。  现在是2018年。你的用户不需要为了一小块内容而去下载整个应用。如果一个用户下载所有的代码，仅仅是为了请求一个注册页面是毫无意义的。而">
 <meta name="twitter:image" content="http://yoursite.com/2018/03/19/Router进行代码分片/chunk.png">
-    
+
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
-    
+
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
-    
+
 
 </head>
 
@@ -66,42 +66,42 @@
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
-        
+
             <li class="waves-block waves-effect">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
-        
+
             <li class="waves-block waves-effect">
               <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
-        
+
             <li class="waves-block waves-effect">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
-        
+
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
               </a>
             </li>
-        
+
             <li class="waves-block waves-effect">
               <a href="https://github.com/choicelin" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
-        
+
       </ul>
     </div>
   </div>
@@ -114,7 +114,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">Router进行代码分片</div>
-        
+
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
@@ -124,12 +124,12 @@
                 <i class="icon icon-lg icon-search"></i>
             </a>
         </div>
-        
-        
+
+
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
-        
+
     </div>
 </header>
 <header class="content-header post-header">
@@ -137,24 +137,24 @@
     <div class="container fade-scale">
         <h1 class="title">Router进行代码分片</h1>
         <h5 class="subtitle">
-            
+
                 <time datetime="2018-03-19T00:58:50.000Z" itemprop="datePublished" class="page-time">
   2018-03-19
 </time>
 
 
-            
+
         </h5>
     </div>
 
-    
+
 
 
 </header>
 
 
 <div class="container body-wrap">
-    
+
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
@@ -171,10 +171,10 @@
         <div class="post-meta">
             <time class="post-time" title="2018-03-19 08:58:50" datetime="2018-03-19T00:58:50.000Z"  itemprop="datePublished">2018-03-19</time>
 
-            
 
 
-            
+
+
 <span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
     <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
 </span>
@@ -276,19 +276,19 @@
         </div>
 
         <blockquote class="post-copyright">
-    
+
     <div class="content">
-        
+
 <span class="post-time">
     Last updated: <time datetime="2018-03-19T12:02:40.470Z" itemprop="dateUpdated">2018-03-19 20:02:40</time>
 </span><br>
 
 
-        
+
         作者只是一个小菜鸡，请轻喷！！
-        
+
     </div>
-    
+
     <footer>
         <a href="http://yoursite.com">
             <img src="/img/avatar.png" alt="Choicelin">
@@ -297,7 +297,7 @@
     </footer>
 </blockquote>
 
-        
+
 <div class="page-reward">
     <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
@@ -305,13 +305,13 @@
 
 
         <div class="post-footer">
-            
+
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
 
 
-            
+
 <div class="page-share-wrap">
-    
+
 
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
@@ -360,23 +360,23 @@
         </div>
     </div>
 
-    
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
-  
 
-  
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+
+
+
     <div class="waves-block waves-effect next">
       <a href="/2018/03/11/wepy开发速查手册/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
         <h4 class="title">wepy开发速查手册</h4>
       </a>
     </div>
-  
+
 </nav>
 
 
 
-    
+
 
 
 
@@ -396,13 +396,13 @@
   <script type="text/javascript">
      (function(d, s) {
          var j, e = d.getElementsByTagName(s)[0];
-  
+
          if (typeof LivereTower === 'function') { return; }
-  
+
          j = d.createElement(s);
          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
          j.async = true;
-  
+
          e.parentNode.insertBefore(j, e);
      })(document, 'script');
   </script>
@@ -422,11 +422,11 @@
         <i class="icon icon-quote-right"></i>
     </h3>
     <div class="reward-content">
-        
+
         <div class="reward-code">
             <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
         </div>
-        
+
         <label class="reward-toggle">
             <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
                 data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
@@ -436,7 +436,7 @@
                 <span class="reward-toggle-item alipay">支付宝</span>
             </div>
         </label>
-        
+
     </div>
 </div>
 
@@ -446,7 +446,7 @@
 
         <footer class="footer">
     <div class="top">
-        
+
 <p>
     <span id="busuanzi_container_site_uv" style='display:none'>
         站点总访客数：<span id="busuanzi_value_site_uv"></span>
@@ -458,16 +458,16 @@
 
 
         <p>
-            
+
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
+
             <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
         <p><span>Choicelin &copy; 2017 - 2018</span>
             <span>
-                
+
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
             </span>
         </p>
@@ -559,7 +559,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
