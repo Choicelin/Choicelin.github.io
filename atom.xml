@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-02T02:47:37.168Z</updated>
+  <updated>2019-07-20T11:48:05.865Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>近况</title>
+    <link href="http://yoursite.com/2019/07/20/%E8%BF%91%E5%86%B5/"/>
+    <id>http://yoursite.com/2019/07/20/近况/</id>
+    <published>2019-07-20T10:00:36.000Z</published>
+    <updated>2019-07-20T11:48:05.865Z</updated>
+    
+    <content type="html"><![CDATA[<p>Node诞生已经10年了，可以说是和go同期的语言，18年我在狼叔的群里，大家都兴致勃勃的讨论着Node，感觉那个时候是我个人对Node最有冲动的一年，后面也陆续用express写了一些简单的api，觉得Node还是很有趣的。那一年，狼叔在写书，群友都三番五次的催稿，慢慢的我都觉得成了一个笑话。今年，他的书总算出来了，我很欣慰，虽然说实话，从目录上看，虽然很多讲的都是比较基础，但是还是下单了一本，想看看狼叔写的内容和其他作者写的是不是会不一样。</p><p>回顾接近3年的职业生涯，现在写前端代码的速度明显感到有所提升，这是唯一感觉渐入佳境的地方。3年我走了4家公司，在第三家公司武汉花卷科技有限公司，这里我认识了一个我职业生涯以来最大方和爽快的老板(包子赵长军)，低调有内涵的且也为人爽快项目经理面窝，技术极客鱼丸，技术多面手栗子，还有很有阅历的豆丝，以及其他一群很有实力和头脑的同事。栗子和豆丝现在和我一起在啊哈编程，为青少年教育平台做自己的一份贡献。在这里我遇到另一个极客领导，技术总监张总。张总说他是007，从早上写代码到晚上12点，然后一周7天。当然我们是965工作制。其实我觉得张总是对技术有一种痴迷，他喜欢这个东西，很好玩。是的，确实有点好玩。张总那爆炸的开发的速度和解决实际技术问题的能力我就不多阐述了。</p><p>如果没有花卷，我是不会遇到这些人，和后面的故事的。我很感谢花卷的所有人，特别谢谢栗子，在花卷和啊哈都很照顾我，告诉了我很多网络和后端的知识甚至一些人生经验（蛙声一片），让我也能分清什么路由是走了前端怎么配nginx让它走后端等等。</p><p>离开花卷做了3份私活，也是花卷的一位同事介绍给我的，这位同事是一位设计，西瓜。西瓜的设计很独到，处理问题也是能从设计上解决技术上的问题，同时也很讲信用。和他合作还挺放心。</p><p>说了那么多其他人，现在再回到我自己，我自己在公司的业务开发中，扩展了一个开源的包的功能，发布了自己第一个，一个比较正式的开源npm包，虽然从最初的每周6百多下载量，跌到现在的30多，但是也见证了自己的开源的一小步。然后就是这个开源项目也成功申请了Jetbrain的开源许可证。本来职业生涯的前一年多都在做小程序和React，然而我现在敢说我自己的Vue比React用的好。这也是件很意料之外的事，React大部分是从别人那里学的，而Vue的全家桶，全是自己自学的。所以对知识在文档的哪个位置还是很有数的。在啊哈给自己的技术栈带来的收获，有Electron，Vue和Codorva，感觉也还挺简单的。唯一有些遗憾的是啊哈经历了一次裁员，很多熟悉的面孔再也看不到了。</p><p>9102下半年，准备把自己的全栈工坊小程序的后端由Java转Node，之所以这么做，是方便我个人维护。上半年开启了自己的直播生涯，会偶尔在b站上直播自己的代码周常，挺有意思的。B站搜索学酥兔即可找到我的直播间。</p><p>就到这里吧，人生不求大富大贵，只求能够平平安安，希望9102年下半年能够平平安安就好！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Node诞生已经10年了，可以说是和go同期的语言，18年我在狼叔的群里，大家都兴致勃勃的讨论着Node，感觉那个时候是我个人对Node最有冲动的一年，后面也陆续用express写了一些简单的api，觉得Node还是很有趣的。那一年，狼叔在写书，群友都三番五次的催稿，慢慢的
+      
+    
+    </summary>
+    
+    
+      <category term="程序心情" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
   
   <entry>
     <title>unmanaged hostwind设置ssh远程登录</title>
@@ -477,36 +500,6 @@
     
     
       <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>css可以继承的属性</title>
-    <link href="http://yoursite.com/2018/04/04/css%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E7%9A%84%E5%B1%9E%E6%80%A7/"/>
-    <id>http://yoursite.com/2018/04/04/css可以继承的属性/</id>
-    <published>2018-04-03T22:16:29.000Z</published>
-    <updated>2018-04-03T22:43:32.278Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>font-size</li><li>text-indent</li><li>text-align</li><li>line-height</li><li>word-spacing</li><li>letter-spacing</li><li>text-transform</li><li>color</li><li>visibility</li><li>cursor</li><li>direction</li><li>font</li><li>font-family</li><li>font-style</li><li>font-weight</li><li>list-style</li></ol><p>———————————————— 不常用 —————————————————–</p><ol><li>caption-side</li><li>font-variant</li><li>list-style-position</li><li>list-style-type</li><li>border-collapse</li><li>border-spacing</li><li>empty-cells</li><li>table-layout</li><li>list-style-type</li><li>list-style-image</li><li>quotes</li><li>page</li><li>page-break-inside</li><li>widows</li><li>orphans</li><li>speak</li><li>speak-punctuation</li><li>speak-numeral</li><li>speak-header</li><li>speech-rate</li><li>volume</li><li>voice-family</li><li>pitch</li><li>pitch-range</li><li>stress</li><li>richness</li><li>azimuth</li><li>​</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;font-size&lt;/li&gt;
-&lt;li&gt;text-indent&lt;/li&gt;
-&lt;li&gt;text-align&lt;/li&gt;
-&lt;li&gt;line-height&lt;/li&gt;
-&lt;li&gt;word-spacing&lt;/li&gt;
-&lt;li&gt;letter-spacing&lt;/li&gt;
-&lt;li&gt;text
-      
-    
-    </summary>
-    
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
