@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-28T04:19:31.350Z</updated>
+  <updated>2019-09-16T04:07:05.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mapbox做画多边形来进行地理位置信息查询</title>
+    <link href="http://yoursite.com/2019/09/16/mapbox%E5%81%9A%E7%94%BB%E5%A4%9A%E8%BE%B9%E5%BD%A2%E6%9D%A5%E8%BF%9B%E8%A1%8C%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2/"/>
+    <id>http://yoursite.com/2019/09/16/mapbox做画多边形来进行地理位置信息查询/</id>
+    <published>2019-09-16T03:49:47.000Z</published>
+    <updated>2019-09-16T04:07:05.107Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="mapbox介绍"><a href="#mapbox介绍" class="headerlink" title="mapbox介绍"></a>mapbox介绍</h1><p>mapbox是一款国外的地图工具，这里介绍的是mapbox gl js api。是在浏览器中显示地图信息。</p><h1 id="mapbox画多边形"><a href="#mapbox画多边形" class="headerlink" title="mapbox画多边形"></a>mapbox画多边形</h1><p>mapbox画多边形是使用了mapbox-gl-draw这个配套的库，这个库的api在初始化加上defaultMode为simple_select即可。可以禁用自定义控件，自己通过changeMode的方式来自定义控件。这里具体说一下，比如你要画图，你就按自己定义的按钮，调changeMode到画图模式上去，画完会自动回到默认的simple_select模式。</p><h1 id="多变形地理位置信息查询的原理"><a href="#多变形地理位置信息查询的原理" class="headerlink" title="多变形地理位置信息查询的原理"></a>多变形地理位置信息查询的原理</h1><p>原理上是这样的，在通过mapbox-gl-draw的draw.create事件中能过获取到多边形的点的经纬度，这几个点的排列是能够绕出一块地理区域的，后端可以根据这个来把数据中的经纬度做一个对比，比如，有一种算法可以是获取最大的经度和最小的经度，最大的纬度和最小的纬度，然后在同时这两个范围内的数据返回给前端做展示即可。这个算法的精度还不够精确，这里只是举例。</p><h1 id="授人以渔"><a href="#授人以渔" class="headerlink" title="授人以渔"></a>授人以渔</h1><p>相信大家看了上面的思路，应该心中有底了吧。</p><h1 id="warning"><a href="#warning" class="headerlink" title="warning"></a>warning</h1><p>注意，拉框查询可以使用官方的示例，拉框查询就是画矩形，是一比一还原上述算法，拉框查询无需使用mapbox-gl-draw这个库，详见官方示例。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;mapbox介绍&quot;&gt;&lt;a href=&quot;#mapbox介绍&quot; class=&quot;headerlink&quot; title=&quot;mapbox介绍&quot;&gt;&lt;/a&gt;mapbox介绍&lt;/h1&gt;&lt;p&gt;mapbox是一款国外的地图工具，这里介绍的是mapbox gl js api。是在浏览器中
+      
+    
+    </summary>
+    
+    
+      <category term="地图" scheme="http://yoursite.com/tags/%E5%9C%B0%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Node.js异步演进过程</title>
@@ -476,31 +499,6 @@
     
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bug心路2</title>
-    <link href="http://yoursite.com/2018/05/04/bug%E5%BF%83%E8%B7%AF2/"/>
-    <id>http://yoursite.com/2018/05/04/bug心路2/</id>
-    <published>2018-05-03T16:55:23.000Z</published>
-    <updated>2018-05-03T17:00:25.232Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天做一个node项目，遇到一个bug，刚开始没明显报错，定位都没法定位。</p><p>至于原因是用了别人的脚手架不太熟悉，这个脚手架把错误处理都搞得较为复杂。</p><p>后来搞了很久，把脚手架里面所有的错误处理全部替换为最简单的，然后报错就来了瞬间就解决了。</p><p>关于解决问题，如果想要解决就能够解决，现在越来越能够沉着的有耐心的去解决一个问题，对于复杂的东西就简单化，记得当年听一个大哥跟一个小弟，找一个最简单的示例，这个不够简单，再找一个。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;今天做一个node项目，遇到一个bug，刚开始没明显报错，定位都没法定位。&lt;/p&gt;
-&lt;p&gt;至于原因是用了别人的脚手架不太熟悉，这个脚手架把错误处理都搞得较为复杂。&lt;/p&gt;
-&lt;p&gt;后来搞了很久，把脚手架里面所有的错误处理全部替换为最简单的，然后报错就来了瞬间就解决了。&lt;/p&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="心得体会" scheme="http://yoursite.com/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
     
   </entry>
   
