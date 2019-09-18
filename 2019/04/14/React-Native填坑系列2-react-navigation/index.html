@@ -24,15 +24,16 @@
 <meta name="keywords" content="React Native">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React Native填坑系列2---react navigation">
-<meta property="og:url" content="http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/index.html">
+<meta property="og:url" content="https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="引言继上期填坑后，笔者继续推进安卓app的开发，web上都有导航路由的功能，app要实现这个，需要模拟类似web导航的特性，目前有一个静态路由的库比较好，叫react-navigation，于是笔者开启了第二段填坑之旅。 关于要实现的路由形式在准备阶段，我们大多数都会想尽可能的覆盖很多情况，所以笔者也是，关于路由的构成，首先有鉴权，然后有底部导航，接着每层导航对应的页面组件有内页，同时内页不会有底">
-<meta property="og:image" content="http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/tabBar.png">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/tabBar.png">
 <meta property="og:updated_time" content="2019-04-14T05:59:31.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native填坑系列2---react navigation">
 <meta name="twitter:description" content="引言继上期填坑后，笔者继续推进安卓app的开发，web上都有导航路由的功能，app要实现这个，需要模拟类似web导航的特性，目前有一个静态路由的库比较好，叫react-navigation，于是笔者开启了第二段填坑之旅。 关于要实现的路由形式在准备阶段，我们大多数都会想尽可能的覆盖很多情况，所以笔者也是，关于路由的构成，首先有鉴权，然后有底部导航，接着每层导航对应的页面组件有内页，同时内页不会有底">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/tabBar.png">
+<meta name="twitter:image" content="https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/tabBar.png">
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
@@ -119,7 +120,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -239,7 +240,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-04-14T05:59:31.043Z" itemprop="dateUpdated">2019-04-14 13:59:31</time>
+    最后更新时间：<time datetime="2019-04-14T05:59:31.043Z" itemprop="dateUpdated">2019-04-14 13:59:31</time>
 </span><br>
 
 
@@ -249,7 +250,7 @@
     </div>
     
     <footer>
-        <a href="http://yoursite.com">
+        <a href="https://choicelin.github.io">
             <img src="/img/avatar.png" alt="Choicelin">
             Choicelin
         </a>
@@ -275,7 +276,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&pic=https://choicelin.github.io/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -285,22 +286,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&url=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/&via=https://choicelin.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -427,7 +428,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -449,7 +450,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&pic=https://choicelin.github.io/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -459,22 +460,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/&title=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React Native填坑系列2---react navigation》 — 1024子翔的程序人生&url=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/&via=https://choicelin.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://choicelin.github.io/2019/04/14/React-Native填坑系列2-react-navigation/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -485,7 +486,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtElEQVR42u3aQU5jMRAE0Nz/0ow0m9EI8anqtiGL51WUQL6fkeym2q9XPD7+judPN+PzU54/PTzw8PDwRlPPH/z8u8+T+/x+O6t8znh4eHi3ec+HwfNXJPj9gubLjYeHh/c+vFkdW2/l8bfh4eHhvT9vthD7ghsPDw/vPXn5P/8to93027DjWNaCh4eHN69gX/nW/1uvL/b38PDw8BZd9bzMvf2Tw9ni4eHhXeAlraZNPJE0zGYhRVG+4+Hh4R3lfazHvnGVbP35dYT/XuPh4eFd4M0C2f12v8HX18Lw8PDwjvL2Tf1TUe+p9hgeHh7ebV4eNCSBRTKVTbCbxCVFBw8PDw9vxDsVQJwKKfIFij7Fw8PDu8ZrD4NNg3/2rDxZ+TJlwcPDwzvKm5Hywncf1+aHyrD/hoeHhxfz2lZTXli3l7TyJGEYiODh4eEd5bWlbRsEt4vVRrffzBAPDw/vKC8PTPMoYR8EHwhw8fDw8K7xksigjV83x0b7fgTGw8PDO8rblMuzzT2/ktUu8ZcxBB4eHt4FXt5qOsuYRcbFZQI8PDy8C7y2uZVvzbPieBaCfDN/PDw8vKO82cFwthRum17FFS48PDy8H+fNrhfkE8oDjiTk7TtjeHh4eHPerB2VT2IWXjwfIVG4jIeHh3eNl7e4Zles2uVI/gBRdIKHh4d3gdceD/t4Nync8xZX1JzDw8PDO8rLHzxr/OffmV81yOeGh4eHd5vXtv83W3keLuThSHHi4eHh4S14+UhC2H3ZvQptNwMPDw+v5LXbd15q55cM2lZZHpfg4eHh3eO1G3q7NLOyex/+4uHh4f0uL7+wtdmfZ4236OoVHh4e3i/xkpI3j2LzArpdbjw8PLzbvLwsbkvnU42r4WUsPDw8vAu8fQOsvVLQtr7aA+lwfw8PDw/v3/gDUm8YPELXRbYAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqUlEQVR42u3aQWrlQAwFwNz/0sl2hhDnPamb8UB59fkYu8uGlizp4yM+Pr8dyZl//jM7M7/v6sDDw8NbL/2nG8+Wkv9O1pCfj4eHh3eb99OO+nxOcn4eSGaP5hcLHh4e3st4z5vy8z+zR4CHh4f3P/Kek+l2cfvUHA8PD+9f8Wap7VnM88O9XmvBw8PDi3l5F+k9v6/09/Dw8PDWXfVTjahTcw31avHw8PBubYRFc6soAQShpS1JDNeJh4eHd4E3KyWcao8lyLxs8cvjxsPDw1vz9qXbzRhrG3LaK+Ph4eHd4LXbcbtNzwoTbXCK3iEeHh7eIV6yZW+aUvtwkn8TRHEPDw8Pb83Ll9Iuerb0NqjUk2V4eHh4a17+ed+OFGyuORuxijp7eHh4eNd4bVTJE+tZMTeH4eHh4b2Bt/m636TLm5QdDw8P7x4v/8hPbtZu7m2RYtaEw8PDwzvLq9tIZdrdlh5mQwzD54eHh4e34N0bgdqky/m4QDR0hYeHh3eItwkY+4JvPmQwG1/Aw8PDu8ebpcjt7WehZTZqgIeHh3ebl0SMtpibb/15423WkMPDw8O7wUs+8vNe/Ka8e6MSi4eHh3eWt2lQtWGgbXrN0vf6WwEPDw+v5OXtqLOAlpEXIIoqNR4eHt6Cd6o4uy/gtq246I3h4eHhXeadKsLmyfqsXFtcHw8PD+8ab3bjWcOszvGD2kI0NICHh4e35n2WR5uC58EjeQ95W+6vBhgeHh7eUV67+W7a/Mni2qJt0fTCw8PDO8prg0HbgkqKEbNBrqiEgYeHh3eNV9cwRm3+zSNY1Vrw8PDwXsPLw8ypdlde2sDDw8N7Dy9JwWcdqNnVDqfUeHh4eDFvk/K2razZFp+vDQ8PD+82r/3gb4sLm+R7NqaAh4eHd433BSpFK/CjwLZoAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

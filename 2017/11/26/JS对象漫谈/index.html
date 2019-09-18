@@ -23,9 +23,10 @@
     <meta name="description" content="如何转为number Number(‘1’) === 1 parseInt(‘1’, 10) === 1 parseFloat(‘1.23’) === 1.23 ‘1’ - 0  +‘1’  全局对象window 浏览器在加载时首先会创建window对象 window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, histor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS对象漫谈">
-<meta property="og:url" content="http://yoursite.com/2017/11/26/JS对象漫谈/index.html">
+<meta property="og:url" content="https://choicelin.github.io/2017/11/26/JS对象漫谈/index.html">
 <meta property="og:site_name" content="1024子翔的程序人生">
 <meta property="og:description" content="如何转为number Number(‘1’) === 1 parseInt(‘1’, 10) === 1 parseFloat(‘1.23’) === 1.23 ‘1’ - 0  +‘1’  全局对象window 浏览器在加载时首先会创建window对象 window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, histor">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-11-26T04:22:56.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS对象漫谈">
@@ -116,7 +117,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -239,7 +240,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2017-11-26T04:22:56.288Z" itemprop="dateUpdated">2017-11-26 12:22:56</time>
+    最后更新时间：<time datetime="2017-11-26T04:22:56.288Z" itemprop="dateUpdated">2017-11-26 12:22:56</time>
 </span><br>
 
 
@@ -249,7 +250,7 @@
     </div>
     
     <footer>
-        <a href="http://yoursite.com">
+        <a href="https://choicelin.github.io">
             <img src="/img/avatar.png" alt="Choicelin">
             Choicelin
         </a>
@@ -273,7 +274,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/11/26/JS对象漫谈/&title=《JS对象漫谈》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://choicelin.github.io/2017/11/26/JS对象漫谈/&title=《JS对象漫谈》 — 1024子翔的程序人生&pic=https://choicelin.github.io/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -283,22 +284,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/11/26/JS对象漫谈/&title=《JS对象漫谈》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://choicelin.github.io/2017/11/26/JS对象漫谈/&title=《JS对象漫谈》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/11/26/JS对象漫谈/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://choicelin.github.io/2017/11/26/JS对象漫谈/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS对象漫谈》 — 1024子翔的程序人生&url=http://yoursite.com/2017/11/26/JS对象漫谈/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS对象漫谈》 — 1024子翔的程序人生&url=https://choicelin.github.io/2017/11/26/JS对象漫谈/&via=https://choicelin.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/11/26/JS对象漫谈/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://choicelin.github.io/2017/11/26/JS对象漫谈/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -425,7 +426,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -447,7 +448,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/11/26/JS对象漫谈/&title=《JS对象漫谈》 — 1024子翔的程序人生&pic=http://yoursite.com/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://choicelin.github.io/2017/11/26/JS对象漫谈/&title=《JS对象漫谈》 — 1024子翔的程序人生&pic=https://choicelin.github.io/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -457,22 +458,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/11/26/JS对象漫谈/&title=《JS对象漫谈》 — 1024子翔的程序人生&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://choicelin.github.io/2017/11/26/JS对象漫谈/&title=《JS对象漫谈》 — 1024子翔的程序人生&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/11/26/JS对象漫谈/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://choicelin.github.io/2017/11/26/JS对象漫谈/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS对象漫谈》 — 1024子翔的程序人生&url=http://yoursite.com/2017/11/26/JS对象漫谈/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS对象漫谈》 — 1024子翔的程序人生&url=https://choicelin.github.io/2017/11/26/JS对象漫谈/&via=https://choicelin.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/11/26/JS对象漫谈/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://choicelin.github.io/2017/11/26/JS对象漫谈/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -483,7 +484,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aQY6DMAwF0N7/0sx2pKrh24YF4WVVIQh5VLJiO59PPI5/o3f/9+/v2apvKQ8MDIzHMo7lSO759eL1DOuZ87VhYGC8h5EsIn+qx0ve+/M6BgYGRvDiKmy9QcTAwMC4KuBWefkVDAwMjF4SOym9rZeVp74X5OIYGBgPZEyWcvfvW/obGBgYj2IcxZHPc9VmMVoVBgbG1ozqdi3hJeB5wMXAwHgPY11EW6eyvR1aEqCTg2In/wMGBsZGjKTQf19LslpWi5JbDAyMrRnJ1OuQd1UjYfIUBgbGfoz8KMMxHr2PFYV7DAyM1zDyw2HVYDoJ3KP+KgYGxqaMJPxVS2nz5sHJJ8bAwHgBY/2y6jaxl8RWt48nZ0YwMDC2Y+Slrl7zoNpayBPpT28RGBgYj2L0jlBUQ2ReYqtuJaP/BAMD4+GM6gPVIn4erHvBHQMD4w2MSek/byRUS2nVdgUGBsbejKjsXlxifj2ZOZoNAwNja0YSZKspbh6+8+IdBgYGRhLsqiloNYntbTdPklgMDIwXMPIl5k3HXpAttzAxMDC2ZtxSz8uX0vpYGBgYezOO4si3idU0OKH+XAMGBsbWjPlRiUnRv9p+mGxbMTAwns6oppq95uU8WT2ZAQMD4wWMaqDMmwe9w2EX5OIYGBgYrbh3bZsBAwMDY5IHV0tyExIGBsZ7GJOjqHlhLmeXm6AYGBhbM6obtV6IrLYZ8g+EgYGxNeMPabRVg381t6UAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aS27DMAwFwN7/0inQve1HUilgabwq2jTRZPHAj35+4ufz91R/f/XXq9ck/zV6MDAwXsv43D73x03erXroq9dcvTMGBsY5jPswTXj3x0q+iPzrw8DAwLg6Yv7xq+o3DAwMjEng5uFbPS4GBgbGpImdt51JO/r1XhwDA+OFjOpi4D9//uJ+AwMD4yWMeSzmo7dklNYMawwMjK0Z929Xjd1eATfHY2BgnMDIl5S98dzkv8rFIgYGxtaMfFV5H7K9aM5PEkU5BgbGpoykWa0WapPRfzWUMTAw9mYkSZy3l9VIXXDNAgMD4xhGr/nsXaGoBnpExcDAOIBRLeDyYdzaQvBhhYmBgXEMo7eSTEKzWg7mQYyBgbErIxnfJ5ctquO2yWAOAwPjNEbelPYudeXDtXylWr4WhoGBsSlj1SHmK9LFi0wMDIwXMiaRmi8AqkO68pIAAwPjGEavia3GdN6a5mM4DAyMvRm9km60hSgWo6sKUwwMjPcyqg1k3oJWL0wkS83yMgADA2MjRq9cSyIyoWJgYGAkHd+8Nc2bz/k686FAxMDA2I7xKT550zvJw3zxgIGBcQKjOnSrDtGqxV+1NMTAwDiHUf3g6qWKJFjzwL08AwYGxgGM3hJxXsb1is6H2SEGBsbBjCqpF8q9uMfAwMCoxmLSuFaLyIdXYmBgHMDIr3bli8nqGC75yh5ujmBgYGzKWNBALj1E77oGBgbGpoxf3o6odtM6Nf0AAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
