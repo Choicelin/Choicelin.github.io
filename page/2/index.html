@@ -16,8 +16,6 @@
     <title>1024子翔的程序人生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="theme-color" content="#3F51B5">
-    
     
     <meta name="keywords" content="">
     <meta property="og:type" content="website">
@@ -30,8 +28,8 @@
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <link rel="shortcut icon" href="/">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
@@ -47,54 +45,19 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+    <div class="brand-wrap" style="background-image:url(/)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.png">
+          <img src="/">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Choicelin</h5>
-          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+          <a href="mailto:undefined" class="mail">
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                Categories
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/choicelin" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
         
       </ul>
     </div>
@@ -109,20 +72,6 @@
         </a>
         <div class="flex-col header-title ellipsis">1024子翔的程序人生</div>
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
     </div>
 </header>
@@ -145,6 +94,56 @@
 <div class="container body-wrap">
 
     <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-CSS布局"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-01-12 12:18:30" datetime="2019-01-12T04:18:30.000Z"  itemprop="datePublished">2019-01-12</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/01/12/CSS布局/">CSS布局</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+左右布局
+
+使用浮动
+
+12345678910111...
+    
+
+        <a href="/2019/01/12/CSS布局/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
     
         <li class="post-list-item fade">
             <article id="post-升级React-Redux"
@@ -176,8 +175,7 @@
         
 本文翻译于原文链接
 
-Redux是一个在javascript应用中同时管理数据和UI视图状态的工具。它被认为是完美管理单页应用复杂状态的杰作。同时它不是一定要用于一个特定的框架上（比如React），虽然它的作者心中是想解决React的复杂状态管理，但是它依然可以用在Angular，甚至jQuery应用之上。
-告诉大家更多的是，它是经过一项“time travel”的实验而想出来的——这是它...
+Redux是一个在javasc...
     
 
         <a href="/2018/11/17/升级React-Redux/" class="post-more waves-effect waves-button">
@@ -222,9 +220,7 @@ Redux是一个在javascript应用中同时管理数据和UI视图状态的工具
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        场景我们在开发的时候经常会有生产环境和开发环境，这两种环境中可能用到不同的配置，比如本地域名和线上域名，如何去区别它们，是我今天要谈到的一个问题。
-process对象与NODE_ENVNode.js中有一个全局的对象process，这个对象无需require(),它控制着Node.js的进程的信息。
-它有一个属性，叫做env。我下面将会使用这个属性，在它里面挂载一个NODE_ENV属性，我们...
+        场景我们在开发的时候经常会有生产环境和开发环境，这两种...
     
 
         <a href="/2018/11/08/NODE-ENV作用知多少/" class="post-more waves-effect waves-button">
@@ -269,7 +265,7 @@ process对象与NODE_ENVNode.js中有一个全局的对象process，这个对象
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        安装依赖1234(  export PKG=eslint-config-airbnb;  npm info &quot;$PKG@latest&quot; peerDependencies --json | command sed &apos;s/[\&#123;\&#125;,]//g ; s/: /@/g&apos; | xargs npm install --save-dev &quo...
+        安装依赖1234(  export PKG=eslin...
     
 
         <a href="/2018/08/25/ESLIN配置airbnb标准/" class="post-more waves-effect waves-button">
@@ -315,12 +311,7 @@ process对象与NODE_ENVNode.js中有一个全局的对象process，这个对象
 
     
         
-span,text之间的换行会导致空格的出现，引出一些样式bug
-border写了下方要在上方补一个透明的，同适用于padding，为了垂直居中，水平方向也是
-div高度由其内部文档流元素的高度总和决定
-文档流是文档内元素的流动方向
-内联元素从左往右遇到宽度不够换行，英文是以单词为整体换行如果要字母截断使用word-break: break-all;否则是break-word
-块级元素每一...
+span,text之间的换行会导致空格的出现，引出一...
     
 
         <a href="/2018/08/24/css积累一/" class="post-more waves-effect waves-button">
@@ -365,8 +356,7 @@ div高度由其内部文档流元素的高度总和决定
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        场景在开发原生小程序时，可能会一种场景，比如我对某一个点击事件，多次点击只触发一次，这是常见的once函数做的事情，但是如何用在小程序里面呢，下面给大家看看我的处理方法。
-once函数123456789101112131415function once(fn, context) &#123;   return function() &#123;       if (fn) &#123;   ...
+        场景在开发原生小程序时，可能会一种场景，比如我对某一个...
     
 
         <a href="/2018/08/24/微信小程序一次性事件实现/" class="post-more waves-effect waves-button">
@@ -411,10 +401,7 @@ once函数123456789101112131415function once(fn, context) &#123;   return functi
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        说说引用值搞清楚引用之前先看看值是什么。在计算机科学中，一个值代表了一个程序可操作控制的实体。某种数据类型的一些成员就是这种类型的一些值。
-指针在计算机科学中，指针是一个对象，它存储了另一个在内存中值的内存地址。一个指针引用了内存中的一个位置。
-地址在计算机中，一个内存地址是一个对一块特定内存位置的引用。
-引用在计算机科学中，引用是一个值，它能够让程序在内存或其他设备存储中间接获取到特定的数...
+        说说引用值搞清楚引用之前先看看值是什么。在计算机科学中...
     
 
         <a href="/2018/07/23/谈谈引用和求值策略/" class="post-more waves-effect waves-button">
@@ -460,12 +447,7 @@ once函数123456789101112131415function once(fn, context) &#123;   return functi
 
     
         前言
-vue-cli 使用webpack模板生成的项目需要引入scss预处理器，网上散人教程不够官方，这里参照官方文档写一个简化步骤
-
-步骤
-1234# use npmnpm install sass-loader node-sass --save-dev# use yarnyarn add -D sass-loader node-sass
-
-1234567891011// bulid文件夹...
+vue-cli 使用webpack模板生成的项目...
     
 
         <a href="/2018/07/18/在vue中配置使用SCSS预编译/" class="post-more waves-effect waves-button">
@@ -510,8 +492,7 @@ vue-cli 使用webpack模板生成的项目需要引入scss预处理器，网上�
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        前言  大家在原生小程序中需要用到图表插件时，可能会选择echarts或者由xiaolin3303开发的一款wx-charts插件，本文为大家剖析一下如何在开源小程序框架mpvue中使用wx-charts插件
-原理  mpvue编译后的代码是原生的小程序代码，它把页面的wxml内容全部封成了template引入到page中。既然是最后会转为原生代码，就支持使用原生的canvas组件，这一点也...
+        前言  大家在原生小程序中需要用到图表插件时，可能会选...
     
 
         <a href="/2018/07/06/在mpvue中使用图表插件wx-charts/" class="post-more waves-effect waves-button">
@@ -557,8 +538,7 @@ vue-cli 使用webpack模板生成的项目需要引入scss预处理器，网上�
 
     
         异步流程控制的两种思路
-第一种在异步回调里面执行操作，这是最为常见的，扩展一下可以在回调参数里面再传回调，然后这个传入的回调里面执行可以保证异步逻辑走完了
-思路二，我称之为赛跑回调，跟第一种有点类似，但是有细微的区别，有一个赛跑的感觉，也是在异步回调里面注册一个回调，把数据放到回调形参，这个回调可以在其他地方调用，在其他地方使用时，判断一下数据是否到位，如果到位了执行你的逻辑，如果没到位，执...
+第一种在异步回调里面执行操作，...
     
 
         <a href="/2018/05/15/异步流程控制的两种思路/" class="post-more waves-effect waves-button">
@@ -569,57 +549,6 @@ vue-cli 使用webpack模板生成的项目需要引入scss预处理器，网上�
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-node写接口无响应原因总结"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-05-15 23:12:38" datetime="2018-05-15T15:12:38.000Z"  itemprop="datePublished">2018-05-15</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/05/15/node写接口无响应原因总结/">node写接口无响应原因总结</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        可能原因
-路由路径不对
-未调用next
-中间件问题
-
-debug方法 先注释全部路由以外的中间件，然后再依次打开，看是哪个中间件出问题
-
-    
-
-        <a href="/2018/05/15/node写接口无响应原因总结/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
 
     </div>
     
@@ -642,15 +571,6 @@ debug方法 先注释全部路由以外的中间件，然后再依次打开，�
         <footer class="footer">
     <div class="top">
         
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
 
         <p>
             
@@ -660,7 +580,7 @@ debug方法 先注释全部路由以外的中间件，然后再依次打开，�
         </p>
     </div>
     <div class="bottom">
-        <p><span>Choicelin &copy; 2017 - 2019</span>
+        <p><span>Choicelin &copy; 2020</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
@@ -674,52 +594,6 @@ debug方法 先注释全部路由以外的中间件，然后再依次打开，�
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://choicelin.github.io/page/2/&title=1024子翔的程序人生&pic=https://choicelin.github.io/img/avatar.png" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://choicelin.github.io/page/2/&title=1024子翔的程序人生&source=" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://choicelin.github.io/page/2/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=1024子翔的程序人生&url=https://choicelin.github.io/page/2/&via=https://choicelin.github.io" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://choicelin.github.io/page/2/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAB0ElEQVR42u3aO47jMBAFQN//0tp0gpXmvaZIeIBiJMACXUoa/ft84nP9OMmv181Jbnvh4OLiLnOvx/Pznefnu9tWPu8/N+Di4h7k3l3aBrI2nOUGXFzc7+euEJ/puLi4f4vbpjgr7+Di4n4DdxaA8s9uw+ILtRouLu4CN+9S7nve0t/FxcUdca/RyW97DnP1/+Li4h7htkGnbZiuTEhvQx4uLu5mbvsHSWoyC4XRigYuLu5B7nMKko9A2rWMtr2Ci4t7hjsLQCuBqU2YhgMVXFzcBW7bykySm/XEKJoG4+LibuOurGe9OzSNih9cXNyD3KTYyMckbTM0L8ZwcXHPcNsipw1es7B4S8fFxT3IbVem3mqUbK/VcHFxX+K2AStPcWYf88uQFRcXdwO3bVa2Q9ak7Bn2b3Bxcbdx84WJlZToOTAVLRJcXNwj3HZlqu1efkbnFw8uLu5m7lWe2bJFktwUMx9cXNzN3FlwycueJIVqUx9cXNwz3CR4vTVkbVc6iiUMXFzcDdy8MdGmLFHXNr4HFxf327iz0UieNkW5GC4u7pdx89FIHtTqRS5cXNyD3Lz4eQ40s0Fs3n7FxcU9w31rbSIfvbTcYX8XFxd3wv0Hb/olC5NFhiYAAAAASUVORK5CYII=" alt="微信分享二维码">
-</div>
-
-
-
-
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
 var _hmt = _hmt || [];
@@ -731,58 +605,19 @@ var _hmt = _hmt || [];
 })();
 </script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+<script src="/js/main.min.js?v=1.7.2"></script>
 
 
 
 
 
 
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '死鬼去哪里了！';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
 

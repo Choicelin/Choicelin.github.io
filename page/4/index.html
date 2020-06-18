@@ -16,8 +16,6 @@
     <title>1024子翔的程序人生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="theme-color" content="#3F51B5">
-    
     
     <meta name="keywords" content="">
     <meta property="og:type" content="website">
@@ -30,8 +28,8 @@
     
         <link rel="alternate" type="application/atom+xml" title="1024子翔的程序人生" href="/atom.xml">
     
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <link rel="shortcut icon" href="/">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
@@ -47,54 +45,19 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+    <div class="brand-wrap" style="background-image:url(/)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.png">
+          <img src="/">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Choicelin</h5>
-          <a href="mailto:413807584@qq.com" title="413807584@qq.com" class="mail">413807584@qq.com</a>
+          <a href="mailto:undefined" class="mail">
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                Categories
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/choicelin" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
         
       </ul>
     </div>
@@ -109,20 +72,6 @@
         </a>
         <div class="flex-col header-title ellipsis">1024子翔的程序人生</div>
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
     </div>
 </header>
@@ -145,6 +94,51 @@
 <div class="container body-wrap">
 
     <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-html5的data"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-02-12 18:51:30" datetime="2018-02-12T10:51:30.000Z"  itemprop="datePublished">2018-02-12</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/02/12/html5的data/">html5的data-*</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        引入看公司的表单组件，发现一个data-name属性，...
+    
+
+        <a href="/2018/02/12/html5的data/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
     
         <li class="post-list-item fade">
             <article id="post-日期-学习到的知识点"
@@ -174,14 +168,7 @@
 
     
         2018-1-30
-css filter: drop-shadow()
-sass draken()
-sass placeholder
-sass @include
-sass @content
-redux mapDispatchToProps dispatched function(bindActionCreator)
-react-router onEnter hook(20%)
-react-r...
+css filter: drop-...
     
 
         <a href="/2018/01/30/日期-学习到的知识点/" class="post-more waves-effect waves-button">
@@ -226,12 +213,7 @@ react-r...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        需求首先是一个播放的气泡，点击播放src音频，但是是一组列表，有许多这样的气泡，点其中一个播放后，再点其他的，前一个要停止播放。
-分析这种其实是很好实现的，如果是直接写的话。但是现在用上了小程序的自定义组件，每个组件都是独立的没有联系，唯一的联系是父组件，这个时候，我们该怎么办呢。
-解决方案由于涉及保密协议，就不上代码，说说思路。
-思路：
-
-用广播，如果该组件播放时，就发出一个广播，让其他组...
+        需求首先是一个播放的气泡，点击播放src音频，但是是一...
     
 
         <a href="/2018/01/25/解决小程序音频自定义组件不同时播放问题/" class="post-more waves-effect waves-button">
@@ -276,7 +258,7 @@ react-r...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        1234567891011121314151617181920212223242526272829function process1() &#123;  setTimeout(function() &#123;   var process1Result = 1;   next(null, process1Result)  &#125;,10)&#125;function process2(d...
+        123456789101112131415161718...
     
 
         <a href="/2018/01/18/node流程控制之串行/" class="post-more waves-effect waves-button">
@@ -322,12 +304,7 @@ react-r...
 
     
         Node编程基础如何组织代码
-模块是Node让代码易于重用的一种组织和包装方式
-
-
-传统方式按逻辑把单个文件分为多个文件，但这些文件互相引用的同时会产生全局变量污染的问题
-Node模块打包代码是为了重用，但它们不会改变全局作用域
-Node模块允许你从被引入文件中选择要你暴露给程序的函数和变量，如果模块返回的函数和变量不止一个，可以把它们作为exports对象的属性，否则就使用module.e...
+模块是Node让代码易于...
     
 
         <a href="/2018/01/11/Node编程基础/" class="post-more waves-effect waves-button">
@@ -373,15 +350,7 @@ Node模块允许你从被引入文件中选择要你暴露给程序的函数和�
 
     
         基本视觉格式化基本框
-css假定每个元素都会生成一个或多个矩形框，这称为元素框。各元素框中心有一个内容区。这个内容区周围有可选的内边距，边框和外边距。
-
-包含块（布局上下文）
-每个元素都相对于其包含块摆放。正常流中的一个元素，其包含块由最近的块级祖先框、表单元格或行内块祖先框的内容边界构成。
-
-
-正常流是指西方语言文本从左向右、从上向下显示。大多数元素都在正常流中，除了浮动或定位元素。
-
-块...
+css假定每个元素都会生成一个或...
     
 
         <a href="/2018/01/11/基本视觉格式化/" class="post-more waves-effect waves-button">
@@ -427,9 +396,7 @@ css假定每个元素都会生成一个或多个矩形框，这称为元素框�
 
     
         
-顶部子元素的margin-top直接到父元素上，目前简单的处理方法将子元素margin-top变成父元素padding-top,感觉其他方式也可以解决比如改变BFC，需要补一下BFC，还不太熟
-微信小程序中，纵向的高度一定不要px，否则到不同屏幕上差异很明显，横向如果写滑动的效果，计算的left值可以用px，因为获取到的屏幕的宽度是一个以px为单位的值，用px才不会出现位置上偏移的问题。
-...
+顶部子元素的margin-top直接到父元素上，目前...
     
 
         <a href="/2018/01/09/前端工作遇到的小知识点/" class="post-more waves-effect waves-button">
@@ -478,34 +445,7 @@ css假定每个元素都会生成一个或多个矩形框，这称为元素框�
 a
 abbr
 acronym
-address
-applet
-area
-article
-aside
-audio
-b
-base
-basefont
-bdi
-bdo
-bgsound
-big
-blink
-blockquote
-body
-br
-button
-canvas
-caption
-center
-cite
-code
-col
-colgroup
-command
-content
-dat...
+ad...
     
 
         <a href="/2018/01/05/html标签/" class="post-more waves-effect waves-button">
@@ -551,15 +491,7 @@ dat...
 
     
         如何转为number
-Number(‘1’) === 1
-parseInt(‘1’, 10) === 1
-parseFloat(‘1.23’) === 1.23
-‘1’ - 0 
-+‘1’
-
-全局对象window
-浏览器在加载时首先会创建window对象
-window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, his...
+Number(‘1’) === ...
     
 
         <a href="/2017/11/26/JS对象漫谈/" class="post-more waves-effect waves-button">
@@ -600,24 +532,7 @@ window的属性分为两类： ECMAScript规定的和浏览器私有的（alert�
     
         安装
 npm install -g hexo-cli
-
-建站
-hexo init  &lt;你博客存储文件夹名字&gt;
-cd &lt;你博客存储文件夹名字&gt;
-npm i
-
-example
-npm init blog
-cd blog
-npm i
-
-修改配置文件_config.yml
-deploy: 
-​    type: git
-​    repo: 
-
-部署
-npm install ...
+...
     
 
         <a href="/2017/11/18/Hexo食用教程/" class="post-more waves-effect waves-button">
@@ -650,15 +565,6 @@ npm install ...
         <footer class="footer">
     <div class="top">
         
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
 
         <p>
             
@@ -668,7 +574,7 @@ npm install ...
         </p>
     </div>
     <div class="bottom">
-        <p><span>Choicelin &copy; 2017 - 2019</span>
+        <p><span>Choicelin &copy; 2020</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
@@ -682,52 +588,6 @@ npm install ...
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://choicelin.github.io/page/4/&title=1024子翔的程序人生&pic=https://choicelin.github.io/img/avatar.png" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://choicelin.github.io/page/4/&title=1024子翔的程序人生&source=" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://choicelin.github.io/page/4/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=1024子翔的程序人生&url=https://choicelin.github.io/page/4/&via=https://choicelin.github.io" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://choicelin.github.io/page/4/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABy0lEQVR42u3aS46DMBAFQO5/aUaaVUaRmddu7KCovIoQmCKLlvtzHPE6f9fr79f1fv392dH1Y8XCxcVtc8/LNeJe00egfJ/Rnri4uDu5neCVxJzr64kBFxf3mdwk6OShEBcX9zu4ScKDi4v7TdwkDF2/IL8/+cgbcjVcXNwGd65geu/v5fVdXFzcm7oSSUDJX3m2Fy4u7h5ucljpXK+2VaIwh4uLu4WbFz6SoNZPXaIdcHFxl3GTFul1u7RTYM2PU39OZLi4uIu51SJI9fjSaasUQiEuLu6t3KRlMjd+UQ1z0QgXLi7udm6/IbpiaKOQn+Hi4t7KzUuieYrSKZHg4uJ+lpsca5JQdb1bdHyJ34iLi7uaW21zzjVKq3sO/xRcXNzt3LlWRz420X8WFxd3DzdvoM4dTTrNlaENFxd3MXdu9CEHzU2K4eLiPoE7N3pVHeGqhktcXNzPcjsJTx7+8hbskcc/XFzcBdxqQLmrSJq3ZKK2Ky4u7gJuHrySxmp+bKqmQLi4uPu5/ZSm2oLNUyxcXNwnc6sl1LwNk9yJi4v7ZG6ersyNbvzzMbi4uBu5/QGsTomkEDpxcXG3cDsF02qhZK65gouLu5H7Az14bMNMNckVAAAAAElFTkSuQmCC" alt="微信分享二维码">
-</div>
-
-
-
-
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
 var _hmt = _hmt || [];
@@ -739,58 +599,19 @@ var _hmt = _hmt || [];
 })();
 </script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+<script src="/js/main.min.js?v=1.7.2"></script>
 
 
 
 
 
 
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '死鬼去哪里了！';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
 
