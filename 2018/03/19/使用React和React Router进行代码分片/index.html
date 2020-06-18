@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Router进行代码分片 | 1024子翔的程序人生</title>
+  <meta name="keywords" content=" 翻译 ">
+  <meta name="description" content="Router进行代码分片 | 1024子翔的程序人生">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="1024子翔的程序人生">
+<meta property="og:url" content="https://choicelin.github.io/categories/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-21T07:47:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1024子翔的程序人生">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+</div>
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Choicelin</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="facebook" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="instagram" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-instagram"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-reddit"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="http://weibo.com/u/2307534817" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/ff56736de7cf" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:jaytp@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="neteasemusic" href="https://music.163.com/#/user/home?id=88151013" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-neteasemusic"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(40)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="40">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ajax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>centos7</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>css</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>css读书笔记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Google Blockly</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html5</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mac</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>react</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>React Native</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>wepy</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>前端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>地图</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>学习记录</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作经验</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>开发环境</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>异步</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>微信小程序</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>心得体会</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>心情</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>程序心情</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>笔记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>翻译</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>计算机科学</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>记录</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 "
+           href="/2020/06/18/Blockly设置预置块到代码区/"
+           data-tag="Google Blockly"
+           data-author="" >
+            <span class="post-title" title="Blockly设置预置块到代码区">Blockly设置预置块到代码区</span>
+            <span class="post-date" title="2020-06-18 17:52:19">2020/06/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/12/14/mac安装ishowu-audio-capture后无法开机解决/"
+           data-tag="mac"
+           data-author="" >
+            <span class="post-title" title="mac安装ishowu audio capture后无法开机解决">mac安装ishowu audio capture后无法开机解决</span>
+            <span class="post-date" title="2019-12-14 10:59:54">2019/12/14</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/09/16/mapbox做画多边形来进行地理位置信息查询/"
+           data-tag="地图"
+           data-author="" >
+            <span class="post-title" title="mapbox做画多边形来进行地理位置信息查询">mapbox做画多边形来进行地理位置信息查询</span>
+            <span class="post-date" title="2019-09-16 11:49:47">2019/09/16</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/07/28/Node-js异步演进过程/"
+           data-tag="异步"
+           data-author="" >
+            <span class="post-title" title="Node.js异步演进过程">Node.js异步演进过程</span>
+            <span class="post-date" title="2019-07-28 11:24:12">2019/07/28</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/07/20/近况/"
+           data-tag="程序心情"
+           data-author="" >
+            <span class="post-title" title="近况">近况</span>
+            <span class="post-date" title="2019-07-20 18:00:36">2019/07/20</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/05/02/unmanaged-hostwind设置ssh远程登录/"
+           data-tag="centos7"
+           data-author="" >
+            <span class="post-title" title="unmanaged hostwind设置ssh远程登录">unmanaged hostwind设置ssh远程登录</span>
+            <span class="post-date" title="2019-05-02 10:04:49">2019/05/02</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/04/14/React-Native填坑系列2-react-navigation/"
+           data-tag="React Native"
+           data-author="" >
+            <span class="post-title" title="React Native填坑系列2---react navigation">React Native填坑系列2---react navigation</span>
+            <span class="post-date" title="2019-04-14 11:59:08">2019/04/14</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/"
+           data-tag="React Native"
+           data-author="" >
+            <span class="post-title" title="React Native填坑系列之一（Could not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）">React Native填坑系列之一（Could not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）</span>
+            <span class="post-date" title="2019-04-08 13:16:32">2019/04/08</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/02/21/2019前端windows环境搭建指南/"
+           data-tag="开发环境"
+           data-author="" >
+            <span class="post-title" title="2019前端windows环境搭建指南">2019前端windows环境搭建指南</span>
+            <span class="post-date" title="2019-02-21 15:45:42">2019/02/21</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/01/23/加油，小林/"
+           data-tag="心情"
+           data-author="" >
+            <span class="post-title" title="加油，小林">加油，小林</span>
+            <span class="post-date" title="2019-01-23 20:16:09">2019/01/23</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/01/12/CSS布局/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS布局">CSS布局</span>
+            <span class="post-date" title="2019-01-12 12:18:30">2019/01/12</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/11/17/升级React-Redux/"
+           data-tag="react"
+           data-author="" >
+            <span class="post-title" title="升级React:Redux">升级React:Redux</span>
+            <span class="post-date" title="2018-11-17 10:33:59">2018/11/17</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/11/08/NODE-ENV作用知多少/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="NODE_ENV作用知多少">NODE_ENV作用知多少</span>
+            <span class="post-date" title="2018-11-08 16:13:58">2018/11/08</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/25/ESLIN配置airbnb标准/"
+           data-tag="笔记"
+           data-author="" >
+            <span class="post-title" title="ESLIN配置airbnb标准">ESLIN配置airbnb标准</span>
+            <span class="post-date" title="2018-08-25 09:20:18">2018/08/25</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/24/css积累一/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="css积累一">css积累一</span>
+            <span class="post-date" title="2018-08-24 19:03:59">2018/08/24</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/24/微信小程序一次性事件实现/"
+           data-tag="记录"
+           data-author="" >
+            <span class="post-title" title="微信小程序一次性事件实现">微信小程序一次性事件实现</span>
+            <span class="post-date" title="2018-08-24 16:14:56">2018/08/24</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/23/谈谈引用和求值策略/"
+           data-tag="计算机科学"
+           data-author="" >
+            <span class="post-title" title="谈谈引用和求值策略">谈谈引用和求值策略</span>
+            <span class="post-date" title="2018-07-23 10:32:25">2018/07/23</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/18/在vue中配置使用SCSS预编译/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="在vue中配置使用SCSS预编译">在vue中配置使用SCSS预编译</span>
+            <span class="post-date" title="2018-07-18 19:12:15">2018/07/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/06/在mpvue中使用图表插件wx-charts/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="在mpvue中使用图表插件wx-charts">在mpvue中使用图表插件wx-charts</span>
+            <span class="post-date" title="2018-07-06 10:00:43">2018/07/06</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/异步流程控制的两种思路/"
+           data-tag="ajax"
+           data-author="" >
+            <span class="post-title" title="异步流程控制的两种思路">异步流程控制的两种思路</span>
+            <span class="post-date" title="2018-05-15 23:13:49">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/node写接口无响应原因总结/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="node写接口无响应原因总结">node写接口无响应原因总结</span>
+            <span class="post-date" title="2018-05-15 23:12:38">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/前端工作积累的知识点二/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="前端工作积累的知识点二">前端工作积累的知识点二</span>
+            <span class="post-date" title="2018-05-15 23:10:19">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/04/bug心路2/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="bug心路2">bug心路2</span>
+            <span class="post-date" title="2018-05-04 00:55:23">2018/05/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/04/06/mysql学习笔记/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql学习笔记">mysql学习笔记</span>
+            <span class="post-date" title="2018-04-06 08:17:08">2018/04/06</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/04/04/css可以继承的属性/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="css可以继承的属性">css可以继承的属性</span>
+            <span class="post-date" title="2018-04-04 06:16:29">2018/04/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/19/使用React和React Router进行代码分片/"
+           data-tag="翻译"
+           data-author="" >
+            <span class="post-title" title="Router进行代码分片">Router进行代码分片</span>
+            <span class="post-date" title="2018-03-19 08:58:50">2018/03/19</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/11/wepy开发速查手册/"
+           data-tag="wepy"
+           data-author="" >
+            <span class="post-title" title="wepy开发速查手册">wepy开发速查手册</span>
+            <span class="post-date" title="2018-03-11 16:25:24">2018/03/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/04/微信小程序api之setEnableDebug说明/"
+           data-tag="微信小程序"
+           data-author="" >
+            <span class="post-title" title="微信小程序api之setEnableDebug说明">微信小程序api之setEnableDebug说明</span>
+            <span class="post-date" title="2018-03-04 15:20:01">2018/03/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/28/函数式编程入门/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="函数式编程入门">函数式编程入门</span>
+            <span class="post-date" title="2018-02-28 22:02:09">2018/02/28</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/22/mark/"
+           data-tag="记录"
+           data-author="" >
+            <span class="post-title" title="mark">mark</span>
+            <span class="post-date" title="2018-02-22 18:57:35">2018/02/22</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/12/html5的data/"
+           data-tag="html5"
+           data-author="" >
+            <span class="post-title" title="html5的data-*">html5的data-*</span>
+            <span class="post-date" title="2018-02-12 18:51:30">2018/02/12</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/30/日期-学习到的知识点/"
+           data-tag="学习记录"
+           data-author="" >
+            <span class="post-title" title="日期+学习到的知识点">日期+学习到的知识点</span>
+            <span class="post-date" title="2018-01-30 21:26:20">2018/01/30</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/25/解决小程序音频自定义组件不同时播放问题/"
+           data-tag="工作经验"
+           data-author="" >
+            <span class="post-title" title="解决小程序音频自定义组件不同时播放问题">解决小程序音频自定义组件不同时播放问题</span>
+            <span class="post-date" title="2018-01-25 00:22:07">2018/01/25</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/18/node流程控制之串行/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="node流程控制之串行">node流程控制之串行</span>
+            <span class="post-date" title="2018-01-18 18:22:28">2018/01/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/11/Node编程基础/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Node编程基础">Node编程基础</span>
+            <span class="post-date" title="2018-01-11 13:59:29">2018/01/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/11/基本视觉格式化/"
+           data-tag="css读书笔记"
+           data-author="" >
+            <span class="post-title" title="基本视觉格式化">基本视觉格式化</span>
+            <span class="post-date" title="2018-01-11 13:48:33">2018/01/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/09/前端工作遇到的小知识点/"
+           data-tag="工作"
+           data-author="" >
+            <span class="post-title" title="前端工作遇到的小知识点">前端工作遇到的小知识点</span>
+            <span class="post-date" title="2018-01-09 10:21:41">2018/01/09</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/05/html标签/"
+           data-tag="html"
+           data-author="" >
+            <span class="post-title" title="html标签">html标签</span>
+            <span class="post-date" title="2018-01-05 13:24:08">2018/01/05</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2017/11/26/JS对象漫谈/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="JS对象漫谈">JS对象漫谈</span>
+            <span class="post-date" title="2017-11-26 12:18:14">2017/11/26</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2017/11/18/Hexo食用教程/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo食用教程">Hexo食用教程</span>
+            <span class="post-date" title="2017-11-18 19:00:30">2017/11/18</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="使用react和react-使用React和React Router进行代码分片" class="article article-type-使用react和react" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Router进行代码分片</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">翻译</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2018-03-19 20:02:40'>2018-03-19 08:58</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用React和React-Router进行代码分片"><span class="toc-text">使用React和React Router进行代码分片</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用React和React-Router进行代码分片"><a href="#使用React和React-Router进行代码分片" class="headerlink" title="使用React和React Router进行代码分片"></a>使用React和React Router进行代码分片</h1><blockquote>
+<p>本文由林子翔翻译自<a href="https://medium.freecodecamp.org/code-splitting-with-react-and-react-router-62e174382d4c" target="_blank" rel="noopener">原文链接</a></p>
+</blockquote>
+<ul>
+<li><p>代码分片可以让你把应用分成多个包，使你的用户能逐步加载应用而变得流行起来。在这篇文章中，我们将会看一下什么是代码分片和怎么去做，了解怎么去配合React Router去实现它。</p>
+</li>
+<li><p>现在是2018年。你的用户不需要为了一小块内容而去下载整个应用。如果一个用户下载所有的代码，仅仅是为了请求一个注册页面是毫无意义的。而且用户在注册时并不需要下载用户设置页的巨大富文本编辑器代码。如果要下载那么多内容的话，是很浪费的。而且对于一些用户，他们会抱怨不尊重没有特别好带宽的他们。这个点子近年不仅很热，而且实现难度以指数级降低。甚至还有有了一个很酷的名字，代码分片。</p>
+</li>
+<li><p>这个点子很简单，即按需加载。实践的话，它可能有一点复杂。而复杂的原因并不是代码分片本身，而是现在有各种各样的工具来做这个事情。而且每个人对哪个方式最好都有自己的看法。当你第一次开始着手的时候，可能很困难分析什么是什么。</p>
+</li>
+<li><p>最常见的两种做法是使用Webpack和它的包加载器（bundle-loader），或者使用ECMAScript的stage3提案的动态import()。任何机会不用Webpack，我就不用，因此在这篇文章中，我将会使用动态import()。</p>
+</li>
+<li><p>如果你很熟悉ES模块，你应该知道它们是静态的。意思就是说你必须在编译时确定你要引入和导出的内容，而不是运行时。这也意味着你不能基于一些条件来动态导入一个模块。导入的内容必须声明在文件的最开头否则会抛出一个错误。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!user) &#123;</span><br><span class="line">    <span class="keyword">import</span> * <span class="keyword">as</span> api <span class="keyword">from</span> <span class="string">'./api'</span> <span class="comment">//不能这样做，“import”和“export”只能出现在文件顶部</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在，如果import不需要是静态的怎么办？意味着上面的代码可以工作?将会给我们带来什么好处？首先这意味着我可以按着需要加载某个模块。这非常强大，它让我们更接近按用户需要下载代码的想象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (editPost === <span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">import</span> * <span class="keyword">as</span> edit <span class="keyword">from</span> <span class="string">'./editpost'</span></span><br><span class="line">    </span><br><span class="line">    edit.showEditor()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>假设<strong>editpost</strong>包含一个非常大的富文本编辑器，我们需要保证用户在没有使用它的时候不会去下载它。</p>
+</li>
+<li><p>另外一个很酷的例子用于遗留支持。你可以在浏览器确定确实没有的时候才下载对应代码。</p>
+</li>
+<li><p>好消息（我在上文中曾间接提及）。这种类型的方法确实存在，它被Create React App（React项目的一种官方创建方法）支持,而且它是ECMAScript stage3的提案。不同的是替换了你之前使用import的方式。它使用起来像一个方法，并返回一个Promise，一旦模块完全加载，就会把这个模块resolve回来。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (editPost === <span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'./editpost'</span>)</span><br><span class="line">      .then(<span class="function"><span class="params">module</span> =&gt;</span> <span class="built_in">module</span>.showEditor())</span><br><span class="line">      .catch(<span class="function"><span class="params">e</span> =&gt;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>特别好，对吧？</p>
+</li>
+<li><p>现在我们知道怎么动态引入模块了，下一步是找出怎么结合React和React Router来使用它。</p>
+</li>
+<li><p>第一个（可能是最大的一个）问题，我们对React代码分片时，我们应该对哪里进行分片？典型的回答有两个</p>
+<ol>
+<li>在路由的层次上分片</li>
+<li>在组件的层次上分片</li>
+</ol>
+</li>
+<li><p>而更加常见的做法是在路由的层次上进行分片。你已经把你的应用分成了不同的路由，因此根据这个来代码分片是自然而然的事情。</p>
+</li>
+<li><p>让我以一个简单的React Router例子开始。我们将有三条路由分别是： <strong>/</strong>，<strong>/topics</strong>，<strong>/settings</strong>。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    BrowserRouter <span class="keyword">as</span> Router,</span><br><span class="line">    Route,</span><br><span class="line">    Link,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./Home'</span></span><br><span class="line"><span class="keyword">import</span> Topics <span class="keyword">from</span> <span class="string">'./Topics'</span></span><br><span class="line"><span class="keyword">import</span> Settings <span class="keyword">from</span> <span class="string">'./Settings'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">          &lt;Router&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">              &lt;ul&gt;</span><br><span class="line">              	&lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/'</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">			   &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/topics'</span>&gt;</span>Topics<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span> </span><br><span class="line">                &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/settings'</span>&gt;</span>Settings<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">              &lt;<span class="regexp">/ul&gt;    </span></span><br><span class="line"><span class="regexp">                </span></span><br><span class="line"><span class="regexp">              &lt;hr /</span>&gt;</span><br><span class="line">              </span><br><span class="line">              &lt;Route exact path=<span class="string">'/'</span> component=&#123;Home&#125; /&gt;</span><br><span class="line">              &lt;Route exact path=<span class="string">'/topics'</span> component=&#123;Topics&#125; /&gt;</span><br><span class="line"> 			 &lt;Route exact path=<span class="string">'/settings'</span> component=&#123;Settings&#125; /&gt;</span><br><span class="line">            &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">          &lt;/</span>Router&gt;  </span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在，假设我们的<strong>/settings</strong>路由内容非常多。它包含一个富文本编辑器，和一个原始超级马里奥兄弟的拷贝，和盖伊法利的高清图片。当用户不在<strong>/settings</strong>路由上时，我们不想让他们下载全部这些内容。让我们使用我们React和动态引入（import()）的知识来分片<strong>/settings</strong>路由。</p>
+</li>
+<li><p>就像我们在React里解决任何问题一样，我们先写一个组件。我们将叫它<strong>DynamicImport</strong>。这个组件的目的是动态的加载一个模块，只要模块加载好了，就把它传给它子节点（children）。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Settings = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">  &lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">    &#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">       ? <span class="xml"><span class="tag">&lt;<span class="name">Loading</span> /&gt;</span> </span></span><br><span class="line">       : &lt;Component &#123;...props&#125; /&gt;&#125;</span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">DynamicImport</span>&gt;</span></span></span><br><span class="line"><span class="xml">)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面的代码告诉我们两个重要的要素。第一，这个组件在执行时会接受一个属性<strong>load</strong>，将使用我们前面提到的语法动态引入一个模块。第二，这个组件会接受一个函数作为他的子节点，这个函数需要和引入进来的模块一起调用。</p>
+</li>
+<li><p>在我们深入思考<strong>DynamicImport</strong>的实现的之前，让我们想一下我们会怎么实现。第一件事我们需要确定的是要调用props.load。这让我们返回一个Promise，当它resolve的时候应该返回模块。接着，一旦我们有了模块，我们需要一种方式去触发重渲染，因此我们要把模块传给props.children并且调用它。怎样在React里面触发重渲染呢？设置state（setState）。通过把动态引入的模块加入到<strong>DynamicImport</strong>的state里面，就像我们之前使用的一样，我们遵循和React同样的过程- 获取数据 -&gt; 设置到state里 -&gt; 重渲染。而这一次我们只是把获取数据替换成了引入模块。</p>
+</li>
+<li><p>好了，首先，让我们加入初始的状态到组件里。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在，我们需要调props.load方法。这将返回一个promise同时在resolve后有一个模块</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125; </span><br><span class="line">    componentWillMount () &#123;</span><br><span class="line">        <span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function"><span class="params">component</span> =&gt;</span> &#123;</span><br><span class="line">            	<span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span>｛</span><br><span class="line">                  	component</span><br><span class="line">                 )&#125;           </span><br><span class="line">        	&#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这里有一个疑难杂症。如果我们ES模块和commonjs模块混用时，ES模块会有一个.default属性，而commonjs模块并没有。让我们改变一下代码，适应一下上面的情况。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.props.load()</span><br><span class="line">    .then(<span class="function"><span class="params">component</span> =&gt;</span> &#123;</span><br><span class="line">    	<span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        	component: component.default ?</span><br><span class="line">component.default : component</span><br><span class="line">    	&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在我们动态引入的模块并且把它加入到了state里面，最后一件事就是render方法长什么样了。如果你会记得，当<strong>DynamicImport</strong>使用的时候，它看起来像这样</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Settings = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">	&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">        &#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">            ? ＜Loading/&gt;</span><br><span class="line">        	: <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span>&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">DynamicImport</span>&gt;</span></span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意我们给组件传了一个函数作为子节点。这意味着我们需要执行这个函数，传递的是这个引入在state里的组件。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">	componentWillMount () &#123;</span><br><span class="line">    	<span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function">(<span class="params">component</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">				  component: component.default </span><br><span class="line">                    ? component.default</span><br><span class="line">                    : component</span><br><span class="line">                &#125;)</span><br><span class="line">        	&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.props.children(<span class="keyword">this</span>.state.component)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>欧了，现在任何时候我们动态引入一个模块，我们可以把它包裹在<strong>DynamicImport</strong>。如果我们之前尝试用这种方法到我们路由上，我们的代码会看起来像这样</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    BrowserRouter <span class="keyword">as</span> Router,</span><br><span class="line">    Route,</span><br><span class="line">    Link</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicImport</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">	componentWillMount () &#123;</span><br><span class="line">    	<span class="keyword">this</span>.props.load()</span><br><span class="line">            .then(<span class="function">(<span class="params">component</span>) =&gt;</span>　&#123;</span><br><span class="line">            	<span class="keyword">this</span>.setState(&#123;</span><br><span class="line">                    component: component.default </span><br><span class="line">                    ? component.default</span><br><span class="line">                    : component</span><br><span class="line">                &#125;)</span><br><span class="line">        	&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	render() &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.props.children(<span class="keyword">this</span>.state.component)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Home = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">	&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Home'</span>)&#125;&gt;</span><br><span class="line">    	&#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">          	? <span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Loading<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">            : <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">DynamicImport</span>&gt;</span></span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Topics = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">	&lt;DynamicImport load=&#123;() =&gt; <span class="keyword">import</span>(<span class="string">'./Settings'</span>)&#125;&gt;</span><br><span class="line">    	&#123;(Component) =&gt; Component === <span class="literal">null</span> </span><br><span class="line">        	? <span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Loading<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">            : <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...props</span>&#125;/&gt;</span></span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">DynamicImport</span>&gt;</span></span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">        	&lt;Router&gt;</span><br><span class="line">            	&lt;div&gt;</span><br><span class="line">                	&lt;ul&gt;</span><br><span class="line">                    	&lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/'</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">                        &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/topics'</span>&gt;</span>Topics<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">                        &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/settings'</span>&gt;</span>Settings<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">                    &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;hr /</span>&gt;</span><br><span class="line">                    &lt;Route exact path=<span class="string">'/'</span> component=&#123;Home&#125; /&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">'/topics'</span> component=&#123;Topics&#125; /&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">'/settings'</span> component=&#123;Settings&#125; /&gt;</span><br><span class="line">                &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/</span>Router&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+<p>我们怎么知道这个确实起作用并且分片了我们的路由呢？如果你用一个React官方的Create React App创建一个应用跑一下<strong>npm run build</strong>，你将看到应用被分片了。</p>
+<p><img src="./chunk.png" alt="包"></p>
+</li>
+<li><p>每一个包被一一引入进了我们的应用</p>
+</li>
+<li><p>你到了这一步，可以跳个舞轻松一下了</p>
+</li>
+<li><p>还记得我讲到有两种层级的代码分片方式吗？我们曾放在手边的引导</p>
+<ol>
+<li>以路由层级分片</li>
+<li>以组建层级分片</li>
+</ol>
+</li>
+<li><p>至此，我们只讲了路由层级的代码分片。到这里很多人就停止了。在路由层级上代码分片，就像刷牙一样，你天天刷，牙齿大部分很干净，但是还会有蛀牙。</p>
+</li>
+<li><p>除了思考用路由的分片方式，你应该想想怎么用组件的方式去分片。如果你在弹层里面有很多内容，路由分片还是会下载弹层的代码，无论这个弹层是否显示。</p>
+</li>
+<li><p>从这一点看，它更多是在你大脑里的一种变更而不是新知识。你已经知道如何使用动态引入，现在你需要找出哪些组件是在用到时才要下载的。</p>
+</li>
+<li><p>如果我不提React Loadable那我就是哑巴了。它是一个“通过动态引入加载组件的高阶组件”。重要的是，它处理所有我们提到的事情，并把它做成了一个精致的API。它甚至处理了很多很边角的事情，比如我们没有考虑服务端渲染和错误处理。看看它吧，如果你想要一个简单，开箱即用的解决方案的话。</p>
+<p>​</p>
+<p>(完，逃)</p>
+</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>React Native填坑系列2---react navigation | 1024子翔的程序人生</title>
+  <meta name="keywords" content=" React Native ">
+  <meta name="description" content="React Native填坑系列2---react navigation | 1024子翔的程序人生">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="1024子翔的程序人生">
+<meta property="og:url" content="https://choicelin.github.io/categories/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-21T07:47:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1024子翔的程序人生">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+</div>
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Choicelin</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="facebook" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="instagram" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-instagram"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-reddit"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="http://weibo.com/u/2307534817" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/ff56736de7cf" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:jaytp@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="neteasemusic" href="https://music.163.com/#/user/home?id=88151013" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-neteasemusic"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(40)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="40">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ajax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>centos7</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>css</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>css读书笔记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Google Blockly</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html5</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mac</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>react</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>React Native</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>wepy</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>前端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>地图</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>学习记录</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作经验</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>开发环境</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>异步</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>微信小程序</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>心得体会</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>心情</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>程序心情</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>笔记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>翻译</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>计算机科学</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>记录</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 "
+           href="/2020/06/18/Blockly设置预置块到代码区/"
+           data-tag="Google Blockly"
+           data-author="" >
+            <span class="post-title" title="Blockly设置预置块到代码区">Blockly设置预置块到代码区</span>
+            <span class="post-date" title="2020-06-18 17:52:19">2020/06/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/12/14/mac安装ishowu-audio-capture后无法开机解决/"
+           data-tag="mac"
+           data-author="" >
+            <span class="post-title" title="mac安装ishowu audio capture后无法开机解决">mac安装ishowu audio capture后无法开机解决</span>
+            <span class="post-date" title="2019-12-14 10:59:54">2019/12/14</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/09/16/mapbox做画多边形来进行地理位置信息查询/"
+           data-tag="地图"
+           data-author="" >
+            <span class="post-title" title="mapbox做画多边形来进行地理位置信息查询">mapbox做画多边形来进行地理位置信息查询</span>
+            <span class="post-date" title="2019-09-16 11:49:47">2019/09/16</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/07/28/Node-js异步演进过程/"
+           data-tag="异步"
+           data-author="" >
+            <span class="post-title" title="Node.js异步演进过程">Node.js异步演进过程</span>
+            <span class="post-date" title="2019-07-28 11:24:12">2019/07/28</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/07/20/近况/"
+           data-tag="程序心情"
+           data-author="" >
+            <span class="post-title" title="近况">近况</span>
+            <span class="post-date" title="2019-07-20 18:00:36">2019/07/20</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/05/02/unmanaged-hostwind设置ssh远程登录/"
+           data-tag="centos7"
+           data-author="" >
+            <span class="post-title" title="unmanaged hostwind设置ssh远程登录">unmanaged hostwind设置ssh远程登录</span>
+            <span class="post-date" title="2019-05-02 10:04:49">2019/05/02</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/04/14/React-Native填坑系列2-react-navigation/"
+           data-tag="React Native"
+           data-author="" >
+            <span class="post-title" title="React Native填坑系列2---react navigation">React Native填坑系列2---react navigation</span>
+            <span class="post-date" title="2019-04-14 11:59:08">2019/04/14</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/"
+           data-tag="React Native"
+           data-author="" >
+            <span class="post-title" title="React Native填坑系列之一（Could not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）">React Native填坑系列之一（Could not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）</span>
+            <span class="post-date" title="2019-04-08 13:16:32">2019/04/08</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/02/21/2019前端windows环境搭建指南/"
+           data-tag="开发环境"
+           data-author="" >
+            <span class="post-title" title="2019前端windows环境搭建指南">2019前端windows环境搭建指南</span>
+            <span class="post-date" title="2019-02-21 15:45:42">2019/02/21</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/01/23/加油，小林/"
+           data-tag="心情"
+           data-author="" >
+            <span class="post-title" title="加油，小林">加油，小林</span>
+            <span class="post-date" title="2019-01-23 20:16:09">2019/01/23</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/01/12/CSS布局/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS布局">CSS布局</span>
+            <span class="post-date" title="2019-01-12 12:18:30">2019/01/12</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/11/17/升级React-Redux/"
+           data-tag="react"
+           data-author="" >
+            <span class="post-title" title="升级React:Redux">升级React:Redux</span>
+            <span class="post-date" title="2018-11-17 10:33:59">2018/11/17</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/11/08/NODE-ENV作用知多少/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="NODE_ENV作用知多少">NODE_ENV作用知多少</span>
+            <span class="post-date" title="2018-11-08 16:13:58">2018/11/08</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/25/ESLIN配置airbnb标准/"
+           data-tag="笔记"
+           data-author="" >
+            <span class="post-title" title="ESLIN配置airbnb标准">ESLIN配置airbnb标准</span>
+            <span class="post-date" title="2018-08-25 09:20:18">2018/08/25</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/24/css积累一/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="css积累一">css积累一</span>
+            <span class="post-date" title="2018-08-24 19:03:59">2018/08/24</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/24/微信小程序一次性事件实现/"
+           data-tag="记录"
+           data-author="" >
+            <span class="post-title" title="微信小程序一次性事件实现">微信小程序一次性事件实现</span>
+            <span class="post-date" title="2018-08-24 16:14:56">2018/08/24</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/23/谈谈引用和求值策略/"
+           data-tag="计算机科学"
+           data-author="" >
+            <span class="post-title" title="谈谈引用和求值策略">谈谈引用和求值策略</span>
+            <span class="post-date" title="2018-07-23 10:32:25">2018/07/23</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/18/在vue中配置使用SCSS预编译/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="在vue中配置使用SCSS预编译">在vue中配置使用SCSS预编译</span>
+            <span class="post-date" title="2018-07-18 19:12:15">2018/07/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/06/在mpvue中使用图表插件wx-charts/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="在mpvue中使用图表插件wx-charts">在mpvue中使用图表插件wx-charts</span>
+            <span class="post-date" title="2018-07-06 10:00:43">2018/07/06</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/异步流程控制的两种思路/"
+           data-tag="ajax"
+           data-author="" >
+            <span class="post-title" title="异步流程控制的两种思路">异步流程控制的两种思路</span>
+            <span class="post-date" title="2018-05-15 23:13:49">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/node写接口无响应原因总结/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="node写接口无响应原因总结">node写接口无响应原因总结</span>
+            <span class="post-date" title="2018-05-15 23:12:38">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/前端工作积累的知识点二/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="前端工作积累的知识点二">前端工作积累的知识点二</span>
+            <span class="post-date" title="2018-05-15 23:10:19">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/04/bug心路2/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="bug心路2">bug心路2</span>
+            <span class="post-date" title="2018-05-04 00:55:23">2018/05/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/04/06/mysql学习笔记/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql学习笔记">mysql学习笔记</span>
+            <span class="post-date" title="2018-04-06 08:17:08">2018/04/06</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/04/04/css可以继承的属性/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="css可以继承的属性">css可以继承的属性</span>
+            <span class="post-date" title="2018-04-04 06:16:29">2018/04/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/19/使用React和React Router进行代码分片/"
+           data-tag="翻译"
+           data-author="" >
+            <span class="post-title" title="Router进行代码分片">Router进行代码分片</span>
+            <span class="post-date" title="2018-03-19 08:58:50">2018/03/19</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/11/wepy开发速查手册/"
+           data-tag="wepy"
+           data-author="" >
+            <span class="post-title" title="wepy开发速查手册">wepy开发速查手册</span>
+            <span class="post-date" title="2018-03-11 16:25:24">2018/03/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/04/微信小程序api之setEnableDebug说明/"
+           data-tag="微信小程序"
+           data-author="" >
+            <span class="post-title" title="微信小程序api之setEnableDebug说明">微信小程序api之setEnableDebug说明</span>
+            <span class="post-date" title="2018-03-04 15:20:01">2018/03/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/28/函数式编程入门/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="函数式编程入门">函数式编程入门</span>
+            <span class="post-date" title="2018-02-28 22:02:09">2018/02/28</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/22/mark/"
+           data-tag="记录"
+           data-author="" >
+            <span class="post-title" title="mark">mark</span>
+            <span class="post-date" title="2018-02-22 18:57:35">2018/02/22</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/12/html5的data/"
+           data-tag="html5"
+           data-author="" >
+            <span class="post-title" title="html5的data-*">html5的data-*</span>
+            <span class="post-date" title="2018-02-12 18:51:30">2018/02/12</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/30/日期-学习到的知识点/"
+           data-tag="学习记录"
+           data-author="" >
+            <span class="post-title" title="日期+学习到的知识点">日期+学习到的知识点</span>
+            <span class="post-date" title="2018-01-30 21:26:20">2018/01/30</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/25/解决小程序音频自定义组件不同时播放问题/"
+           data-tag="工作经验"
+           data-author="" >
+            <span class="post-title" title="解决小程序音频自定义组件不同时播放问题">解决小程序音频自定义组件不同时播放问题</span>
+            <span class="post-date" title="2018-01-25 00:22:07">2018/01/25</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/18/node流程控制之串行/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="node流程控制之串行">node流程控制之串行</span>
+            <span class="post-date" title="2018-01-18 18:22:28">2018/01/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/11/Node编程基础/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Node编程基础">Node编程基础</span>
+            <span class="post-date" title="2018-01-11 13:59:29">2018/01/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/11/基本视觉格式化/"
+           data-tag="css读书笔记"
+           data-author="" >
+            <span class="post-title" title="基本视觉格式化">基本视觉格式化</span>
+            <span class="post-date" title="2018-01-11 13:48:33">2018/01/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/09/前端工作遇到的小知识点/"
+           data-tag="工作"
+           data-author="" >
+            <span class="post-title" title="前端工作遇到的小知识点">前端工作遇到的小知识点</span>
+            <span class="post-date" title="2018-01-09 10:21:41">2018/01/09</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/05/html标签/"
+           data-tag="html"
+           data-author="" >
+            <span class="post-title" title="html标签">html标签</span>
+            <span class="post-date" title="2018-01-05 13:24:08">2018/01/05</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2017/11/26/JS对象漫谈/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="JS对象漫谈">JS对象漫谈</span>
+            <span class="post-date" title="2017-11-26 12:18:14">2017/11/26</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2017/11/18/Hexo食用教程/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo食用教程">Hexo食用教程</span>
+            <span class="post-date" title="2017-11-18 19:00:30">2017/11/18</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-React-Native填坑系列2-react-navigation" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">React Native填坑系列2---react navigation</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">React Native</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2019-04-14 13:59:30'>2019-04-14 11:59</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引言"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于要实现的路由形式"><span class="toc-text">关于要实现的路由形式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#React-Navigation简介"><span class="toc-text">React Navigation简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何实现这种路由形式"><span class="toc-text">如何实现这种路由形式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#createSwitchNavigator是什么？"><span class="toc-text">createSwitchNavigator是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义根视图的子切换视图"><span class="toc-text">定义根视图的子切换视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auth-Component"><span class="toc-text">Auth Component</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PageStack-Navigator"><span class="toc-text">PageStack Navigator</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#createStackNavigator"><span class="toc-text">createStackNavigator</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BottomNavigator"><span class="toc-text">BottomNavigator</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#createBottomTabNavigator"><span class="toc-text">createBottomTabNavigator</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-text">结语</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>继上期填坑后，笔者继续推进安卓app的开发，web上都有导航路由的功能，app要实现这个，需要模拟类似web导航的特性，目前有一个静态路由的库比较好，叫react-navigation，于是笔者开启了第二段填坑之旅。</p>
+<h2 id="关于要实现的路由形式"><a href="#关于要实现的路由形式" class="headerlink" title="关于要实现的路由形式"></a>关于要实现的路由形式</h2><p>在准备阶段，我们大多数都会想尽可能的覆盖很多情况，所以笔者也是，关于路由的构成，首先有鉴权，然后有底部导航，接着每层导航对应的页面组件有内页，同时内页不会有底部导航。这是笔者目前的一个形式。</p>
+<h3 id="React-Navigation简介"><a href="#React-Navigation简介" class="headerlink" title="React Navigation简介"></a>React Navigation简介</h3><p>就像引言提到的这是在app中模拟的一个导航历史功能的库。浏览器的导航历史维持在一个堆栈中，每次的后退就是出栈，前进就是进栈，栈顶就是当前显示的页面。React Navigation除了提供了这些基础的功能以外，还提供了手势和动画的效果。</p>
+<h2 id="如何实现这种路由形式"><a href="#如何实现这种路由形式" class="headerlink" title="如何实现这种路由形式"></a>如何实现这种路由形式</h2><p>首先React Native和web中的单页应用(Vue SPA和React SPA等)有些相似，都会有一个根视图，然后向下包含内容。比如在Vue中的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>)</span><br></pre></td></tr></table></figure>
+<p>这里的根就是id为app的节点。</p>
+<p>而在React Native中也有类似的行为。</p>
+<p>所以第一件事情就是确定这个根视图。根据react-navigation官方推荐的鉴权是使用createSwitchNavigator。由于用户进来第一件事情对开发者来说，笔者认为是鉴权，也就是确定用户是否有权限进入一些页面，同时确定用户会进哪里，所以笔者将该组件作为app的根视图。</p>
+<h3 id="createSwitchNavigator是什么？"><a href="#createSwitchNavigator是什么？" class="headerlink" title="createSwitchNavigator是什么？"></a>createSwitchNavigator是什么？</h3><p>下面引用官方的一段介绍：</p>
+<blockquote>
+<p>The purpose of SwitchNavigator is to only ever show one screen at a time. By default, it does not handle back actions and it resets routes to their default state when you switch away.</p>
+</blockquote>
+<p>笔者翻译：SwitchNavigator的目的在于在同一时间下仅显示一个页面。它的默认行为：</p>
+<ol>
+<li>不处理返回动作，可以理解为点不了返回，无需担心还会返回到了之前的页面</li>
+<li>其正在显示的页面会重置为其最初的设置，也就是重新加载了对应的页面，会重头初始化</li>
+</ol>
+<p>SwitchNavigator如其名称一样，是在多个视图之间切换（switch），那么我们的根视图下面就会有子视图的显示切换，这些切换的视图如何定义呢？</p>
+<h3 id="定义根视图的子切换视图"><a href="#定义根视图的子切换视图" class="headerlink" title="定义根视图的子切换视图"></a>定义根视图的子切换视图</h3><p>talk is cheap，show me the code.好，那么就上代码。</p>
+<blockquote>
+<p>/ 指代项目根目录，本项目由react-native-cli搭建</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /routes/AppNavigator.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> &#123;createSwitchNavigator&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ....省略部分代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createSwitchNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    AuthPage: Auth,</span><br><span class="line">    Pages: PageStack</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">'AuthPage'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /App.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React, &#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;createAppContainer&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">import</span> AppNavigator <span class="keyword">from</span> <span class="string">'./routes/AppNavigator'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createAppContainer(AppNavigator)</span><br></pre></td></tr></table></figure>
+<p>在AppNavigator.js中可以看到createSwitchNavigator中有两个参数，第二个参数里面的initialRouteName是指默认显示的视图(已切换上的视图)，第一个参数里面配置的是可供切换的视图，AuthPage和Pages是指的切换的视图的名字，后面跟的值是实际的Navigator对象或者Component，说人话就是实际的视图对象，目前笔者用到的视图对象是上述提到的两种，Navigator对象是createStackNavigator和createBottomTabNavigator等创建出来的，而Compnenent则是指React创建的视图组件。当然，现在这段有点奇怪，因为Auth和PageStack都还没创建和引入，它们在省略的代码里，所以莫慌，我们接下来，慢慢实现省略的代码。</p>
+<h3 id="Auth-Component"><a href="#Auth-Component" class="headerlink" title="Auth Component"></a>Auth Component</h3><p>下面笔者将会定义上文提到Auth，它是一个React Component，由本文仅介绍路由的实现形式，具体鉴权代码是没有的。但是鉴权的逻辑会放在这个组件里。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /views/Auth.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React, &#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;View, Text, StyleSheet&#125; <span class="keyword">from</span> <span class="string">'react-native'</span></span><br><span class="line"><span class="keyword">import</span> Icon <span class="keyword">from</span> <span class="string">'react-native-vector-icons/AntDesign'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Auth</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;View style=&#123;[styles.fc, styles.flex1]&#125;&gt;</span><br><span class="line">        &lt;Text style=&#123;styles.f38&#125;&gt;auth&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">        &lt;Icon name="yuque" size=&#123;30&#125; color="#004aff"/</span>&gt;</span><br><span class="line">      &lt;<span class="regexp">/View&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const styles = StyleSheet.create(&#123;</span></span><br><span class="line"><span class="regexp">  fc: &#123;</span></span><br><span class="line"><span class="regexp">    alignItems: 'center',</span></span><br><span class="line"><span class="regexp">    justifyContent: 'center'</span></span><br><span class="line"><span class="regexp">  &#125;,</span></span><br><span class="line"><span class="regexp">  flex1: &#123;</span></span><br><span class="line"><span class="regexp">    flex: 1</span></span><br><span class="line"><span class="regexp">  &#125;,</span></span><br><span class="line"><span class="regexp">  f38: &#123;</span></span><br><span class="line"><span class="regexp">    fontSize: 38</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;)</span></span><br></pre></td></tr></table></figure>
+<p>这就是Auth的一个静态的壳，下面笔者在/routes/AppNavigator.js中引入该组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /routes/AppNavigator.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> &#123;createSwitchNavigator&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">import</span> Auth <span class="keyword">from</span> <span class="string">'../views/Auth'</span>  <span class="comment">// 新增的代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ....省略部分代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createSwitchNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    AuthPage: Auth,</span><br><span class="line">    Pages: PageStack</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">'AuthPage'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="PageStack-Navigator"><a href="#PageStack-Navigator" class="headerlink" title="PageStack Navigator"></a>PageStack Navigator</h3><p>上文中引入了Auth组件，笔者的路由又进了一步。那么现在来看下这个PageStack怎么做。还记得最初想的路由形式吗？</p>
+<p>有鉴权和底部导航还有内页。这里AuthPage就是鉴权，所以逻辑可以梳理一下，首先用户进来会显示initialRouteName提供的AuthPage视图，即/views/Auth.js组件展示的内容；接着通过Auth内的判断是否有后端的token后，如果有token，会跳转到Pages视图，显示PageStack的内容，如果没有token，那么我们可以再加一个视图，跳转过去。但是目前笔者准备暂时将其停留在原地。需要注意的是，跳转的代码和判断的逻辑还木有加上，笔者需要先完成现在路由的构建。当我们进入PageStack后，底部导航就需要显示出来，然后显示对应的页面，并备好内页(即当前导航的页面的深层页面)。下面笔者来添加点代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /routes/AppNavigator.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  createSwitchNavigator, </span><br><span class="line">  createStackNavigator</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">import</span> Auth <span class="keyword">from</span> <span class="string">'../views/Auth'</span>  </span><br><span class="line"><span class="keyword">import</span> MyTests <span class="keyword">from</span> <span class="string">'../views/MyTests'</span> <span class="comment">// 新增的代码</span></span><br><span class="line"><span class="keyword">import</span> TestDetail <span class="keyword">from</span> <span class="string">'../views/TestDetail'</span> <span class="comment">// 新增的代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ....省略部分代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 新增的代码</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> PageStack = createStackNavigator(&#123;</span><br><span class="line">  MyTests: &#123;</span><br><span class="line">    screen: MyTests	 <span class="comment">// Component</span></span><br><span class="line">  &#125;,</span><br><span class="line">  TestDetail: &#123;</span><br><span class="line">    screen: TestDetail	<span class="comment">// Component</span></span><br><span class="line">  &#125;,</span><br><span class="line">  Bottom: &#123;</span><br><span class="line">    screen: BottomNavigator</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  initialRouteName: <span class="string">'Bottom'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createSwitchNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    AuthPage: Auth,</span><br><span class="line">    Pages: PageStack</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">'AuthPage'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>上述代码注明Component的都是指和Auth类似的React组件，它们的定义可以仿照Auth的定义来实现，只是没有了鉴权逻辑。同时这里的两个Component指的就是上文中的内页。</p>
+<h4 id="createStackNavigator"><a href="#createStackNavigator" class="headerlink" title="createStackNavigator"></a>createStackNavigator</h4><p>上面的代码用到了一个方法叫createStackNavigator，这个方法即创建页面路由栈的方法，第一个参数是包含的路由，第二参数里面的initialRouteName指定这个Navigator视图激活后的默认显示的Navigator或者Component(激活是指当前视图显示的是该Navigator)</p>
+<h3 id="BottomNavigator"><a href="#BottomNavigator" class="headerlink" title="BottomNavigator"></a>BottomNavigator</h3><p>下面我们来定义底部导航，在前端里有个专业术语叫tabBar，指的就是这个。这个是一个Navigator对象，通过createBottomTabNavigator方法来创建</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * /routes/AppNavigator.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123;Platform&#125; <span class="keyword">from</span> <span class="string">'react-native'</span></span><br><span class="line"><span class="keyword">import</span> &#123;createBottomTabNavigator, createStackNavigator, createSwitchNavigator&#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">import</span> Icon <span class="keyword">from</span> <span class="string">'react-native-vector-icons/AntDesign'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'../views/Home'</span> <span class="comment">// Component</span></span><br><span class="line"><span class="keyword">import</span> User <span class="keyword">from</span> <span class="string">'../views/User'</span> <span class="comment">// Component</span></span><br><span class="line"><span class="keyword">import</span> Auth <span class="keyword">from</span> <span class="string">'../views/Auth'</span> <span class="comment">// Component</span></span><br><span class="line"><span class="keyword">import</span> MyTests <span class="keyword">from</span> <span class="string">'../views/MyTests'</span> <span class="comment">// Component</span></span><br><span class="line"><span class="keyword">import</span> TestDetail <span class="keyword">from</span> <span class="string">'../views/TestDetail'</span> <span class="comment">// Component</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> BottomNavigator = createBottomTabNavigator(&#123;</span><br><span class="line">  Home: &#123;</span><br><span class="line">    screen: Home,</span><br><span class="line">    navigationOptions: &#123;</span><br><span class="line">      tabBarLabel: <span class="string">'测验'</span>,</span><br><span class="line">      tabBarIcon: <span class="function">(<span class="params">&#123;tintColor, focused&#125;</span>) =&gt;</span> (</span><br><span class="line">        &lt;Icon</span><br><span class="line">          name=<span class="string">"calculator"</span></span><br><span class="line">          color=&#123;tintColor&#125;</span><br><span class="line">          size=&#123;<span class="number">26</span>&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  User: &#123;</span><br><span class="line">    screen: User,</span><br><span class="line">    navigationOptions: &#123;</span><br><span class="line">      tabBarLabel: <span class="string">'个人'</span>,</span><br><span class="line">      tabBarIcon: <span class="function">(<span class="params">&#123;tintColor, focused&#125;</span>) =&gt;</span></span><br><span class="line">        (</span><br><span class="line">          &lt;Icon</span><br><span class="line">            name=<span class="string">"user"</span></span><br><span class="line">            color=&#123;tintColor&#125;</span><br><span class="line">            size=&#123;<span class="number">26</span>&#125;</span><br><span class="line">          /&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  tabBarOptions: &#123;</span><br><span class="line">    activeTintColor: Platform.OS === <span class="string">'ios'</span> ? <span class="string">'#e91e63'</span> : <span class="string">'#004aff'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">const</span> PageStack = createStackNavigator(&#123;</span><br><span class="line">  MyTests: &#123;</span><br><span class="line">    screen: MyTests</span><br><span class="line">  &#125;,</span><br><span class="line">  TestDetail: &#123;</span><br><span class="line">    screen: TestDetail</span><br><span class="line">  &#125;,</span><br><span class="line">  Bottom: &#123;</span><br><span class="line">    screen: BottomNavigator</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  initialRouteName: <span class="string">'Bottom'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createSwitchNavigator(</span><br><span class="line">  &#123;</span><br><span class="line">    Auth,</span><br><span class="line">    Pages: PageStack</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    initialRouteName: <span class="string">'Pages'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>上述代码中的Component跟PageStack Navigator提到的Component注释是同一个意思。</p>
+<h4 id="createBottomTabNavigator"><a href="#createBottomTabNavigator" class="headerlink" title="createBottomTabNavigator"></a>createBottomTabNavigator</h4><p>这个方法用来创建一个底部导航，显示效果如下图：</p>
+<p><img src="./tabBar.png" alt="tabbar"></p>
+<p>(用长方形圈起来的部分是tabbar，用椭圆圈起来的部分是tabbar激活的部分承载的视图)</p>
+<p>createBottomTabNavigator有两个参数，第一个参数是配置视图有多少个，即承载的视图和下方的tabbar文字和图标，第二个参数时是对第一个参数里的视图，配置公共的属性，比如这里用到的activeTintColor是指的tabbar激活(即被选中)时的颜色，这里的#004aff是蓝色，Platform.OS是用来是区分是iOS平台还是安卓平台，笔者展示的图片是安卓平台，所以读者看到的激活状态是蓝色的。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>到这里，其实整个路由的形式已经做好了，接下来就是对它进行添砖加瓦，或者进行更进一步的扩展，目前笔者的需求暂时只会用到这些，后期会根据新的需求做调整。</p>
+<p>最后，感谢大家的观看，欢迎使用全栈工坊微信小程序并关注java技术大本营微信公众号。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

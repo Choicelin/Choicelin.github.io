@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>在mpvue中使用图表插件wx-charts | 1024子翔的程序人生</title>
+  <meta name="keywords" content=" 心得体会 ">
+  <meta name="description" content="在mpvue中使用图表插件wx-charts | 1024子翔的程序人生">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="1024子翔的程序人生">
+<meta property="og:url" content="https://choicelin.github.io/categories/index.html">
+<meta property="og:site_name" content="1024子翔的程序人生">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-21T07:47:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1024子翔的程序人生">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+</div>
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Choicelin</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="facebook" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="instagram" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-instagram"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-reddit"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="http://weibo.com/u/2307534817" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/ff56736de7cf" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:jaytp@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="neteasemusic" href="https://music.163.com/#/user/home?id=88151013" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-neteasemusic"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(40)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="40">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ajax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>centos7</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>css</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>css读书笔记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Google Blockly</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html5</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mac</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>react</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>React Native</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>wepy</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>前端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>地图</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>学习记录</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作经验</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>开发环境</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>异步</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>微信小程序</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>心得体会</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>心情</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>程序心情</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>笔记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>翻译</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>计算机科学</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>记录</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 "
+           href="/2020/06/18/Blockly设置预置块到代码区/"
+           data-tag="Google Blockly"
+           data-author="" >
+            <span class="post-title" title="Blockly设置预置块到代码区">Blockly设置预置块到代码区</span>
+            <span class="post-date" title="2020-06-18 17:52:19">2020/06/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/12/14/mac安装ishowu-audio-capture后无法开机解决/"
+           data-tag="mac"
+           data-author="" >
+            <span class="post-title" title="mac安装ishowu audio capture后无法开机解决">mac安装ishowu audio capture后无法开机解决</span>
+            <span class="post-date" title="2019-12-14 10:59:54">2019/12/14</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/09/16/mapbox做画多边形来进行地理位置信息查询/"
+           data-tag="地图"
+           data-author="" >
+            <span class="post-title" title="mapbox做画多边形来进行地理位置信息查询">mapbox做画多边形来进行地理位置信息查询</span>
+            <span class="post-date" title="2019-09-16 11:49:47">2019/09/16</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/07/28/Node-js异步演进过程/"
+           data-tag="异步"
+           data-author="" >
+            <span class="post-title" title="Node.js异步演进过程">Node.js异步演进过程</span>
+            <span class="post-date" title="2019-07-28 11:24:12">2019/07/28</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/07/20/近况/"
+           data-tag="程序心情"
+           data-author="" >
+            <span class="post-title" title="近况">近况</span>
+            <span class="post-date" title="2019-07-20 18:00:36">2019/07/20</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/05/02/unmanaged-hostwind设置ssh远程登录/"
+           data-tag="centos7"
+           data-author="" >
+            <span class="post-title" title="unmanaged hostwind设置ssh远程登录">unmanaged hostwind设置ssh远程登录</span>
+            <span class="post-date" title="2019-05-02 10:04:49">2019/05/02</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/04/14/React-Native填坑系列2-react-navigation/"
+           data-tag="React Native"
+           data-author="" >
+            <span class="post-title" title="React Native填坑系列2---react navigation">React Native填坑系列2---react navigation</span>
+            <span class="post-date" title="2019-04-14 11:59:08">2019/04/14</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/04/08/React-Native填坑系列之一（lCould-not-GET-https-dl-google-com-dl-android-maven2-com-android-tools-build-gradle-2-2-2-gradle-2-2-2-pom-Connect-to-127-0-0-1-1089-127-0-0-1-failed-Connection-refused-Connection-refused-）/"
+           data-tag="React Native"
+           data-author="" >
+            <span class="post-title" title="React Native填坑系列之一（Could not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）">React Native填坑系列之一（Could not GET &#39;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.2.1/gradle-3.2.1.pom&#39;. &gt; Connect to 127.0.0.1:1089 [/127.0.0.1] failed: Connection refused (Connection refused)）</span>
+            <span class="post-date" title="2019-04-08 13:16:32">2019/04/08</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/02/21/2019前端windows环境搭建指南/"
+           data-tag="开发环境"
+           data-author="" >
+            <span class="post-title" title="2019前端windows环境搭建指南">2019前端windows环境搭建指南</span>
+            <span class="post-date" title="2019-02-21 15:45:42">2019/02/21</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/01/23/加油，小林/"
+           data-tag="心情"
+           data-author="" >
+            <span class="post-title" title="加油，小林">加油，小林</span>
+            <span class="post-date" title="2019-01-23 20:16:09">2019/01/23</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2019/01/12/CSS布局/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS布局">CSS布局</span>
+            <span class="post-date" title="2019-01-12 12:18:30">2019/01/12</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/11/17/升级React-Redux/"
+           data-tag="react"
+           data-author="" >
+            <span class="post-title" title="升级React:Redux">升级React:Redux</span>
+            <span class="post-date" title="2018-11-17 10:33:59">2018/11/17</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/11/08/NODE-ENV作用知多少/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="NODE_ENV作用知多少">NODE_ENV作用知多少</span>
+            <span class="post-date" title="2018-11-08 16:13:58">2018/11/08</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/25/ESLIN配置airbnb标准/"
+           data-tag="笔记"
+           data-author="" >
+            <span class="post-title" title="ESLIN配置airbnb标准">ESLIN配置airbnb标准</span>
+            <span class="post-date" title="2018-08-25 09:20:18">2018/08/25</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/24/css积累一/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="css积累一">css积累一</span>
+            <span class="post-date" title="2018-08-24 19:03:59">2018/08/24</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/08/24/微信小程序一次性事件实现/"
+           data-tag="记录"
+           data-author="" >
+            <span class="post-title" title="微信小程序一次性事件实现">微信小程序一次性事件实现</span>
+            <span class="post-date" title="2018-08-24 16:14:56">2018/08/24</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/23/谈谈引用和求值策略/"
+           data-tag="计算机科学"
+           data-author="" >
+            <span class="post-title" title="谈谈引用和求值策略">谈谈引用和求值策略</span>
+            <span class="post-date" title="2018-07-23 10:32:25">2018/07/23</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/18/在vue中配置使用SCSS预编译/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="在vue中配置使用SCSS预编译">在vue中配置使用SCSS预编译</span>
+            <span class="post-date" title="2018-07-18 19:12:15">2018/07/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/07/06/在mpvue中使用图表插件wx-charts/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="在mpvue中使用图表插件wx-charts">在mpvue中使用图表插件wx-charts</span>
+            <span class="post-date" title="2018-07-06 10:00:43">2018/07/06</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/异步流程控制的两种思路/"
+           data-tag="ajax"
+           data-author="" >
+            <span class="post-title" title="异步流程控制的两种思路">异步流程控制的两种思路</span>
+            <span class="post-date" title="2018-05-15 23:13:49">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/node写接口无响应原因总结/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="node写接口无响应原因总结">node写接口无响应原因总结</span>
+            <span class="post-date" title="2018-05-15 23:12:38">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/15/前端工作积累的知识点二/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="前端工作积累的知识点二">前端工作积累的知识点二</span>
+            <span class="post-date" title="2018-05-15 23:10:19">2018/05/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/05/04/bug心路2/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="bug心路2">bug心路2</span>
+            <span class="post-date" title="2018-05-04 00:55:23">2018/05/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/04/06/mysql学习笔记/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql学习笔记">mysql学习笔记</span>
+            <span class="post-date" title="2018-04-06 08:17:08">2018/04/06</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/04/04/css可以继承的属性/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="css可以继承的属性">css可以继承的属性</span>
+            <span class="post-date" title="2018-04-04 06:16:29">2018/04/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/19/使用React和React Router进行代码分片/"
+           data-tag="翻译"
+           data-author="" >
+            <span class="post-title" title="Router进行代码分片">Router进行代码分片</span>
+            <span class="post-date" title="2018-03-19 08:58:50">2018/03/19</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/11/wepy开发速查手册/"
+           data-tag="wepy"
+           data-author="" >
+            <span class="post-title" title="wepy开发速查手册">wepy开发速查手册</span>
+            <span class="post-date" title="2018-03-11 16:25:24">2018/03/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/03/04/微信小程序api之setEnableDebug说明/"
+           data-tag="微信小程序"
+           data-author="" >
+            <span class="post-title" title="微信小程序api之setEnableDebug说明">微信小程序api之setEnableDebug说明</span>
+            <span class="post-date" title="2018-03-04 15:20:01">2018/03/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/28/函数式编程入门/"
+           data-tag="心得体会"
+           data-author="" >
+            <span class="post-title" title="函数式编程入门">函数式编程入门</span>
+            <span class="post-date" title="2018-02-28 22:02:09">2018/02/28</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/22/mark/"
+           data-tag="记录"
+           data-author="" >
+            <span class="post-title" title="mark">mark</span>
+            <span class="post-date" title="2018-02-22 18:57:35">2018/02/22</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/02/12/html5的data/"
+           data-tag="html5"
+           data-author="" >
+            <span class="post-title" title="html5的data-*">html5的data-*</span>
+            <span class="post-date" title="2018-02-12 18:51:30">2018/02/12</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/30/日期-学习到的知识点/"
+           data-tag="学习记录"
+           data-author="" >
+            <span class="post-title" title="日期+学习到的知识点">日期+学习到的知识点</span>
+            <span class="post-date" title="2018-01-30 21:26:20">2018/01/30</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/25/解决小程序音频自定义组件不同时播放问题/"
+           data-tag="工作经验"
+           data-author="" >
+            <span class="post-title" title="解决小程序音频自定义组件不同时播放问题">解决小程序音频自定义组件不同时播放问题</span>
+            <span class="post-date" title="2018-01-25 00:22:07">2018/01/25</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/18/node流程控制之串行/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="node流程控制之串行">node流程控制之串行</span>
+            <span class="post-date" title="2018-01-18 18:22:28">2018/01/18</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/11/Node编程基础/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Node编程基础">Node编程基础</span>
+            <span class="post-date" title="2018-01-11 13:59:29">2018/01/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/11/基本视觉格式化/"
+           data-tag="css读书笔记"
+           data-author="" >
+            <span class="post-title" title="基本视觉格式化">基本视觉格式化</span>
+            <span class="post-date" title="2018-01-11 13:48:33">2018/01/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/09/前端工作遇到的小知识点/"
+           data-tag="工作"
+           data-author="" >
+            <span class="post-title" title="前端工作遇到的小知识点">前端工作遇到的小知识点</span>
+            <span class="post-date" title="2018-01-09 10:21:41">2018/01/09</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2018/01/05/html标签/"
+           data-tag="html"
+           data-author="" >
+            <span class="post-title" title="html标签">html标签</span>
+            <span class="post-date" title="2018-01-05 13:24:08">2018/01/05</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2017/11/26/JS对象漫谈/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="JS对象漫谈">JS对象漫谈</span>
+            <span class="post-date" title="2017-11-26 12:18:14">2017/11/26</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2017/11/18/Hexo食用教程/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo食用教程">Hexo食用教程</span>
+            <span class="post-date" title="2017-11-18 19:00:30">2017/11/18</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-在mpvue中使用图表插件wx-charts" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">在mpvue中使用图表插件wx-charts</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">心得体会</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2018-08-05 19:35:32'>2018-07-06 10:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-text">原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  大家在原生小程序中需要用到图表插件时，可能会选择echarts或者由xiaolin3303开发的一款wx-charts插件，<br>本文为大家剖析一下如何在开源小程序框架mpvue中使用wx-charts插件</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>  mpvue编译后的代码是原生的小程序代码，它把页面的wxml内容全部封成了template引入到page中。既然是最后会转为原生代码，就支持使用原生的canvas组件，这一点也是官方明确肯定的。所以在mpvue中使用wx-charts就跟在原生中使用一样，除了注意事件的绑定使用mpvue的方式即可。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1.<br> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:xiaolin3303/wx-charts.git</span><br></pre></td></tr></table></figure></p>
+<p>   在clone下来的dist文件夹获得wxcharts-min.js（混淆版本）,如果需要进行二次开发，可以使用wxcharts.js然后修改<br>   内容，达到定制化的目的，修改完后可以利用在线混淆进行重新混淆使用。</p>
+<ol>
+<li><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--/src/pages/bar/bar.vue template中内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">canvas-id</span>=<span class="string">"areaCanvas"</span> <span class="attr">class</span>=<span class="string">"canvas"</span> @<span class="attr">touchstart</span>=<span class="string">"touchHandler"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>3.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// /src/pages/bar/bar.vue script中内容</span></span><br><span class="line"><span class="keyword">var</span> wxCharts = <span class="built_in">require</span>(<span class="string">'@/lib/wxcharts-min.js'</span>);  <span class="comment">//该路径为该js文件在你项目中的路径</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">	name: <span class="string">"bar"</span>,</span><br><span class="line">	data() &#123;</span><br><span class="line">		<span class="keyword">return</span> &#123;</span><br><span class="line">			bar: <span class="literal">null</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">		</span><br><span class="line">	mounted: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> windowWidth = <span class="number">320</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">var</span> res = wx.getSystemInfoSync();</span><br><span class="line">			windowWidth = res.windowWidth;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">'getSystemInfoSync failed!'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">this</span>.bar = <span class="keyword">new</span> wxCharts(&#123;</span><br><span class="line">			canvasId: <span class="string">'areaCanvas'</span>,</span><br><span class="line">			type: <span class="string">'area'</span>,</span><br><span class="line">			categories: [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>],</span><br><span class="line">			animation: <span class="literal">true</span>,</span><br><span class="line">			series: [&#123;</span><br><span class="line">				name: <span class="string">'成交量1'</span>,</span><br><span class="line">				data: [<span class="number">32</span>, <span class="number">45</span>, <span class="literal">null</span>, <span class="number">56</span>, <span class="number">33</span>, <span class="number">34</span>],</span><br><span class="line">				format: <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">return</span> val.toFixed(<span class="number">2</span>) + <span class="string">'万'</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;],</span><br><span class="line">			yAxis: &#123;</span><br><span class="line">				title: <span class="string">'成交金额 (万元)'</span>,</span><br><span class="line">				format: <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">return</span> val.toFixed(<span class="number">2</span>);</span><br><span class="line">				&#125;,</span><br><span class="line">				min: <span class="number">0</span>,</span><br><span class="line">					fontColor: <span class="string">'#8085e9'</span>,</span><br><span class="line">					gridColor: <span class="string">'#8085e9'</span>,</span><br><span class="line">					titleFontColor: <span class="string">'#f7a35c'</span></span><br><span class="line">				&#125;,</span><br><span class="line">				xAxis: &#123;</span><br><span class="line">					fontColor: <span class="string">'#7cb5ec'</span>,</span><br><span class="line">					gridColor: <span class="string">'#7cb5ec'</span></span><br><span class="line">				&#125;,</span><br><span class="line">				extra: &#123;</span><br><span class="line">					legendTextColor: <span class="string">'#cb2431'</span></span><br><span class="line">				&#125;,</span><br><span class="line">				width: windowWidth,</span><br><span class="line">				height: <span class="number">200</span></span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;,</span><br><span class="line">		methods: &#123;</span><br><span class="line">			touchHandler: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="keyword">this</span>.bar.getCurrentDataIndex(e));</span><br><span class="line">				<span class="keyword">this</span>.bar.showToolTip(e);</span><br><span class="line">			&#125;   </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>  该图表支持tooltip，这个功能比较实用，目前mpvue-echarts是不支持这一点的，但是echarts会更加美观，<br>可以根据需求取舍</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
