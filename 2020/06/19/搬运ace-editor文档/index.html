@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>JS对象漫谈 | 1024子翔的程序人生</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="JS对象漫谈 | 1024子翔的程序人生">
+  <title>搬运ace-editor文档 | 1024子翔的程序人生</title>
+  <meta name="keywords" content=" ace ">
+  <meta name="description" content="搬运ace-editor文档 | 1024子翔的程序人生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="1024子翔的程序人生">
@@ -747,19 +747,26 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-JS对象漫谈" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-搬运ace-editor文档" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">JS对象漫谈</h1>
+        <h1 class="article-title">搬运ace-editor文档</h1>
     
     <div class="article-meta">
         
         
         
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">ace</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2017-11-26 12:22:56'>2017-11-26 12:18</time>
+            发布时间 : <time class="date" title='最后更新: 2020-06-19 15:07:32'>2020-06-19 15:04</time>
         
     </div>
     <div class="article-meta">
@@ -781,7 +788,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何转为number"><span class="toc-text">如何转为number</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#全局对象window"><span class="toc-text">全局对象window</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#详解Number"><span class="toc-text">详解Number</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#parseInt-与-toString进制问题"><span class="toc-text">parseInt 与 toString进制问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#slice"><span class="toc-text">slice</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5个falsy值"><span class="toc-text">5个falsy值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#原型"><span class="toc-text">原型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#proto-和-prototype"><span class="toc-text">proto 和 prototype</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuring-the-editor"><span class="toc-text">Configuring the editor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Changing-the-size-of-the-editor"><span class="toc-text">Changing the size of the editor</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setting-Themes"><span class="toc-text">Setting Themes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setting-the-Programming-Language-Mode"><span class="toc-text">Setting the Programming Language Mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#One-Editor-Multiple-Sessions"><span class="toc-text">One Editor, Multiple Sessions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Common-Operations"><span class="toc-text">Common Operations</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-undo-manager"><span class="toc-text">Using undo manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Searching"><span class="toc-text">Searching</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Listening-to-Events"><span class="toc-text">Listening to Events</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Adding-New-Commands-and-Keybindings"><span class="toc-text">Adding New Commands and Keybindings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configure-dynamic-loading-of-modes-and-themes"><span class="toc-text">Configure dynamic loading of modes and themes</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -797,58 +804,96 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="如何转为number"><a href="#如何转为number" class="headerlink" title="如何转为number"></a>如何转为number</h1><ul>
-<li>Number(‘1’) === 1</li>
-<li>parseInt(‘1’, 10) === 1</li>
-<li>parseFloat(‘1.23’) === 1.23</li>
-<li>‘1’ - 0 </li>
-<li>+‘1’</li>
-</ul>
-<h1 id="全局对象window"><a href="#全局对象window" class="headerlink" title="全局对象window"></a>全局对象window</h1><ul>
-<li>浏览器在加载时首先会创建window对象</li>
-<li>window的属性分为两类： ECMAScript规定的和浏览器私有的（alert，prompt，confirm，console, history, document等）</li>
-<li>document属于dom规范范畴 ,history属于bom规范范畴</li>
-</ul>
-<h1 id="详解Number"><a href="#详解Number" class="headerlink" title="详解Number"></a>详解Number</h1><ul>
-<li>Number(‘1’) 类型转换</li>
-<li>var n = new Number(1) 1 =&gt; {valueOf(): 1,..},通过valueOf获取到原始值1</li>
-<li>使用直接量赋值 var n = 1;在早期是没有toString方法的，而现在直接使用toString会临时转换为Number对象包装后的“1”然后使用toString，最后把这个包装对象丢掉（磨砂次）,这就是为什么给n.xxx = 1后，然后取n.xxx是undefined的原因</li>
-</ul>
-<h1 id="parseInt-与-toString进制问题"><a href="#parseInt-与-toString进制问题" class="headerlink" title="parseInt 与 toString进制问题"></a>parseInt 与 toString进制问题</h1><ul>
-<li>parseInt第二个形参传入一个进制，代表将第一个实参是什么进制的，然后转化为10进制输出</li>
-<li>toString可以传入一个参数代表将要转化的进制，把调用者转化为对应进制的字符串</li>
-</ul>
-<h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><ul>
-<li>为什么叫slice？外国人切面包叫slice，js slice可以“切”数组，字符串。</li>
-</ul>
-<h1 id="5个falsy值"><a href="#5个falsy值" class="headerlink" title="5个falsy值"></a>5个falsy值</h1><ul>
-<li>0</li>
-<li>NaN</li>
-<li>‘’</li>
-<li>null</li>
-<li>undefined</li>
-<li>false</li>
-</ul>
-<blockquote>
-<p>所有对象都是真值</p>
+        <blockquote>
+<p>鉴于 ace 官网国内访问较慢，搬运了一份guide到博客，仅供学习，请勿用于商业用途，侵权请联系我删除</p>
 </blockquote>
-<h1 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h1><blockquote>
-<p>var o1 = {};</p>
-<p>o1.<strong>proto</strong> ===  Object.prototype</p>
-<p>var n1 = new Number(1)</p>
-</blockquote>
-<p>n1.<strong>proto</strong> === Number.prototype</p>
-<p>n1.<strong>proto</strong>.<strong>proto</strong> === Object.prototype</p>
-<h1 id="proto-和-prototype"><a href="#proto-和-prototype" class="headerlink" title="proto 和 prototype"></a><strong>proto</strong> 和 prototype</h1><p>String.prototype是String的公用属性的引用</p>
-<p>s.<strong>proto</strong> 也是String的公用属性的引用</p>
-<p>var 对象 = new 函数();</p>
-<p>对象.<strong>proto</strong> === 函数.prototype 它们的值是 <a href="原型对象，一个对象或null">[Prototype]</a></p>
-<p>var obj = 函数.prototype</p>
-<p>obj.<strong>proto</strong>  === Object.prototype</p>
-<p>var obj2 = 函数</p>
-<p>obj2.<strong>proto</strong> === Function.prototype</p>
-<p>Function.<strong>proto</strong> === Function.prototype</p>
-<p>Function,prototype.<strong>proto</strong> === Object.prototype</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;Demo of ACE Editor&lt;/title&gt;</span><br><span class="line">        &lt;!--导入js库--&gt;</span><br><span class="line">        &lt;script src=&quot;./ace.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script src=&quot;./ext-language_tools.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line"></span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!--代码输入框（注意请务必设置高度，否则无法显示）--&gt;</span><br><span class="line">        &lt;pre id=&quot;code&quot; class=&quot;ace_editor&quot; style=&quot;min-height:400px&quot;&gt;</span><br><span class="line">            &lt;textarea class=&quot;ace_text-input&quot;&gt;</span><br><span class="line">#include</span><br><span class="line">                int main()&#123;</span><br><span class="line">                    int n,m;</span><br><span class="line">                    scanf(&quot;%d %d&quot;,&amp;n,&amp;m);</span><br><span class="line">                    printf(&quot;%d&quot;,n+m);</span><br><span class="line">                    return 0;</span><br><span class="line">                &#125;</span><br><span class="line">            &lt;/textarea&gt;</span><br><span class="line">        &lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">        &lt;script&gt;</span><br><span class="line">            //初始化对象</span><br><span class="line">            var editor = ace.edit(&quot;code&quot;);</span><br><span class="line"></span><br><span class="line">            //设置风格和语言（更多风格和语言，请到github上相应目录查看）</span><br><span class="line">            var theme = &quot;clouds&quot;</span><br><span class="line">            var language = &quot;javascript&quot;</span><br><span class="line">            editor.setTheme(&quot;ace/theme/&quot; + theme);</span><br><span class="line">            editor.session.setMode(&quot;ace/mode/&quot; + language);</span><br><span class="line"></span><br><span class="line">            //字体大小</span><br><span class="line">            editor.setFontSize(18);</span><br><span class="line"></span><br><span class="line">            //设置只读（true时只读，用于展示代码）</span><br><span class="line">            editor.setReadOnly(false);</span><br><span class="line"></span><br><span class="line">            //自动换行,设置为off关闭</span><br><span class="line">            editor.setOption(&quot;wrap&quot;, &quot;free&quot;)</span><br><span class="line"></span><br><span class="line">            //启用提示菜单</span><br><span class="line">            ace.require(&quot;ace/ext/language_tools&quot;);</span><br><span class="line">            editor.setOptions(&#123;</span><br><span class="line">                    enableBasicAutocompletion: true,</span><br><span class="line">                    enableSnippets: true,</span><br><span class="line">                    enableLiveAutocompletion: true</span><br><span class="line">                &#125;);</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><em>In all of these examples Ace has been invoked as shown in the <a href="https://ace.c9.io/#nav=embedding" target="_blank" rel="noopener">embedding guide</a>.</em></p>
+<h2 id="Configuring-the-editor"><a href="#Configuring-the-editor" class="headerlink" title="Configuring the editor"></a>Configuring the editor</h2><p>there are several ways to pass configuration to Ace</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">// pass options to ace.edit</span><br><span class="line"></span><br><span class="line">ace.edit(element, &#123;</span><br><span class="line"></span><br><span class="line">    mode: &quot;ace/mode/javascript&quot;,</span><br><span class="line"></span><br><span class="line">    selectionStyle: &quot;text&quot;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// use setOptions method to set several options at once</span><br><span class="line"></span><br><span class="line">editor.setOptions(&#123;</span><br><span class="line"></span><br><span class="line">    autoScrollEditorIntoView: true,</span><br><span class="line"></span><br><span class="line">    copyWithEmptySelection: true,</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// use setOptions method</span><br><span class="line"></span><br><span class="line">editor.setOption(&quot;mergeUndoDeltas&quot;, &quot;always&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// some options are also available as methods e.g. </span><br><span class="line"></span><br><span class="line">editor.setTheme(...)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// to get the value of the option use</span><br><span class="line"></span><br><span class="line">editor.getOption(&quot;optionName&quot;);</span><br></pre></td></tr></table></figure>
+<p>See <a href="https://github.com/ajaxorg/ace/wiki/Configuring-Ace" target="_blank" rel="noopener">Configuring-Ace wiki page</a> for a more detailed list of options.</p>
+<h3 id="Changing-the-size-of-the-editor"><a href="#Changing-the-size-of-the-editor" class="headerlink" title="Changing the size of the editor"></a>Changing the size of the editor</h3><p>Ace only checks for changes of the size of it’s container when window is resized. If you resize the editor div in another manner, and need Ace to resize, use the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.resize()</span><br></pre></td></tr></table></figure>
+<p>if you want editor to change it’s size based on contents, use maxLines option as shown in <a href="https://ace.c9.io/demo/autoresize.html" target="_blank" rel="noopener">https://ace.c9.io/demo/autoresize.html</a></p>
+<h2 id="Setting-Themes"><a href="#Setting-Themes" class="headerlink" title="Setting Themes"></a>Setting Themes</h2><p>Themes are loaded on demand; all you have to do is pass the string name:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.setTheme(&quot;ace/theme/twilight&quot;);</span><br></pre></td></tr></table></figure>
+<p>> <a href="https://github.com/ajaxorg/ace/tree/master/lib/ace/theme" target="_blank" rel="noopener">See all themes</a></p>
+<h2 id="Setting-the-Programming-Language-Mode"><a href="#Setting-the-Programming-Language-Mode" class="headerlink" title="Setting the Programming Language Mode"></a>Setting the Programming Language Mode</h2><p>By default, the editor supports plain text mode. All other language modes are available as separate modules, loaded on demand like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.session.setMode(&quot;ace/mode/javascript&quot;);</span><br></pre></td></tr></table></figure>
+<h2 id="One-Editor-Multiple-Sessions"><a href="#One-Editor-Multiple-Sessions" class="headerlink" title="One Editor, Multiple Sessions"></a>One Editor, Multiple Sessions</h2><p>Ace keeps everything about the state of the editor (selection, scroll position, etc.) in ``</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.session</span><br></pre></td></tr></table></figure>
+<p>. This means you can grab the session, store it in a var, and set the editor to another session (e.g. a tabbed editor).</p>
+<p>You might accomplish this like so:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var EditSession = require(&quot;ace/edit_session&quot;).EditSession;</span><br><span class="line"></span><br><span class="line">var js = new EditSession(&quot;some js code&quot;);</span><br><span class="line"></span><br><span class="line">var css = new EditSession([&quot;some&quot;, &quot;css&quot;, &quot;code here&quot;]);</span><br><span class="line"></span><br><span class="line">// and then to load document into editor, just call</span><br><span class="line"></span><br><span class="line">editor.setSession(js);</span><br></pre></td></tr></table></figure>
+<h2 id="Common-Operations"><a href="#Common-Operations" class="headerlink" title="Common Operations"></a>Common Operations</h2><p>Set and get content:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">editor.setValue(&quot;the new text here&quot;);</span><br><span class="line"></span><br><span class="line">editor.session.setValue(&quot;the new text here&quot;); // set value and reset undo history</span><br><span class="line"></span><br><span class="line">editor.getValue(); // or session.getValue</span><br></pre></td></tr></table></figure>
+<p>Get selected text:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">editor.getSelectedText(); // or for a specific range</span><br><span class="line"></span><br><span class="line">editor.session.getTextRange(editor.getSelectionRange());</span><br></pre></td></tr></table></figure>
+<p>Insert at cursor, emulating user input:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.insert(&quot;Something cool&quot;);</span><br></pre></td></tr></table></figure>
+<p>Replace text in range:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.session.replace(new ace.Range(0, 0, 1, 1), &quot;new text&quot;);</span><br></pre></td></tr></table></figure>
+<p>Get the current cursor line and column:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.selection.getCursor();</span><br></pre></td></tr></table></figure>
+<p>Go to a line:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.gotoLine(lineNumber);</span><br></pre></td></tr></table></figure>
+<p>Get total number of lines:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.session.getLength();</span><br></pre></td></tr></table></figure>
+<p>Set the default tab size:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.session.setTabSize(4);</span><br></pre></td></tr></table></figure>
+<p>Use soft tabs:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.session.setUseSoftTabs(true);</span><br></pre></td></tr></table></figure>
+<p>Set the font size:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&apos;editor&apos;).style.fontSize=&apos;12px&apos;;</span><br></pre></td></tr></table></figure>
+<p>Toggle word wrapping:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.session.setUseWrapMode(true);</span><br></pre></td></tr></table></figure>
+<p>Set line highlighting:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.setHighlightActiveLine(false);</span><br></pre></td></tr></table></figure>
+<p>Set the print margin visibility:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.setShowPrintMargin(false);</span><br></pre></td></tr></table></figure>
+<p>Set the editor to read-only:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.setReadOnly(true);  // false to make it editable</span><br></pre></td></tr></table></figure>
+<h3 id="Using-undo-manager"><a href="#Using-undo-manager" class="headerlink" title="Using undo manager"></a>Using undo manager</h3><p>To group undo delta of the next edit with the previous one set <code>mergeUndoDeltas</code> to true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">editor.session.mergeUndoDeltas = <span class="literal">true</span>; </span><br><span class="line"></span><br><span class="line">editor.session.insert(&#123;<span class="attr">row</span>: <span class="number">0</span>, <span class="attr">column</span>:<span class="number">0</span>&#125;, <span class="built_in">Date</span>()+<span class="string">""</span>);</span><br></pre></td></tr></table></figure>
+<p>To start new undo group use <code>markUndoGroup</code> method</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">editor.insertSnippet(<span class="string">"a$0b"</span>); </span><br><span class="line"></span><br><span class="line">editor.session.markUndoGroup(); </span><br><span class="line"></span><br><span class="line">editor.insertSnippet(<span class="string">"x$0y"</span>);</span><br></pre></td></tr></table></figure>
+<p>To disable undo of a an edit in a collaborative editor</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rev = session.$undoManager.startNewGroup(); <span class="comment">// start new undo group</span></span><br><span class="line"></span><br><span class="line">... <span class="comment">// apply the edit </span></span><br><span class="line"></span><br><span class="line">session.$undoManager.markIgnored(rev); <span class="comment">// mark the new group as ignored</span></span><br></pre></td></tr></table></figure>
+<p>To implement undo/redo buttons see <a href="https://ace.c9.io/demo/toolbar.html" target="_blank" rel="noopener">https://ace.c9.io/demo/toolbar.html</a></p>
+<h3 id="Searching"><a href="#Searching" class="headerlink" title="Searching"></a>Searching</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">editor.find(<span class="string">'needle'</span>,&#123;</span><br><span class="line"></span><br><span class="line">    backwards: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">    wrap: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">    caseSensitive: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">    wholeWord: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">    regExp: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">editor.findNext();</span><br><span class="line"></span><br><span class="line">editor.findPrevious();</span><br></pre></td></tr></table></figure>
+<p>The following options are available to you for your search parameters:</p>
+<ul>
+<li><code>needle</code>: The string or regular expression you’re looking for</li>
+<li><code>backwards</code>: Whether to search backwards from where cursor currently is. Defaults to <code>false</code>.</li>
+<li><code>wrap</code>: Whether to wrap the search back to the beginning when it hits the end. Defaults to <code>false</code>.</li>
+<li><code>caseSensitive</code>: Whether the search ought to be case-sensitive. Defaults to <code>false</code>.</li>
+<li><code>wholeWord</code>: Whether the search matches only on whole words. Defaults to <code>false</code>.</li>
+<li><code>range</code>: The <a href="https://ace.c9.io/ajaxorg/ace/wiki/Range" target="_blank" rel="noopener">Range</a> to search within. Set this to <code>null</code> for the whole document</li>
+<li><code>regExp</code>: Whether the search is a regular expression or not. Defaults to <code>false</code>.</li>
+<li><code>start</code>: The starting <a href="https://ace.c9.io/ajaxorg/ace/wiki/Range" target="_blank" rel="noopener">Range</a> or cursor position to begin the search</li>
+<li><code>skipCurrent</code>: Whether or not to include the current line in the search. Default to <code>false</code>.</li>
+<li><code>preventScroll</code>: Whether or not to move the cursor to the next match. Default to <code>false</code>.</li>
+</ul>
+<p>Here’s how you can perform a replace:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">editor.find(&apos;foo&apos;);</span><br><span class="line"></span><br><span class="line">editor.replace(&apos;bar&apos;);</span><br></pre></td></tr></table></figure>
+<p>And here’s a replace all:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.replaceAll(&apos;bar&apos;);</span><br></pre></td></tr></table></figure>
+<p>(<code>editor.replaceAll</code> uses the needle set earlier by <code>editor.find(&#39;needle&#39;, ...</code>)</p>
+<h3 id="Listening-to-Events"><a href="#Listening-to-Events" class="headerlink" title="Listening to Events"></a>Listening to Events</h3><p>To listen for an <code>onchange</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">editor.session.on(&apos;change&apos;, function(delta) &#123;</span><br><span class="line"></span><br><span class="line">    // delta.start, delta.end, delta.lines, delta.action</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>To listen for an <code>selection</code> change:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">editor.session.selection.on(&apos;changeSelection&apos;, function(e) &#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>To listen for a <code>cursor</code> change:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">editor.session.selection.on(&apos;changeCursor&apos;, function(e) &#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Adding-New-Commands-and-Keybindings"><a href="#Adding-New-Commands-and-Keybindings" class="headerlink" title="Adding New Commands and Keybindings"></a>Adding New Commands and Keybindings</h3><p>To assign key bindings to a custom function:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">editor.commands.addCommand(&#123;</span><br><span class="line"></span><br><span class="line">    name: &apos;myCommand&apos;,</span><br><span class="line"></span><br><span class="line">    bindKey: &#123;win: &apos;Ctrl-M&apos;,  mac: &apos;Command-M&apos;&#125;,</span><br><span class="line"></span><br><span class="line">    exec: function(editor) &#123;</span><br><span class="line"></span><br><span class="line">        //...</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    readOnly: true // false if this command should not apply in readOnly mode</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Configure-dynamic-loading-of-modes-and-themes"><a href="#Configure-dynamic-loading-of-modes-and-themes" class="headerlink" title="Configure dynamic loading of modes and themes"></a>Configure dynamic loading of modes and themes</h3><p>By default ace detcts the url for dynamic loading by finding the script node for ace.js. This doesn’t work if ace.js is not loaded with a separate script tag, and in this case it is required to set url explicitely</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ace.config.set(&quot;basePath&quot;, &quot;https://url.to.a/folder/that/contains-ace-modes&quot;);</span><br></pre></td></tr></table></figure>
+<p>Path for one module alone can be configured with:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ace.config.setModuleUrl(&quot;ace/theme/textmate&quot;, &quot;url for textmate.js&quot;);</span><br></pre></td></tr></table></figure>
+<p>When using ace with webpack, it is possible to configure paths for all submodules using</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require(&quot;ace-builds/webpack-resolver&quot;);</span><br></pre></td></tr></table></figure>
+<p>which depends on <a href="https://github.com/webpack-contrib/file-loader" target="_blank" rel="noopener">file-loader</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
