@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>在mpvue中使用图表插件wx-charts | 1024子翔的程序人生</title>
-  <meta name="keywords" content=" 心得体会 ">
-  <meta name="description" content="在mpvue中使用图表插件wx-charts | 1024子翔的程序人生">
+  <title>创建homestead管理脚本 | 1024子翔的程序人生</title>
+  <meta name="keywords" content=" php ">
+  <meta name="description" content="创建homestead管理脚本 | 1024子翔的程序人生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="1024子翔的程序人生">
@@ -775,9 +775,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-在mpvue中使用图表插件wx-charts" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-创建homestead管理脚本" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">在mpvue中使用图表插件wx-charts</h1>
+        <h1 class="article-title">创建homestead管理脚本</h1>
     
     <div class="article-meta">
         
@@ -787,14 +787,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">心得体会</a>
+            <a class="color4">php</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2018-08-05 19:35:32'>2018-07-06 10:00</time>
+            发布时间 : <time class="date" title='最后更新: 2021-02-27 11:11:09'>2021-02-27 11:07</time>
         
     </div>
     <div class="article-meta">
@@ -816,7 +816,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-text">原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -832,16 +832,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  大家在原生小程序中需要用到图表插件时，可能会选择echarts或者由xiaolin3303开发的一款wx-charts插件，<br>本文为大家剖析一下如何在开源小程序框架mpvue中使用wx-charts插件</p>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>  mpvue编译后的代码是原生的小程序代码，它把页面的wxml内容全部封成了template引入到page中。既然是最后会转为原生代码，就支持使用原生的canvas组件，这一点也是官方明确肯定的。所以在mpvue中使用wx-charts就跟在原生中使用一样，除了注意事件的绑定使用mpvue的方式即可。</p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1.<br> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:xiaolin3303/wx-charts.git</span><br></pre></td></tr></table></figure></p>
-<p>   在clone下来的dist文件夹获得wxcharts-min.js（混淆版本）,如果需要进行二次开发，可以使用wxcharts.js然后修改<br>   内容，达到定制化的目的，修改完后可以利用在线混淆进行重新混淆使用。</p>
-<ol>
-<li><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--/src/pages/bar/bar.vue template中内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">canvas-id</span>=<span class="string">"areaCanvas"</span> <span class="attr">class</span>=<span class="string">"canvas"</span> @<span class="attr">touchstart</span>=<span class="string">"touchHandler"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>3.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// /src/pages/bar/bar.vue script中内容</span></span><br><span class="line"><span class="keyword">var</span> wxCharts = <span class="built_in">require</span>(<span class="string">'@/lib/wxcharts-min.js'</span>);  <span class="comment">//该路径为该js文件在你项目中的路径</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">	name: <span class="string">"bar"</span>,</span><br><span class="line">	data() &#123;</span><br><span class="line">		<span class="keyword">return</span> &#123;</span><br><span class="line">			bar: <span class="literal">null</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">		</span><br><span class="line">	mounted: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> windowWidth = <span class="number">320</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">var</span> res = wx.getSystemInfoSync();</span><br><span class="line">			windowWidth = res.windowWidth;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">'getSystemInfoSync failed!'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">this</span>.bar = <span class="keyword">new</span> wxCharts(&#123;</span><br><span class="line">			canvasId: <span class="string">'areaCanvas'</span>,</span><br><span class="line">			type: <span class="string">'area'</span>,</span><br><span class="line">			categories: [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>],</span><br><span class="line">			animation: <span class="literal">true</span>,</span><br><span class="line">			series: [&#123;</span><br><span class="line">				name: <span class="string">'成交量1'</span>,</span><br><span class="line">				data: [<span class="number">32</span>, <span class="number">45</span>, <span class="literal">null</span>, <span class="number">56</span>, <span class="number">33</span>, <span class="number">34</span>],</span><br><span class="line">				format: <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">return</span> val.toFixed(<span class="number">2</span>) + <span class="string">'万'</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;],</span><br><span class="line">			yAxis: &#123;</span><br><span class="line">				title: <span class="string">'成交金额 (万元)'</span>,</span><br><span class="line">				format: <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">return</span> val.toFixed(<span class="number">2</span>);</span><br><span class="line">				&#125;,</span><br><span class="line">				min: <span class="number">0</span>,</span><br><span class="line">					fontColor: <span class="string">'#8085e9'</span>,</span><br><span class="line">					gridColor: <span class="string">'#8085e9'</span>,</span><br><span class="line">					titleFontColor: <span class="string">'#f7a35c'</span></span><br><span class="line">				&#125;,</span><br><span class="line">				xAxis: &#123;</span><br><span class="line">					fontColor: <span class="string">'#7cb5ec'</span>,</span><br><span class="line">					gridColor: <span class="string">'#7cb5ec'</span></span><br><span class="line">				&#125;,</span><br><span class="line">				extra: &#123;</span><br><span class="line">					legendTextColor: <span class="string">'#cb2431'</span></span><br><span class="line">				&#125;,</span><br><span class="line">				width: windowWidth,</span><br><span class="line">				height: <span class="number">200</span></span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;,</span><br><span class="line">		methods: &#123;</span><br><span class="line">			touchHandler: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="keyword">this</span>.bar.getCurrentDataIndex(e));</span><br><span class="line">				<span class="keyword">this</span>.bar.showToolTip(e);</span><br><span class="line">			&#125;   </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>  该图表支持tooltip，这个功能比较实用，目前mpvue-echarts是不支持这一点的，但是echarts会更加美观，<br>可以根据需求取舍</p>
+        <p>创建homestead管理脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/laravel/homestead.git ~/homestead</span><br><span class="line"></span><br><span class="line">cd ~/homestead</span><br><span class="line">git checkout 需要的版本(比如 git checkout v12.1.0)</span><br><span class="line"></span><br><span class="line">bash init.sh</span><br><span class="line">然后配置Homestead.yaml即可</span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
