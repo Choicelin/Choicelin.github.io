@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>解决小程序音频自定义组件不同时播放问题 | 1024子翔的程序人生</title>
-  <meta name="keywords" content=" 工作经验 ">
-  <meta name="description" content="解决小程序音频自定义组件不同时播放问题 | 1024子翔的程序人生">
+  <title>如何使用pxtorem | 1024子翔的程序人生</title>
+  <meta name="keywords" content=" 移动端 ">
+  <meta name="description" content="如何使用pxtorem | 1024子翔的程序人生">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="1024子翔的程序人生">
@@ -803,9 +803,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-解决小程序音频自定义组件不同时播放问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-如何使用pxtorem" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">解决小程序音频自定义组件不同时播放问题</h1>
+        <h1 class="article-title">如何使用pxtorem</h1>
     
     <div class="article-meta">
         
@@ -815,14 +815,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">工作经验</a>
+            <a class="color4">移动端</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2018-03-11 16:23:04'>2018-01-25 00:22</time>
+            发布时间 : <time class="date" title='最后更新: 2021-03-16 13:24:13'>2021-03-13 20:36</time>
         
     </div>
     <div class="article-meta">
@@ -844,7 +844,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#需求"><span class="toc-text">需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分析"><span class="toc-text">分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方案"><span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -860,23 +860,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>首先是一个播放的气泡，点击播放src音频，但是是一组列表，有许多这样的气泡，点其中一个播放后，再点其他的，前一个要停止播放。</p>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>这种其实是很好实现的，如果是直接写的话。但是现在用上了小程序的自定义组件，每个组件都是独立的没有联系，唯一的联系是父组件，这个时候，我们该怎么办呢。</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>由于涉及保密协议，就不上代码，说说思路。</p>
-<p>思路：</p>
-<ol>
-<li>用广播，如果该组件播放时，就发出一个广播，让其他组件关闭播放。</li>
+        <ol>
+<li>安装postcss-pxtorem包</li>
 </ol>
-<p>这里知识用到观察者模式（订阅与发布），具体怎么实现，有很多方式，本项目中的实现是我的师父写的，然而他写的有个地方有问题，他用了Promise处理监听的回调，然而Promise resolve以后，它的生命就到此为止了（个人目前的理解是这样的，如有勘误，请务必指出），所以只能执行一次回调，而不能多次监听，触发回调。我把这里改了，实现了一次监听，有触发随时执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i postcss-pxtorem -D</span><br></pre></td></tr></table></figure>
 <ol>
-<li>关键问题，我怎么样只广播非当前播放的气泡呢。设一个属性，每次给一个变化的值进去，利用observer确定是当前组件，当前组件执行一个逻辑，这个逻辑就是避免被广播到</li>
+<li>配置规则</li>
 </ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>程序出不来，大部分是代码原因，继续搞，继续搞就能看到光明。</p>
-<p>我的每篇文章都不长，但都可以说明一个问题，欢迎阅读。</p>
-<p>-————–update分割线 —————–</p>
-<p>最佳实践是这样的：</p>
-<p><a href="https://choicelin.github.io/2018/01/09/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/">前端工作遇到的小知识点</a>第14点，最好放在父组件中控制，上面操作太骚，而且后期处理起来不易维护</p>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">	plugins: &#123;</span><br><span class="line">		&apos;autoprefixer&apos;: &#123;</span><br><span class="line">			browsers: [&apos;Android &gt;= 4.0&apos;, &apos;iOS &gt;= 7&apos;]</span><br><span class="line">		&#125;,</span><br><span class="line">		&apos;postcss-pxtorem&apos;: &#123;</span><br><span class="line">			rootValue: 37.5px,</span><br><span class="line">			propList: [&apos;*&apos;]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>设置根元素font-size动态变化（iphone 6下开发）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function setRem () &#123;</span><br><span class="line">    let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;</span><br><span class="line">    let htmlDom = document.getElementsByTagName(&apos;html&apos;)[0];</span><br><span class="line">    htmlDom.style.fontSize= htmlWidth/10 + &apos;px&apos;;</span><br><span class="line">&#125;</span><br><span class="line">setRem();</span><br><span class="line">// 这里可以加一个节流</span><br><span class="line">window.onresize = function () &#123;</span><br><span class="line">    setRem()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
